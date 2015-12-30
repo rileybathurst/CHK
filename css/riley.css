@@ -1,0 +1,346 @@
+/* Extra CSS I've added to fix things */
+
+/* Header image */
+.top-background-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 1710px;
+}
+
+.over-background {
+    background: #333;
+}
+
+.second-background {
+    background: #282828;
+    padding-top: .4em;
+}
+
+.off-stripe {
+    padding-top: .4em;
+}
+
+.any-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Secondary Link or just other text color
+-------------------------------------------------------------- */
+
+/* Im not sure if this is neccesary as body already is white*/
+
+.a2 a {
+    color: #fff;
+}
+
+.a2 a:hover {
+    color: #888;
+}
+    
+.a3 a {
+    color: #b9202f;
+}
+
+a3 a:hover {
+    color: #333;
+}
+
+.a4 a {
+    color: #333;
+}
+
+.a4 a:hover {
+    color: #b9202f;
+}
+
+.highlight {
+    color: #b9202f;
+}
+
+/* Border
+-------------------------------------------------------------- */
+
+/* Small Medium screens */
+@media only screen and (max-width: 64em) {  /* min-width 1025px, large screens */
+    .border {
+        border-top: 3px solid #fff;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 64.063em) {  /* min-width 1025px, large screens */
+    .border {
+        border: 3px solid #fff;
+    }
+}
+
+.border-slim {
+    border-top: 2px solid #999;
+}
+
+.navi a {
+    margin-left: 1em;
+}
+
+/* Spacer
+-------------------------------------------------------------- */
+
+.spacer {
+    margin-right: 1rem;
+}
+
+/* Center an inline list - based on inline-list */
+
+.centered-inline-list {
+  margin: 0 auto 1.0625rem auto;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; 
+  text-align: center;
+}
+  .centered-inline-list > li {
+      list-style: none;
+      margin-left: 1.375rem;
+      display: inline-block; 
+  }
+    .centered-inline-list > li > * {
+      display: block; }
+
+/* Drop 20px used on mobile nav */
+
+.drop-20 {
+    margin-top: 20px;
+}
+
+.below-20 {
+    margin-bottom: 20px;
+}
+
+#map-canvas {
+    height: 20rem;
+    width: 100%;
+}
+
+.gallery img {
+margin-top: 20px;   
+}
+
+/* Flag Banner
+-------------------------------------------------------------- */
+
+.flagbanner:before {
+    content:url('../img/flag-before.png');
+    position: absolute;
+    z-index: 2;
+    margin-left: -87px;
+    overflow: visible;
+}
+
+.flagbanner {
+    position: relative;
+}
+
+.flagbanner:after {
+    content:url('../img/flag-after.png');
+    position: absolute;
+    z-index: 2;
+    float: left;
+}
+
+.flagbuttonbanner {
+    display: inline-block;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background: #333;
+    border: 3px solid;
+    margin-right: -20px;
+}
+
+.flagbuttonbanner:hover {
+    background: #333;
+    cursor: auto;
+}
+
+/* Banners
+-------------------------------------------------------------- */
+
+.banner:before {
+    content:url('../img/button-end-left.png');
+    position: absolute;
+    z-index: 2;
+    margin-left: -22px;
+}
+
+.banner {
+    position: relative;
+    margin-left: 15px;
+}
+
+.banner:after {
+    content:url('../img/button-end-right.png');
+    position: absolute;
+    z-index: 2;
+    float: left;
+}
+
+.button-banner {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #b9202f;
+    line-height: 51px;
+    margin-top: 0;
+}
+
+.any-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Banner Dark
+-------------------------------------------------------------- */
+
+.bannerdark:before {
+    content:url('../img/bannerdark-end-left.png');
+    position: absolute;
+}
+
+.bannerdark {
+    position: relative;
+}
+
+.bannerdark:after {
+    content:url('../img/bannerdark-end-right.png');
+}
+
+.buttonbannerdark {
+    margin-left: 1.2em;
+    float: left;
+    background: #000;
+    color: #fff;
+    padding: 1rem .1rem;
+    font-size: 1rem;
+}
+
+.buttonbannerdark:hover {
+    background: #000;
+}
+    
+.inline-block: {
+    display: inline-block;
+}
+
+.accross {
+    margin-left: 7rem;
+}
+
+.nudge {
+    margin-left: 3rem;
+}
+
+
+/* Round
+-------------------------------------------------------------- */
+
+.round {
+    border-radius: 50%;
+    border: 5px solid #fbfbfb;
+}
+
+.outer {
+    border-radius: 50%;
+    border: 3px solid #fbfbfb;
+    padding: 1rem 0;
+    display: block;
+}
+
+.tap {
+    margin-left: 3rem;
+}
+
+/* Full
+-------------------------------------------------------------- */
+
+.bright {
+	background: #fbfbfb;
+    color: #000;
+}
+
+.soft, .soft:before, .soft:after {
+	background: #666;
+	margin-bottom: 0;
+    color: #000;
+}
+
+.bright h2 {
+    color: #000;
+}
+
+/* 
+html, body {
+    overflow-x: hidden;
+}
+*/
+
+.back-to-black {
+    background: #333;
+    border: 2px solid #000;
+    margin-right: 6px;
+    margin-left: -6px;
+}
+
+.light-back {
+    background: #999999;
+}
+
+
+/* Off
+-------------------------------------------------------------- */
+
+.off {
+    position: absolute;
+    top: 500px;
+    left: 60%;
+    height: 400px;
+}
+
+
+.center-button {
+  text-align: center;
+  padding: .5em;
+  background-color: #b9202f;
+  color: #FFFFFF; 
+  margin: 1em;
+  border-radius: .1em;
+}
+
+.fade {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade a:hover {
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: .8;
+}
+
+.fade img:hover {
+    opacity: .8;
+}
+
+/* Capitalize
+-------------------------------------------------------------- */
+
+.capitalize {
+    text-transform: capitalize;
+}
