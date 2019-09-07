@@ -1,3 +1,3 @@
 # Canterbury Homekill
 
-Start of weekly work
+Start of weekly work with a clean github
