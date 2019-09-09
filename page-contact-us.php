@@ -12,20 +12,8 @@
         <!-- Start the main container -->
         <div class="container" role="document">
 
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); 
-
-                    /*
-                     * Pull in a different sub-template, depending on the Post Format.
-                     * 
-                     * Make sure that there is a default '<tt>format.php</tt>' file to fall back to
-                     * as a default. Name templates '<tt>format-link.php</tt>', '<tt>format-aside.php</tt>', etc.
-                     *
-                     * You should use this in the loop.
-                     */
-
-                    $format = get_post_format();
-                    get_template_part( 'format', $format );
+            <?php if (have_posts()) :
+			while (have_posts()) : the_post();
                     ?>
 
                     <div class="row"><!-- row open --> 

@@ -1,7 +1,7 @@
 <?php
-/*  
+/*
  *  Template Name: order small goods
- */ 
+ */
 ?>
 
 <?php get_header(); ?>
@@ -415,7 +415,7 @@
                                 
                                         
                                 <!-- extra jquery needed for validation -->        
-                                <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+                                <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> <!-- I should definatley have jquery already -->
                                 <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
                                 <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 

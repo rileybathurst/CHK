@@ -29,7 +29,7 @@ $small-space: .625rem;
 
 
 // BASICS
-html {
+html { // why is this here?
     @include breakpoint (small) {
         margin-top: 0 !important;
     } @include breakpoint (medium) {
@@ -100,7 +100,7 @@ select {
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
-    display: initial;
+    display: initial; // is this not in reset?
 }
 
 .callout.alert {
@@ -523,7 +523,7 @@ a3 a:hover {
 -------------------------------------------------------------- */
 
 .spacer {
-    margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 /* Center an inline list - based on inline-list */
