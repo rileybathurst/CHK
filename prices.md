@@ -99,7 +99,7 @@ Vacuum Packed in Family Sized Packs
 
 ## Beef
 
-### Slaughter Charges 
+### Slaughter Charges
 
 | Price       | Description |
 | ----------- | ----------- |
@@ -201,6 +201,7 @@ Minimum order of 8kg
 | $5.50         | per kg packaged
 
 ---
+
 ### Salami
 
 Minimum of 4 per flavour
@@ -210,7 +211,9 @@ Minimum of 4 per flavour
 | $10 each      |tailored made to suit your taste
 
 ## Delivery
+
 We deliver to drop off points to in
+
 - Waipara
 - Waikari
 - Culverden
