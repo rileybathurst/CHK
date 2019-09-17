@@ -1,0 +1,21 @@
+.a-mega {
+	background: $highlight;
+	color: $white;
+	padding: $regular-space;
+	text-transform: uppercase;
+}
+
+.a-mega:hover {
+	background: $highlight-secondary;
+	color: $white;
+}
+
+footer {
+	background: $white;
+	color: $black;
+	// max-width: calc(88em - 0.9375em*2); // minus the padding needs a border width tho?
+	max-width: 86.5em; // this is a guess and check without math so needs to be fixed?
+	margin: 0 auto;
+	padding: $regular-space;
+	margin-bottom: $regular-space*2;
+}

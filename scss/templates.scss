@@ -1,0 +1,7 @@
+.contentful {
+	background: $background;
+	max-width: 88em;
+	margin: 0 auto; // when above 88em center
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(44em, 1fr));
+}

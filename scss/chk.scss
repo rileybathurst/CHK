@@ -20,8 +20,8 @@ $global-border-width: 3px;
 
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
-$regular-space: .9375rem; 
-$small-space: .625rem; // remove this I can just use math
+$regular-space: .9375em; 
+$small-space: $regular-space/2;
 
 // CONTENTS
 
@@ -55,6 +55,10 @@ h3 {
 	@media (min-width: map-get($breakpoints, medium)) {
 		font-size: 2.2rem;
 	}
+}
+
+hr {
+	border-bottom: 1px solid $white;
 }
 
 a {
@@ -259,6 +263,7 @@ header > .small-nav {
 
 .over-background {
 	background: $background; // this would add some depth to alter the color slightly
+	padding: $regular-space;
 }
 
 
@@ -516,6 +521,10 @@ a3 a:hover {
 
 .main-border {
 	border-top: $global-border-width solid $white;
+
+	@media (min-width: map-get($breakpoints, medium)) {
+		border: $global-border-width solid $white;
+	}
 }
 
 .border-slim {
@@ -573,40 +582,6 @@ label {
 
 .gallery img { // wordpress generated class?
 margin-top: 20px;   
-}
-
-/* Flag Banner
--------------------------------------------------------------- */
-
-.flagbanner:before {
-	content:url('../img/flag-before.png');
-	position: absolute;
-	z-index: 2;
-	margin-left: -87px; // this is a very hacky way of doing this
-	overflow: visible;
-}
-
-.flagbanner {
-	position: relative;
-	margin-top: $regular-space; // do this in one line?
-	margin-bottom: $regular-space;
-}
-
-.flagbanner:after {
-	content:url('../img/flag-after.png');
-	position: absolute;
-	z-index: 2;
-	float: left;
-}
-
-.flagbuttonbanner {
-	display: inline-block;
-	padding-right: 2rem; // all done with em would be more scaleable?
-	padding-left: 2rem;
-	background: #333;
-	border: $secondary 3px solid;
-	margin-right: -20px;
-	line-height: 3rem;
 }
 
 /* Banners
@@ -742,6 +717,7 @@ margin-top: 20px;
 
 .light-back {
 	background: $tertiary;
+	padding: $regular-space;
 }
 
 /* Off
@@ -790,6 +766,7 @@ margin-top: 20px;
 	opacity: 1;
 }
 
+.img-min-100,
 .img-min-100 img { // cant this be somewhere better?
 	min-width: 100%;
 }

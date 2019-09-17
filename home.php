@@ -1,77 +1,58 @@
 <?php get_header(); ?>
 
-<div class="contentful">
-	<main class="over-background main-border">
+<div class="contentful main-border">
+	<main class="over-background">
 		<h2>Welcome to <?php echo get_bloginfo( 'name' ); ?> Ltd</h2> <!-- this is probably a little convaluted but its fine for now -->
-			
+		
 		<hr>
 		
 		<p class="drop"><?php echo (get_page_by_title('Intro')->post_content); ?></p>
-
 		<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('about')->ID); ?>" class="button">Read More <?php echo (get_page_by_title('about')->post_title); ?> Us</a></h4>
-			</div>
-		</div>
 		
 		<hr>
+
+		<p><?php echo (get_page_by_title('HOW CHK WORKS')->post_content); ?></p> <!-- why is a page title a p? -->
+		<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Prices')->ID); ?>" class="button drop"><?php echo (get_page_by_title('Prices')->post_title); ?></a></h3>
 		
-		<div><!-- How -->
-			<p><?php echo (get_page_by_title('HOW CHK WORKS')->post_content); ?></p>
+		<p>The first step to having us work on your animal would be our online booking form.</p>
 		
-			<div class="row">   
-				<div class="small-12 columns">
-					<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Prices')->ID); ?>" class="button drop"><?php echo (get_page_by_title('Prices')->post_title); ?></a></h3>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="small-12 columns">
-					<p>The first step to having us work on your animal would be our online booking form.</p>
-				</div>
-			</div>
-			
-				<div class="row">   
-				<div class="small-12 columns">
-					<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Booking Form')->ID); ?>" class="button drop"><?php echo (get_page_by_title('Booking Form')->post_title); ?></a></h3>
-				</div>
-			</div> -->
+		<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Booking Form')->ID); ?>" class="button drop"><?php echo (get_page_by_title('Booking Form')->post_title); ?></a></h3>
 		
-		</div><!-- How -->
 	</main><!-- First Two -->
 			 
 	<section class="light-back">
  
 		<div class="flagbanner drop">
 			<h3 class="flagbuttonbanner a2"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Order')->ID); ?>"><?php echo (get_page_by_title('Order')->post_title); ?></a></h3>
-		</div>               
-
-		<p class="drop"><?php echo (get_page_by_title('order')->post_content); ?></p>
-
-		<div class="small-12 medium-6 columns drop">
-			<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/beef-flat.png" alt="homekill beef" width="140" height="140" class="round any-center hover-back" /></a>
-			<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>" class="button center-button">Beef</a></h3>
 		</div>
 
-		<div class="small-12 medium-6 columns drop">
-			<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/deer-flat.png" alt="homekill venison" width="140" height="140" class="round any-center hover-back" /></a>
-			<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>" class="button center-button">Deer</a></h3>
-		</div>
+		<p><?php echo (get_page_by_title('order')->post_content); ?></p>
 
-		<div class="small-12 medium-6 columns drop">
-			<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/pig-flat.png" alt="homekill bacon" width="140" height="140" class="round any-center hover-back" /></a>
-			<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>" class="button center-button">Pig</a></h3>
-		</div>
+		<div class="farm">
+			<div class="animal">		
+				<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/beef-flat.png" alt="homekill beef" width="140" height="140" class="round any-center hover-back" /></a>
+				<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>" class="a-mega">Beef</a></h3>
+			</div>
 
-		<div class="small-12 medium-6 columns drop">
-			<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/sheep-flat.png" alt="lamb homekill" width="140" height="140" class="round any-center hover-back" /></a>
-			<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>" class="button center-button">Sheep</a></h3>
-		</div>
+			<div class="animal">
+				<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/deer-flat.png" alt="homekill venison" width="140" height="140" class="round any-center hover-back" /></a>
+				<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>" class="a-mega">Deer</a></h3>
+			</div>
 
-		<div class="small-12 medium-6 columns end drop">
-			<a href="<?php echo home_url(); ?>/alpaca-llama"><img src="<?php echo content_url(); ?>/uploads/2016/03/Alpaca-flat.png" class="round any-center hover-back" alt="alpaca" /></a>
-			<h3 class="text-center">
-				<a href="<?php echo home_url(); ?>/alpaca-llama" class="button center-button">Alpaca /</a>
-				<a href="<?php echo home_url(); ?>/alpaca-llama" class="button center-button"> llama</a>
-			</h3>
+			<div class="animal">
+				<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/pig-flat.png" alt="homekill bacon" width="140" height="140" class="round any-center hover-back" /></a>
+				<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>" class="a-mega">Pig</a></h3>
+			</div>
+
+			<div class="animal">
+				<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><img src="<?php echo content_url(); ?>/uploads/2016/02/sheep-flat.png" alt="lamb homekill" width="140" height="140" class="round any-center hover-back" /></a>
+				<h3 class="text-center"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>" class="a-mega">Sheep</a></h3>
+			</div>
+
+			<div class="animal">
+				<a href="<?php echo home_url(); ?>/alpaca-llama"><img src="<?php echo content_url(); ?>/uploads/2016/03/Alpaca-flat.png" class="round any-center hover-back" alt="alpaca" /></a>
+				<h3 class="text-center"><a href="<?php echo home_url(); ?>/alpaca-llama" class="a-mega">Alpaca / llama</a></h3>
+			</div>
 		</div>
 
 		<hr>
@@ -83,7 +64,7 @@
 			</div>
 	
 			<?php 
-				$current_user = wp_get_current_user();
+				$current_user = wp_get_current_user(); // I would guess this can be simplified
 				$current_login = $current_user->user_login;
 				$current_email = $current_user->user_email;
 			?>
@@ -105,30 +86,8 @@
 				);
 				foreach ( $orders as $order ) 
 				{ ?>
-					<ul class="no-bullet stripes"> <!-- this shouldn't be a list its limited to one but I guess I wanted the styling?-->
-						<li>
-							<div class="row">
-								<div class="small-2 columns">
-									<a href="<?php echo home_url(); ?>/view-order?n=<?php echo $order->unid; ?>"><?php echo $order->unid; ?></a>
-								</div>
-									
-								<div class="small-1 columns stripe-breaker">|</div>
-
-								<div class="small-2 columns">
-									<?php echo $order->amp; ?>
-								</div>
-									
-								<div class="small-1 columns stripe-breaker">|</div>
-
-								<div class="small-6 columns">
-									<?php echo $order->timenow; ?>
-								</div>
-							</div>
-						</li>
-						
-					</ul> 
-
-				<?php } ?>
+					<a href="<?php echo home_url(); ?>/view-order?n=<?php echo $order->unid; ?>"><?php echo $order->unid; ?></a> | <?php echo $order->amp; ?> | <?php echo $order->timenow;
+				} ?>
 
 			<p>Would you like to view <a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('view profile')->ID); ?>">your previous orders?</a></p> <!-- im not entirley sure about these all being sepetate <p> tags but its fine for now -->
 			<p><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('update')->ID); ?>">Check or modify your current info</a></p>
@@ -156,16 +115,18 @@
 	</section> <!-- .light-back -->
 </div> <!-- contentful -->
 	
-<div class="contentful"><!-- make sure reusing this works as expected -->
+<div class="contentful main-border"><!-- make sure reusing this works as expected -->
 	<section class="">
 		<hr> <!-- doesnt seem like a great way to start a section -->
-		<div class="flagbanner drop fall">
-			<h3 class="flagbuttonbanner a2"><a href="<?php echo home_url(); ?>/contact">Contact Us</a></h3>
-		</div>
+
+		<div class="flag-before"><!-- stay gold --></div>
+		<h3 class="flagbanner"><a href="<?php echo home_url(); ?>/contact">Contact Us</a></h3>
+		<div class="flag-after"><img src="<?php echo get_template_directory_uri(); ?>/img/flag-after.png"></div>
+
 		<p class="drop"><?php echo (get_page_by_title('Contact Us')->post_content); ?></p>
 	</section>
 
-	<img src="<?php echo content_url(); ?>/uploads/2016/02/iStock_000021247297_recipe.jpg" alt="cooking">
+	<img src="<?php echo content_url(); ?>/uploads/2016/02/iStock_000021247297_recipe.jpg" alt="cooking" class="img-min-100">
 </div>
 	
 <?php get_footer(); ?> 
