@@ -183,16 +183,18 @@ Green Capsicum & Onion* Seasonal – Staff Will Advise
 ### Patties
 
 Minimum order of 8kg
+
 | Price         | Description        |
 | ------------- | ------------------ |
 | $5 | per kg Patties                |
 | $6 | per kg Gluten Free Patties    |
 
-----
+---
 
 ### Saveloys
 
 Minimum order of 8kg
+
 | Price         | Description        |
 | ------------- | ------------------ |
 | $5            | per kg bulk
@@ -202,7 +204,10 @@ Minimum order of 8kg
 ### Salami
 
 Minimum of 4 per flavour
-$10 each|tailored made to suit your taste
+
+| Price         | Description        |
+| ------------- | ------------------ |
+| $10 each      |tailored made to suit your taste
 
 ## Delivery
 We deliver to drop off points to in
@@ -214,6 +219,7 @@ We deliver to drop off points to in
 Prices may vary regarding travelling.
 Delivery Prices*
 *Prices may vary due to animal size and amount
+
 | Price         | Description        |
 | ------------- | ------------------ |
 | $5            | per sheep
