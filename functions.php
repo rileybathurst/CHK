@@ -27,6 +27,21 @@ if ( ! function_exists( 'chk_setup' ) ) :
 
 		/* Add featured image support */
 		add_theme_support( 'post-thumbnails' );
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+			//	'height'      => 190,
+			//	'width'       => 190,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'chk_setup' );

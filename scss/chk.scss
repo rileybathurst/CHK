@@ -1,5 +1,13 @@
 /* sass variable */
 
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+);
+
+$white: #fefefe;
+
 $background: #333;
 $secondary: #fff;
 $tertiary: #888;
@@ -7,13 +15,14 @@ $quaternary: #222;
 $highlight: #b9202f;
 $highlight-secondary: #FF482A;
 
+$global-border-width: 3px;
+
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
 $regular-space: .9375rem;
 $small-space: .625rem;
 
 /* Extra CSS I've added to fix things */
-
 
 // CONTENTS
 
@@ -27,258 +36,276 @@ $small-space: .625rem;
 // #side_log
 // EXTRAS
 
-
 // BASICS
-html { // why is this here?
-    @include breakpoint (small) {
-        margin-top: 0 !important;
-    } @include breakpoint (medium) {
-        margin-top: 46px !important;
-    }
+html {
+	margin: 0;
 }
 body {
-    background: $background;
-    font-family: $font-stack;
-    color: $secondary;
+	margin: 0;
+	background: $background;
+	font-family: $font-stack;
+	color: $secondary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-stack;
+	font-family: $font-stack;
 }
 
 h3 {
-    /* Medium up screens */
-    @include breakpoint(medium down) { 
-        font-size: 2.2rem;
-    }
+	/* Medium up screens */
+	@media (min-width: map-get($breakpoints, medium)) {
+		font-size: 2.2rem;
+	}
 }
 
 a {
-    color: $highlight;
+	color: $highlight;
 }
 
 a:hover {
-    color: $highlight-secondary;
+	color: $highlight-secondary;
 }
 
 .serif {
-    font-family: $font-stack;
+	font-family: $font-stack;
 }
 
 .san-serif {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.screen-reader {
+	display: none; // this might need something more?
+}
+
+.show-for-medium {
+	visibility: hidden;
+	@media (min-width: map-get($breakpoints, medium)) {
+		visibility: visible;
+	}
 }
 
 blockquote {
-    border: 4px $highlight solid;
-    padding: $regular-space;
-    font-size: 1.2rem; 
-    color: $highlight;
-    font-family: sans-serif;
-    background: $quaternary;
+	border: 4px $highlight solid;
+	padding: $regular-space;
+	font-size: 1.2rem; 
+	color: $highlight;
+	font-family: sans-serif;
+	background: $quaternary;
 }
 
 select {
-    color: $background;
+	color: $background;
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 .keep-all {
-    word-break: keep-all;
+	word-break: keep-all;
 }
 
 .capitalize {
-    text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .uppercase {
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
-    display: initial; // is this not in reset?
+	display: initial; // is this not in reset?
 }
 
 .callout.alert {
-    background: $quaternary;
-    border: 2px $highlight solid;
-    color: $highlight;
+	background: $quaternary;
+	border: 2px $highlight solid;
+	color: $highlight;
 }
 
 .is-invalid-label, .form-error {
-    color: $highlight;
+	color: $highlight;
 }
 
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
-    color: $background;
+	color: $background;
 }
 
 textarea {
-    height: 10rem;
+	height: 10rem;
 }
 
 .field-visibility-settings-notoggle, #buddypress .standard-form p.description {
-    visibility: hidden;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
+	visibility: hidden;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
 }
 
 // OFF CANVAS
 .off-canvas {
-    height: 100%; /* needed to fill the frame */
-    z-index: 0; /* deal with full colour background sides, this is -1 default */
-    position: absolute;
-    background: $background;
-    max-height: 100%;
-    overflow-y: auto;
-    color: $highlight;
-    padding: $regular-space;
+	height: 100%; /* needed to fill the frame */
+	z-index: 0; /* deal with full colour background sides, this is -1 default */
+	position: absolute;
+	background: $background;
+	max-height: 100%;
+	overflow-y: auto;
+	color: $highlight;
+	padding: $regular-space;
 }
 
 .off-canvas-content {
-    background: none;
-    
-    // gives a little space when on large for the floating
-    @include breakpoint(large) {
-        padding-bottom: 2rem;
-    }
+	background: none;
+	
+	// gives a little space when on large for the floating
+	@media (min-width: map-get($breakpoints, large)) {
+		padding-bottom: 2rem;
+	}
 }
 
 // Note to Riley why is this the only one not .off-canvas with the hypen
 .offcanvas ul {
-    line-height: 1.5rem;
+	line-height: 1.5rem;
 }
 
 .off-canvas .button {
-    color: $secondary;
+	color: $secondary;
 }
 
 .off-canvas .button:hover {
-    color: $highlight;
+	color: $highlight;
 }
 
 .has-submenu a:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: 6px inset;
-    border-color: $highlight-secondary transparent transparent;
-    border-top-style: solid;
-    position: absolute;
-    top: inherit;
-    margin-top: -4px;
-    right: 1rem;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border: 6px inset;
+	border-color: $highlight-secondary transparent transparent;
+	border-top-style: solid;
+	position: absolute;
+	top: inherit;
+	margin-top: -4px;
+	right: 1rem;
 }
 
 .is-submenu-item a:after {
-    content: none;
+	content: none;
 }
 
 .menu.vertical > li {
-    border-top: 1px solid $highlight;
-    padding: .5rem;
+	border-top: 1px solid $highlight;
+	padding: .5rem;
 }
 
 .menu.vertical > li:first-child {
-    border-top: none;
-    // padding-bottom: $regular-space;
+	border-top: none;
+	// padding-bottom: $regular-space;
 } 
 
 .menu.vertical > li:nth-child(2) {
-    border-top: none;
-    padding-bottom: $regular-space;
+	border-top: none;
+	padding-bottom: $regular-space;
 } 
-    
+	
 .off-canvas label {
-    color: #fff;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    border-top: none;
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	border-top: none;
 }
 
 .off-canvas a {
-    color: $highlight;
+	color: $highlight;
 }
 
 .off-canvas a:hover, a:focus {
-    color: $highlight-secondary;
+	color: $highlight-secondary;
 }
 
 // TOP BAR
 .top-bar {
-    color: $background;
-    padding: $regular-space;
-    border-bottom: 3px solid rgba(122, 122, 122, .5);
-    background-clip: padding-box;
+	color: $background;
+	padding: $regular-space;
+	border-bottom: 3px solid rgba(122, 122, 122, .5);
+	background-clip: padding-box;
 }
 
 .top-bar label {
-    color: $tertiary;
+	color: $tertiary;
 }
 
 .top-bar input {
-    width: 15em;
+	width: 15em;
 }
 
 .top-bar-left li {
-    height: 2.4375rem;
-    padding-top: .6rem; 
+	height: 2.4375rem;
+	padding-top: .6rem; 
 }
 
 // HEADER IMAGE
-.top-background-image {
-    background-repeat: no-repeat;
-    width: 100%; // Might need to sort with specific heights
-    position: absolute;
-    top: 0;
+header {
+	display: grid;
 }
 
-.top-background-image img {
-    width: 100%;
+.top-background-image {
+	grid-row: 1;
+	grid-column: 1/3;
+	width: 100%;
+}
+
+header > .site-logo {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+header > .small-nav {
+	grid-row: 1;
+	grid-column: 2;
 }
 
 .over-background {
-    background: $background;
+	background: $background;
 }
 
 // MENU
 // This was supposed to be an icon so now a word needs fixing
+.small-nav {
+	float: right;
+}
+
 .menu-icon {
-    width: auto;
-    height: auto;
-    @include breakpoint(small) {
-        font-size: 1.5rem;
-    }
-    @include breakpoint(medium) {
-        font-size: 2rem;
-    }
+	width: auto;
+	height: auto;
+	font-size: 1.5rem;
+	@media (min-width: map-get($breakpoints, medium)) {
+		font-size: 2rem;
+	}
 }
 
 .menu-icon::after {
-    background: none;
-    box-shadow: none;
+	background: none;
+	box-shadow: none;
 }
 
 .menu-icon:hover::after {
-    background: none;
-    box-shadow: none;
+	background: none;
+	box-shadow: none;
 }
 
 .medium-up-menu li {
-    text-align: center;
-    @include breakpoint(medium) {
-        font-size: 1.61rem;
-    }
-    @include breakpoint(large) {
-        font-size: 1.61rem;
-    }
+	text-align: center;
+	@media (min-width: map-get($breakpoints, medium)) {
+		font-size: 1.61rem;
+	}
+		@media (min-width: map-get($breakpoints, large)) {
+		font-size: 1.61rem;
+	}
 }
 
 // BUTTONS
@@ -308,10 +335,10 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 #buddypress .button:focus, 
 #buddypress input[type="submit"]:hover, 
 #buddypress input[type="submit"]:focus { 
-    // extra colour as its an alpha level I havent need other places
-    border: rgba(0,0,0,.1) 4px solid;
-    background: $secondary;
-    color: $highlight;
+	// extra colour as its an alpha level I havent need other places
+	border: rgba(0,0,0,.1) 4px solid;
+	background: $secondary;
+	color: $highlight;
 }
 
 // styling without the hover attribute
@@ -336,187 +363,178 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 
 // BUDDYPRESS
 #buddypress .standard-form #basic-details-section input[type=password], #buddypress .standard-form #blog-details-section input#signup_blog_url, #buddypress #commentform input[type=text], #buddypress #commentform textarea, #buddypress .form-allowed-tags, #buddypress .standard-form#signup_form input[type=text], #buddypress .standard-form#signup_form textarea {
-    width: 100%;
+	width: 100%;
 }
 
 #buddypress .standard-form #profile-details-section {
-    clear: both;
-    float: left;
+	clear: both;
+	float: left;
 }
 
 #buddypress .standard-form #basic-details-section, #buddypress .standard-form #blog-details-section, #buddypress .standard-form #profile-details-section {
-    width: 100%;
+	width: 100%;
 }
 
 #profile-details-section h4 {
-    display: none;
+	display: none;
 }
 
 .field-visibility-settings-toggle {
-    display: none;
+	display: none;
 }
 
 #buddypress .standard-form#signup_form div div.error {
-    width: 100%;
+	width: 100%;
 }
 
 #buddypress #pass-strength-result {
-    color: $background;
+	color: $background;
 }
 #buddypress .standard-form#signup_form div div.error {
-    background: $tertiary;
+	background: $tertiary;
 }
 
 // #SIDE_LOG
 #side_log p, #side_log label, #side_log input {
-    float: left;
-    margin-right: 1rem;
+	float: left;
+	margin-right: 1rem;
 }
 
 #side_log label {
-    height: 2.4375rem;
-    padding-top: .6rem;  
+	height: 2.4375rem;
+	padding-top: .6rem;  
 }
 
 #side_log input[type="checkbox"] {
-    width: auto;
-    margin-top: .4rem;
+	width: auto;
+	margin-top: .4rem;
 }
 
 #side_log input[type="submit"] {
-    width: auto;
-    padding: .7rem;
-    line-height: 1rem;
-    margin-bottom: 0;
+	width: auto;
+	padding: .7rem;
+	line-height: 1rem;
+	margin-bottom: 0;
 }
 
 #side_log h1, #side_log h2, #side_log h3, #side_log h4, #side_log h5, #side_log h6, #side_log p,#side_log p, #side_log label {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 // EXTRAS
 // lists in mutliple places
 .stripes li {
-    padding-left: $regular-space;
-    padding-right: $regular-space;
-    padding-top: $small-space;
-    padding-bottom: $small-space;
+	padding-left: $regular-space;
+	padding-right: $regular-space;
+	padding-top: $small-space;
+	padding-bottom: $small-space;
 }
 
 .stripes li:nth-child(odd) {
-    background: $quaternary;
+	background: $quaternary;
 }
 
 .stripes li:last-child {
-    margin-bottom: $regular-space;
+	margin-bottom: $regular-space;
 }
 
 .light-back .stripes li:nth-child(odd) {
-    background: $background;
+	background: $background;
 }
 
 .stripe-breaker {
-    margin-top: -.9375rem;
-    margin-bottom: -.9375rem;
-    font-size: 1.875rem;
-    color: $background;
+	margin-top: -.9375rem;
+	margin-bottom: -.9375rem;
+	font-size: 1.875rem;
+	color: $background;
 }
 
 .stripes li:nth-child(even) .stripe-breaker {
-    color: $quaternary;
+	color: $quaternary;
 }
 
 .light-back .stripes li:nth-child(odd) .stripe-breaker {
-    color: $tertiary;
+	color: $tertiary;
 }
 
 .line-higher {
-    line-height: 2.5rem;
+	line-height: 2.5rem;
 }
 
 .a2 a {
-    color: $secondary;
+	color: $secondary;
 }
 
 .a2 a:hover {
-    color: $tertiary;
+	color: $tertiary;
 }
-    
+	
 .a3 a {
-    color: $highlight;
+	color: $highlight;
 }
 
 a3 a:hover {
-    color: $background;
+	color: $background;
 }
 
 .a4 a {
-    color: $background;
+	color: $background;
 }
 
 .a4 a:hover {
-    color: $highlight;
+	color: $highlight;
 }
 
 .highlights {
-    color: $highlight;
+	color: $highlight;
 }
 
 .seconds {
-    color: $secondary;
+	color: $secondary;
 }
 
 .postfix {
-    margin-left: $regular-space;
+	margin-left: $regular-space;
 }
 
 // rows for mega form
 .second-background {
-    background: $quaternary;
-    padding-top: .4em;
+	background: $quaternary;
+	padding-top: .4em;
 }
 
 .any-center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .inline {
-    clear: both;
-    float: left;
-    margin-left: 0;
-    li {
-        float: left;
-        list-style: none;
-        margin-right: $regular-space;
-        margin-left: 0;
-    }
+	clear: both;
+	float: left;
+	margin-left: 0;
+	li {
+		float: left;
+		list-style: none;
+		margin-right: $regular-space;
+		margin-left: 0;
+	}
 }
 
-/* Border
+/* Border - neds better documentation
 -------------------------------------------------------------- */
 
 /* Small Medium screens */
-@media only screen and (max-width: 64em) {  /* min-width 1025px, large screens */
-    .border {
-        border-top: 3px solid #fff;
-    }
-}
-
-/* Large screens */
-@media only screen and (min-width: 64.063em) {  /* min-width 1025px, large screens */
-    .border {
-        border: 3px solid #fff;
-    }
+.main-border {
+	border-top: $global-border-width solid $white;
 }
 
 .border-slim {
-    border-top: 2px solid #999;
+	border-top: 2px solid #999;
 }
 
 .navi a {
-    margin-left: 1em;
+	margin-left: 1em;
 }
 
 /* Spacer
@@ -538,33 +556,33 @@ a3 a:hover {
   text-align: center;
 }
   .centered-inline-list > li {
-      list-style: none;
-      margin-left: 1.375rem;
-      display: inline-block; 
+	  list-style: none;
+	  margin-left: 1.375rem;
+	  display: inline-block; 
   }
-    .centered-inline-list > li > * {
-      display: block; }
+	.centered-inline-list > li > * {
+	  display: block; }
 
 /* Drop 20px used on mobile nav */
 
 .drop {
-    margin-top: $regular-space;
+	margin-top: $regular-space;
 }
 
 .fall {
-    margin-bottom: $regular-space;
+	margin-bottom: $regular-space;
 }
 
 label {
-    color: $secondary;
-    font-size: 1rem;
-    line-height: 1.6rem;
-    margin-bottom: 1.6rem;
+	color: $secondary;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	margin-bottom: 1.6rem;
 }
 
 #map-canvas {
-    height: 20rem;
-    width: 100%;
+	height: 20rem;
+	width: 100%;
 }
 
 .gallery img {
@@ -575,135 +593,135 @@ margin-top: 20px;
 -------------------------------------------------------------- */
 
 .flagbanner:before {
-    content:url('../img/flag-before.png');
-    position: absolute;
-    z-index: 2;
-    margin-left: -87px;
-    overflow: visible;
+	content:url('../img/flag-before.png');
+	position: absolute;
+	z-index: 2;
+	margin-left: -87px;
+	overflow: visible;
 }
 
 .flagbanner {
-    position: relative;
-    margin-top: $regular-space;
-    margin-bottom: $regular-space;
+	position: relative;
+	margin-top: $regular-space;
+	margin-bottom: $regular-space;
 }
 
 .flagbanner:after {
-    content:url('../img/flag-after.png');
-    position: absolute;
-    z-index: 2;
-    float: left;
+	content:url('../img/flag-after.png');
+	position: absolute;
+	z-index: 2;
+	float: left;
 }
 
 .flagbuttonbanner {
-    display: inline-block;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    background: #333;
-    border: $secondary 3px solid;
-    margin-right: -20px;
-    line-height: 3rem;
+	display: inline-block;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	background: #333;
+	border: $secondary 3px solid;
+	margin-right: -20px;
+	line-height: 3rem;
 }
 
 /* Banners
 -------------------------------------------------------------- */
 
 .banner:before {
-    content:url('../img/button-end-left.png');
-    position: absolute;
-    z-index: 2;
-    margin-left: -22px;
+	content:url('../img/button-end-left.png');
+	position: absolute;
+	z-index: 2;
+	margin-left: -22px;
 }
 
 .banner {
-    position: relative;
-    margin-left: 15px;
+	position: relative;
+	margin-left: 15px;
 }
 
 .banner:after {
-    content:url('../img/button-end-right.png');
-    position: absolute;
-    z-index: 2;
-    float: left;
+	content:url('../img/button-end-right.png');
+	position: absolute;
+	z-index: 2;
+	float: left;
 }
 
 .button-banner {
-    display: inline-block;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    background: #b9202f;
-    line-height: 51px;
-    margin-top: 0;
-    color: $secondary;
-    border: none;
-    text-transform: capitalize;
+	display: inline-block;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	padding-top: 0;
+	padding-bottom: 0;
+	background: #b9202f;
+	line-height: 51px;
+	margin-top: 0;
+	color: $secondary;
+	border: none;
+	text-transform: capitalize;
 }
 
 .any-collapse {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* Banner Dark
 -------------------------------------------------------------- */
 
 .bannerdark:before {
-    content:url('../img/bannerdark-end-left.png');
-    position: absolute;
+	content:url('../img/bannerdark-end-left.png');
+	position: absolute;
 }
 
 .bannerdark {
-    position: relative;
+	position: relative;
 }
 
 .bannerdark:after {
-    content:url('../img/bannerdark-end-right.png');
+	content:url('../img/bannerdark-end-right.png');
 }
 
 .buttonbannerdark {
-    margin-left: 1.2em;
-    float: left;
-    background: #000;
-    color: #fff;
-    padding: 1rem .1rem;
-    font-size: 1rem;
+	margin-left: 1.2em;
+	float: left;
+	background: #000;
+	color: #fff;
+	padding: 1rem .1rem;
+	font-size: 1rem;
 }
 
 .buttonbannerdark:hover {
-    background: #000;
+	background: #000;
 }
-    
+	
 .inline-block {
-    display: inline-block;
+	display: inline-block;
 }
 
 .accross {
-    margin-left: 7rem;
+	margin-left: 7rem;
 }
 
 .nudge {
-    margin-left: 3rem;
+	margin-left: 3rem;
 }
 
 /* Round
 -------------------------------------------------------------- */
 
 .round {
-    border-radius: 50%;
-    border: 5px solid #fbfbfb;
+	border-radius: 50%;
+	border: 5px solid #fbfbfb;
 }
 
 .outer {
-    border-radius: 50%;
-    border: 3px solid #fbfbfb;
-    padding: 1rem 0;
-    display: block;
+	border-radius: 50%;
+	border: 3px solid #fbfbfb;
+	padding: 1rem 0;
+	display: block;
 }
 
 .tap {
-    margin-left: 3rem;
+	margin-left: 3rem;
 }
 
 /* Full
@@ -711,46 +729,46 @@ margin-top: 20px;
 
 .bright {
 	background: $secondary;
-    color: #000;
+	color: #000;
 }
 
 .bright a {
-    color: $highlight;
+	color: $highlight;
 }
 
 .bright a:hover {
-    color: $background;
+	color: $background;
 }  
 
 .soft, .soft:before, .soft:after {
 	background: #666;
 	margin-bottom: 0;
-    color: #000;
+	color: #000;
 }
 
 .bright h2 {
-    color: #000;
+	color: #000;
 }
 
 .back-to-black {
-    background: #333;
-    border: 2px solid #000;
-    margin-right: 6px;
-    margin-left: -6px;
+	background: #333;
+	border: 2px solid #000;
+	margin-right: 6px;
+	margin-left: -6px;
 }
 
 .light-back {
-    background: $tertiary;
+	background: $tertiary;
 }
 
 /* Off
 -------------------------------------------------------------- */
 
 .off {
-    position: absolute;
-    top: 500px;
-    left: 60%;
-    height: 400px;
+	position: absolute;
+	top: 500px;
+	left: 60%;
+	height: 400px;
 }
 
 .center-button {
@@ -759,60 +777,60 @@ margin-top: 20px;
   line-height: 1.5;
   
   /* Medium up screens */
-    @include breakpoint(medium down) { 
-    font-size: 2.2rem;
-    }
-    @include breakpoint(large) {
-        font-size: 1.9375rem;
-    }
+  @media (min-width: map-get($breakpoints, medium)) { 
+	font-size: 2.2rem;
+	}
+		@media (min-width: map-get($breakpoints, large)) {
+		font-size: 1.9375rem;
+	}
 }
 
 .fade {
-    transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
 }
 
 .fade a:hover {
-    zoom: 1;
-    filter: alpha(opacity=80);
-    opacity: .8;
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: .8;
 }
 
 .fade:hover {
-    opacity: .8;
+	opacity: .8;
 }
 
 .fade-to-red img {
 	transition: .3s ease-in-out;
-    opacity: 0;
+	opacity: 0;
 }
 .fade-to-red img:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
 .img-min-100 img {
-    min-width: 100%;
+	min-width: 100%;
 }
 
 /* 
-    3 - Sticky
-    Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress 
+	3 - Sticky
+	Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress 
 --------------------------------------------------------------- */
 .featured-title {
-    display: none;
+	display: none;
 }
 
 .sticky {
-    position: relative;
+	position: relative;
 }
 
 .sticky .featured-title {
-    background: $tertiary;
-    display: block;
-    color: $tertiary;
+	background: $tertiary;
+	display: block;
+	color: $tertiary;
 }
 
 .extra-right {
-    margin-right: $regular-space;
+	margin-right: $regular-space;
 }
 
 .hover-back:hover {
@@ -824,21 +842,21 @@ margin-top: 20px;
 .unicode {
 	speak: none;
 	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $highlight;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: $highlight;
 }
 
 // literal cross the anti tick
 .cross {
-    color: $tertiary;
+	color: $tertiary;
 }
 
 .no-bottom {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 //give the top bar double buttons a bit of space to breathe
 .border-spacing-top-bar {
-    border-spacing: $regular-space 0px;
+	border-spacing: $regular-space 0px;
 }

@@ -32,13 +32,11 @@
 
 </div>
 
-		</div><!-- inner wrap -->
-	</div><!-- off canvas wrap -->
-</div><!-- background image header -->
+		<!-- </div> inner wrap -->
+	<!-- </div> off canvas wrap -->
+<!-- </div> background image header this can't be right anymore -->
 
 <?php wp_footer(); ?>
-<script src="<?php echo get_template_directory_uri()?>/node_modules/what-input/dist/what-input.js"></script>
-<script src="<?php echo get_template_directory_uri()?>/node_modules/foundation-sites/dist/js/foundation.js"></script>
-<script src="<?php echo get_template_directory_uri()?>/js/app.js"></script>
+
 </body>
 </html>
