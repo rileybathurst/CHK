@@ -5,8 +5,8 @@
 
 get_header();
 
-    if ( is_user_logged_in() ) { 
-        
-        wp_logout(); 
-
+	if ( is_user_logged_in() ) { 
+		
+		wp_logout(); 
+	}
 get_footer(); ?>

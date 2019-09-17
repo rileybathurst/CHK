@@ -230,32 +230,38 @@ textarea {
 
 // HEADER IMAGE
 header {
-	display: grid; // needed for overlay
+	// display: grid; // I dont think this is needed for overlay
 }
 
 .top-background-image {
-	grid-row: 1;
-	grid-column: 1/3;
+	// grid-row: 1;
+	// grid-column: 1/3;
+	position: absolute;
+	z-index: -1;
 }
 
-header > .site-logo {
-	grid-row: 1;
-	grid-column: 1;
+.top-background-image picture {
+	width: 100%;
+}
+
+header > .site-logo { // this isnt't wrapping the height properly
+	// grid-row: 1;
+	// grid-column: 1;
+	display: inline; // allow the small-nav to sit beside
+	margin: $regular-space;
 }
 
 header > .small-nav {
-	grid-row: 1;
-	grid-column: 2;
+	// grid-row: 1;
+	// grid-column: 2;
+	float: right;
 }
 
 .over-background {
 	background: $background; // this would add some depth to alter the color slightly
 }
 
-// MENU
-.small-nav {
-	float: right;
-}
+
 
 .menu-icon {
 	width: auto; // are these needed?
