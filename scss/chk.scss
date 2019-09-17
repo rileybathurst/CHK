@@ -1,4 +1,4 @@
-/* sass variable */
+/* sass variables */
 
 $breakpoints: (
 	small: 0,
@@ -7,22 +7,21 @@ $breakpoints: (
 );
 
 $white: #fefefe;
+$black: #222;
 
 $background: #333;
-$secondary: #fff;
-$tertiary: #888;
-$quaternary: #222;
+$secondary: #fff; // get rid of this
+$tertiary: #888; // get rid of this
+$quaternary: #222; // get rid of this
 $highlight: #b9202f;
-$highlight-secondary: #FF482A;
+$highlight-secondary: #FF482A; // this might be better with an rgba?
 
 $global-border-width: 3px;
 
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
-$regular-space: .9375rem;
-$small-space: .625rem;
-
-/* Extra CSS I've added to fix things */
+$regular-space: .9375rem; 
+$small-space: .625rem; // remove this I can just use math
 
 // CONTENTS
 
@@ -129,15 +128,30 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 	color: $highlight;
 }
 
-[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
-	color: $background;
+[type='text'], // get rid of the ones I'm not using
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+	color: $background; // this is currently really dark thats probably not what I want
 }
 
 textarea {
-	height: 10rem;
+	min-height: 10rem;
 }
 
-.field-visibility-settings-notoggle, #buddypress .standard-form p.description {
+.field-visibility-settings-notoggle,
+#buddypress .standard-form p.description { // these are a couple of specific selectors with no documentation
 	visibility: hidden;
 	height: 0;
 	margin: 0;
@@ -147,83 +161,49 @@ textarea {
 
 // OFF CANVAS
 .off-canvas {
-	height: 100%; /* needed to fill the frame */
-	z-index: 0; /* deal with full colour background sides, this is -1 default */
+	min-height: 100%; /* needed to fill the frame */
+	z-index: 0;
 	position: absolute;
 	background: $background;
-	max-height: 100%;
-	overflow-y: auto;
-	color: $highlight;
+	color: $highlight; // why am I using link color for regular text
 	padding: $regular-space;
 }
 
-.off-canvas-content {
-	background: none;
-	
-	// gives a little space when on large for the floating
-	@media (min-width: map-get($breakpoints, large)) {
-		padding-bottom: 2rem;
-	}
-}
-
-// Note to Riley why is this the only one not .off-canvas with the hypen
-.offcanvas ul {
+.offcanvas ul { // why is this the only one not .off-canvas with the hypen
 	line-height: 1.5rem;
 }
 
 .off-canvas .button {
-	color: $secondary;
+	color: $secondary; // why am I changing up the color scheme for the off canvas? keep it simple and its easier?
 }
 
 .off-canvas .button:hover {
 	color: $highlight;
 }
 
-.has-submenu a:after {
-	content: '';
-	display: block;
-	width: 0;
-	height: 0;
-	border: 6px inset;
-	border-color: $highlight-secondary transparent transparent;
-	border-top-style: solid;
-	position: absolute;
-	top: inherit;
-	margin-top: -4px;
-	right: 1rem;
-}
-
-.is-submenu-item a:after {
-	content: none;
-}
-
 .menu.vertical > li {
 	border-top: 1px solid $highlight;
-	padding: .5rem;
+	padding: 1.5em;
 }
 
-.menu.vertical > li:first-child {
-	border-top: none;
-	// padding-bottom: $regular-space;
-} 
-
+.menu.vertical > li:first-child, 
 .menu.vertical > li:nth-child(2) {
 	border-top: none;
-	padding-bottom: $regular-space;
 } 
 	
-.off-canvas label {
-	color: #fff;
-	font-size: 1.2rem;
+.off-canvas label { // part of the log in form
+	color: $white;
+	font-size: 1.2rem; // type scale
 	line-height: 1.5rem;
-	border-top: none;
+	border-top: none; // do labels ever have a border
 }
 
 .off-canvas a {
-	color: $highlight;
+	color: $highlight; // why do I have to double down on this?
 }
 
-.off-canvas a:hover, a:focus {
+.off-canvas a:hover, 
+.off-canvas a:focus {
 	color: $highlight-secondary;
 }
 
@@ -231,32 +211,31 @@ textarea {
 .top-bar {
 	color: $background;
 	padding: $regular-space;
-	border-bottom: 3px solid rgba(122, 122, 122, .5);
-	background-clip: padding-box;
+	border-bottom: $global-border-width solid $tertiary;
+	background-clip: padding-box; // why do we have this?
 }
 
-.top-bar label {
-	color: $tertiary;
+.top-bar label { // sign in forms
+	color: $tertiary; // why not use the same label color everywhere?
 }
 
 .top-bar input {
-	width: 15em;
+	width: 15em; // can this be a min or max width?
 }
 
 .top-bar-left li {
-	height: 2.4375rem;
-	padding-top: .6rem; 
+	height: 2.4375rem; // this could be simplier
+	padding-top: .6rem; // this could be simplier
 }
 
 // HEADER IMAGE
 header {
-	display: grid;
+	display: grid; // needed for overlay
 }
 
 .top-background-image {
 	grid-row: 1;
 	grid-column: 1/3;
-	width: 100%;
 }
 
 header > .site-logo {
@@ -270,60 +249,59 @@ header > .small-nav {
 }
 
 .over-background {
-	background: $background;
+	background: $background; // this would add some depth to alter the color slightly
 }
 
 // MENU
-// This was supposed to be an icon so now a word needs fixing
 .small-nav {
 	float: right;
 }
 
 .menu-icon {
-	width: auto;
+	width: auto; // are these needed?
 	height: auto;
-	font-size: 1.5rem;
+	font-size: 1.5rem; // type scale?
 	@media (min-width: map-get($breakpoints, medium)) {
-		font-size: 2rem;
+		font-size: 2rem; // type scale?
 	}
 }
 
-.menu-icon::after {
+.menu-icon::after { // what is this working on?
 	background: none;
 	box-shadow: none;
 }
 
-.menu-icon:hover::after {
+.menu-icon:hover::after { // why does it need doubling down on?
 	background: none;
 	box-shadow: none;
 }
 
 .medium-up-menu li {
 	text-align: center;
-	@media (min-width: map-get($breakpoints, medium)) {
-		font-size: 1.61rem;
-	}
-		@media (min-width: map-get($breakpoints, large)) {
-		font-size: 1.61rem;
-	}
+	font-size: 1.61rem; // type scale?
 }
 
 // BUTTONS
-button, .button, input[type="submit"], #buddypress button, #buddypress .button, #buddypress input[type="submit"] {
-  cursor: pointer;
-  margin: 0 0 $regular-space;
-  position: relative;
-  text-decoration: none;
+button,
+.button,
+input[type="submit"],
+#buddypress button, // are these overwritten or am I doubling for no reason?
+#buddypress .button,
+#buddypress input[type="submit"] {
+  cursor: pointer; // needed for the .button
+  margin: 0 0 $regular-space; // dont use 3?
+  position: relative; // what is this overwritting?
+  text-decoration: none; // needed for the .button
   text-align: center;
-  display: inline-block;
-  text-transform: uppercase;  
+  display: inline-block; // lets other things on the same line? 
+  text-transform: uppercase;
   padding: $regular-space;
-  font-size: $regular-space;
+  font-size: $regular-space; // dont use spacing variables on sizes use a type scale?
   background: $highlight;
-  font-weight: normal !important;  
+  font-weight: normal !important; // what was it trying to be?
   transition: all 300ms;
   color: $secondary;
-  border: $highlight 4px solid;
+  border: $highlight 4px solid; // needed for using a border on hover
   border-radius: .1em;
 }
 
@@ -336,13 +314,14 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 #buddypress input[type="submit"]:hover, 
 #buddypress input[type="submit"]:focus { 
 	// extra colour as its an alpha level I havent need other places
-	border: rgba(0,0,0,.1) 4px solid;
+	border: rgba(0,0,0,.1) $global-border-width solid; // why such a transparent why not use a color?
 	background: $secondary;
 	color: $highlight;
 }
 
 // styling without the hover attribute
-.fake-button {
+.fake-button { // used in some pagination but seems like I could do it better?
+	// I could use the same as regular button just not givve it a :hover
   margin: 0 0 $regular-space;
   position: relative;
   text-decoration: none;
@@ -362,72 +341,77 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 }
 
 // BUDDYPRESS
-#buddypress .standard-form #basic-details-section input[type=password], #buddypress .standard-form #blog-details-section input#signup_blog_url, #buddypress #commentform input[type=text], #buddypress #commentform textarea, #buddypress .form-allowed-tags, #buddypress .standard-form#signup_form input[type=text], #buddypress .standard-form#signup_form textarea {
+#buddypress .standard-form #basic-details-section input[type=password], // couldnt these be simplier selectors?
+#buddypress .standard-form #blog-details-section input#signup_blog_url,
+#buddypress #commentform input[type=text],
+#buddypress #commentform textarea,
+#buddypress .form-allowed-tags,
+#buddypress .standard-form#signup_form input[type=text],
+#buddypress .standard-form#signup_form textarea {
 	width: 100%;
 }
 
-#buddypress .standard-form #profile-details-section {
+#buddypress .standard-form #profile-details-section { // give some documentation on this?
 	clear: both;
 	float: left;
 }
 
-#buddypress .standard-form #basic-details-section, #buddypress .standard-form #blog-details-section, #buddypress .standard-form #profile-details-section {
+#buddypress .standard-form #basic-details-section, // add these all to the selectors above?
+#buddypress .standard-form #blog-details-section,
+#buddypress .standard-form #profile-details-section {
 	width: 100%;
 }
 
-#profile-details-section h4 {
+#profile-details-section h4 { // this seems like a strange thing to remove?
 	display: none;
 }
 
-.field-visibility-settings-toggle {
+.field-visibility-settings-toggle { // am I just not letting customers use things? seems like that could be a setting instead?
 	display: none;
 }
 
-#buddypress .standard-form#signup_form div div.error {
+#buddypress .standard-form#signup_form div div.error { // add it above?
 	width: 100%;
 }
 
 #buddypress #pass-strength-result {
-	color: $background;
+	color: $background; // what is this overwritting?
 }
 #buddypress .standard-form#signup_form div div.error {
-	background: $tertiary;
+	background: $tertiary; // use an error color for an error?
 }
 
-// #SIDE_LOG
+// #SIDE_LOG // I presume this is the side log in?
 #side_log p, #side_log label, #side_log input {
-	float: left;
+	float: left; // why would any of these not be floated left?
 	margin-right: 1rem;
 }
 
 #side_log label {
-	height: 2.4375rem;
-	padding-top: .6rem;  
+	height: 2.4375rem; // repeat of the other log in not fixing the height is safer?
+	padding-top: .6rem; // is this a hack to get it to sit inline?
 }
 
 #side_log input[type="checkbox"] {
-	width: auto;
-	margin-top: .4rem;
+	width: auto; // why would it not be?
+	margin-top: .4rem; // use a standard measure
 }
 
 #side_log input[type="submit"] {
 	width: auto;
-	padding: .7rem;
-	line-height: 1rem;
-	margin-bottom: 0;
+	padding: .7rem; // use a standard measure
+	line-height: 1rem; // why would it not be?
+	margin-bottom: 0; // why am I dropping off all the margin-bottom?
 }
 
 #side_log h1, #side_log h2, #side_log h3, #side_log h4, #side_log h5, #side_log h6, #side_log p,#side_log p, #side_log label {
-	margin-bottom: 0;
+	margin-bottom: 0; // why am I dropping off all the margin-bottom?
 }
 
 // EXTRAS
 // lists in mutliple places
 .stripes li {
-	padding-left: $regular-space;
-	padding-right: $regular-space;
-	padding-top: $small-space;
-	padding-bottom: $small-space;
+	padding: $small-space $regular-space;
 }
 
 .stripes li:nth-child(odd) {
@@ -435,21 +419,21 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 }
 
 .stripes li:last-child {
-	margin-bottom: $regular-space;
+	margin-bottom: $regular-space; // whats this overwritting?
 }
 
 .light-back .stripes li:nth-child(odd) {
 	background: $background;
 }
 
-.stripe-breaker {
+.stripe-breaker { // does this just reset the stripes?
 	margin-top: -.9375rem;
 	margin-bottom: -.9375rem;
 	font-size: 1.875rem;
 	color: $background;
 }
 
-.stripes li:nth-child(even) .stripe-breaker {
+.stripes li:nth-child(even) .stripe-breaker { // this is a super confusing selector
 	color: $quaternary;
 }
 
@@ -457,8 +441,8 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 	color: $tertiary;
 }
 
-.line-higher {
-	line-height: 2.5rem;
+.line-higher { // is this just part of the stripes so the lines are uniform
+	line-height: 2.5rem; // type scale?
 }
 
 .a2 a {
@@ -470,7 +454,7 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 }
 	
 .a3 a {
-	color: $highlight;
+	color: $highlight; // isnt this just going back to defaults?
 }
 
 a3 a:hover {
@@ -478,7 +462,7 @@ a3 a:hover {
 }
 
 .a4 a {
-	color: $background;
+	color: $background; 
 }
 
 .a4 a:hover {
@@ -486,7 +470,7 @@ a3 a:hover {
 }
 
 .highlights {
-	color: $highlight;
+	color: $highlight; // not very user friendly to use the link pattern on regular text
 }
 
 .seconds {
@@ -494,27 +478,27 @@ a3 a:hover {
 }
 
 .postfix {
-	margin-left: $regular-space;
+	margin-left: $regular-space; // is this just a bad way of making a space?
 }
 
 // rows for mega form
-.second-background {
-	background: $quaternary;
-	padding-top: .4em;
+.second-background { // at least its documented as why
+	background: $quaternary; 
+	padding-top: .4em; // type scale?
 }
 
 .any-center {
-	margin-left: auto;
+	margin-left: auto; // can this be made in one line?
 	margin-right: auto;
-	display: block;
+	display: block; // why?
 }
 
 .inline {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	li {
-		float: left;
+	li { // only time I used nested selectors?
+		float: left; // whats this overwritting?
 		list-style: none;
 		margin-right: $regular-space;
 		margin-left: 0;
@@ -524,48 +508,44 @@ a3 a:hover {
 /* Border - neds better documentation
 -------------------------------------------------------------- */
 
-/* Small Medium screens */
 .main-border {
 	border-top: $global-border-width solid $white;
 }
 
 .border-slim {
-	border-top: 2px solid #999;
+	border-top: $global-border-width/2 solid #999; // is the color just to be more subtle?
 }
 
 .navi a {
-	margin-left: 1em;
+	margin-left: 1em; // why not the gloabl space?
 }
 
 /* Spacer
 -------------------------------------------------------------- */
 
 .spacer {
-	margin-right: 1rem;
+	margin-right: 1rem; // used around unicode symbolds - can they just have spaces or &nbsp;?
 }
 
 /* Center an inline list - based on inline-list */
-
 .centered-inline-list {
-  margin: 0 auto 1.0625rem auto;
+  margin: 0 auto 1.0625rem auto; // overly complicated
   margin-left: -1.375rem;
   margin-right: 0;
   padding: 0;
-  list-style: none;
-  overflow: hidden; 
+  list-style: none; // why is this here and below?
+  overflow: hidden;  // why would there be an overflow?
   text-align: center;
 }
   .centered-inline-list > li {
 	  list-style: none;
-	  margin-left: 1.375rem;
-	  display: inline-block; 
+	  margin-left: 1.375rem; // not just have this and above both be zero rather than going back and forward?
+	  display: inline-block; // seems like it always would be?
   }
 	.centered-inline-list > li > * {
-	  display: block; }
+	  display: block; } // everything has to be a row?
 
-/* Drop 20px used on mobile nav */
-
-.drop {
+.drop { // globals should be at the top?
 	margin-top: $regular-space;
 }
 
@@ -575,17 +555,17 @@ a3 a:hover {
 
 label {
 	color: $secondary;
-	font-size: 1rem;
-	line-height: 1.6rem;
+	font-size: 1rem; // is this a browser reset?
+	line-height: 1.6rem; // type scale?
 	margin-bottom: 1.6rem;
 }
 
-#map-canvas {
+#map-canvas { // is this used anywhere?
 	height: 20rem;
 	width: 100%;
 }
 
-.gallery img {
+.gallery img { // wordpress generated class?
 margin-top: 20px;   
 }
 
@@ -596,13 +576,13 @@ margin-top: 20px;
 	content:url('../img/flag-before.png');
 	position: absolute;
 	z-index: 2;
-	margin-left: -87px;
+	margin-left: -87px; // this is a very hacky way of doing this
 	overflow: visible;
 }
 
 .flagbanner {
 	position: relative;
-	margin-top: $regular-space;
+	margin-top: $regular-space; // do this in one line?
 	margin-bottom: $regular-space;
 }
 
@@ -615,7 +595,7 @@ margin-top: 20px;
 
 .flagbuttonbanner {
 	display: inline-block;
-	padding-right: 2rem;
+	padding-right: 2rem; // all done with em would be more scaleable?
 	padding-left: 2rem;
 	background: #333;
 	border: $secondary 3px solid;
@@ -627,15 +607,15 @@ margin-top: 20px;
 -------------------------------------------------------------- */
 
 .banner:before {
-	content:url('../img/button-end-left.png');
+	content:url('../img/button-end-left.png'); // Id like to see this a svg seems lighter
 	position: absolute;
-	z-index: 2;
+	z-index: 2; // what does it need to be above?
 	margin-left: -22px;
 }
 
 .banner {
 	position: relative;
-	margin-left: 15px;
+	margin-left: 15px; // is this just trying to make 7px?
 }
 
 .banner:after {
@@ -645,22 +625,19 @@ margin-top: 20px;
 	float: left;
 }
 
-.button-banner {
+.button-banner { // I dont think button is the right name
 	display: inline-block;
-	padding-right: 1rem;
-	padding-left: 1rem;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 1rem;
 	background: #b9202f;
-	line-height: 51px;
+	line-height: 51px; // cmon? this cant be right
 	margin-top: 0;
 	color: $secondary;
 	border: none;
 	text-transform: capitalize;
 }
 
-.any-collapse {
-	padding-left: 0;
+.any-collapse { // document
+	padding-left: 0; // can it be one line?
 	padding-right: 0;
 }
 
@@ -668,7 +645,7 @@ margin-top: 20px;
 -------------------------------------------------------------- */
 
 .bannerdark:before {
-	content:url('../img/bannerdark-end-left.png');
+	content:url('../img/bannerdark-end-left.png'); // an svg would stop doubling up
 	position: absolute;
 }
 
@@ -685,24 +662,24 @@ margin-top: 20px;
 	float: left;
 	background: #000;
 	color: #fff;
-	padding: 1rem .1rem;
-	font-size: 1rem;
+	padding: 1rem .1rem; // thats a wierd hack fix
+	font-size: 1rem; // what else was it going to be?
 }
 
 .buttonbannerdark:hover {
-	background: #000;
+	background: #000; // am I stopping somethng from changing or just a duplicate?
 }
 	
 .inline-block {
-	display: inline-block;
+	display: inline-block; // why wouldnt this be on the element?
 }
 
-.accross {
-	margin-left: 7rem;
+.accross { // doesnt seem like its used?
+	margin-left: 7rem; // thats a really big margin?
 }
 
-.nudge {
-	margin-left: 3rem;
+.nudge { // doesnt seem used?
+	margin-left: 3rem; // pretty big nudge?
 }
 
 /* Round
@@ -720,7 +697,7 @@ margin-top: 20px;
 	display: block;
 }
 
-.tap {
+.tap { // doesnt seem used?
 	margin-left: 3rem;
 }
 
@@ -740,17 +717,17 @@ margin-top: 20px;
 	color: $background;
 }  
 
-.soft, .soft:before, .soft:after {
+.soft, .soft:before, .soft:after { // doesnt seem used?
 	background: #666;
 	margin-bottom: 0;
 	color: #000;
 }
 
-.bright h2 {
+.bright h2 { // only h2?
 	color: #000;
 }
 
-.back-to-black {
+.back-to-black { // not referenced as used
 	background: #333;
 	border: 2px solid #000;
 	margin-right: 6px;
@@ -764,7 +741,7 @@ margin-top: 20px;
 /* Off
 -------------------------------------------------------------- */
 
-.off {
+.off { // not referenced as used?
 	position: absolute;
 	top: 500px;
 	left: 60%;
@@ -778,9 +755,9 @@ margin-top: 20px;
   
   /* Medium up screens */
   @media (min-width: map-get($breakpoints, medium)) { 
-	font-size: 2.2rem;
+	font-size: 2.2rem; // type scale?
 	}
-		@media (min-width: map-get($breakpoints, large)) {
+	@media (min-width: map-get($breakpoints, large)) {
 		font-size: 1.9375rem;
 	}
 }
@@ -791,23 +768,23 @@ margin-top: 20px;
 
 .fade a:hover {
 	zoom: 1;
-	filter: alpha(opacity=80);
+	filter: alpha(opacity=80); // is this just below?
 	opacity: .8;
 }
 
 .fade:hover {
-	opacity: .8;
+	opacity: .8; // why is this below the selector above?
 }
 
 .fade-to-red img {
 	transition: .3s ease-in-out;
-	opacity: 0;
+	opacity: 0; // why start at 0 and go to 100 not the other way around? seems worse for touch interaction
 }
 .fade-to-red img:hover {
 	opacity: 1;
 }
 
-.img-min-100 img {
+.img-min-100 img { // cant this be somewhere better?
 	min-width: 100%;
 }
 
@@ -816,7 +793,7 @@ margin-top: 20px;
 	Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress 
 --------------------------------------------------------------- */
 .featured-title {
-	display: none;
+	display: none; // I think this is a default
 }
 
 .sticky {
@@ -833,14 +810,14 @@ margin-top: 20px;
 	margin-right: $regular-space;
 }
 
-.hover-back:hover {
+.hover-back:hover { // needs a better name
   background-color: $highlight;
   background-blend-mode: screen;
   transition: background-color .5s ease;
 }
 
 .unicode {
-	speak: none;
+	speak: none; // throwing a warning on vscode?
 	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -849,7 +826,7 @@ margin-top: 20px;
 
 // literal cross the anti tick
 .cross {
-	color: $tertiary;
+	color: $tertiary; // whats this overwritting?
 }
 
 .no-bottom {
@@ -858,5 +835,5 @@ margin-top: 20px;
 
 //give the top bar double buttons a bit of space to breathe
 .border-spacing-top-bar {
-	border-spacing: $regular-space 0px;
+	border-spacing: $regular-space 0px; // why border spacing and not margins?
 }

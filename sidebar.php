@@ -1,4 +1,4 @@
-<div class="large-6 columns light-back show-for-large" data-equalizer-watch>
+<div class="large-6 columns light-back show-for-large">
 	<?php
 	// first loop
 	$args = array( 'posts_per_page' => 1, 'category_name' => 'recipes', 'orderby' => 'rand', ); // can this be done with a widget?

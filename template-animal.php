@@ -113,7 +113,7 @@
                                 <!-- remove spaces from the page title needed for the next url -->
                                 <?php 
                                     $str = get_the_title(); 
-                                    $str=preg_replace('/\s+/', '', $str);
+                                    $str=preg_replace('/\s+/', '', $str); // this is a sketchy way of overwritting a variable with the same name?
                                 ?>
 
                                 <h4 class="small-push-1"><a href="<?php echo home_url(); ?>/order-declaration/?a=<?php echo $str; ?>" class="button">Order</a></h4>

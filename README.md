@@ -8,3 +8,4 @@ sass scss/app.scss css/app.css --watch
 Things to do
 - small menu
 - how much of home can be made in Gutenberg
+- what is the site map? it doesnt have an extension
