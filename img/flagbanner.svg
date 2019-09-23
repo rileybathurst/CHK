@@ -1,0 +1,41 @@
+<!-- scrappy but works as an idea -->
+<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="
+    M 30,5
+    Q 90,20 150,10
+      165,5 170,20
+    V 60
+    Q 169,75 150,80
+      90,100 30,70
+      45,60 60,40
+    Z
+    " stroke="gray" fill="gray" stroke-width="5"/>
+
+  <path d="
+    M 170,20
+    V 80
+    Q 170,95 150,100
+      115,105 100,50
+      100,40 130,40
+    T 170,20
+    Z
+    " stroke="darkgray" fill="darkgray" stroke-width="5"/>
+
+  <path d="
+    M 105,45
+    L 110,75
+      110,40
+      120,85
+      120,40
+      130,98
+      130,40
+      140,102
+      140,40
+      150,102
+      150,35
+      160,100
+      160,30
+      170,90
+      170,20
+  " stroke="white" fill="transparent" stroke-width="3" stroke-linecap="round"/>
+</svg>

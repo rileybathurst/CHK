@@ -187,3 +187,37 @@ function logout_redirect()
 }
 // Starts the action
 add_action( 'template_redirect', 'logout_redirect' );
+
+// Make a block to deal with the banners
+function gutenberg_banner_block() {
+
+	wp_register_script(
+		'banner-block',
+		get_template_directory_uri() . '/js/banner-block.js',
+		array( 'wp-blocks', 'wp-element', 'wp-editor' )
+		// filemtime( get_template_directory_uri() . '/js/banner-block.js' ) // I dont understand this one or know if its neccesary
+	);
+
+	wp_register_style(
+		'banner-block-editor',
+		get_template_directory_uri() . '/css/banner-block-editor.css',
+		array( 'wp-edit-blocks' )
+		// filemtime( get_template_directory_uri() . '/css/banner-block-editor.css' )
+	);
+
+	wp_register_style(
+		'banner-block',
+		get_template_directory_uri() . '/css/banner-block.css',
+		array( )
+		// filemtime( get_template_directory_uri() . '/css/banner-block.css' )
+	);
+
+	register_block_type( 'chk/banner-block', array(
+		'style' => 'banner-block',
+		'editor_style' => 'banner-block-editor',
+		'editor_script' => 'banner-block',
+		) 
+	);
+
+}
+add_action( 'init', 'gutenberg_banner_block' );
