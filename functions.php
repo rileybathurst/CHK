@@ -65,32 +65,20 @@ function chk_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	// hack way of using the 
+	// enqueue the script we would like to pass our PHP variables to
+	wp_enqueue_script( 'uncoverwp1', get_template_directory_uri() . '/js/test.js', array(), false, true); // this works only on the front end
+	// pass our PHP variables to the script we enqueued above using wp_localize_script()
+	wp_localize_script(
+		'uncoverwp1', // the handle of the script we enqueued above
+		'uncoverwp_script_vars', // object name to access our PHP variables from in our script
+		// register an array of variables we would like to use in our script
+		array(
+			'template_directory' => get_template_directory_uri() // template_directory now contains the path to our template directory
+		)
+	);
 }
 add_action( 'wp_enqueue_scripts', 'chk_scripts' );
-
-/* Custom Login */
-/* Custom Logo */
-/*function my_login_logo() { ?>
-    <style type="text/css">
-        .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/CHK-logo-280.png);
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-*/
-// I think these have all been removed with front page logins and were not asahmed of using wp
-/* Logo Links to my site */
-/* function my_login_logo_url() {
-    return home_url();
-}
-add_filter( 'login_headerurl', 'my_login_logo_url' );
-
-function my_login_logo_url_title() {
-    return 'Canterbury Homekill';
-}
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
-*/
 
 // remove p from posts - was making some wierd stuff with flagbanner and extremely custom styling
 // I think with gutenberg I can now remove this
@@ -190,34 +178,29 @@ add_action( 'template_redirect', 'logout_redirect' );
 
 // Make a block to deal with the banners
 function gutenberg_banner_block() {
-
 	wp_register_script(
 		'banner-block',
 		get_template_directory_uri() . '/js/banner-block.js',
 		array( 'wp-blocks', 'wp-element', 'wp-editor' )
 		// filemtime( get_template_directory_uri() . '/js/banner-block.js' ) // I dont understand this one or know if its neccesary
 	);
-
 	wp_register_style(
 		'banner-block-editor',
 		get_template_directory_uri() . '/css/banner-block-editor.css',
 		array( 'wp-edit-blocks' )
 		// filemtime( get_template_directory_uri() . '/css/banner-block-editor.css' )
 	);
-
 	wp_register_style(
 		'banner-block',
 		get_template_directory_uri() . '/css/banner-block.css',
 		array( )
 		// filemtime( get_template_directory_uri() . '/css/banner-block.css' )
 	);
-
 	register_block_type( 'chk/banner-block', array(
 		'style' => 'banner-block',
 		'editor_style' => 'banner-block-editor',
 		'editor_script' => 'banner-block',
 		) 
 	);
-
 }
 add_action( 'init', 'gutenberg_banner_block' );
