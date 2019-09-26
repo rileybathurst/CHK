@@ -50,8 +50,7 @@
 				tagName: 'div',
 				value: 
 					props.attributes.content +
-					'ello World, step 1' +
-					'<div id="extra">inside</div>' +
+					
 					'<img src="http://localhost:8888/chk/wp-content/uploads/2019/09/CHK-logo.png" alt="img">' +
 					'<img src="../img/pig.png" alt="pig" />' // +
 					// alignment

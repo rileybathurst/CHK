@@ -65,12 +65,12 @@ function chk_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// hack way of using the 
+	// hack way of updating a gutenberg block that needs a php variable but is a js file
 	// enqueue the script we would like to pass our PHP variables to
-	wp_enqueue_script( 'uncoverwp1', get_template_directory_uri() . '/js/test.js', array(), false, true); // this works only on the front end
+	wp_enqueue_script( 'uncoverwp', get_template_directory_uri() . '/js/update.js', array(), false, true);
 	// pass our PHP variables to the script we enqueued above using wp_localize_script()
 	wp_localize_script(
-		'uncoverwp1', // the handle of the script we enqueued above
+		'uncoverwp', // the handle of the script we enqueued above
 		'uncoverwp_script_vars', // object name to access our PHP variables from in our script
 		// register an array of variables we would like to use in our script
 		array(
