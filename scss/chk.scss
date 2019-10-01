@@ -20,8 +20,8 @@ $global-border-width: 3px;
 
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
-$regular-space: .9375em; 
-$small-space: $regular-space/2;
+$regular-space: .9375rem; 
+$small-space: .625rem; // remove this I can just use math
 
 // CONTENTS
 
@@ -55,10 +55,6 @@ h3 {
 	@media (min-width: map-get($breakpoints, medium)) {
 		font-size: 2.2rem;
 	}
-}
-
-hr {
-	border-bottom: 1px solid $white;
 }
 
 a {
@@ -116,6 +112,10 @@ select {
 .uppercase {
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
+}
+
+.text-center {
+	text-align: center;
 }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
@@ -234,39 +234,41 @@ textarea {
 
 // HEADER IMAGE
 header {
-	// display: grid; // I dont think this is needed for overlay
+	display: grid; // needed for overlay
+	max-width: 100% // this isnt working and needs love
 }
 
 .top-background-image {
-	// grid-row: 1;
-	// grid-column: 1/3;
-	position: absolute;
-	z-index: -1;
+	grid-row: 1;
+	grid-column: 1/3;
+	// theres a cover spec for this but I cant remeber it without internet
 }
 
-.top-background-image picture {
-	width: 100%;
+header > .site-logo { // is there a nice way to keep this to a max width?
+	grid-row: 1;
+	grid-column: 1;
 }
 
-header > .site-logo { // this isnt't wrapping the height properly
-	// grid-row: 1;
-	// grid-column: 1;
-	display: inline; // allow the small-nav to sit beside
-	margin: $regular-space;
+.custom-logo {
+	max-width: 44em;
+	height: auto; // needed to constrain proportions
+	margin: 1em auto; // this doesnt work as the element being adapted is too far down
 }
 
 header > .small-nav {
-	// grid-row: 1;
-	// grid-column: 2;
-	float: right;
+	grid-row: 1;
+	grid-column: 2;
 }
 
 .over-background {
 	background: $background; // this would add some depth to alter the color slightly
-	padding: $regular-space;
 }
 
-
+// MENU
+.small-nav > button {
+	float: right;
+	margin: $regular-space;
+}
 
 .menu-icon {
 	width: auto; // are these needed?
@@ -521,8 +523,8 @@ a3 a:hover {
 
 .main-border {
 	border-top: $global-border-width solid $white;
-
-	@media (min-width: map-get($breakpoints, medium)) {
+	border-bottom: $global-border-width solid $white;
+		@media (min-width: 66em) { // before the container floats only border the top and bottom
 		border: $global-border-width solid $white;
 	}
 }
@@ -582,6 +584,40 @@ label {
 
 .gallery img { // wordpress generated class?
 margin-top: 20px;   
+}
+
+/* Flag Banner
+-------------------------------------------------------------- */
+
+.flagbanner:before {
+	content:url('../img/flag-before.png');
+	position: absolute;
+	z-index: 2;
+	margin-left: -87px; // this is a very hacky way of doing this
+	overflow: visible;
+}
+
+.flagbanner {
+	position: relative;
+	margin-top: $regular-space; // do this in one line?
+	margin-bottom: $regular-space;
+}
+
+.flagbanner:after {
+	content:url('../img/flag-after.png');
+	position: absolute;
+	z-index: 2;
+	float: left;
+}
+
+.flagbuttonbanner {
+	display: inline-block;
+	padding-right: 2rem; // all done with em would be more scaleable?
+	padding-left: 2rem;
+	background: #333;
+	border: $secondary 3px solid;
+	margin-right: -20px;
+	line-height: 3rem;
 }
 
 /* Banners
@@ -717,7 +753,6 @@ margin-top: 20px;
 
 .light-back {
 	background: $tertiary;
-	padding: $regular-space;
 }
 
 /* Off
@@ -766,7 +801,6 @@ margin-top: 20px;
 	opacity: 1;
 }
 
-.img-min-100,
 .img-min-100 img { // cant this be somewhere better?
 	min-width: 100%;
 }
@@ -819,4 +853,70 @@ margin-top: 20px;
 //give the top bar double buttons a bit of space to breathe
 .border-spacing-top-bar {
 	border-spacing: $regular-space 0px; // why border spacing and not margins?
+}
+
+.container {
+	max-width: 66em;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: $regular-space*2; // fix this in one line
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0; // the footer always sits below this
+}
+
+.container > main,
+.container > div,
+.container > img {
+	flex: 1 0 33em;
+	// paddings have to be nested due to background colors
+}
+
+.container > main > div { // due to the flex on the layer below I have to nest the padding
+	padding: $regular-space;
+}
+
+.animals {
+	display: flex; // I could use inline block but firefox developer tools are easier with flex or grid
+	flex-wrap: wrap;
+}
+
+.animals > div { 
+	flex: 0 0 16.5em; // grow has to be zero to stop the orphan behaving badly with an odd number
+}
+
+.animals > div > h3 {
+	margin-top: 0;
+}
+
+.animals-link {
+	background: $highlight;
+	color: $white;
+	padding: $regular-space;
+	// margin: -$regular-space auto auto $regular-space; // what order do all four go in?
+	margin-top: -$regular-space;
+}
+
+footer {
+	max-width: 66em;
+	margin-top: 0; // fix this in one line I cant remeber the syntax
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: $regular-space*3;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-gap: $regular-space;
+	@media (min-width: map-get($breakpoints, medium)) { // this isnt working?
+		border: $global-border-width solid $white; // needed to sit inline with the container above		
+	}
+
+}
+
+footer img {
+	display: none;
+	@media (min-width: 33em) { // is this medium im just defining by flex usually
+		display: inline;
+		max-width: calc(100% - $regular-space*2);
+		padding: $regular-space;
+	}
 }
