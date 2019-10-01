@@ -37,8 +37,8 @@
 	<body>
 
 		<!-- facebook -->
-		<!-- <div id="fb-root"></div> -->
-		<!-- <script>(function(d, s, id) {
+		<!-- <div id="fb-root"></div>
+		<script>(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
@@ -51,8 +51,8 @@
 		<!-- <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper> -->
 
 			<!-- this is the off canvas aka small menu -->
-			<!-- <div class="off-canvas position-right hide-for-print" id="my-info" data-off-canvas data-position="right">
-				<ul class="vertical menu" data-accordion-menu>
+			<!-- <div class="off-canvas position-right hide-for-print">
+				<ul class="vertical menu">
 					<li><img src=" php echo get_template_directory_uri(); ?>/img/CHK-logo.png" alt="canterbury homekill logo" class="small-8 small-push-2"/></li>
 					<li><label><h2>Canterbury Homekill</h2></label></li>
 					 php
