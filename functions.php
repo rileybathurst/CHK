@@ -55,7 +55,8 @@ add_action( 'after_setup_theme', 'chk_content_width', 0 );
 /* Enqueue scripts and styles. */
 function chk_scripts() {
 	// Foundation style.
-	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/app.css' );
+	wp_enqueue_style( 'chk-css', get_template_directory_uri() . '/css/app.css' );
+	wp_enqueue_script( 'chk-js', get_template_directory_uri() . '/js/app.js', array(), false, true);
 
 	// Print styles
 	// wp_enqueue_style( 'print', get_template_directory_uri() . '/css/print.css' , $deps = array(), $ver = false, $media = 'all'  );

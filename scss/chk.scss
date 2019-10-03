@@ -17,11 +17,14 @@ $highlight: #b9202f;
 $highlight-secondary: #FF482A; // this might be better with an rgba?
 
 $global-border-width: 3px;
+$global-border-radius: 0.2em;
 
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
-$regular-space: .9375rem; 
-$small-space: .625rem; // remove this I can just use math
+$regular-space: .9375em; 
+$small-space: .625em; // remove this I can just use math
+
+$shadow: -$regular-space/2 0px $regular-space/2 rgba(0,0,0,0.5);
 
 // CONTENTS
 
@@ -44,6 +47,9 @@ body {
 	background: $background;
 	font-family: $font-stack;
 	color: $secondary;
+
+	width: 100vw; // minimenu sits outside of this // this isnt working in safari
+	overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,6 +87,20 @@ a:hover {
 	visibility: hidden;
 	@media (min-width: map-get($breakpoints, medium)) {
 		visibility: visible;
+	}
+}
+
+.show-for-large {
+	display: none;
+	@media (min-width: map-get($breakpoints, large)) {
+		display: inherit;
+	}
+}
+
+.hide-for-large {
+	display: inherit;
+	@media (min-width: map-get($breakpoints, large)) {
+		display: none;
 	}
 }
 
@@ -163,7 +183,7 @@ textarea {
 	line-height: 0;
 }
 
-// OFF CANVAS
+// OFF CANVAS - this is now minimenu what do I need to take across
 .off-canvas {
 	min-height: 100%; /* needed to fill the frame */
 	z-index: 0;
@@ -213,23 +233,25 @@ textarea {
 
 // TOP BAR
 .top-bar {
-	color: $background;
+	background: $tertiary;
+	color: $background; // a11y check these contrast ratios?
 	padding: $regular-space;
-	border-bottom: $global-border-width solid $tertiary;
-	background-clip: padding-box; // why do we have this?
+	border-bottom: $global-border-width solid $tertiary; // work this in with the shadow
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
 }
 
-.top-bar label { // sign in forms
-	color: $tertiary; // why not use the same label color everywhere?
+.top-bar--together {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
 }
 
 .top-bar input {
-	width: 15em; // can this be a min or max width?
-}
-
-.top-bar-left li {
-	height: 2.4375rem; // this could be simplier
-	padding-top: .6rem; // this could be simplier
+	// width: 15em; // can this be a min or max width?
 }
 
 // HEADER IMAGE
@@ -242,6 +264,10 @@ header {
 	grid-row: 1;
 	grid-column: 1/3;
 	// theres a cover spec for this but I cant remeber it without internet
+}
+
+.top-background-image img {
+	width: 100%;
 }
 
 header > .site-logo { // is there a nice way to keep this to a max width?
@@ -258,6 +284,7 @@ header > .site-logo { // is there a nice way to keep this to a max width?
 header > .small-nav {
 	grid-row: 1;
 	grid-column: 2;
+	z-index: 4;
 }
 
 .over-background {
@@ -296,26 +323,22 @@ header > .small-nav {
 
 // BUTTONS
 button,
-.button,
+.button, // can I get ride of this
 input[type="submit"],
 #buddypress button, // are these overwritten or am I doubling for no reason?
 #buddypress .button,
 #buddypress input[type="submit"] {
   cursor: pointer; // needed for the .button
-  margin: 0 0 $regular-space; // dont use 3?
-  position: relative; // what is this overwritting?
-  text-decoration: none; // needed for the .button
-  text-align: center;
-  display: inline-block; // lets other things on the same line? 
   text-transform: uppercase;
   padding: $regular-space;
+  margin: $regular-space;
   font-size: $regular-space; // dont use spacing variables on sizes use a type scale?
   background: $highlight;
-  font-weight: normal !important; // what was it trying to be?
   transition: all 300ms;
   color: $secondary;
   border: $highlight 4px solid; // needed for using a border on hover
-  border-radius: .1em;
+  border-radius: $global-border-radius;
+  box-shadow: $shadow;
 }
 
 button:hover, button:focus, .button:hover, .button:focus, 
@@ -395,7 +418,18 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 }
 
 // #SIDE_LOG // I presume this is the side log in?
-#side_log p, #side_log label, #side_log input {
+#side_log {
+	background: $background;
+	background: pink;
+	display: flex;
+	// flex-direction: row;
+	padding: $regular-space;
+	box-shadow: $shadow;
+	border: 1px solid $background;
+	border-radius: $global-border-radius;
+}
+
+/* #side_log p, #side_log label, #side_log input {
 	float: left; // why would any of these not be floated left?
 	margin-right: 1rem;
 }
@@ -419,7 +453,7 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 
 #side_log h1, #side_log h2, #side_log h3, #side_log h4, #side_log h5, #side_log h6, #side_log p,#side_log p, #side_log label {
 	margin-bottom: 0; // why am I dropping off all the margin-bottom?
-}
+} */
 
 // EXTRAS
 // lists in mutliple places
@@ -919,4 +953,32 @@ footer img {
 		max-width: calc(100% - $regular-space*2);
 		padding: $regular-space;
 	}
+}
+
+#minimenu {
+	background: $background;
+	position: absolute;
+	z-index: 3; // above flagbanner below menu button
+	box-shadow: $shadow;
+	width: 33%;
+	// height: 100%; // needs fixing to be full height or stuck to the side
+	left: 100%;
+	transition: all 3s;
+}
+
+.minimenu-open {
+	transform: translate3d(-100%, 0, 0);
+}
+
+#minimenu:target { // no-js backup // I could do something with smooth scroll etc and make it easier but the main problem is the click outside to remove
+	background: palegoldenrod;
+	transform: translate3d(-100%, 0, 0);
+}
+
+#mediummenu {
+	background: $tertiary;
+}
+
+#mediummenu > div > ul {
+	display: flex;
 }
