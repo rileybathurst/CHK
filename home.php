@@ -8,17 +8,16 @@
 			<hr>
 			
 			<p class="drop"><?php echo (get_page_by_title('Intro')->post_content); ?></p>
-			<h4><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('about')->ID); ?>" class="button">Read More <?php echo (get_page_by_title('about')->post_title); ?> Us</a></h4>
+			<h4><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('about')->ID); ?>" class="">Read More <?php echo (get_page_by_title('about')->post_title); ?> Us</a></h4>
 
 			<hr>
-			
+
 			<p><?php echo (get_page_by_title('HOW CHK WORKS')->post_content); ?></p>
 		
 			<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Prices')->ID); ?>"><?php echo (get_page_by_title('Prices')->post_title); ?></a></h3>
 		
-			<p>The first step to having us work on your animal would be our online booking form.</p>
-		
-			<!-- <h3><a href="?php echo home_url(); ?>/?page_id=?php echo (get_page_by_title('Booking Form')->ID); ?>">?php echo (get_page_by_title('Booking Form')->post_title); ?></a></h3> this hasnt been built yet-->
+			<!-- <p>The first step to having us work on your animal would be our online booking form.</p>
+			<h3><a href="?php echo home_url(); ?>/?page_id=?php echo (get_page_by_title('Booking Form')->ID); ?>">?php echo (get_page_by_title('Booking Form')->post_title); ?></a></h3> this hasnt been built yet-->
 		</div>
 	</main><!-- first area -->
 			
@@ -27,7 +26,7 @@
 	
 			<div class="flagbanner drop">
 				<h3 class="flagbuttonbanner a2"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Order')->ID); ?>"><?php echo (get_page_by_title('Order')->post_title); ?></a></h3>
-			</div>               
+			</div>
 
 			<p><?php echo (get_page_by_title('order')->post_content); ?></p>
 
@@ -55,15 +54,12 @@
 				<div class="">
 					<a href="<?php echo home_url(); ?>/alpaca-llama"><img src="<?php echo content_url(); ?>/uploads/2016/03/Alpaca-flat.png" class="round any-center hover-back" alt="alpaca" /></a>
 					<h3 class="text-center">
-						<a href="<?php echo home_url(); ?>/alpaca-llama" class="animals-link">Alpaca /</a> <!-- Im not sure if this should become one element -->
-						<a href="<?php echo home_url(); ?>/alpaca-llama" class="animals-link"> llama</a>
+						<a href="<?php echo home_url(); ?>/alpaca-llama" class="animals-link">Alpaca / llama</a>
 					</h3>
 				</div>
 			</div>
 		</section>
 		
-		<hr>
-				
 		<?php if ( is_user_logged_in() ) { ?>
 			
 			<div class="flagbanner drop fall">
@@ -73,9 +69,10 @@
 			<?php 
 				$current_user = wp_get_current_user();
 				$current_login = $current_user->user_login;
-				$current_email = $current_user->user_email; ?>
+				$current_email = $current_user->user_email;
+			?>
 
-			<p>                        
+			<p>
 				Welcome back <?php echo $current_login; ?><br />
 				Your most recent order was:<br />
 			</p>
@@ -113,12 +110,13 @@
 				<h3 class="flagbuttonbanner a2">Login</h3>
 			</div>  
 
-			<p><em>Usernames have no spaces or special charachters.</em></p>
+			<div class="light-back"> <!-- needs more than the login form for the for the section -->
+				<p><em>Usernames have no spaces or special charachters.</em></p>
 
-			<?php wp_login_form(); ?>
+				<?php wp_login_form(); ?>
 
-			<p><em><a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword">Lost Your Password?</a></em></p>
-
+				<p><em><a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword">Lost Your Password?</a></em></p>
+			</div>
 			<hr>
 
 			<div class="flagbanner drop fall">
@@ -144,7 +142,7 @@
 			
 	</div><!-- columns -->
 
-	<img src="<?php echo content_url(); ?>/uploads/2016/02/iStock_000021247297_recipe.jpg" alt="cooking" class=""> <!-- this is its own area -->
+	<img src="<?php echo content_url(); ?>/uploads/2016/02/iStock_000021247297_recipe.jpg" alt="cooking" class="home-image"> <!-- this is its own area -->
 		
 </div> <!-- .container -->
 	

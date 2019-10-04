@@ -55,6 +55,37 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-stack;
 }
+/* typescale needs to be implemented
+html {font-size: 16px;}
+
+body {
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.25em;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Griffy', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0; // where is this coming from is it a cross browser thing or just once?
+  font-size: 3.052em;
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;} */
 
 h3 {
 	/* Medium up screens */
@@ -250,6 +281,10 @@ textarea {
 	align-items: baseline;
 }
 
+.top-bar--contact {
+	margin-right: 0; // realigns the button to the base grid
+}
+
 .top-bar input {
 	// width: 15em; // can this be a min or max width?
 }
@@ -257,11 +292,12 @@ textarea {
 // HEADER IMAGE
 header {
 	display: grid; // needed for overlay
-	max-width: 100% // this isnt working and needs love
+	max-width: 100%; // this isnt working to stop safari having the mini menu falling off the side and needs love
+	// grid-template-columns: repeat(2, 1fr); turn this on to visually check the logo is in the center
 }
 
 .top-background-image {
-	grid-row: 1;
+	grid-row: 1/3;
 	grid-column: 1/3;
 	// theres a cover spec for this but I cant remeber it without internet
 }
@@ -272,7 +308,14 @@ header {
 
 header > .site-logo { // is there a nice way to keep this to a max width?
 	grid-row: 1;
-	grid-column: 1;
+	grid-column: 1/3;
+	max-width: 22em;
+	place-self: center;
+}
+
+header > .site-logo > a,
+header > .site-logo > a > img {
+	max-width: 100%;
 }
 
 .custom-logo {
@@ -339,6 +382,7 @@ input[type="submit"],
   border: $highlight 4px solid; // needed for using a border on hover
   border-radius: $global-border-radius;
   box-shadow: $shadow;
+  display: inline-block;
 }
 
 button:hover, button:focus, .button:hover, .button:focus, 
@@ -596,14 +640,6 @@ a3 a:hover {
 	.centered-inline-list > li > * {
 	  display: block; } // everything has to be a row?
 
-.drop { // globals should be at the top?
-	margin-top: $regular-space;
-}
-
-.fall {
-	margin-bottom: $regular-space;
-}
-
 label {
 	color: $secondary;
 	font-size: 1rem; // is this a browser reset?
@@ -632,9 +668,9 @@ margin-top: 20px;
 }
 
 .flagbanner {
-	position: relative;
-	margin-top: $regular-space; // do this in one line?
-	margin-bottom: $regular-space;
+	// position: relative;
+	// margin-top: $regular-space; // do this in one line?
+	// margin-bottom: $regular-space;
 }
 
 .flagbanner:after {
@@ -913,22 +949,23 @@ margin-top: 20px;
 .animals {
 	display: flex; // I could use inline block but firefox developer tools are easier with flex or grid
 	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .animals > div { 
-	flex: 0 0 16.5em; // grow has to be zero to stop the orphan behaving badly with an odd number
+	flex: 1 0 16.5em; // let the alpaca grow
 }
 
 .animals > div > h3 {
-	margin-top: 0;
+	margin-top: -$regular-space/2;
 }
 
 .animals-link {
 	background: $highlight;
+	padding: $regular-space/2;
 	color: $white;
-	padding: $regular-space;
-	// margin: -$regular-space auto auto $regular-space; // what order do all four go in?
-	margin-top: -$regular-space;
+	border: $global-border-width solid $highlight;
+	border-radius: $global-border-radius;
 }
 
 footer {
@@ -964,6 +1001,7 @@ footer img {
 	// height: 100%; // needs fixing to be full height or stuck to the side
 	left: 100%;
 	transition: all 3s;
+	padding: $regular-space;
 }
 
 .minimenu-open {
@@ -975,10 +1013,88 @@ footer img {
 	transform: translate3d(-100%, 0, 0);
 }
 
-#mediummenu {
+#minimenu > .minimenu-logo {
+	max-width: 50%;
+	margin: $regular-space auto;
+	> a > img {
+		max-width: 100%; // keep it in the box
+	}
+}
+
+#minimenu > div > ul {
+	margin: 0;
+	padding: 0;
+}
+
+#minimenu > div > ul > li {
+	// these are tap buttons not links they can look like that
+	list-style: none;
+	background: $highlight;
+	margin: $regular-space;
+	padding: $regular-space;
+	border: $global-border-width solid $highlight;
+	border-radius: $global-border-radius;
+	text-align: center;
+	box-shadow: $shadow;
+}
+
+#minimenu > div > ul > li > a {
+	color: $white;
+}
+
+#loginform {
 	background: $tertiary;
+	color: $black;
+	padding: $regular-space;
+}
+
+#mediummenu {
+	background: $background;
+	grid-row: 2;
+	grid-column: 1/3;
+	max-width: 31em; // trial and error
+	margin: 0 auto;
+	border: $global-border-width solid $white; 
+	font-size: 2.441em;
 }
 
 #mediummenu > div > ul {
 	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: $regular-space;
+	justify-content: space-between;
+	margin: 0; // reset
+} 
+
+#mediummenu > div > ul > li {
+	margin: $regular-space;
+}
+
+.page-layout {
+	display: grid; // using grid even tho its two dimensional because its needs the overlay
+
+	.top-background-image {
+		grid-row: 1/3;
+		grid-column: 1;
+	}
+
+	header {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.container {
+		grid-row: 2;
+		grid-column: 1;
+	}
+
+	footer {
+		grid-row: 3;
+		grid-column: 1;
+	}
+}
+
+.home-image {
+	align-self: flex-start;
 }
