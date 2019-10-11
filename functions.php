@@ -54,7 +54,7 @@ add_action( 'after_setup_theme', 'chk_content_width', 0 );
 
 /* Enqueue scripts and styles. */
 function chk_scripts() {
-	// Foundation style.
+	// CHK style.
 	wp_enqueue_style( 'chk-css', get_template_directory_uri() . '/css/app.css' );
 	wp_enqueue_script( 'chk-js', get_template_directory_uri() . '/js/app.js', array(), false, true);
 
@@ -205,3 +205,16 @@ function gutenberg_banner_block() {
 	);
 }
 add_action( 'init', 'gutenberg_banner_block' );
+
+// add some additional styles
+function be_gutenberg_scripts() {
+
+	wp_enqueue_script(
+		'be-editor', 
+		get_stylesheet_directory_uri() . '/js/block-styles.js', 
+		array( 'wp-blocks', 'wp-dom' ), 
+		filemtime( get_stylesheet_directory() . '/js/block-styles.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );

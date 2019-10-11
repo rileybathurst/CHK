@@ -14,3 +14,4 @@ const siteLogo_el = document.getElementsByClassName("site-logo"); // i can repea
 for (let item of siteLogo_el) { // newer browsers only
     item.addEventListener('click', remover, false);
 }
+

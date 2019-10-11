@@ -71,7 +71,13 @@
 				<button href=" php echo home_url(); ?>/logout" class="">logout</button>
 			<?php } else { ?>
 				<h2>Login</h2>  
-				<?php wp_login_form(); ?>
+				<?php 
+					$mini_login = array (
+						'form_id'			=> 'mini_login'
+						// 'label_username'	=> ''
+					);
+					wp_login_form( $mini_login );
+				?>
 				<button href=" php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>" class="button drop">Sign Up</button>
 			<?php } ?>
 		</div>

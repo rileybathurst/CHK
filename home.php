@@ -4,25 +4,24 @@
 	<main class="">
 		<div> <!-- due to the flex on the layer below I have to nest the padding -->
 			<h2>Welcome to <?php echo get_bloginfo( 'name' ); ?> Ltd</h2> <!-- this is probably a little convaluted but its fine for now -->
-				
+
 			<hr>
-			
 			<p class="drop"><?php echo (get_page_by_title('Intro')->post_content); ?></p>
 			<h4><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('about')->ID); ?>" class="">Read More <?php echo (get_page_by_title('about')->post_title); ?> Us</a></h4>
 
 			<hr>
 
 			<p><?php echo (get_page_by_title('HOW CHK WORKS')->post_content); ?></p>
-		
-			<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Prices')->ID); ?>"><?php echo (get_page_by_title('Prices')->post_title); ?></a></h3>
+
+			<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Prices')->ID); ?>"><?php echo (get_page_by_title('Prices')->post_title); ?></a>
 		
 			<!-- <p>The first step to having us work on your animal would be our online booking form.</p>
 			<h3><a href="?php echo home_url(); ?>/?page_id=?php echo (get_page_by_title('Booking Form')->ID); ?>">?php echo (get_page_by_title('Booking Form')->post_title); ?></a></h3> this hasnt been built yet-->
 		</div>
 	</main><!-- first area -->
 			
-	<div> <!-- hold the second area together -->
-		<section class="light-back"><!-- Order Animals -->
+	<div class="light-back"> <!-- hold the second area together -->
+		<section><!-- Order Animals -->
 	
 			<div class="flagbanner drop">
 				<h3 class="flagbuttonbanner a2"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Order')->ID); ?>"><?php echo (get_page_by_title('Order')->post_title); ?></a></h3>
@@ -66,14 +65,8 @@
 				<h3 class="flagbuttonbanner a2">Welcome</h3>
 			</div>
 
-			<?php 
-				$current_user = wp_get_current_user();
-				$current_login = $current_user->user_login;
-				$current_email = $current_user->user_email;
-			?>
-
 			<p>
-				Welcome back <?php echo $current_login; ?><br />
+				Welcome back <?php echo $current_login; ?><br /> <!-- $current_login comes from the header -->
 				Your most recent order was:<br />
 			</p>
 			
@@ -113,7 +106,12 @@
 			<div class="light-back"> <!-- needs more than the login form for the for the section -->
 				<p><em>Usernames have no spaces or special charachters.</em></p>
 
-				<?php wp_login_form(); ?>
+				<?php 
+					$main_login = array (
+						'form_id'			=> 'main_login'
+					);
+					wp_login_form( $main_login );
+				?>
 
 				<p><em><a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword">Lost Your Password?</a></em></p>
 			</div>
@@ -132,7 +130,7 @@
 		
 	</div> <!-- the second area -->
 
-	<div class=""><!-- seconday set of grid to allow for margins on 1 or 2 columns // outside of row on purpose -->
+	<div class="home-contact"><!-- seconday set of grid to allow for margins on 1 or 2 columns // outside of row on purpose -->
 			
 		<div class="flagbanner drop fall">
 			<h3 class="flagbuttonbanner a2"><a href="<?php echo home_url(); ?>/contact">Contact Us</a></h3>

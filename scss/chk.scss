@@ -40,10 +40,10 @@ $shadow: -$regular-space/2 0px $regular-space/2 rgba(0,0,0,0.5);
 
 // BASICS
 html {
-	margin: 0;
+	margin: 0; // browser reset
 }
 body {
-	margin: 0;
+	margin: 0; // browser reset
 	background: $background;
 	font-family: $font-stack;
 	color: $secondary;
@@ -52,12 +52,19 @@ body {
 	overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 { // would this to be smart to make as a variable?
 	font-family: $font-stack;
 }
-/* typescale needs to be implemented
+
+p,
+li { // keep an eye on this it could cause problems
+	line-height: 1.953em; // pretty large due to black on white type
+}
+
+//typescale needs to be implemented
 html {font-size: 16px;}
 
+/* 
 body {
   line-height: 1.45;
   color: #333;
@@ -90,7 +97,7 @@ small, .text_small {font-size: 0.8em;} */
 h3 {
 	/* Medium up screens */
 	@media (min-width: map-get($breakpoints, medium)) {
-		font-size: 2.2rem;
+		font-size: 2.441rem; // this is normally h2
 	}
 }
 
@@ -102,7 +109,7 @@ a:hover {
 	color: $highlight-secondary;
 }
 
-.serif {
+.serif { // I don't like the way this is named
 	font-family: $font-stack;
 }
 
@@ -111,7 +118,7 @@ a:hover {
 }
 
 .screen-reader {
-	display: none; // this might need something more?
+	display: none; // this needs work
 }
 
 .show-for-medium {
@@ -169,6 +176,10 @@ select {
 	text-align: center;
 }
 
+label {
+	color: $highlight;
+}
+
 input[type="checkbox"] + label, input[type="radio"] + label {
 	display: initial; // is this not in reset?
 }
@@ -198,7 +209,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 [type='url'],
 [type='color'],
 textarea {
-	color: $background; // this is currently really dark thats probably not what I want
+	// color: $background; // this doesnt seem to matter I guess it sits different than body color?
 }
 
 textarea {
@@ -464,7 +475,7 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 // #SIDE_LOG // I presume this is the side log in?
 #side_log {
 	background: $background;
-	background: pink;
+	background: pink; // this is clearly wrong
 	display: flex;
 	// flex-direction: row;
 	padding: $regular-space;
@@ -499,20 +510,41 @@ input[type="submit"]:hover, input[type="submit"]:focus,
 	margin-bottom: 0; // why am I dropping off all the margin-bottom?
 } */
 
+.login-username input,
+.login-password input { 
+	width: calc(100% - 5em);
+	padding: $regular-space;
+	margin: $regular-space;
+	caret-color: $highlight;
+	border: solid $global-border-width $tertiary;
+	border-radius: $global-border-radius;
+}
+
 // EXTRAS
 // lists in mutliple places
+.is-style-stripes {
+	padding-left: 0; // browser reset
+	list-style: none;
+}
+
+.is-style-stripes li, // newer gutenberg name
 .stripes li {
 	padding: $small-space $regular-space;
 }
 
+.is-style-stripes li:nth-child(odd),
 .stripes li:nth-child(odd) {
 	background: $quaternary;
+	border: $global-border-width solid $quaternary;
+	border-radius: $global-border-radius;
 }
 
+.is-style-stripes li:last-child,
 .stripes li:last-child {
 	margin-bottom: $regular-space; // whats this overwritting?
 }
 
+.light-back .is-style-stripes li:nth-child(odd),
 .light-back .stripes li:nth-child(odd) {
 	background: $background;
 }
@@ -823,6 +855,11 @@ margin-top: 20px;
 
 .light-back {
 	background: $tertiary;
+
+	hr {
+		border-bottom: 1px solid $white;
+		margin: $regular-space;
+	}
 }
 
 /* Off
@@ -1096,5 +1133,22 @@ footer img {
 }
 
 .home-image {
-	align-self: flex-start;
+	align-self: flex-start; // cooking image lower down on the page otherwise it stretchs
+}
+
+.is-style-light-back {
+	background: $tertiary;
+	padding: $regular-space;
+	border: solid $global-border-width $background;
+	border-radius: $global-border-radius;
+}
+
+.home-contact {
+	h3, p, ul, iframe, hr, .flagbanner { // you cant throw a padding on the main it breaks the flex
+		margin: $regular-space;
+	}
+
+	iframe {
+		width: calc(100% - $regular-space); // why wont this let me do regular space
+	}
 }
