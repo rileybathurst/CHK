@@ -1,5 +1,5 @@
 <footer class="bright hide-for-print">
-	<div>
+	<div class="set-in">
 		<ul class="inline drop"> <!-- this should be a menu -->
 			<li><a href="<?php echo home_url(); ?>">Home</a></li> 
 			<li><a href="<?php echo home_url(); ?>/about"><?php echo (get_page_by_title('about')->post_title); ?> Us</a></li> 
@@ -19,7 +19,7 @@
 			<li><a href="<?php echo home_url(); ?>/small-goods"><?php echo (get_page_by_title('small goods')->post_title); ?></a></li> 
 		</ul>
 
-		<ul class="inline">    
+		<ul class="inline">
 			<li><a href="<?php echo home_url(); ?>/terms">Terms &amp; Conditions</a></li> 
 			<li><a href="https://rileybathurst.com">Site by Riley Bathurst Design</a></li> 
 		</ul>
@@ -27,7 +27,7 @@
 		<p class="clear">Canterbury Homekill <?php echo date ('Y'); ?></p>
 	</div>
 
-	<img src="<?php echo get_template_directory_uri(); ?>/img/pig.png" alt="pig" class="show-for-medium">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/pig.png" alt="pig" class="show-for-medium"> <!-- this should come from the customizer -->
 
 </footer>
 

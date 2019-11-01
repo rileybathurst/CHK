@@ -1,257 +1,177 @@
 <?php
-/*  
+/*
  *  Template Name: order details
- */ 
+ */
+
+get_header();
+
+//define variable for url bar .php?n=
+$unid = $_GET['n'];
 ?>
 
-<?php get_header(); ?>
+<div class="container main-border over-background">
+	<main>
 
-<?php 
-    //define variable for url bar .php?n=
-    $unid = $_GET['n'];
-?>
+		<!-- Start the main container -->
+		<section role="document" class="set-in">
 
-<div class="row over-background border drop" data-equalizer>
-    <div class="small-12 large-6 columns" data-equalizer-watch><!-- First Two -->
+			<?php if (have_posts()) {
+				while (have_posts()) : the_post(); ?>
 
-        <!-- Start the main container -->
-        <div class="container" role="document">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- post open -->
 
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); 
+						<?php the_post_thumbnail(); ?>
 
-                    $format = get_post_format();
-                    get_template_part( 'format', $format );
-                    ?>
-                    
-                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<h2><?php the_title(); ?></h2>
 
-                            <?php include("page-title.php"); ?>
-                            
-                            <?php if ( is_user_logged_in() ) { ?>
-                                <div class=""></div>
-                            <?php } else { ?>
-                            
-                                <div class="row">
-                                    <div class="small-12 columns">
-                                        <p>Your currently not logged in, if you are these fields will automatically get filled in <a href="<?php echo home_url(); ?>/login">log in here</a></p>
-                                    </div>
-                                </div>
-                            <?php } ?>
-                            
-                            <!-- post -->
-                            <div class="small-12 medium-8 large-12 columns end text-justify">
-                                
-                                <?php the_content(); ?>
-    
-                                <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" data-abide novalidate>
-                                    
-                                    <div data-abide-error class="alert callout" style="display: none;">
-                                        <p><i class="fi-alert"></i> There are some errors in your form.</p>
-                                    </div>
-                                  
-                                   <?php 
-                                    // search for orders to bring back animal name -->
-                                    $orders = $wpdb->get_results( 
-                                            "SELECT * FROM meatorders WHERE unid = '$unid';"
-                                        );
-                                    foreach ( $orders as $order ) { ?>
-                                    
-                                    <input type="hidden" name="action" value="orderdetailsupdate">
-                                    <input type="hidden" name="data" value="orderdetailsupdateid"><!-- slightly different value to differentiate, not used -->
-                                    
-                                    <!-- take the animal through so it can confirm to the right one -->
-                                    <input type="hidden" name="animal" value="<?php echo $order->animal; ?>">
-                                    
-                                    <!-- close animal name -->
-                                    <?php } ?>
-                                    
-                                    <!-- use the url unid variable in the form to keep it on the same one -->
-                                    <input type="hidden" name="unid" value="<?php echo $unid; ?>">
-                                
-                                    <div class="row">
-    
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="name" class="inline">Full Name:</label>
-                                        </div>
+						<hr>
+						
+						<?php if ( is_user_logged_in() ) { ?>
+							<div class=""></div><!-- is this just left here incase we put something in? -->
+						<?php } else { ?>
+							<div class="row">
+								<div class="small-12 columns">
+									<p>Your currently not logged in, if you are these fields will automatically get filled in <a href="<?php echo home_url(); ?>/login">log in here</a></p>
+								</div>
+							</div>
+						<?php } ?>
 
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="name" class="text-right">Full Name:</label>
-                                        </div>
+						<?php the_content(); ?>
 
-                                        <div class="small-12 medium-9 columns">
-                                            <input name="name" type="text" required id="name"
-                                               <?php if ( is_user_logged_in() ) { ?>
-                                                    value="<?php echo $current_user->display_name; ?>"
-                                                <?php } else { ?>
-                                                    placeholder="Joe Smith"
-                                                <?php } ?>
-                                            />
-                                            
-                                            <!-- error -->
-                                            <small class="form-error">A full name is required.</small>
-            
-                                        </div>
-                                    </div>
+						<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+							<fieldset class="run-the-stripes">
 
-                                    <div class="row">
+							<?php // search for orders to bring back animal name -->
+								$orders = $wpdb->get_results( 
+										"SELECT * FROM meatorders WHERE unid = '$unid';"
+									);
+								foreach ( $orders as $order ) {?>
+									
+									<input type="hidden" name="action" value="orderdetailsupdate">
+									<input type="hidden" name="data" value="orderdetailsupdateid">
+									
+									<!-- take the animal through so it can confirm to the right one -->
+									<input type="hidden" name="animal" value="<?php echo $order->animal; ?>">
+									
+								<!-- close animal name -->
+							<?php } ?>
 
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="add1" class="inline">Address:</label>
-                                        </div>
+							<!-- use the url unid variable in the form to keep it on the same one -->
+							<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="right-label" class="text-right">Address:</label>
-                                        </div>
+							<div>
+								<label for="name">Full Name:</label>
+								<input name="name" type="text" required id="name"
+									<?php if ( is_user_logged_in() ) { ?>
+										value="<?php echo $current_user->display_name; ?>"
+									<?php } else { ?>
+										placeholder="Joe Smith"
+									<?php } ?>
+								/>
+							</div>
 
-                                        <div class="small-12 medium-9 columns">
-                                            <input name="add1" type="text" required id="add1" 
-                                                <?php if ( is_user_logged_in() ) { ?>
-                                                    value="<?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?>"
-                                                <?php } else { ?>
-                                                    placeholder="26 Merton Road, RD 1, Rangiora 7471"
-                                                <?php } ?>       
-                                            /><small class="form-error">An address is required.</small>
-                                        </div>
-                                    </div>
+							<div>
+								<label for="add1">Address:</label>
+								<input name="add1" type="text" required id="add1" 
+									<?php if ( is_user_logged_in() ) { ?>
+										value="<?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?>"
+									<?php } else { ?>
+										placeholder="26 Merton Road, RD 1, Rangiora 7471"
+									<?php } ?>
+								/> <!-- very specific placeholder -->
+							</div>
 
-                                    <div class="row">
+							<div>
+								<label for="email">email:</label>
+								<input name="email" type="email" required  id="email"  
+									<?php if ( is_user_logged_in() ) { ?>
+										value="<?php echo $current_user->user_email; ?>"
+									<?php } else { ?>
+										placeholder="info@canterburyhomekill.co.nz"
+									<?php } ?>
+								/>
+							</div>
 
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="email" class="inline">email:</label>
-                                        </div>
+							<div>
+								<label for="phone">Phone:</label>
+								<input name="phone" type="tel" required id="phone"
+									<?php if ( is_user_logged_in() ) { ?>
+										value="<?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?>"
+									<?php } else { ?>
+										placeholder="03 313 4771"
+									<?php } ?>
+								>
+							</div>
 
-                                        <div class="small-3 columns show-for-medium">
-                                            <label for="email" class="text-right">email:</label>
-                                        </div>
-                                        
-                                        <div class="small-12 medium-9 columns">
-                                            <input name="email" type="email" required  id="email"  
-                                                <?php if ( is_user_logged_in() ) { ?>
-                                                    value="<?php echo $current_user->user_email; ?>"
-                                                <?php } else { ?>
-                                                    placeholder="info@canterburyhomekill.co.nz"
-                                                <?php } ?>       
-                                            /><small class="form-error">An email address is required.</small>
-                                        </div>
-                                    </div>
+							<div>
+								<label for="phone2">Mobile:</label>
+								<input name="phone2" type="tel" required id="phone2"
+									<?php if ( is_user_logged_in() ) { ?>
+										value="<?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?>"
+									<?php } else { ?>
+										placeholder="0274 312 804"
+									<?php } ?>
+								> <!-- double check this placeholder, might be able to bring it in from a variable -->
+							</div>
+							
+							<div>
+								<label for="animal">Animal:</label>
+									<p class="preselected-options"><span class="custom-check"><span class="screen-reader">✓</span></span><?php echo $order->animal; ?></p><!-- leaving the html checkmark for screenreaders but using a fancy css shape one when we can -->
+							</div>
 
-                                    <div class="row">
+							<div>
+								<label for="amp">Animal to be processed:</label>
+								<textarea name="amp" type="text" required placeholder="Old heifer" id="amp"></textarea>
+							</div>
 
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="phone" class="inline">Phone:</label>
-                                        </div>
+							<div>
+								<label for="people">Number of people to be packed for:</label>
+								<input type="number" placeholder="2 or more" required pattern="\d*" min="2" name="people" id="people">
+							</div>
+							
+							<button type="submit">Next Step</button>
+						</form>
 
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="phone" class="text-right">Phone:</label>
-                                        </div>
+					</article>
 
-                                        <div class="small-12 medium-9 columns">
-                                            <input name="phone" type="tel" required id="phone"
-                                                <?php if ( is_user_logged_in() ) { ?>
-                                                    value="<?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?>"
-                                                <?php } else { ?>
-                                                    placeholder="03 313 4771"
-                                                <?php } ?>       
-                                            ><small class="form-error">A phone number is required.</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="phone2" class="inline">Mobile:</label>
-                                        </div>
-
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="phone2" class="text-right">Mobile:</label>
-                                        </div>
-
-                                        <div class="small-12 medium-9 columns">
-                                            <input name="phone2" type="tel" required id="phone2"
-                                                <?php if ( is_user_logged_in() ) { ?>
-                                                    value="<?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?>"
-                                                <?php } else { ?>
-                                                    placeholder="0274 312 804"
-                                                <?php } ?>       
-                                            ><small class="form-error">A mobile phone number is required.</small>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="animal" class="inline">Animal:</label>
-                                        </div>
-
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="animal" class="text-right">Animal:</label>
-                                        </div>
-
-                                        <div class="small-12 medium-9 columns">
-                                            <p><?php echo $order->animal; ?></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">
-
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="amp" class="inline">Animal to be processed:</label>
-                                        </div>
-
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="amp" class="text-right">Animal to be processed:</label>
-                                        </div>
-                                        <div class="small-12 medium-9 columns">
-                                            <textarea name="amp" type="text" required placeholder="Old heifer" id="amp"></textarea><small class="form-error">An animal has to be specified.</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-
-                                        <div class="small-12 columns show-for-small-only">
-                                            <label for="people" class="inline">Number of people to be packed for:</label>
-                                        </div>
-
-                                        <div class="medium-3 columns show-for-medium">
-                                            <label for="people" class="text-right">Number of people to be packed for:</label>
-                                        </div>
-
-                                        <div class="small-12 medium-9 columns">
-                                            <input type="number" placeholder="2 or more" required pattern="\d*" min="2" name="people" id="people"><small class="form-error">A number is required.</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="small-12 columns">
-                                            <button type="submit">Next Step</button>
-                                        </div>
-                                    </div>    
-                                </form>
-                    
-                            </div>
-
-                        </div><!-- post -->
-                   
-
-                    <?php endwhile; ?><!-- while have posts -->
-
-                <?php else : ?>
-                    <div class="row">
-                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-                            <p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
-                            <p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
-                         </div><!--.entry-->
-                    </div>
-
-                <?php endif; ?><!-- if have posts -->
-            
-        </div><!-- container -->
-        
-        </div><!-- equilizer watch -->
-
-    <?php get_sidebar(); ?>    
-        
-</div><!-- row -->
+				<?php endwhile; // while have posts
 			
+				// single comments -->
+				if (is_single()) {
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					} ?>
+
+					<!-- single pagination -->
+					<ul>
+
+						<p>Check out some other posts</p>
+						<li><p><?php previous_post_link( '%link', '%title', TRUE ); ?></p></li>
+						<li><p> <?php next_post_link( '%link', '%title', TRUE ); ?> </p></li>
+
+					</ul>
+				<?php } // if is single
+
+				// pagination
+				if ( $wp_query->max_num_pages > 1 ) : ?>	
+					<h4>Look deeper into the site</h4>
+					<h4><?php next_posts_link ( '<span class="meta-nav">&larr;</span> Older posts' ) ; ?></h4>
+					<h4><?php previous_posts_link ( '<span class="meta-nav">&rarr;</span> Newer posts' ) ; ?></h4>
+				<?php endif; // if pagination
+
+			} else { ?>
+				<section>
+					<p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
+					<p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
+				</section><!-- row -->
+
+			<?php } ?><!-- if have posts -->
+
+		</section><!-- container -->
+	</main><!-- over-background main-border -->
+
+	<?php get_sidebar(); ?> <!-- symantically this should be outside the main -->
+</div>
 <?php get_footer(); ?>

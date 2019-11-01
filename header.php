@@ -110,7 +110,7 @@
 				</div>
 			<?php } ?>
 			<!-- show for either login state -->
-			<button href=" php echo home_url(); ?>/contact" class="top-bar--contact"><?php echo (get_page_by_title('Contact Us')->post_title); ?></button>
+			<button href="<?php echo home_url(); ?>/contact" class="top-bar--contact"><?php echo (get_page_by_title('Contact Us')->post_title); ?></button> <!-- this purposley fails if we don't have a contact page so it's obvious -->
 		</section>
 
 		<div class="page-layout">
