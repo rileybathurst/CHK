@@ -54,7 +54,7 @@ $unid = $_GET['n'];
 
 							<!-- part of order-small-goods-....php -->
 
-								<!-- sg_porkherb t_porkherb -->
+							<!-- sg_porkherb t_porkherb -->
 							<div>
 								<label for="sg_porkherb">Pork &amp; Herb <em>- GF</em></label>
 								<input type="number" placeholder="5" pattern="\d*" id="t_porkherb" name="t_porkherb" />

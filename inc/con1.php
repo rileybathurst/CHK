@@ -18,7 +18,7 @@ function prefix_admin_con1() {
 		);
 
 		//email confirmations
-		// $to = 'riley@rileybathurst.com';
+		// $to = 'riley@rileybathurst.com'; // developer account should be off by default
 		$tochk = 'info@canterburyhomekill.co.nz';
 		$tosender = $_POST['email'];
 
@@ -113,520 +113,11 @@ function prefix_admin_con1() {
 											'</strong>
 										</p>';
 
-									$beef = ' 
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<h3>Beef Options</h3>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Fillet  
-											<strong>'.
-												$_POST['b_fillet'].
-											'</strong>
-											<em> '.
-												$_POST['fillet_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Portherhouse   
-											<strong>'.
-												$_POST['b_porterhouse'].
-											'</strong>
-											<em> '.
-												$_POST['porterhouse_bf'].
-											'</em>
-										</p>
-
-										<p>
-											T-Bone  
-											<strong>'.
-												$_POST['b_tbone'].
-											'</strong>
-											<em> '.
-												$_POST['tbone_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Ribeye  
-											<strong>'.
-												$_POST['b_ribeye'].
-											'</strong>
-											<em> '.
-												$_POST['ribeye_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Rump Steak  
-											<strong>'.
-												$_POST['b_rump'].
-											'</strong>
-											<em> '.
-												$_POST['rump_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Topside   
-											<strong>'.
-												$_POST['b_topside'].
-											'</strong>
-											<em> '.
-												$_POST['topside_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Rolled Roast   
-											<strong>'.
-												$_POST['b_rolledroast'].
-											'</strong>
-											<em> '.
-												$_POST['rolledroast_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Wiener Schnitzel   
-											<strong>'.
-												$_POST['b_weinerschnitzel'].
-											'</strong>
-											<em> '.
-												$_POST['wienerschnitzel_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Silverside   
-											<strong>'.
-												$_POST['b_silverside'].
-											'</strong>
-											<em> '.
-												$_POST['silverside_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Blade  
-											<strong>'.
-												$_POST['b_blade'].
-											'</strong>
-											<em> '.
-												$_POST['blade_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Shin Fillet   
-											<strong>'.
-												$_POST['b_shinfillet'].
-											'</strong>
-											<em> '.
-												$_POST['shinfillet_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Chuck Steak   
-											<strong>'.
-												$_POST['b_chucksteak'].
-											'</strong>
-											<em> '.
-												$_POST['chucksteak_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Skirt Steak   
-											<strong>'.
-												$_POST['b_skirtsteak'].
-											'</strong>
-											<em> '.
-												$_POST['skirtsteak_bf'].
-											'</em>
-										</p>
-
-										<p>
-											Mince   
-											<strong>'.
-												$_POST['b_mince'].
-											'</strong>
-										</p>
-							';
-
-								$pig = ' 
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<h3>Pig Options</h3>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<strong>Shoulder</strong>
-
-										<p>
-											Rolled Shoulder  
-											<strong>'.
-												$_POST['ps_rolledshoulder'].
-											'</strong>
-											<em> '.
-												$_POST['rolledshoulder_ps'].
-											'</em>
-										</p>
-
-										<p>
-											Bacon   
-											<strong>'.
-												$_POST['ps_bacon'].
-											'</strong>
-										</p>
-
-										<p>
-											Pickled Pork  
-											<strong>'.
-												$_POST['ps_pickledpork'].
-											'</strong>
-										</p>
-
-										<p>
-											Chops  
-											<strong>'.
-												$_POST['ps_chops'].
-											'</strong>
-										</p>
-
-										<p>
-											Pressed Ham   
-											<strong>'.
-												$_POST['ps_pressedham'].
-											'</strong>
-											<em> '.
-												$_POST['pressedham_ps'].
-											'</em>
-										</p>
-
-										<p>
-											Mince   
-											<strong>'.
-												$_POST['ps_mince'].
-											'</strong>
-										</p>
-
-										<p>
-											Diced Pork   
-											<strong>'.
-												$_POST['ps_dicedpork'].
-											'</strong>
-										</p>
-
-										<p>
-											Roast Jointed   
-											<strong>'.
-												$_POST['ps_roastjointed'].
-											'</strong>
-											<em> '.
-												$_POST['roastjointed_ps'].
-											'</em>
-										</p>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<strong>Loin</strong>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Chops   
-											<strong>'.
-												$_POST['pl_chops'].
-											'</strong>
-										</p>
-
-										<p>
-											Loin Steaks  
-											<strong>'.
-												$_POST['pl_loinsteaks'].
-											'</strong>
-										</p>
-
-										<p>
-											Roast Jointed   
-											<strong>'.
-												$_POST['pl_roastjointed'].
-											'</strong>
-											<em> '.
-												$_POST['roastjointed_pl'].
-											'</em>
-										</p>
-
-										<p>
-											Bacon   
-											<strong>'.
-												$_POST['pl_bacon'].
-											'</strong>
-										</p>
-
-										<p>
-											Bacon Chops   
-											<strong>'.
-												$_POST['pl_baconchops'].
-											'</strong>
-										</p>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<strong>Belly</strong>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Bacon   
-											<strong>'.
-												$_POST['pb_bacon'].
-											'</strong>
-										</p>
-
-										<p>
-											Bacon Strips    
-											<strong>'.
-												$_POST['pb_baconstrips'].
-											'</strong>
-										</p>
-
-										<p>
-											Rolled   
-											<strong>'.
-												$_POST['pb_rolled'].
-											'</strong>
-										</p>
-
-										<p>
-											Roast   
-											<strong>'.
-												$_POST['pb_whole'].
-											'</strong>
-											<em> '.
-												$_POST['whole_pb'].
-											'</em>
-										</p>
-
-										<p>
-											Strips   
-											<strong>'.
-												$_POST['pb_strips'].
-											'</strong>
-										</p>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<strong>Leg</strong>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Ham On The Bone   
-											<strong>'.
-												$_POST['pg_hamonthebone'].
-											'</strong>
-											<em> '.
-												$_POST['hamonthebone_cook'].
-											'</em> '.
-											$_POST['hamonthebone_size'].
-										'</p>
-
-										<p>
-											Pressed Ham   
-											<strong>'.
-												$_POST['pg_pressedham'].
-											'</strong>
-											<em> '.
-												$_POST['pressedham_cook'].
-											'</em> '.
-											$_POST['pressedham_size'].
-										'</p>
-
-										<p>
-											Roast   
-											<strong>'.
-												$_POST['pg_roast'].
-											'</strong>
-											<em> '.
-												$_POST['roast_pg'].
-											'</em>
-										</p>
-
-										<p>
-											Mince   
-											<strong>'.
-												$_POST['pg_mince'].
-											'</strong>
-										</p>
-
-										<p>
-											Diced   
-											<strong>'.
-												$_POST['pg_diced'].
-											'</strong>
-										</p>
-
-										<p>
-											Leg Steaks   
-											<strong>'.
-												$_POST['pg_legsteaks'].
-											'</strong>
-										</p>
-
-										<p>
-											Bacon   
-											<strong>'.
-												$_POST['pg_bacon'].
-											'</strong>
-										</p>
-							';
-
-								$deer = ' 
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<h3>Deer Options</h3>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Shoulder   
-											<strong>'.
-												$_POST['v_shoulder'].
-											'</strong>
-											<em> '.
-												$_POST['shoulder_v'].
-											'</em>
-										</p>
-
-										<p>
-											Loin    
-											<strong>'.
-												$_POST['v_loin'].
-											'</strong>
-											<em> '.
-												$_POST['loin_v'].
-											'</em>
-										</p>
-
-										<p>
-											Leg    
-											<strong>'.
-												$_POST['v_leg'].
-											'</strong>
-											<em> '.
-												$_POST['leg_v'].
-											'</em> '.
-											$_POST['v_leg_whole_half'].
-										'</p>
-							';                
-
-								$sheep = ' 
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<h3>Sheep Options</h3>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Shoulder  
-											<strong>'.
-												$_POST['l_shoulder'].
-											'</strong>
-											<em> '.
-												$_POST['shoulder_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Loin   
-											<strong>'.
-												$_POST['l_loin'].
-											'</strong>
-											<em> '.
-												$_POST['loin_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Flaps  
-											<strong>'.
-												$_POST['l_flaps'].
-											'</strong>
-											<em> '.
-												$_POST['flaps_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Leg  
-											<strong>'.
-												$_POST['l_leg'].
-											'</strong>
-											<em> '.
-												$_POST['leg_lb'].
-											'</em>
-										</p>
-							';
-
-								$alpacalama = ' 
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<h3>Alpaca / Llama Options</h3>
-
-										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
-
-										<p>
-											Shoulder  
-											<strong>'.
-												$_POST['l_shoulder'].
-											'</strong>
-											<em> '.
-												$_POST['shoulder_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Loin   
-											<strong>'.
-												$_POST['l_loin'].
-											'</strong>
-											<em> '.
-												$_POST['loin_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Flaps  
-											<strong>'.
-												$_POST['l_flaps'].
-											'</strong>
-											<em> '.
-												$_POST['flaps_lb'].
-											'</em>
-										</p>
-
-										<p>
-											Leg  
-											<strong>'.
-												$_POST['l_leg'].
-											'</strong>
-											<em> '.
-												$_POST['leg_lb'].
-											'</em>
-										</p>
-							';
-
-							$tail = '<p>
-											Special Instructions     
-											<strong>'.
-												$_POST['spins'].
-											'</strong>
+									$tail = '<p>
+										Special Instructions
+										<strong>'.
+											$_POST['spins'].
+										'</strong>
 										</p>
 
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
@@ -638,126 +129,126 @@ function prefix_admin_con1() {
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
 
 										<p>
-											Pork &amp; Herb Sausages    
+											Pork &amp; Herb Sausages
 											<strong>'.
 												$_POST['t_porkherb'].
 											'</strong>
 										</p>
 
 										<p>
-											Lamb &amp; Mint Sausages    
+											Lamb &amp; Mint Sausages
 											<strong>'.
 												$_POST['t_lambmint'].
 											'</strong>
 										</p>
 
 										<p>
-											Bratwurst Sausages    
+											Bratwurst Sausages
 											<strong>'.
 												$_POST['t_bratwurst'].
 											'</strong>
 										</p>
 
 										<p>
-											Bratwurst with Fennel Sausages    
+											Bratwurst with Fennel Sausages
 											<strong>'.
 												$_POST['t_bratwurst_fennel'].
 											'</strong>
 										</p>
 
 										<p>
-											Texan Chile Sausages    
+											Texan Chile Sausages
 											<strong>'.
 												$_POST['t_texan_chile'].
 											'</strong>
 										</p>
 
 										<p>
-											Chorizo Sausages    
+											Chorizo Sausages
 											<strong>'.
 												$_POST['t_chorizo'].
 											'</strong>
 										</p>
 
 										<p>
-											Tomato &amp; Basil Sausages    
+											Tomato &amp; Basil Sausages
 											<strong>'.
 												$_POST['t_tomatobasil'].
 											'</strong>
 										</p>
 
 										<p>
-											Herb &amp; Garlic Sausages    
+											Herb &amp; Garlic Sausages
 											<strong>'.
 												$_POST['t_herbgarlic'].
 											'</strong>
 										</p>
 
 										<p>
-											Green Capsicum &amp; Onion Sausages    
+											Green Capsicum &amp; Onion Sausages
 											<strong>'.
 												$_POST['t_peppersonion'].
 											'</strong>
 										</p>
 
 										<p>
-											Green Capsicum &amp; Onion <em>- GF</em> Sausages    
+											Green Capsicum &amp; Onion <em>- GF</em> Sausages
 											<strong>'.
 												$_POST['t_gf_capsicum'].
 											'</strong>
 										</p>
 
 										<p>
-											Plain Sausages    
+											Plain Sausages
 											<strong>'.
 												$_POST['t_plain'].
 											'</strong>
 										</p>
 
 										<p>
-											Plain <em>- GF</em> Sausages    
+											Plain <em>- GF</em> Sausages
 											<strong>'.
 												$_POST['t_gf_plain'].
 											'</strong>
 										</p>
 
 										<p>
-											Saveloys    
+											Saveloys
 											<strong>'.
 												$_POST['t_saveloys'].
 											'</strong>
 										</p>
 
 										<p>
-											Saveloys <em>- GF</em>    
+											Saveloys <em>- GF</em>
 											<strong>'.
 												$_POST['t_gf_saveloys'].
 											'</strong>
 										</p>
 
 										<p>
-											Build Your Own Sausages    
+											Build Your Own Sausages
 											<strong>'.
 												$_POST['t_create'].
 											'</strong>
 										</p>
 
 										<p>
-											Patties    
+											Patties
 											<strong>'.
 												$_POST['t_patties'].
 											'</strong>
 										</p>
 
 										<p>
-											Patties <em>- GF</em>    
+											Patties <em>- GF</em>
 											<strong>'.
 												$_POST['t_gf_patties'].
 											'</strong>
 										</p>
 
 										<p>
-											Salami    
+											Salami
 											<strong>'.
 												$_POST['t_salami'].
 											'</strong>
@@ -770,24 +261,24 @@ function prefix_admin_con1() {
 										</p>
 
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>   
-								</tr>
+									</tr>
 
-								<tr>
-									<td style="background-color: #ffffff; border-top: 0px solid #000000; text-align: center;" align="center">
-										<span style="font-size: 11px; color: #575757; line-height: 200%; font-family: arial; text-decoration: none;">
-											Canterbury Homekill. 26 Merton Road. RD 1. Rangiora 7471<br />
-											<a href="mailto:info@canterburyhomekill.co.nz">info@canterburyhomekill.co.nz</a><br />
-											Phone (03) 313 4771
-										</span>
-									</td>
-								</tr>
+									<tr>
+										<td style="background-color: #ffffff; border-top: 0px solid #000000; text-align: center;" align="center">
+											<span style="font-size: 11px; color: #575757; line-height: 200%; font-family: arial; text-decoration: none;">
+												Canterbury Homekill. 26 Merton Road. RD 1. Rangiora 7471<br />
+												<a href="mailto:info@canterburyhomekill.co.nz">info@canterburyhomekill.co.nz</a><br />
+												Phone (03) 313 4771
+											</span>
+										</td>
+									</tr>
 
-						</table>
-					</tr>
-				</tbody>
-			</table>
+							</table>
+						</tr>
+					</tbody>
+				</table>
 			</body>
-			</html>
+		</html>
 		';
 
 	// fixes orders 0 and 1's to Y's and N's
@@ -796,22 +287,27 @@ function prefix_admin_con1() {
 
 	// pick the right animal
 	if ($_POST['animal'] == 'beef') {
+		include get_parent_theme_file_path( '/inc/email-beef.php' );
 		$middle = str_replace($number, $letter, $beef);
 	} elseif ($_POST['animal'] == 'pig') {
+		include get_parent_theme_file_path( '/inc/email-pig.php' );
 		$middle = str_replace($number, $letter, $pig);
 	} elseif ($_POST['animal'] == 'deer') {
+		include get_parent_theme_file_path( '/inc/email-deer.php' );
 		$middle = str_replace($number, $letter, $deer);
 	} elseif ($_POST['animal'] == 'sheep') {
-		$middle = str_replace($number, $letter, $sheep);  
+		include get_parent_theme_file_path( '/inc/email-sheep.php' );
+		$middle = str_replace($number, $letter, $sheep);
 	} elseif ($_POST['animal'] == 'alpacallama') {
+		include get_parent_theme_file_path( '/inc/email-alpaca-llama.php' );
 		$middle = str_replace($number, $letter, $alpacallama);
 	} 
 
-// places both parts of the message together
+	// places both parts of the message together
 	$message = 
-				$top .
-				$middle .
-				$tail;
+		$top .
+		$middle .
+		$tail;
 
 	add_filter( 'wp_mail_from_name', function( $name ) {
 		return 'Canterbury Homekill';
@@ -824,7 +320,7 @@ function prefix_admin_con1() {
 
 	// wp_mail($to , $subject , $message );
 	wp_mail($tosender , $subject , $message );
-	wp_mail($to , $subject , $message );
+	// wp_mail($to , $subject , $message );
 	wp_mail($tochk , $subject , $message );
 
 	wp_redirect( home_url() . '/thanks' );

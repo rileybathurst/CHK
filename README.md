@@ -1,11 +1,15 @@
 # Canterbury Homekill
+
 Start of weekly work with a clean github
 
 ## Sass
+
 sass scss/app.scss css/app.css --watch
 
 ## Removing Foundation
+
 Things to do
+
 - small menu
 - how much of home can be made in Gutenberg
 - what is the site map? it doesnt have an extension
@@ -30,8 +34,10 @@ there might need to be some work done on the order pages to deal with secondary 
 ## WP Plugins
 
 - buddypress - we might be able to get away with removing it? would remove user profiles?
-- [https://en-nz.wordpress.org/plugins/wp-email-login/](email login) - this is really old can we deal with default worpdress now?
+- [wp email login plugin](https://en-nz.wordpress.org/plugins/wp-email-login/) - this is really old can we deal with default worpdress now?
 
 - wp cache or jetpack, currently not setup
 - yoast until I do all the work for seo
 - gutenberg? am I needing any advanced features?
+- there might be something funky going on with forms now being in the inc folders means I dont have the $variables from higher above
+- page-order-deer.php has additional script that needs fixing
