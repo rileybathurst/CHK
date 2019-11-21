@@ -11,7 +11,7 @@ Prices may vary regarding size.
 | Price       | Description |
 | ----------- | ----------- |
 | 35          | Large Sheep |
-| 25          | Lambs       |
+| 30          | Lambs       |
 
 ---
 
@@ -46,7 +46,7 @@ Prices may vary regarding size.
 | Price       | Description |
 | ----------- | ----------- |
 | 80          | Single      |
-| 60 each     | Two or more |
+| 70 each     | Two or more |
 
 ---
 
@@ -54,9 +54,9 @@ Prices may vary regarding size.
 
 | Price       | Description  |
 | ----------- | ------------ |
-| 1.30        | Per KG       |
+| 1.40        | Per KG       |
 | 20          | Bacon        | Per forequarter, loin and leg(third)
-| 15          | Bacon        | Belly (Streaky)
+| 16          | Bacon        | Belly (Streaky)
 | 12          | Pickled Pork |
 there are x8 Pieces that can be made into bacon)
 Your Bacon Will Be Vacuum Packed in family size packs
@@ -87,7 +87,7 @@ Vacuum Packed in Family Sized Packs
 | Price       | Description |
 | ----------- | ----------- |
 | 75          | Per Deer    |
-| 25          | Skin only (Not killed, wild, dropped off dead with skin on) |
+| 25          | Skin removal only (wild, dropped off dead with skin on) |
 
 ---
 
@@ -95,7 +95,7 @@ Vacuum Packed in Family Sized Packs
 
 | Price       | Description |
 | ----------- | ----------- |
-| 1.50        | per kg to process/package    |
+| 1.75        | per kg to process/package    |
 
 ## Beef
 
@@ -103,7 +103,7 @@ Vacuum Packed in Family Sized Packs
 
 | Price       | Description |
 | ----------- | ----------- |
-| 150         | Per Cow     |
+| 175         | Per Cow     |
 
 ---
 
@@ -111,7 +111,7 @@ Vacuum Packed in Family Sized Packs
 
 | Price       | Description                              |
 | ----------- | ---------------------------------------- |
-| 1.35        | per kg to process/package                |
+| 1.50        | per kg to process/package                |
 | 10          | per side (2 Silversides in a whole body) |
 
 ## Alpaca Llama

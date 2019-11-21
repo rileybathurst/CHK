@@ -6,7 +6,7 @@
 			<h2>Welcome to <?php echo get_bloginfo( 'name' ); ?> Ltd</h2> <!-- this is probably a little convaluted but its fine for now -->
 
 			<hr>
-			<?php echo (get_page_by_title('Intro')->post_content); ?>
+			<p><?php echo (get_page_by_title('Intro')->post_content); ?></p><!-- not quite sure why this isnt bringing in the p tags by default -->
 			<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('about')->ID); ?>" class="">Read More <?php echo (get_page_by_title('about')->post_title); ?> Us</a></h3>
 
 			<hr>
@@ -24,7 +24,7 @@
 		<section><!-- Order Animals -->
 
 			<div class="set-in"> <!-- this cant be higher level as the animals go all the way to the edge -->
-				<h3 class="set-in"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Order')->ID); ?>"><?php echo (get_page_by_title('Order')->post_title); ?></a></h3>
+				<h3 class="set-in"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('Order')->ID); ?>"><?php echo (get_page_by_title('Order')->post_title); ?></a></h3> <!-- this has a double set in which makes things go wrong in a print style -->
 
 				<?php echo (get_page_by_title('order')->post_content); ?>
 			</div>
@@ -135,7 +135,7 @@
 		</div>
 	</div><!-- columns -->
 
-	<img src="http://localhost:8888/chk/wp-content/uploads/2016/03/iStock_000021247297_recipe.jpg" alt="cooking" class="home-image"> <!-- this is its own area and needs to be written into the theme in a better way including as a responsive picture element -->
+	<img src="http://localhost:8888/chk/wp-content/uploads/2016/03/iStock_000021247297_recipe.jpg" alt="cooking" class="home-image hide-for-print"> <!-- this is its own area and needs to be written into the theme in a better way including as a responsive picture element -->
 		
 </div> <!-- .container -->
 	

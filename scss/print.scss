@@ -303,7 +303,35 @@
 	.border-slim {
 		border-top: 1px dashed #999;
 	}
-	.print-highlights {
-		color: $highlight !important;
+	/* .print-highlights {
+		// color: $highlight !important; 5.0 this doesnt work
+	} */
+
+	.over-background {
+		background: none;
 	}
-}
+
+	.is-style-stripes li:nth-child(2n+1) {
+		background: none;
+		border: none;
+	}
+
+	.light-back,
+	.is-style-light-back {
+		background: none;
+		border: none;
+	}
+
+	.animals-link {
+		background: none;
+		border: none;
+	}
+
+	.container {
+		display: inline;
+	}
+
+	.set-in .set-in { // little hack to tidy this up with double set ins
+		margin: 0;
+	}
+} // print styles

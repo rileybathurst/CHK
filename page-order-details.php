@@ -172,6 +172,6 @@ $unid = $_GET['n'];
 		</section><!-- container -->
 	</main><!-- over-background main-border -->
 
-	<?php get_sidebar(); ?> <!-- symantically this should be outside the main -->
+	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

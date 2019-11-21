@@ -1,31 +1,26 @@
 <!--  This page is to make the php easier and kept but is actually a wordpress page so the template never uses this -->
-<hr>
-<h3>Slaughter Charges</h3>
-<ul class="no-bullet stripes">
-    <li>
-        <div class="row">
-            <div class="small-3 columns">$75</div>
-            <div class="small-1 columns stripe-breaker">|</div>
-            <div class="small-8 columns">Per Deer</div>
-        </div>
-    </li>
-    <li>
-        <div class="row">
-            <div class="small-3 columns">$25</div>
-            <div class="small-1 columns stripe-breaker">|</div>
-            <div class="small-8 columns">Skin only (Not killed, wild, dropped off dead with skin on)</div>
-        </div>
-    </li>
-</ul>
 
-<hr>
-<h3>Processing Charges</h3>	
-<ul class="no-bullet stripes">
-    <li>
-        <div class="row">
-            <div class="small-3 columns">$1.50</div>
-            <div class="small-1 columns stripe-breaker">|</div>
-            <div class="small-8 columns">per kg to process/package</div>
-        </div>
-    </li>
+<!-- wp:heading {"level":3} -->
+<h3>Slaughter Charges</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {"className":"is-style-stripes"} -->
+<ul class="is-style-stripes">
+	<li>$75 | Per Deer</li>
+	<li>$25 | Skin only (Not killed, wild, dropped off dead with skin on)</li>
 </ul>
+<!-- /wp:list -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Processing Charges</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {"className":"is-style-stripes"} -->
+<ul class="is-style-stripes">
+	<li>$1.50 | per kg to process/package</li>
+</ul>
+<!-- /wp:list -->
