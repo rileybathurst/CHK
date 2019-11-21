@@ -99,12 +99,13 @@ h5 {font-size: 1.25em;}
 
 small, .text_small {font-size: 0.8em;} */
 
+/*
 h3 {
 	/* Medium up screens */
-	@media (min-width: map-get($breakpoints, medium)) {
+	/* @media (min-width: map-get($breakpoints, medium)) {
 		font-size: 2.441rem; // this is normally h2
 	}
-}
+} */
 
 a {
 	color: $highlight;
@@ -1417,4 +1418,8 @@ footer img {
 
 .login-remeber input[type="checkbox"] {
 	border-color: $black; // this isnt working
+}
+
+.wp-block-image {
+	margin: 0; // wp default override
 }
