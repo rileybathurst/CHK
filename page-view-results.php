@@ -1,199 +1,136 @@
 <?php
-/*  
- *  Template Name: View Results
- */ 
+/*
+ * Template Name: View Results
+ */
+
+get_header();
+
+//define name variable from url bar .php?r=
+if (isset($_GET['r'])) {
+	$result = $_GET['r'];
+}
+
+//define variable for url bar .php?offset=
+if (isset($_GET['offset'])) {
+	$off = $_GET['offset'];
+} else {
+	$off = 0;
+}
 ?>
 
-<?php get_header(); ?>
+<div class="container main-border over-background">
+	<main>
 
-<?php 
-    //define name variable from url bar .php?s=
-    $result = $_GET['r'];
-?>
+		<!-- Start the main container -->
+		<section role="document" class="set-in">
 
-<div class="row over-background border drop">
-    <div class="small-12 columns"><!-- First Two -->
+			<?php if (have_posts()) {
+				while (have_posts()) : the_post(); ?>
 
-        <!-- Start the main container -->
-        <div class="container" role="document">
-            
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); 
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- post open -->
 
-                    $format = get_post_format();
-                    get_template_part( 'format', $format );
-                    ?>
-                    
-                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- post -->
+						<?php the_post_thumbnail(); ?>
 
-                            <?php include("page-title.php"); ?>
-                            
-                            <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" data-abide novalidate>
+						<h2><?php the_title(); ?> for <?php echo $result; ?></h2>
 
-                                <div data-abide-error class="alert callout" style="display: none;">
-                                    <p><i class="fi-alert"></i> There are some errors in your form.</p>
-                                </div>
+						<hr>
 
-                                <input type="hidden" name="action" value="viewresults">
-                                <input type="hidden" name="data" value="viewresultsid"><!-- slightly different value to differentiate, not used -->
+						<?php the_content(); ?>
+							
+							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" data-abide novalidate>
 
-                                <!-- use the url unid variable in the form to keep it on the same one -->
+								<fieldset>
 
-                                <div class="row">
+									<input type="hidden" name="action" value="viewresults">
+									<input type="hidden" name="data" value="viewresultsid"><!-- both are needed for wp backend -->
 
-                                    <div class="small-12 columns show-for-small-only">
-                                        <label for="search" class="inline">Search:</label>
-                                    </div>
+									<!-- use the url unid variable in the form to keep it on the same one -->
+									<label for="search" class="inline">Search:</label>
+									<input name="name" type="text" required id="name" placeholder="Joe Smith" />
 
-                                    <div class="medium-2 large-1 columns show-for-medium">
-                                        <label for="search" class="text-right">Search:</label>
-                                    </div>
+									<button type="submit">Search</button>
+								<fieldset>
+							</form>
 
-                                    <div class="small-12 medium-8 large-5 columns">
-                                        <input name="name" type="text" required id="name" placeholder="Joe Smith" />
-                                        <!-- error -->
-                                        <small class="form-error">A name is required.</small>
-                                    </div>
-                                
-                                    <div class="small-12 medium-2 end columns">
-                                        <button type="submit">Search</button>
-                                    </div>
-                                    
-                                    <hr>
-                                    
-                                </div>    
-                            </form>
+							<hr>
 
-                            <div class="row">
-                            
-                            <div class="small-12 medium-8 large-12 medium-centered stripes">
-                                
-                                <ul class="no-bullet">
-                                
-                                <!-- multiple options due to not being logged in would see all guest orders -->
-                                <?php 
-                                    $current_user = wp_get_current_user();
-                                    $current_id = $current_user->ID;    
-                                    $user_info = get_userdata( $current_id );
-                                    
-                                    if (is_user_logged_in ()) {
-                                        $user_role = implode(', ', $user_info->roles);
-                                    }
-                                        
-                                    if ($user_role == 'administrator') { 
+							<!-- multiple options due to not being logged in would see all guest orders -->
+							<?php if(current_user_can('administrator')) {
 
-                                    // first extract the current user email as the variable 
-                                    $current_user = wp_get_current_user();
-                                    $current_email = $current_user->user_email;  
-                                        
-                                    // set the number of items to display per page
-                                    $items_per_page = 100;
+								// set the number of items to display per page
+								$items_per_page = 100;
 
-                                    // set the offset the page number with a zero after
-                                    $offset = $off . 00;
+								// set the offset the page number with a zero after
+								$offset = $off . 00;
 
-                                // then search for orders -->
-                                $orders = $wpdb->get_results( 
-                                        "
-                                        SELECT * 
-                                        FROM meatorders
-                                        WHERE ( name LIKE '$result%' OR name LIKE '%$result' OR email LIKE '$result%' OR email LIKE '%$result' AND confirm = 1 )
-                                        ORDER by unid desc
-                                        LIMIT $offset , $items_per_page
-                                        ;"
-                                    );
-                                    foreach ( $orders as $order ) 
-                                    {
-                                        echo 
-                                        '<li><a href="' .
-                                            
-                                            home_url() .
-                                            
-                                            '/view-order?n=' .
-                                                                                    
-                                            $order->unid .
-                                            
-                                        '">'.
-                                            
-                                        $order->unid . 
-                                            
-                                        '</a>' .    
-                                        
-                                        '&nbsp; - ' . 
-                                            
-                                        $order->name .    
-                                            
-                                        '&nbsp; - ' .
-                                            
-                                        $order->email .
-                                            
-                                        '&nbsp; - ' . 
-                                            
-                                        $order->animal .
-                                            
-                                        '&nbsp; - ' .
-                                            
-                                        $order->amp .
-                                            
-                                        '&nbsp; - ' .
-                                            
-                                        $order->timenow .
-                                            
-                                        '</li>' ;
-                                    } ?>
-                                        
-                                    <!-- create variable -->
-                                    <?php $over = $off + 1; ?>
-                                    <?php $under = $off - 1; ?>
 
-                                    <hr >
-                                    
-                                    
-                                    <div class="small-12 columns">
-                                        <button class="current">You're on page <?php if ($off>0) { echo $over; } else { echo '1'; } ?></button>
+								// It would be nicer to not query twice 
+								$rowcount = $wpdb->get_var("SELECT COUNT(*) FROM 
+									meatorders
+									WHERE ( name LIKE '$result%' OR name LIKE '%$result' OR email LIKE '$result%' OR email LIKE '%$result' AND confirm = 1 )
+									ORDER by unid desc
+									LIMIT $offset , $items_per_page
+									;"
+								); ?>
 
-                                        <!-- If more than 0 previous is OK -->
-                                        <?php if ($off>0)  {
-                                                echo '<button><a href=" ' . home_url() . '/view-results/?r=' . $result . '/?offset=' . $under . '" aria-label="Previous">Previous <span class="show-for-sr">page</span></a></button>' ;
-                                             } ?>
+								<h3>Returned <?php echo $rowcount; ?> Results</h3>
+								<?php if ($rowcount == 0) { ?>
+									<p>Sorry no results try search for names or emails or check the <a href="<?php echo home_url(); ?>/view-all">view-all</a> area and search manually</p>
+								<?php } else {
 
-                                        <button><a href="<?php echo home_url(); ?>/view-results/?r=<?php echo $result; ?>/?offset=<?php echo $over; ?>" aria-label="Previous">Next <span class="show-for-sr">page</span></a></button>
+									// then search for orders
+									$orders = $wpdb->get_results( 
+										"
+										SELECT * 
+										FROM meatorders
+										WHERE ( name LIKE '$result%' OR name LIKE '%$result' OR email LIKE '$result%' OR email LIKE '%$result' AND confirm = 1 )
+										ORDER by unid desc
+										LIMIT $offset , $items_per_page
+										;"
+									);
+									foreach ( $orders as $order ) 
+									{
+										echo 
+										'<li><a href="' . home_url() . '/view-order?n=' . $order->unid . '">' . $order->unid . '</a>' .
+											' - ' . $order->name .
+											' - ' . $order->email .
+											' - ' . $order->animal .
+											' - ' . $order->amp .
+											' - ' . $order->timenow .
+										'</li>' ;
+									} ?>
 
-                                    </div>
-                                    
-                                    
-                                <?php } else {
-                                echo '<li>Sorry your not an admin.</li>';
-                                }
-                                ?>
-                                    
-                                </ul>
-                    
-                            </div>
+									<!-- create variable -->
+									<?php $over = $off + 1; ?>
+									<?php $under = $off - 1; ?>
 
-                        </div><!-- row -->
-                    </div><!-- post -->
+									<!-- this needs a result count and then if none print that rather than just fail -->
+									<hr >
 
-                    <?php endwhile; ?><!-- while have posts -->
+									<p>You're on page <?php if ($off>0) { echo $over; } else { echo '1'; } ?></p>
 
-                <?php else : ?>
-                    <div class="row">
-                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            
-                            <h1>hey</h1>
-<?php echo $search; ?>
+									<!-- If more than 0 previous is OK -->
+									<?php if ($off>0)  {
+											echo '<button><a href=" ' . home_url() . '/view-results/?r=' . $result . '/?offset=' . $under . '" aria-label="Previous">Previous <span class="show-for-sr">page</span></a></button>' ;
+											} ?>
 
-                            <p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
-                            <p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
-                         </div><!--.entry-->
-                    </div>
+									<button><a href="<?php echo home_url(); ?>/view-results/?r=<?php echo $result; ?>/?offset=<?php echo $over; ?>" aria-label="Previous">Next <span class="show-for-sr">page</span></a></button>
 
-                <?php endif; ?><!-- if have posts -->
-            
-        </div><!-- container -->
-        
-        </div><!-- equilizer watch -->
-        
+								<?php } // more than zero results
+
+							} else { ?> <!-- if admin -->
+								<h4>Sorry your not an admin.</h4>';
+
+								<?php wp_login_form(); ?>
+
+								<p><a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword">Lost Your Password?</a></p><!-- this is more of a button? it does something? -->
+							<?php }; ?>
+					</article>
+				<?php endwhile; // while have posts
+			} ?><!-- if have posts -->
+		</section><!-- container -->
+	</main><!-- columns -->
+
+	<?php get_sidebar(); ?>
 </div><!-- row -->
-			
-<?php get_footer(); ?>        
+<?php get_footer(); ?>

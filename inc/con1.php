@@ -24,6 +24,10 @@ function prefix_admin_con1() {
 
 		$subject = 'Canterbury Homekill Order: ' . $_POST['unid'];
 
+		// $custom-logo = the_custom_logo(); I presume this doent work but do some testing
+		$theme = 'https://canterburyhomekill.co.nz/wp-content/themes/CHK-0-5-0';
+		$updating = get_template_directory_uri();
+
 		$top = '
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 		<html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,7 +44,12 @@ function prefix_admin_con1() {
 
 								<tr>
 									<td width="596" align="center" style="background-color: #ffffff; border-top: 0px solid #000000; text-align: left; height: 50px;">
-										<img src="https://canterburyhomekill.co.nz/wp-content/themes/CHK-0-3/img/CHK-logo-600.png" alt="canterburyhomekill logo" />
+										<img src="'.
+										$theme .
+										'/img/CHK-logo-600.png" alt="canterburyhomekill logo" loading="lazy" />
+										<img src="'.
+										$updating .
+										'/img/CHK-logo-600.png" alt="canterburyhomekill logo" loading="lazy" />
 									</td>
 								</tr>
 

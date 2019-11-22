@@ -60,7 +60,7 @@ $unid = $_GET['n'];
 											<!-- confirm -->
 											<div>
 												<?php if ($order->confirm == 1) { ?>
-													<span class="unicode check spacer">✓</span>
+													<span class="unicode highlights spacer">✓</span>
 												<?php } else { echo ' '; } ?>
 												<strong>Confirmation</strong>
 											</div>
@@ -181,13 +181,7 @@ $unid = $_GET['n'];
 
 											<hr class="hide-for-print">
 
-											<div class="hide-for-print">
-												<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('view profile')->ID); ?>" class="button san-serif">Back to your orders</a>
-											</div>
-
 											<?php if(current_user_can('administrator')) { ?>
-
-												<hr class="hide-for-print">
 
 												<div class="hide-for-print">
 													<a href="<?php echo home_url(); ?>/view-all" class="button san-serif">Back to all orders</a>
@@ -202,7 +196,11 @@ $unid = $_GET['n'];
 													<?php if ($unid>0)  { ?><a href="<?php esc_url( home_url( '/' ) ); ?>view-order/?n=<?php echo $below; ?>" aria-label="Previous" class="button san-serif">Previous Order</a><?php } ;?>
 												</div>
 
-											<?php } // if admin ?>
+											<?php } else { // if admin ?>
+												<div class="hide-for-print">
+													<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('view profile')->ID); ?>" class="button san-serif">Back to your orders</a>
+												</div>
+											<?php } ?>
 
 										</div><!-- run the stripes -->
 									<?php } // For each

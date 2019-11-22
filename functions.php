@@ -12,9 +12,10 @@ if ( ! function_exists( 'chk_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'text_domain' ),
-			'secondary' => __( 'Seconday Menu', 'text_domain' ),
-			'social'  => __( 'Social Links Menu', 'text_domain' ),
+			'primary'		=> __( 'Primary Menu', 'text_domain' ),
+			'secondary'		=> __( 'Seconday Menu', 'text_domain' ),
+			'footer'		=> __( 'Footer Menu', 'text_domain' ),
+			'social'		=> __( 'Social Links Menu', 'text_domain' ),
 		) );
 
 		/*

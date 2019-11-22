@@ -6,12 +6,11 @@
 get_header();
 
 //define variable for url bar .php?n=
-// this needs an if statement
 if (isset($_GET['n'])) {
 	$unid = $_GET['n'];
 }
 
-//define variable for url bar .php?n=
+//define variable for url bar .php?offset=
 if (isset($_GET['offset'])) {
 	$off = $_GET['offset'];
 } else {

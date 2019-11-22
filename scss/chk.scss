@@ -128,9 +128,13 @@ a:hover {
 }
 
 .show-for-medium {
-	visibility: hidden;
+	/* visibility: hidden;
 	@media (min-width: map-get($breakpoints, medium)) {
 		visibility: visible;
+	} */
+	display: none;
+	@media (min-width: map-get($breakpoints, medium)) {
+		display: inherit;
 	}
 }
 
@@ -164,18 +168,10 @@ blockquote {
 }
 
 select { // https://css-tricks.com/styling-a-select-like-its-2019/
-	background: $tertiary;
+	background: $black;
 	border-radius: $global-border-radius;
-	color: $background;
-
-	padding: $regular-space;
-
+	color: $white;
 	border: 2px solid $tertiary;
-
-	// -moz-appearance: none;
-	// -webkit-appearance: none;
-	// appearance: none;
-
 }
 
 select::-ms-expand {
@@ -193,6 +189,7 @@ select:focus {
 }
 select option {
 	font-weight:normal;
+	padding: $regular-space;
 }
 
 .clear {
@@ -331,7 +328,9 @@ textarea {
 .top-bar--together {
 	display: flex;
 	flex-direction: row;
-	align-items: baseline;
+	@media (min-width: map-get($breakpoints, medium)) {
+		align-items: baseline; // this breaks on small sizes
+	}
 }
 
 .top-bar--contact {
@@ -424,18 +423,20 @@ input[type="submit"],
 #buddypress button, // are these overwritten or am I doubling for no reason?
 #buddypress .button,
 #buddypress input[type="submit"] {
-  cursor: pointer; // needed for the .button
-  text-transform: uppercase;
-  padding: $regular-space;
-  margin: $regular-space;
-  font-size: $regular-space; // dont use spacing variables on sizes use a type scale?
-  background: $highlight;
-  transition: all 300ms;
-  color: $secondary;
-  border: $highlight $global-border-width solid; // needed for using a border on hover but could be a touch darker for styling
-  border-radius: $global-border-radius;
-  box-shadow: $shadow;
-  display: inline-block;
+	cursor: pointer; // needed for the .button
+	text-transform: uppercase;
+	padding: $regular-space;
+	margin: $regular-space;
+	font-size: $regular-space; // dont use spacing variables on sizes use a type scale?
+	background: $highlight;
+	transition: all 300ms;
+	color: $secondary;
+	border: $highlight $global-border-width solid; // needed for using a border on hover but could be a touch darker for styling
+	border-radius: $global-border-radius;
+	box-shadow: $shadow;
+	display: inline-block;
+	text-decoration: none;
+	font-family: sans-serif;
 }
 
 button:hover, button:focus, .button:hover, .button:focus, 
@@ -616,7 +617,7 @@ input[type="password"]:focus {
 .run-the-stripes div:nth-child(odd),
 .run-the-stripes li:nth-child(odd) {
 	background: $quaternary;
-	border: $global-border-width solid $quaternary;
+	// border: $global-border-width solid $quaternary;
 	border-radius: $global-border-radius;
 }
 
@@ -685,7 +686,7 @@ a3 a:hover {
 }
 
 .highlights {
-	color: $highlight; // not very user friendly to use the link pattern on regular text
+	color: $highlight; // not very user friendly to use the link pattern on regular text // but on places like the unicode marks its ok
 }
 
 .seconds {
@@ -744,7 +745,7 @@ a3 a:hover {
 -------------------------------------------------------------- */
 
 .spacer {
-	margin-right: 1rem; // used around unicode symbolds - can they just have spaces or &nbsp;?
+	margin-right: $regular-space; // used around unicode symbolds - can they just have spaces or &nbsp;?
 }
 
 /* Center an inline list - based on inline-list */
@@ -1033,12 +1034,10 @@ margin-top: 20px;
   transition: background-color .5s ease;
 }
 
-.unicode {
+.unicode { // literally unicode
 	speak: none; // throwing a warning on vscode? but a11y might say its right?
-	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; // why does unicode need such a specific font? are we even using unicode like this anymore
-	font-size: 1.5rem;
 	font-weight: bold;
-	color: $highlight;
+	font-size: 1.25em;
 }
 
 // literal cross the anti tick
@@ -1056,13 +1055,11 @@ margin-top: 20px;
 }
 
 .container {
+	width: 100%; // it can get wierd between sizes
 	max-width: 66em;
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: $regular-space*2; // fix this in one line
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0; // the footer always sits below this
+	margin: $regular-space*2 auto 0 auto; // margin-top, margin-right, margin-bottom, and margin-left.
 }
 
 .container > main,
@@ -1100,6 +1097,10 @@ margin-top: 20px;
 	color: $white;
 	border: $global-border-width solid $highlight;
 	border-radius: $global-border-radius;
+}
+
+.animals-link:hover {
+	color: $black;
 }
 
 footer {
@@ -1422,4 +1423,16 @@ footer img {
 
 .wp-block-image {
 	margin: 0; // wp default override
+}
+
+#menu-footer {
+	display: flex;
+	list-style: none;
+	padding-left: 0; // default overwrite
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#menu-footer li {
+	margin-right: $regular-space;
 }

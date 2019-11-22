@@ -1,16 +1,17 @@
-<!-- Beef -->
 <h3>BEEF</h3>
 
 <!-- Start of Option with tich and choice -->
 <!-- b_fillet fillet_bf -->
 <div>
 	<?php if ($order->b_fillet == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php } else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 		<strong>Fillet</strong>
 
 	<?php if ($order->b_fillet == 1) { 
-	echo $order->fillet_bf;
+		echo $order->fillet_bf;
 	} else { echo ' '; } ?>
 
 </div>
@@ -19,28 +20,34 @@
 <!-- b_porterhouse porterhouse_bf -->
 <div>
 	<?php if ($order->b_porterhouse == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php } else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Porterhouse</strong>
 
 	<?php if ($order->b_porterhouse == 1) { 
 		echo $order->porterhouse_bf;
-		} else { echo ' '; } ?>
+	} else { echo ' '; } ?>
 </div>
 
 <!-- b_tbone tbone_bf -->
 <div>
 	<?php if ($order->b_tbone == 1) { ?>
-			<span class="unicode check spacer">✓</span>
-	<?php } else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>T-Bone</strong>
 </div>
 
 <!-- b_ribeye ribeye_bf -->
 <div>
 	<?php if ($order->b_ribeye == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php } else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Ribeye</strong>
 
 	<?php if ($order->b_ribeye == 1) { 
@@ -51,8 +58,8 @@
 <!-- b_rump rump_bf -->
 <div>
 	<?php if ($order->b_rump == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Rump</strong>
 
 	<?php if ($order->b_rump == 1) { 
@@ -63,8 +70,8 @@
 <!-- b_topside topside_bf -->
 <div>
 	<?php if ($order->b_topside == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Topside</strong>
 
 	<?php if ($order->b_topside == 1) { 
@@ -75,8 +82,8 @@
 <!-- b_rolledroast rolledroast_bf -->
 <div>
 	<?php if ($order->b_rolledroast == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Rolled Roast</strong>
 
 	<?php if ($order->b_rolledroast == 1) { 
@@ -87,8 +94,8 @@
 <!-- b_wienerschnitzel weinerschnitzel_bf -->
 <div>
 	<?php if ($order->b_weinerschnitzel == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo " "; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo " "; } ?>
 		<strong>Weiner Schitzel</strong>
 
 	<?php if ($order->b_weinerschnitzel == 1) { 
@@ -99,8 +106,8 @@
 <!-- b_silverside silverside_bf -->
 <div>
 	<?php if ($order->b_silverside == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Silverside</strong>
 	
 	<?php if ($order->b_silverside == 1) { 
@@ -111,8 +118,8 @@
 <!-- b_blade blade_bf -->
 <div>
 		<?php if ($order->b_blade == 1) { ?>
-			<span class="unicode check spacer">✓</span>
-		<?php }  else { echo '&nbsp;'; } ?>
+			<span class="unicode highlights spacer">✓</span>
+		<?php } else { echo '&nbsp;'; } ?>
 		<strong>Blade</strong>
 		
 	<?php if ($order->b_blade == 1) { 
@@ -123,8 +130,8 @@
 <!-- b_shinfillet shinfillet_bf -->
 <div>
 	<?php if ($order->b_shinfillet == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Shin Fillet</strong>
 		
 	<?php if ($order->b_shinfillet == 1) { 
@@ -135,8 +142,8 @@
 <!-- b_chucksteak chucksteak_bf -->
 <div>
 	<?php if ($order->b_chucksteak == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Chuck Steak</strong>
 		
 	<?php if ($order->b_chucksteak == 1) { 
@@ -147,8 +154,10 @@
 <!-- b_skirtsteak skirtsteak_bf -->
 <div>
 	<?php if ($order->b_skirtsteak == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php } else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Skirt Steak</strong>
 		
 	<?php if ($order->b_skirtsteak == 1) { 
@@ -159,7 +168,7 @@
 <!-- b_mince mince_bf -->
 <div>
 	<?php if ($order->b_mince == 1) { ?>
-		<span class="unicode check spacer">✓</span>
-	<?php }  else { echo ' '; } ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { echo ' '; } ?>
 	<strong>Mince</span></strong>
 </div>

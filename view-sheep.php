@@ -4,7 +4,9 @@
 <div>
 	<?php if ($order->l_shoulder == 1) { ?>
 		<span class="unicode check spacer">✓</span>
-	<?php } else { echo '&nbsp;'; } ?>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Shoulder</strong>
 
 	<?php if ($order->l_shoulder == 1) { 
@@ -16,7 +18,9 @@
 <div>
 	<?php if ($order->l_loin == 1) { ?>
 		<span class="unicode check spacer">✓</span>
-	<?php } else { echo '&nbsp;'; } ?>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Loin</strong>
 
 	<?php if ($order->l_loin == 1) { 
@@ -28,7 +32,9 @@
 <div>
 	<?php if ($order->l_flaps == 1) { ?>
 		<span class="unicode check spacer">✓</span>
-	<?php } else { echo '&nbsp;'; } ?>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Flaps</strong>
 
 	<?php if ($order->l_flaps == 1) { 
@@ -41,7 +47,9 @@
 <div>
 	<?php if ($order->l_leg == 1) { ?>
 		<span class="unicode check spacer">✓</span>
-	<?php } else { echo '&nbsp;'; } ?>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Leg</strong>
 
 	<?php if ($order->l_leg == 1) { 
