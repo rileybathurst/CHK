@@ -15,7 +15,3 @@
 - View Order
 - View Profile
 - View Results
-
-## Needs Work
-
-- Gallery

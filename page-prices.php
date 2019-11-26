@@ -4,106 +4,68 @@
  */
  get_header(); ?>
 
-<div class="row over-background border drop" data-equalizer>
-	<div class="small-12 large-6 columns" data-equalizer-watch><!-- First Two -->
+<div class="container main-border over-background">
+	<main>
 
 		<!-- Start the main container -->
-		<div class="container" role="document">
+		<section role="document" class="set-in">
 
-			<?php if (have_posts()) : ?>
-				<?php while (have_posts()) : the_post(); ?>
+			<?php if (have_posts()) {
+				while (have_posts()) : the_post(); ?>
 
-					<div class="row"><!-- row open --> 
-						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- post open -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>><!-- post open -->
 
-							<div class="small-12 columns"><!-- title -->
+						<?php the_post_thumbnail(); ?>
 
-								<?php include("page-title.php");
-								the_post_thumbnail();
-								th_content(); ?>
+						<h2><?php the_title(); ?></h2>
 
-								<!-- sheep -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Sheep')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Sheep')->post_content); ?>
+						<hr>
 
-								<!-- pig -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Pig')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Pig')->post_content); ?>  
+						<?php the_content(); ?>
 
-								<!-- deer -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Deer')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Deer')->post_content); ?>
+						<!-- sheep -->
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Sheep')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Sheep')->post_content); ?>
+						<hr>
 
-								<!-- beef -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Beef')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Beef')->post_content); ?>
+						<!-- pig -->
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Pig')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Pig')->post_content); ?>
+						<hr>
 
-								 <!-- Alpaca Llama -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Alpaca Llama')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Alpaca Llama')->post_content); ?>
+						<!-- deer -->
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Deer')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Deer')->post_content); ?>
+						<hr>
 
+						<!-- beef -->
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Beef')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Beef')->post_content); ?>
+						<hr>
 
-								<!-- small goods -->
-									 <div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Small Goods')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Small Goods')->post_content); ?>
+						<!-- Alpaca Llama -->
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Alpaca Llama')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Alpaca Llama')->post_content); ?>
+						<hr>
 
-								<!-- delivery -->
-								<div class="row">
-									<div class="small-12 columns">
-										<div class="flagbanner">
-											<h3 class="flagbuttonbanner"><?php echo (get_page_by_title('Delivery')->post_title); ?></h3>
-										</div> 
-									</div>
-								</div>
-								<?php echo (get_page_by_title('Delivery')->post_content); ?>
+						<!-- small goods -->
+						<h3><a href="<?php echo home_url(); ?>/order"><?php echo (get_page_by_title('Small Goods')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Small Goods')->post_content); ?>
+						<hr>
 
-								<h4><a href="<?php echo home_url(); ?>/order" class="button"><?php echo (get_page_by_title('Order')->post_title); ?></a></h4><!-- h4 button? this is really wierd -->
+						<!-- delivery -->
+						<h3><a href="<?php echo home_url(); ?>/order"><?php echo (get_page_by_title('Delivery')->post_title); ?></a></h3>
+						<?php echo (get_page_by_title('Delivery')->post_content); ?>
+						<hr>
 
-							</div><!-- small-12 -->
+						<a href="<?php echo home_url(); ?>/order" class="button"><?php echo (get_page_by_title('Order')->post_title); ?></a>
 
-						</div><!-- post -->
-					</div><!-- row -->
-
+					</article>
 				<?php endwhile; // while have posts
-			endif; ?><!-- if have posts -->
-		</div><!-- container -->
-	</div><!-- equilizer watch -->
+			} ?><!-- if have posts -->
+		</section><!-- container -->
+	</main><!-- columns -->
+
 	<?php get_sidebar(); ?>
 </div><!-- row -->
 <?php get_footer(); ?>

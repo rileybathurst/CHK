@@ -314,11 +314,11 @@ textarea {
 
 // TOP BAR
 .top-bar {
-	background: $tertiary;
+	background: #aaa; // this has to belighter than the light back as it looks drker than it is with context
 	color: $background; // a11y check these contrast ratios?
 	padding: $regular-space;
-	border-bottom: $global-border-width solid $tertiary; // work this in with the shadow
-
+	border-bottom: $global-border-width solid #aaa; // work this in with the shadow
+	box-shadow: $shadow;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
@@ -649,6 +649,17 @@ input[type="password"]:focus {
 
 .light-back .stripes li:nth-child(odd) .stripe-breaker {
 	color: $tertiary;
+}
+
+.single-stripe { // little hack to not have to put everything in lists
+	padding: $small-space $regular-space;
+	background: $quaternary;
+	border-radius: $global-border-radius;
+}
+
+#view-profile--orders > div > a{
+	padding: $regular-space;
+	display: inline-block;
 }
 
 /*
@@ -1131,16 +1142,17 @@ footer img {
 	background: $background;
 	position: fixed;
 	z-index: 3; // above flagbanner below menu button
-	box-shadow: $shadow;
 	width: 33%;
-	// height: 100%; // needs fixing to be full height or stuck to the side
 	left: 100%;
 	transition: all 3s;
 	padding: $regular-space;
+	height: 100%;
+	overflow-x: hidden; // need to be able to scroll the minimenu
 }
 
 .minimenu-open {
 	transform: translate3d(-100%, 0, 0);
+	box-shadow: $shadow;
 }
 
 #minimenu:target { // no-js backup // I could do something with smooth scroll etc and make it easier but the main problem is the click outside to remove
@@ -1168,16 +1180,20 @@ footer img {
 	background: rgba(0,0,0,0.25);
 	margin: $regular-space;
 	padding: $regular-space;
-	border: $global-border-width solid rgba(0,0,0,0.25);;
+	// border: $global-border-width solid rgba(0,0,0,0.25);;
 	border-radius: $global-border-radius;
-	text-align: center;
+	// text-align: center;
 	// box-shadow: $shadow;
 	box-shadow: -$regular-space/2 0px $regular-space/2 rgba(0,0,0,0.25); // half strength shadow if its good it should be a variable
+	font-size: 1.25em;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: capitalize;
 }
 
-#minimenu > div > ul > li > a {
-	color: $white;
-}
+/* #minimenu > div > ul > li > a {
+	// color: $white; // Im not sure about this I like keeping to a "correct" color scheme
+} */
 
 #loginform {
 	background: $tertiary;
@@ -1430,9 +1446,58 @@ footer img {
 	list-style: none;
 	padding-left: 0; // default overwrite
 	flex-wrap: wrap;
-	justify-content: space-between;
+	// justify-content: space-between;
 }
 
 #menu-footer li {
 	margin-right: $regular-space;
+}
+
+#buddypress div.dir-search {
+	margin: 0; // default overrite
+	float: initial; // default overrite
+}
+
+#buddypress div.dir-search input[type="text"], #buddypress li.groups-members-search input[type="text"] {
+	font-size: initial; // default overrite
+	padding: $regular-space; // default overrite
+}
+
+#buddypress div.item-list-tabs ul li.last {
+	float: inherit;
+	margin: $regular-space;
+}
+
+#members-dir-list {
+	margin: $regular-space;
+}
+
+#buddypress div.pagination .pag-count {
+	margin-left: 0; // default overrite
+}
+
+#buddypress div.pagination {
+	font-size: inherit; // default overrite
+}
+
+#buddypress ul.item-list li div.item-title, #buddypress ul.item-list li h3, #buddypress ul.item-list li h4 {
+	font-size: inherit; // default overrite
+}
+
+#buddypress #activity-filter-select { // members/member-name/ deal with show box
+	float: left;
+	width: 100%; 
+}
+
+#buddypress div.item-list-tabs#subnav ul li.last {
+	margin-top: $regular-space;
+}
+
+#buddypress > #item-nav,
+#buddypress > #item-body {
+	margin: $regular-space;
+}
+
+#buddypress table.profile-fields tr td.label {
+	width: 50%; // default overrite
 }

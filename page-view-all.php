@@ -39,7 +39,7 @@ if (isset($_GET['offset'])) {
 
 						if(current_user_can('administrator')) { ?>
 
-							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" data-abide novalidate>
+							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 								<fieldset>
 									<input type="hidden" name="action" value="viewresults">
 									<input type="hidden" name="data" value="viewresultsid"><!-- slightly different value to differentiate, not used -->

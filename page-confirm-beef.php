@@ -41,8 +41,8 @@ $unid = $_GET['n'];
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-								<fieldset>
-										
+								<fieldset class="run-the-stripes">
+
 									<input type="hidden" name="action" value="con1">
 									<input type="hidden" name="data" value="con1id"><!-- slightly different value to differentiate, not used -->
 
@@ -61,216 +61,244 @@ $unid = $_GET['n'];
 									<!-- beef options -->
 									<!-- b_fillet fillet_bf -->
 									<div>
-										<?php if ($order->b_fillet == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_fillet" value="<?php echo $order->b_fillet; ?>">
-										<strong>Fillet</strong>
+										<p>
+											<?php if ($order->b_fillet == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_fillet" value="<?php echo $order->b_fillet; ?>">
+											<strong>Fillet</strong>
 
-										<?php if ($order->b_fillet == 1) { 
-											echo $order->fillet_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="fillet_bf" value="<?php echo $order->fillet_bf; ?>">
+											<?php if ($order->b_fillet == 1) { 
+												echo $order->fillet_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="fillet_bf" value="<?php echo $order->fillet_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_porterhouse porterhouse_bf -->
 									<div>
-										<?php if ($order->b_porterhouse == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_porterhouse" value="<?php echo $order->b_porterhouse; ?>">
-										<strong>Porterhouse</strong>
+										<p>
+											<?php if ($order->b_porterhouse == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_porterhouse" value="<?php echo $order->b_porterhouse; ?>">
+											<strong>Porterhouse</strong>
 
-										<?php if ($order->b_porterhouse == 1) { 
-											echo $order->porterhouse_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="porterhouse_bf" value="<?php echo $order->porterhouse_bf; ?>">
+											<?php if ($order->b_porterhouse == 1) { 
+												echo $order->porterhouse_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="porterhouse_bf" value="<?php echo $order->porterhouse_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_tbone -->
 									<div>
-										<?php if ($order->b_tbone == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_tbone" value="<?php echo $order->b_tbone; ?>">
-										<strong>T-Bone</strong>
+										<p>
+											<?php if ($order->b_tbone == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_tbone" value="<?php echo $order->b_tbone; ?>">
+											<strong>T-Bone</strong>
+										</p>
 									</div>
 
 									<!-- b_ribeye ribeye_bf -->
 									<div>
-										<?php if ($order->b_ribeye == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_ribeye" value="<?php echo $order->b_ribeye; ?>">
-										<strong>Ribeye</strong>
+										<p>
+											<?php if ($order->b_ribeye == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_ribeye" value="<?php echo $order->b_ribeye; ?>">
+											<strong>Ribeye</strong>
 
-										<?php if ($order->b_ribeye == 1) { 
-											echo $order->ribeye_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="ribeye_bf" value="<?php echo $order->ribeye_bf; ?>">
+											<?php if ($order->b_ribeye == 1) { 
+												echo $order->ribeye_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="ribeye_bf" value="<?php echo $order->ribeye_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_rump rump_bf -->
 									<div>
-										<?php if ($order->b_rump == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_rump" value="<?php echo $order->b_rump; ?>">
-										<strong>Rump</strong>
+										<p>
+											<?php if ($order->b_rump == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_rump" value="<?php echo $order->b_rump; ?>">
+											<strong>Rump</strong>
 
-										<?php if ($order->b_rump == 1) { 
-											echo $order->rump_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="rump_bf" value="<?php echo $order->rump_bf; ?>">
+											<?php if ($order->b_rump == 1) { 
+												echo $order->rump_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="rump_bf" value="<?php echo $order->rump_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_topside topside_bf -->
 									<div>
-										<?php if ($order->b_topside == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_topside" value="<?php echo $order->b_topside; ?>">
-										<strong>Topside</strong>
+										<p>
+											<?php if ($order->b_topside == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_topside" value="<?php echo $order->b_topside; ?>">
+											<strong>Topside</strong>
 
-										<?php if ($order->b_topside == 1) { 
-											echo $order->topside_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="topside_bf" value="<?php echo $order->topside_bf; ?>">
+											<?php if ($order->b_topside == 1) { 
+												echo $order->topside_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="topside_bf" value="<?php echo $order->topside_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_rolledroast rolledroast_bf -->
 									<div>
-										<?php if ($order->b_rolledroast == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_rolledroast" value="<?php echo $order->b_rolledroast; ?>">
-										<strong>Rolled Roast</strong>
+										<p>
+											<?php if ($order->b_rolledroast == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_rolledroast" value="<?php echo $order->b_rolledroast; ?>">
+											<strong>Rolled Roast</strong>
 
-										<?php if ($order->b_rolledroast == 1) { 
-											echo $order->rolledroast_bf;
-												} else { echo ' '; } ?>
-										<input type="hidden" name="rolledroast_bf" value="<?php echo $order->rolledroast_bf; ?>">
+											<?php if ($order->b_rolledroast == 1) { 
+												echo $order->rolledroast_bf;
+													} else { echo ' '; } ?>
+											<input type="hidden" name="rolledroast_bf" value="<?php echo $order->rolledroast_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_weinerschnitzel weienerschnitzel_bf -->
 									<div>
-										<?php if ($order->b_weinerschnitzel == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_weinerschnitzel" value="<?php echo $order->b_weinerschnitzel; ?>">
-										<strong>Weiner Schnitzel</strong>
+										<p>
+											<?php if ($order->b_weinerschnitzel == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_weinerschnitzel" value="<?php echo $order->b_weinerschnitzel; ?>">
+											<strong>Weiner Schnitzel</strong>
 
-										<?php if ($order->b_weinerschnitzel == 1) { 
-											echo $order->weinerschnitzel_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="weinerschnitzel_bf" value="<?php echo $order->weinerschnitzel_bf; ?>">
+											<?php if ($order->b_weinerschnitzel == 1) { 
+												echo $order->weinerschnitzel_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="weinerschnitzel_bf" value="<?php echo $order->weinerschnitzel_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_silverside silverside_bf -->
 									<div>
-										<?php if ($order->b_silverside == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_silverside" value="<?php echo $order->b_silverside; ?>">
-										<strong>Silverside</strong>
+										<p>
+											<?php if ($order->b_silverside == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_silverside" value="<?php echo $order->b_silverside; ?>">
+											<strong>Silverside</strong>
 
-										<?php if ($order->b_silverside == 1) { 
-											echo $order->silverside_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="silverside_bf" value="<?php echo $order->silverside_bf; ?>">
+											<?php if ($order->b_silverside == 1) { 
+												echo $order->silverside_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="silverside_bf" value="<?php echo $order->silverside_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_blade blade_bf -->
 									<div>
-										<?php if ($order->b_blade == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_blade" value="<?php echo $order->b_blade; ?>">
-										<strong>Blade</strong>
+										<p>
+											<?php if ($order->b_blade == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_blade" value="<?php echo $order->b_blade; ?>">
+											<strong>Blade</strong>
 
-										<?php if ($order->b_blade == 1) { 
-											echo $order->blade_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="blade_bf" value="<?php echo $order->blade_bf; ?>">
+											<?php if ($order->b_blade == 1) { 
+												echo $order->blade_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="blade_bf" value="<?php echo $order->blade_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_shinfillet shinfillet_bf -->
 									<div>
-										<?php if ($order->b_shinfillet == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_shinfillet" value="<?php echo $order->b_shinfillet; ?>">
-										<strong>Shinfillet</strong>
+										<p>
+											<?php if ($order->b_shinfillet == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_shinfillet" value="<?php echo $order->b_shinfillet; ?>">
+											<strong>Shinfillet</strong>
 
-										<?php if ($order->b_shinfillet == 1) { 
-											echo $order->shinfillet_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="shinfillet_bf" value="<?php echo $order->shinfillet_bf; ?>">
+											<?php if ($order->b_shinfillet == 1) { 
+												echo $order->shinfillet_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="shinfillet_bf" value="<?php echo $order->shinfillet_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_chucksteak chucksteak_bf -->
 									<div>
-										<?php if ($order->b_chucksteak == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_chucksteak" value="<?php echo $order->b_chucksteak; ?>">
-										<strong>Chucksteak</strong>
+										<p>
+											<?php if ($order->b_chucksteak == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_chucksteak" value="<?php echo $order->b_chucksteak; ?>">
+											<strong>Chucksteak</strong>
 
-										<?php if ($order->b_chucksteak == 1) { 
-											echo $order->chucksteak_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="chucksteak_bf" value="<?php echo $order->chucksteak_bf; ?>">
+											<?php if ($order->b_chucksteak == 1) { 
+												echo $order->chucksteak_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="chucksteak_bf" value="<?php echo $order->chucksteak_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_skirtsteak skirtsteak_bf -->
 									<div>
-										<?php if ($order->b_skirtsteak == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_skirtsteak" value="<?php echo $order->b_skirtsteak; ?>">
-										<strong>Skirtsteak</strong>
-										
-										<?php if ($order->b_skirtsteak == 1) { 
-											echo $order->skirtsteak_bf;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="skirtsteak_bf" value="<?php echo $order->skirtsteak_bf; ?>">
+										<p>
+											<?php if ($order->b_skirtsteak == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_skirtsteak" value="<?php echo $order->b_skirtsteak; ?>">
+											<strong>Skirtsteak</strong>
+											
+											<?php if ($order->b_skirtsteak == 1) { 
+												echo $order->skirtsteak_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="skirtsteak_bf" value="<?php echo $order->skirtsteak_bf; ?>">
+										</p>
 									</div>
 
 									<!-- b_mince -->
 									<div>
-										<?php if ($order->b_mince == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="b_mince" value="<?php echo $order->b_mince; ?>">
-										<strong>Mince</strong>
+										<p>
+											<?php if ($order->b_mince == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_mince" value="<?php echo $order->b_mince; ?>">
+											<strong>Mince</strong>
+										</p>
 									</div>
 
 									<!-- spins -->

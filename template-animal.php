@@ -1,11 +1,9 @@
 <?php
-/*  
+/*
  *  Template Name: animal
- */ 
-?>
+ */
 
-<!-- posts and pages -->
-<?php get_header(); ?>
+get_header(); ?>
 
 <div class="container main-border over-background">
 	<main>
@@ -20,7 +18,6 @@
 
 						<?php the_post_thumbnail(); ?>
 
-						<h2 class="featured-title">Featured:</h2>
 						<h2><?php the_title(); ?></h2>
 
 						<hr>
@@ -28,20 +25,16 @@
 						<?php the_content(); ?>
 
 						<hr>
-						<!-- small goods -->
-						<h3>Small Goods</h3>
 
-						<ul class="stripes"><li><a href="<?php echo home_url('/'); ?>small-goods">Check here</a> for small goods prices</li></ul><!-- a little over the top for a single element for a list but it styles as the others do -->
+						<h3>Small Goods</h3>
+						<p class="single-stripe"><a href="<?php echo home_url('/'); ?>small-goods">Check here</a> for small goods prices</p>
 
 						<hr>
-						<!-- offal -->
-						<h3>Offal</h3>
-						
-						<ul class="stripes">
-							<li>$5 processed &amp; packaged per animal</li>
-							<li>No charge collected and left on property in customer container</li>
-						</ul>
 
+						<h3>Offal</h3>
+						<p class="single-stripe">$5 processed &amp; packaged per animal</p>
+						<p class="set-in">No charge collected and left on property in customer container</p>
+						
 						<!-- bookings
 						<h3>Bookings</h3>
 
@@ -57,10 +50,10 @@
 						
 						<?php 
 							$str = get_the_title();
-							$space=preg_replace('/\s+/', '', $str); // remove spaces from the title
+							$space=preg_replace('/\s+/', '', $str); // remove spaces from the title really needed for alpaca llama
 						?>
 
-						<h4 class="small-push-1"><a href="<?php echo home_url(); ?>/order-declaration/?a=<?php echo $space; ?>" class="button">Order</a></h4>
+						<a href="<?php echo home_url(); ?>/order-declaration/?a=<?php echo $space; ?>" class="button">Order</a>
 
 					</article>
 

@@ -37,7 +37,7 @@ if (isset($_GET['offset'])) {
 
 						<?php the_content(); ?>
 							
-							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" data-abide novalidate>
+							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 
 								<fieldset>
 

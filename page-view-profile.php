@@ -5,9 +5,16 @@
 
 get_header();
 
-//define variable for url bar .php?n=
-$unid = $_GET['n'];
-$off = $_GET['offset'];
+//define name variable from url bar .php?n=
+if (isset($_GET['n'])) {
+	$unid = $_GET['n'];
+}
+
+if (isset($_GET['offset'])) {
+	$off = $_GET['offset'];
+} else {
+	$off = 0;
+}
 ?>
 
 <div class="container main-border over-background">
@@ -53,26 +60,26 @@ $off = $_GET['offset'];
 								ORDER by unid desc
 								LIMIT $offset , $items_per_page
 								;"
-							);
-							foreach ( $orders as $order ) 
-							{
-								echo '<div>
-									<a href="' . home_url() . '/view-order?n=' . $order->unid . '">'.
+							); ?>
+							<div id="view-profile--orders" class="run-the-stripes">
+								<?php foreach ( $orders as $order ) 
+								{
+									echo '<div>
+										<a href="' . home_url() . '/view-order?n=' . $order->unid . '">'.
 
-										$order->unid . 
+											$order->unid . 
 
-									'</a>' .
+										'</a> | ' . 
 
-									'<span class="stripe-breaker"> | </span>' . 
+										$order->amp .
 
-									$order->amp .
+										' | ' .
 
-									'<span class="stripe-breaker"> | </span>' .
+										$order->timenow .
 
-									$order->timenow .
-
-								'</div>';
-							} ?>
+									'</div>';
+								} ?>
+							</div>
 
 							<!-- create variable -->
 							<?php $over = $off + 1; ?>
@@ -93,8 +100,11 @@ $off = $_GET['offset'];
 								</p>
 
 							</div>
-						<?php } else { ?> <!-- if user logged in -->
+						<?php } else { ?> <!-- if user logged in easier to stop and start this than deal with changing columns while using the if logged in -->
 							<h4>Welcome, visitor!</h4>
+							<?php wp_login_form(); ?>
+
+							<h4><a href="<?php echo home_url(); ?>/wp-login.php?action=lostpassword">Lost Your Password?</a></h4><!-- this is more of a button? it does something? -->
 						<?php } ?>
 
 					</article>
@@ -105,34 +115,37 @@ $off = $_GET['offset'];
 	</section><!-- container -->
 </main><!-- over-background main-border -->
 
-	<!-- this is where the sidebar usually goes -->
-	<div>
+	<?php if ( is_user_logged_in() ) { ?>
+		<!-- this is where the sidebar usually goes -->
+		<div>
+			<div class="set-in"> <!-- has to be down a set to not break the flex -->
 
-		<h2>Profile Info</h2>
+				<h2>Profile Info</h2>
 
-		<hr>
-
-		<?php $current_user = wp_get_current_user(); ?>
-
-			<ul class="no-bullet stripes"> 
-				<li><div class="row"><div class="small-12 columns">Name: <?php echo $current_user->display_name; ?></div></div></li>
-
-				<li><div class="row"><div class="small-12 columns">email: <?php echo $current_user->user_email; ?></div></div></li>
-
-				<li><div class="row"><div class="small-12 columns">Address: <?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?></div></div></li>
-
-				<li><div class="row"><div class="small-12 columns">Phone: <?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?></div></div></li>
-
-				<li><div class="row"><div class="small-12 columns">Mobile: <?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?></div></div></li>
-
-				<li><div class="row"><div class="small-12 columns">Anything need to be changed?</div></div></li>
-
-				<div class="row"><div class="small-12 columns"><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('update')->ID); ?>" class="button drop">Update Info</a></div></div>
-				
 				<hr>
-				
-			</ul>
-	</div>
+
+				<?php $current_user = wp_get_current_user(); ?>
+
+					<div class="run-the-stripes"> 
+						<div>Name: <?php echo $current_user->display_name; ?></div>
+
+						<div>email: <?php echo $current_user->user_email; ?></div>
+
+						<div>Address: <?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?></div>
+
+						<div>Phone: <?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?></div>
+
+						<div>Mobile: <?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?></div>
+
+						<!-- <div>Anything need to be changed?</div> I dont think this makes sense being here -->
+
+						<div><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('update')->ID); ?>" class="button">Update Info</a></div></div>
+				</ul>
+			</div>
+		</div>
+	<?php } else {
+		get_sidebar();
+	} ?>
 
 </div><!-- row -->
 

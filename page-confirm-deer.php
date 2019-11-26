@@ -41,7 +41,7 @@ $unid = $_GET['n'];
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-								<fieldset>
+								<fieldset class="run-the-stripes">
 
 									<input type="hidden" name="action" value="con1">
 									<input type="hidden" name="data" value="con1id"><!-- slightly different value to differentiate, not used -->
@@ -61,67 +61,75 @@ $unid = $_GET['n'];
 									<!-- deer options -->
 									<!-- v_shoulder --> 
 									<div>
-										<?php if ($order->v_shoulder == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="v_shoulder" value="<?php echo $order->v_shoulder; ?>">
-										<strong>Shoulder</strong>
-										
-										<?php if ($order->v_shoulder == 1) { 
-											echo $order->shoulder_v;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="shoulder_v" value="<?php echo $order->shoulder_v; ?>">
+										<p>
+											<?php if ($order->v_shoulder == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_shoulder; ?>">
+											<strong>Shoulder</strong>
+											
+											<?php if ($order->v_shoulder == 1) { 
+												echo $order->shoulder_v;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="shoulder_v" value="<?php echo $order->shoulder_v; ?>">
+										</p>
 									</div>
 
 									<!-- v_loin -->
 									<div>
-										<?php if ($order->v_loin == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="v_loin" value="<?php echo $order->v_loin; ?>">
-										<strong>Backstrap and Fillets</strong>
-										
-										<?php if ($order->v_loin == 1) { 
-											echo $order->loin_v;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="loin_v" value="<?php echo $order->loin_v; ?>">
+										<p>
+											<?php if ($order->v_loin == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="v_loin" value="<?php echo $order->v_loin; ?>">
+											<strong>Backstrap and Fillets</strong>
+											
+											<?php if ($order->v_loin == 1) { 
+												echo $order->loin_v;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="loin_v" value="<?php echo $order->loin_v; ?>">
+										</p>
 									</div>
 
 									<!-- v_leg -->
 									<div>
-										<?php if ($order->v_leg == 1) { ?>
-											<span class="unicode check spacer">✓</span>
-										<?php } else { ?>
-											<span class="unicode cross spacer">✗</span>
-										<?php } ?>
-										<input type="hidden" name="v_leg" value="<?php echo $order->v_leg; ?>">
-										<strong>Leg</strong>
+										<p>
+											<?php if ($order->v_leg == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="v_leg" value="<?php echo $order->v_leg; ?>">
+											<strong>Leg</strong>
 
-										<?php if ($order->v_leg == 1) { 
-											echo $order->leg_v;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="leg_v" value="<?php echo $order->leg_v; ?>">
-										
-										<?php if ($order->v_leg == 1) { 
-											echo $order->v_leg_whole_half;
-										} else { echo ' '; } ?>
-										<input type="hidden" name="v_leg_whole_half" value="<?php echo $order->v_leg_whole_half; ?>">
+											<?php if ($order->v_leg == 1) { 
+												echo $order->leg_v;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="leg_v" value="<?php echo $order->leg_v; ?>">
+											
+											<?php if ($order->v_leg == 1) { 
+												echo $order->v_leg_whole_half;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="v_leg_whole_half" value="<?php echo $order->v_leg_whole_half; ?>">
+										</p>
 									</div>
 
 									<!-- spins -->
-									<p>
-										<em>
-											Special instructions
-										</em>
-										<strong>
-											<?php echo $order->spins; ?>
-											<input type="hidden" name="spins" value="<?php echo $order->spins; ?>">
-										</strong>
-									</p>
+									<div>
+										<p>
+											<em>
+												Special instructions
+											</em>
+											<strong>
+												<?php echo $order->spins; ?>
+												<input type="hidden" name="spins" value="<?php echo $order->spins; ?>">
+											</strong>
+										</p>
+									</div>
 
 									<?php include("confirm-small-goods.php"); ?>
 										
