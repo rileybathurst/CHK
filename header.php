@@ -50,7 +50,7 @@
 				<div class="minimenu-logo"><?php the_custom_logo(); ?></div>
 				<span class="screen-reader"><?php echo get_bloginfo( 'name' ); ?></span>
 			<?php } else { ?>
-				<h2><?php $blog_info = get_bloginfo( 'name' ); ?></h2>
+				<h2><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h2>
 			<?php } ?>
 
 			<?php if ( is_user_logged_in() ) {
@@ -109,12 +109,20 @@
 				</div>
 			<?php } ?>
 			<!-- show for either login state -->
-			<button href="<?php echo home_url(); ?>/contact" class="top-bar--contact"><?php echo (get_page_by_title('Contact Us')->post_title); ?></button> <!-- this purposley fails if we don't have a contact page so it's obvious -->
+			
+			<?php $contact = get_page_by_title('Contact Us');
+			if ( $contact == '') { //no page throw an error purposley so it's obvious -->
+				if(current_user_can('administrator')) { // but only to an admin ?>
+					No Contact Us page
+				<?php } // admin
+			} else { // if contact ?>
+				<button href="<?php echo home_url(); ?>/contact" class="top-bar--contact"><?php echo (get_page_by_title('Contact Us')->post_title); ?></button>
+			<?php } ?>
 		</section>
 
 		<div class="page-layout">
 			<div class="top-background-image hide-for-print">
-				<picture>
+				<picture> <!-- these should be added to the customizer on a generic build -->
 					<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_large.jpg" media="(min-width: 1440px)">
 					<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_medium.jpg" media="(min-width: 640px)">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_small.jpg" loading="lazy">
@@ -127,7 +135,7 @@
 					<div class="site-logo"><?php the_custom_logo(); ?></div>
 					<span class="screen-reader"><?php echo get_bloginfo( 'name' ); ?></span>
 				<?php } else { ?>
-					<?php $blog_info = get_bloginfo( 'name' ); ?>
+					<h1 class="site-logo"><a href="<?php echo home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 				<?php } ?>
 
 				<!-- small nav --> 

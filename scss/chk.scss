@@ -107,6 +107,12 @@ h3 {
 	}
 } */
 
+/*
+hr {
+	width: 100%; // needed sometimes to test things but I think I would rather run defaults at the moment
+}
+*/
+
 a {
 	color: $highlight;
 }
@@ -1209,6 +1215,7 @@ footer img {
 	margin: 0 auto;
 	border: $global-border-width solid $white; 
 	font-size: 2.441em;
+	// on the view-profile at least with only a single item in the menu this is quite tall
 }
 
 #mediummenu > div > ul {
