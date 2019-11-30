@@ -968,7 +968,9 @@ margin-top: 20px;
 	background: $tertiary;
 
 	hr {
-		border-bottom: 1px solid $white;
+		border-style: solid;
+		border-width: 1px 0 0 0;
+		border-color: $white;
 		margin: $regular-space;
 	}
 }
@@ -1507,4 +1509,43 @@ footer img {
 
 #buddypress table.profile-fields tr td.label {
 	width: 50%; // default overrite
+}
+
+// members page
+.buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links) {
+	box-shadow: initial; // overwrite buddy press
+}
+
+#dir-members-search-form,
+#dir-activity-search-form {
+	background: $white;
+	padding: $regular-space/2;
+}
+
+#dir-members-search-submit,
+#dir-activity-search-submit {
+	margin: 0 !important; // overwrite generic button
+	padding: $regular-space/2 !important;
+}
+
+#dir-members-search-form .dashicons-search {
+	vertical-align: initial;
+}
+
+#members-order-select > .select-wrap,
+#activity-filter-by {
+	background: $white;
+	color: $black;
+}
+
+#members-order-by {
+	color: $black;
+}
+
+.buddypress-wrap .bp-feedback.help .bp-icon, .buddypress-wrap .bp-feedback.info .bp-icon {
+	background: $highlight;
+}
+
+#dir-filters {
+	margin-top: 1.3em; // fix against the rss icon
 }
