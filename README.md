@@ -42,3 +42,7 @@ there might need to be some work done on the order pages to deal with secondary 
 - gutenberg? am I needing any advanced features?
 - there might be something funky going on with forms now being in the inc folders means I dont have the $variables from higher above
 - page-order-deer.php has additional script that needs fixing
+
+## Test Site
+
+[test.canterburyhomekill.co.nz](test.canterburyhomekill.co.nz)
