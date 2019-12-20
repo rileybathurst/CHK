@@ -31,7 +31,7 @@
 	</script> -->
 
 	<!-- recaptcha enqueue this probably in the footer -->
-	<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 	</head>
 	<body>
