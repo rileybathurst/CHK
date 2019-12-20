@@ -56,6 +56,8 @@
 									<?php } ?>
 								>
 
+								<?php echo $current_user->user_email; ?>
+
 								<!-- phone -->
 								<input type="text" name="phone" id="phone" required pattern="[0-9]" 
 									<?php if ( is_user_logged_in() ) { ?>
