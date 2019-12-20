@@ -45,8 +45,6 @@
 									<?php } ?>
 								>
 
-								<?php echo $current_user->user_email; ?>
-
 								<!-- email -->
 								<input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" id="email"
 									<?php if ( is_user_logged_in() ) { ?>
@@ -56,16 +54,14 @@
 									<?php } ?>
 								>
 
-								<?php echo $current_user->user_email; ?>
-
-								<!-- phone -->
-								<input type="text" name="phone" id="phone" required pattern="[0-9]" 
+								<!-- phone this will break if buddypress is not installed-->
+								<input type="text" name="phone" id="phone" required 
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?>"
 									<?php } else { ?>
 										placeholder="phone"
 									<?php } ?>
-								>
+								><!-- pattern="[0-9]{3,}" im not sure about this regex it could be nice but needs extra info -->
 
 								<!-- details -->
 								<textarea placeholder="Enter text here..." name="details" id="details"></textarea> 
@@ -74,7 +70,7 @@
 								<div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div><!-- this can be updated to v3 but not the first thing to do -->
 
 								<!-- submit -->
-								<button type="submit" value="Submit">Send</button>≈
+								<button type="submit" value="Submit">Send</button>
 							</form>
 
 						</article>
