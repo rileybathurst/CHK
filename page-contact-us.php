@@ -45,6 +45,8 @@
 									<?php } ?>
 								>
 
+								<?php echo $current_user->user_email; ?>
+
 								<!-- email -->
 								<input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" id="email"
 									<?php if ( is_user_logged_in() ) { ?>
@@ -70,7 +72,7 @@
 								<div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div><!-- this can be updated to v3 but not the first thing to do -->
 
 								<!-- submit -->
-								<button type="submit" value="Submit">Send</button>
+								<button type="submit" value="Submit">Send</button>≈
 							</form>
 
 						</article>
