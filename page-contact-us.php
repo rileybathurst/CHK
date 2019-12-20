@@ -42,25 +42,25 @@
 										value="<?php echo $current_user->display_name; ?>"
 									<?php } else { ?>
 										placeholder="Name"
-									<?php } ?> 
+									<?php } ?>
 								>
 
 								<!-- email -->
-								<input type="text" required pattern="email" name="email" id="email"
+								<input type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" id="email"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo $current_user->user_email; ?>"
 									<?php } else { ?>
 										placeholder="email"
-									<?php } ?>        
+									<?php } ?>
 								>
 
 								<!-- phone -->
-								<input type="text" name="phone" id="phone" required pattern="number" 
+								<input type="text" name="phone" id="phone" required pattern="[0-9]" 
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?>"
 									<?php } else { ?>
 										placeholder="phone"
-									<?php } ?>      
+									<?php } ?>
 								>
 
 								<!-- details -->

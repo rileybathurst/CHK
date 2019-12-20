@@ -28,6 +28,12 @@ meatorders from live for checking
 
 there might need to be some work done on the order pages to deal with secondary numbers when something is checked, order small goods is an example at the moment
 
+there might be something funky going on with forms now being in the inc folders means I dont have the $variables from higher above
+
+page-order-deer.php has additional script that needs fixing
+
+Regular expressions with 
+
 ## Setup
 
 /inc/contact.php has been added to gitignore to remove the captcha secret key so a straight build wont work.
@@ -36,9 +42,6 @@ there might need to be some work done on the order pages to deal with secondary 
 
 - buddypress - we might be able to get away with removing it? would remove user profiles?
 - [wp email login plugin](https://en-nz.wordpress.org/plugins/wp-email-login/) - this is really old can we deal with default worpdress now?
-
 - wp cache or jetpack, currently not setup
 - yoast until I do all the work for seo
 - gutenberg? am I needing any advanced features?
-- there might be something funky going on with forms now being in the inc folders means I dont have the $variables from higher above
-- page-order-deer.php has additional script that needs fixing

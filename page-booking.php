@@ -43,7 +43,7 @@ get_header(); ?>
 
 								<!-- email -->
 								<div>
-									<input type="text" required pattern="email" name="email" id="email"
+									<input type="text" required name="email" id="email"
 										<?php if ( is_user_logged_in() ) { ?>
 											value="<?php echo $current_user->user_email; ?>"
 										<?php } else { ?>
