@@ -1,5 +1,5 @@
 <!-- Alpaca Llama -->
-<h3>ALPACA - LAMA</h3>
+<h3 class="single-stripe">ALPACA - LAMA</h3>
 
 <!-- l_shoulder shoulder_lb -->
 <div>

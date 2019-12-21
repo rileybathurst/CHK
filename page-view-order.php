@@ -9,7 +9,7 @@ $unid = $_GET['n'];
 ?>
 
 <div class="container main-border over-background">
-	<main>
+	<main class="no-side">
 
 		<!-- Start the main container -->
 		<section role="document" class="set-in">
@@ -21,7 +21,6 @@ $unid = $_GET['n'];
 
 						<?php the_post_thumbnail(); ?>
 
-						<h2 class="featured-title">Featured:</h2>
 						<h2><?php the_title(); ?></h2>
 
 						<hr>
@@ -57,21 +56,23 @@ $unid = $_GET['n'];
 												</strong>
 											</div>
 
-											<!-- confirm -->
-											<div>
-												<?php if ($order->confirm == 1) { ?>
-													<span class="unicode highlights spacer">✓</span>
-												<?php } else { echo ' '; } ?>
-												<strong>Confirmation</strong>
-											</div>
+											<div class="half"><!-- print group -->
+												<!-- confirm -->
+												<div>
+													<?php if ($order->confirm == 1) { ?>
+														<span class="unicode highlights spacer">✓</span>
+													<?php } else { echo ' '; } ?>
+													<strong>Confirmation</strong>
+												</div>
 
-											<!-- timenow -->
-											<div>
-												Date
-												| 
-												<strong>
-													<?php echo $order->timenow; ?>
-												</strong>
+												<!-- timenow -->
+												<div>
+													Date
+													| 
+													<strong>
+														<?php echo $order->timenow; ?>
+													</strong>
+												</div>
 											</div>
 
 											<!-- name -->
@@ -92,24 +93,25 @@ $unid = $_GET['n'];
 												</strong>
 											</div>
 
-											<!-- phone -->
-											<div>
-												Phone
-												| 
-												<strong>
-													<?php echo $order->phone; ?>
-												</strong>
-											</div>
+											<div class="half"><!-- print group -->
+												<!-- phone -->
+												<div>
+													Phone
+													| 
+													<strong>
+														<?php echo $order->phone; ?>
+													</strong>
+												</div>
 
-											<!-- phone2 -->
-											<div>
-												Mobile
-												| 
-												<strong>
-													<?php echo $order->phone2; ?>
-												</strong>
+												<!-- phone2 -->
+												<div>
+													Mobile
+													| 
+													<strong>
+														<?php echo $order->phone2; ?>
+													</strong>
+												</div>
 											</div>
-
 
 											<!-- email -->
 											<div>
@@ -128,48 +130,56 @@ $unid = $_GET['n'];
 												</strong>
 											</div>
 
-											<!-- people -->
-											<div>
-												No. Of People
-												| 
-												<strong>
-													<?php echo $order->people; ?>
-												</strong>
+											<div class="half"><!-- print group -->
+												<!-- people -->
+												<div>
+													No. Of People
+													| 
+													<strong>
+														<?php echo $order->people; ?>
+													</strong>
+												</div>
+
+												<!-- people -->
+												<div>
+													Decleration
+													| 
+													<strong>
+														<?php echo $order->declaration; ?>
+													</strong>
+												</div>
 											</div>
 
-											<!-- people -->
-											<div>
-												Decleration
-												| 
-												<strong>
-													<?php echo $order->declaration; ?>
-												</strong>
+											<div class="view-order-options"><!-- print group -->
+												<div class="run-the-stripes"><!-- print group -->
+													<!-- Breaks down the forms into each option -->
+													<?php
+														if ($order->animal == "beef") {
+															include("view-beef.php");
+														}
+
+														elseif ($order->animal == "pig") {
+															include("view-pig.php");
+														}
+
+														elseif ($order->animal == "deer") {
+															include("view-deer.php");
+														}
+
+														elseif ($order->animal == "sheep") {
+															include("view-sheep.php");
+														}
+
+														elseif ($order->animal == "alpacallama") {
+															include("view-alpaca-llama.php");
+														}
+													?>
+												</div>
+
+												<div class="run-the-stripes"><!-- print group -->
+													<?php include("view-small-goods.php"); ?>
+												</div>
 											</div>
-
-											<!-- Breaks down the forms into each option -->
-											<?php
-												if ($order->animal == "beef") {
-													include("view-beef.php");
-												}
-
-												elseif ($order->animal == "pig") {
-													include("view-pig.php");
-												}
-
-												elseif ($order->animal == "deer") {
-													include("view-deer.php");
-												}
-
-												elseif ($order->animal == "sheep") {
-													include("view-sheep.php");
-												}
-
-												elseif ($order->animal == "alpacallama") {
-													include("view-alpaca-llama.php");
-												}
-											?>
-
-											<?php include("view-small-goods.php"); ?>
 
 											<div>
 												SPECIAL INSTRUCTIONS
@@ -218,7 +228,5 @@ $unid = $_GET['n'];
 
 		</section><!-- container -->
 	</main><!-- over-background main-border -->
-
-	<?php get_sidebar(); ?> <!-- symantically this should be outside the main -->
 </div>
 <?php get_footer(); ?>

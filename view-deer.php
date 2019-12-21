@@ -1,4 +1,4 @@
-<h3>DEER</h3>
+<h3 class="single-stripe">DEER</h3>
 
 <!-- v_shoulder -->
 <div>

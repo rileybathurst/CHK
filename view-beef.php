@@ -1,4 +1,4 @@
-<h3>BEEF</h3>
+<h3 class="single-stripe">BEEF</h3>
 
 <!-- Start of Option with tich and choice -->
 <!-- b_fillet fillet_bf -->
