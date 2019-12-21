@@ -29,11 +29,7 @@ $unid = $_GET['n'];
 						<?php if ( is_user_logged_in() ) { ?>
 							<div class=""></div><!-- is this just left here incase we put something in? -->
 						<?php } else { ?>
-							<div class="row">
-								<div class="small-12 columns">
-									<p>Your currently not logged in, if you are these fields will automatically get filled in <a href="<?php echo home_url(); ?>/login">log in here</a></p>
-								</div>
-							</div>
+							<p>Your currently not logged in, if you are these fields will automatically get filled in <a href="<?php echo home_url(); ?>/login">log in here</a></p>
 						<?php } ?>
 
 						<?php the_content(); ?>
@@ -43,7 +39,7 @@ $unid = $_GET['n'];
 
 							<?php // search for orders to bring back animal name -->
 								$orders = $wpdb->get_results( 
-										"SELECT * FROM 'meatorders' WHERE unid = '$unid';"
+										"SELECT * FROM meatorders WHERE unid = '$unid';"
 									);
 								foreach ( $orders as $order ) {?>
 									
