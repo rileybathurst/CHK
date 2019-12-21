@@ -14,7 +14,14 @@ function prefix_admin_ordersheepupdate() {
 	$l_leg = $_POST['l_leg']; if($l_leg == 'on'){$l_leg=1;}else{$l_leg=0;}
 	$leg_lb = $_POST['leg_lb'];
 	$spins = $_POST['spins'];
-	// $small_g            = $_POST['small_goods'];
+
+	if (isset($_POST['small_goods'])) {
+		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
+	}
+
+	/* if (isset($_GET['n'])) {
+		$unid = $_GET['n'];
+	} */
 
 	//create small goods variable
 	// $url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
