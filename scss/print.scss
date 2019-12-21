@@ -334,4 +334,11 @@
 	.set-in .set-in { // little hack to tidy this up with double set ins
 		margin: 0;
 	}
+
+	.is-style-stripes li:nth-child(odd),
+	.stripes li:nth-child(odd),
+	.stripe, .run-the-stripes div:nth-child(odd),
+	.run-the-stripes li:nth-child(odd) {
+		background: none;
+	}
 } // print styles
