@@ -6,10 +6,10 @@
 <p>Sausages, salamis, patties, saveloys</p>
 
 <div> <!-- adds styling for .run-the-stripes -->
-	<input type="radio" name="small_goods" value="yes" id="yes"/><label for="yes">Yes</label><br>
+	<input type="radio" name="small_goods" id="yes" value="yes"/><label for="yes">Yes</label><br>
 </div>
 <div>
-	<input type="radio" name="small_goods" value="no" id="no"/><label for="no">No</label><br>
+	<input type="radio" name="small_goods" id="no" value="no"/><label for="no">No</label><br>
 </div>
 <p><em>Options on following page</em></p>
 
