@@ -56,7 +56,7 @@ $unid = $_GET['n'];
 							<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 
 							<div>
-								<label for="name">Full Name:</label>
+								<label for="name">Full Name:*</label>
 								<input name="name" type="text" required id="name"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo $current_user->display_name; ?>"
@@ -67,7 +67,7 @@ $unid = $_GET['n'];
 							</div>
 
 							<div>
-								<label for="add1">Address:</label>
+								<label for="add1">Address:*</label>
 								<input name="add1" type="text" required id="add1" 
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?>"
@@ -78,8 +78,8 @@ $unid = $_GET['n'];
 							</div>
 
 							<div>
-								<label for="email">email:</label>
-								<input name="email" type="email" required  id="email"  
+								<label for="email">email:*</label>
+								<input name="email" type="email" required id="email"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo $current_user->user_email; ?>"
 									<?php } else { ?>
@@ -89,7 +89,7 @@ $unid = $_GET['n'];
 							</div>
 
 							<div>
-								<label for="phone">Phone:</label>
+								<label for="phone">Phone:*</label>
 								<input name="phone" type="tel" required id="phone"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?>"
@@ -100,7 +100,7 @@ $unid = $_GET['n'];
 							</div>
 
 							<div>
-								<label for="phone2">Mobile:</label>
+								<label for="phone2">Mobile:*</label>
 								<input name="phone2" type="tel" required id="phone2"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?>"
@@ -116,12 +116,12 @@ $unid = $_GET['n'];
 							</div>
 
 							<div>
-								<label for="amp">Animal to be processed:</label>
+								<label for="amp">Animal to be processed:*</label>
 								<textarea name="amp" type="text" required placeholder="Old heifer" id="amp"></textarea>
 							</div>
 
 							<div>
-								<label for="people">Number of people to be packed for:</label>
+								<label for="people">Number of people to be packed for:*</label>
 								<input type="number" placeholder="2 or more" required pattern="\d*" min="2" name="people" id="people">
 							</div>
 							

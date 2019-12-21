@@ -20,8 +20,8 @@ function prefix_admin_orderbeefupdate() {
 	$b_skirtsteak       = $_POST['b_skirtsteak']; if($b_skirtsteak == 'on'){$b_skirtsteak=1;}else{$b_skirtsteak=0;}
 	$b_mince            = $_POST['b_mince']; if($b_mince == 'on'){$b_mince=1;}else{$b_mince=0;}
 
-	//create small goods variable
-	$url = $_POST['small'];  // this is a strange variable needs documentation on why i chose url
+	//create small goods variable this is a strange variable needs documentation on why i chose url
+	$url = $_POST['small_goods'];
 	if($url == 'yes') {
 		$url=1;
 	} else {
