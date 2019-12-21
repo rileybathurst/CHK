@@ -14,10 +14,10 @@ function prefix_admin_ordersheepupdate() {
 	$l_leg = $_POST['l_leg']; if($l_leg == 'on'){$l_leg=1;}else{$l_leg=0;}
 	$leg_lb = $_POST['leg_lb'];
 	$spins = $_POST['spins'];
-	$small_g            = $_POST['small_goods'];
+	// $small_g            = $_POST['small_goods'];
 
 	//create small goods variable
-	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
+	// $url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' , 
@@ -43,7 +43,7 @@ function prefix_admin_ordersheepupdate() {
 	 // small goods send
 	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );
 	} else {
-		wp_redirect( home_url() . '/confirm-sheep?n=' . $_POST['unid'] );
+		wp_redirect( home_url() . '/confirm-sheep?n=' . $_POST['unid'] . '/test' .  $_POST['small_goods'] );
 	}
 }
 add_action( 'admin_post_ordersheepupdate', 'prefix_admin_ordersheepupdate' );
