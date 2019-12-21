@@ -48,7 +48,11 @@ function prefix_admin_orderpigupdate() {
 	$pg_bacon = $_POST['pg_bacon']; if($pg_bacon == 'on'){$pg_bacon=1;}else{$pg_bacon=0;}
 
 	//create small goods variable
-	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
+	if (isset($_POST['small_goods'])) {
+		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
+	} else {
+		$url = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,

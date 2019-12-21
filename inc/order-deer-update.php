@@ -10,7 +10,11 @@ function prefix_admin_orderdeerupdate() {
 	$spins = $_POST['spins'];
 
 	//create small goods variable
-	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
+	if (isset($_POST['small_goods'])) {
+		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
+	} else {
+		$url = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
@@ -24,7 +28,7 @@ function prefix_admin_orderdeerupdate() {
 		'leg_v'             =>      $_POST['leg_v'] ,
 		'v_leg_whole_half'  =>      $_POST['v_leg_whole_half'] ,
 		'spins'             =>      $spins ,
-		'small'             =>      $url    
+		'small'             =>      $url
 	) ,
 
 	// where

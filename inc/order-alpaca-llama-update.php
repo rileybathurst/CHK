@@ -15,7 +15,11 @@ function prefix_admin_orderalpacallamaupdate() {
 	$leg_lb = $_POST['leg_lb'];  
 
 	//create small goods variable
-	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
+	if (isset($_POST['small_goods'])) {
+		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
+	} else {
+		$url = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,

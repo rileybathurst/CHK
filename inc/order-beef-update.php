@@ -19,15 +19,14 @@ function prefix_admin_orderbeefupdate() {
 	$b_chucksteak       = $_POST['b_chucksteak']; if($b_chucksteak == 'on'){$b_chucksteak=1;}else{$b_chucksteak=0;}
 	$b_skirtsteak       = $_POST['b_skirtsteak']; if($b_skirtsteak == 'on'){$b_skirtsteak=1;}else{$b_skirtsteak=0;}
 	$b_mince            = $_POST['b_mince']; if($b_mince == 'on'){$b_mince=1;}else{$b_mince=0;}
-	$small_g            = $_POST['small_goods'];
 
 	//create small goods variable this is a strange variable needs documentation on why i chose url
-	$url = $_POST['small_goods'];
-	if($url == 'yes') {
-		$url=1;
+	if (isset($_POST['small_goods'])) {
+		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
 	} else {
-		$url=0;
+		$url = 0;
 	}
+	
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
 
