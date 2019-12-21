@@ -19,7 +19,7 @@ function prefix_admin_con1() {
 
 		//email confirmations
 		// $to = 'riley@rileybathurst.com'; // developer account should be off by default
-		$tochk = 'info@canterburyhomekill.co.nz';
+		// $tochk = 'info@canterburyhomekill.co.nz';
 		$tosender = $_POST['email'];
 
 		$subject = 'Canterbury Homekill Order: ' . $_POST['unid'];

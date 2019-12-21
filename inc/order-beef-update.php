@@ -21,8 +21,12 @@ function prefix_admin_orderbeefupdate() {
 	$b_mince            = $_POST['b_mince']; if($b_mince == 'on'){$b_mince=1;}else{$b_mince=0;}
 
 	//create small goods variable
-	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
-
+	$url = $_POST['small'];  // this is a strange variable needs documentation on why i chose url
+	if($url == 'yes') {
+		$url=1;
+	} else {
+		$url=0;
+	}
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
 

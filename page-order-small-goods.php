@@ -37,7 +37,7 @@ $unid = $_GET['n'];
 							<!-- use the url unid variable in the form to keep it on the same one -->
 							<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 
-							<?php $orders = $wpdb->get_results("SELECT * FROM 'meatorders' WHERE unid = '$unid';");
+							<?php $orders = $wpdb->get_results("SELECT * FROM meatorders WHERE unid = '$unid';");
 								foreach ( $orders as $order ) { ?>
 
 								<!-- take the animal through so it can confirm to the right one -->
