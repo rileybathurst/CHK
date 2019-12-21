@@ -3,6 +3,10 @@
  */
 
 @media print {
+	/* @page { need to do some research on this
+		size: A4;
+	} */
+
 	.hide-for-print {
 		display: none;
 	}
@@ -340,5 +344,7 @@
 	.stripe, .run-the-stripes div:nth-child(odd),
 	.run-the-stripes li:nth-child(odd) {
 		background: none;
+		width: 50%;
 	}
+
 } // print styles

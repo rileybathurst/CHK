@@ -1,4 +1,4 @@
-<div id="sidebar" class="light-back show-for-large">
+<div id="sidebar" class="light-back show-for-large hide-for-print">
 
 		<?php
 		// first loop

@@ -1,4 +1,4 @@
-<h3>PORK - SHOULDER</h3>
+<h3 class="single-stripe">PORK - SHOULDER</h3>
 
 <!-- ps_rolledshoulder rolledshoulder_ps -->
 <div>

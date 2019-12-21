@@ -1,4 +1,4 @@
-<h3>LAMB</h3>
+<h3 class="single-stripe">LAMB</h3>
 
 <!-- l_shoulder shoulder_lb -->
 <div>

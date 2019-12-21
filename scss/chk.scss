@@ -620,8 +620,8 @@ input[type="password"]:focus {
 .is-style-stripes li:nth-child(odd),
 .stripes li:nth-child(odd),
 .stripe,
-.run-the-stripes div:nth-child(odd),
-.run-the-stripes li:nth-child(odd) {
+.run-the-stripes > div:nth-child(odd),
+.run-the-stripes > li:nth-child(odd) {
 	background: $quaternary;
 	// border: $global-border-width solid $quaternary;
 	border-radius: $global-border-radius;
@@ -1548,4 +1548,26 @@ footer img {
 
 #dir-filters {
 	margin-top: 1.3em; // fix against the rss icon
+}
+
+.half {
+	display: flex;
+	padding-left: 0 !important; // fix the specificty
+	padding-right: 0  !important; // fix the specificty
+}
+
+.half > div, // view-order needs some works
+.half > h3 {
+	width: 50%;
+}
+
+.view-order-options {
+	display: flex;
+	background: none !important;
+	padding: 0;
+
+	> div {
+		width: 50%;
+		padding-left: 0;
+	}
 }

@@ -1,4 +1,4 @@
-<h3>SMALL GOODS</h3>
+<h3 class="single-stripe">SMALL GOODS</h3>
 
 <!-- t_porkherb t_porkherb -->
 <div>
