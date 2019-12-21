@@ -326,7 +326,7 @@ function prefix_admin_con1() {
 	// wp_mail($to , $subject , $message );
 	wp_mail($tosender , $subject , $message );
 	// wp_mail($to , $subject , $message );
-	wp_mail($tochk , $subject , $message );
+	// wp_mail($tochk , $subject , $message );
 
 	wp_redirect( home_url() . '/thanks' );
 	exit;
