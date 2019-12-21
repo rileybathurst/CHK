@@ -6,7 +6,7 @@ function prefix_admin_con1() {
 	global $wpdb;
 
 	// Whats inserted
-	$wpdb->update( meatorders ,
+	$wpdb->update( 'meatorders' ,
 
 		array(
 			'confirm' => '1' 

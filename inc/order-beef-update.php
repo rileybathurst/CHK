@@ -24,7 +24,7 @@ function prefix_admin_orderbeefupdate() {
 	$url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
 
 	// Whats inserted
-	$wpdb->update( meatorders ,
+	$wpdb->update( 'meatorders' ,
 
 		array(
 			'b_fillet'          => $b_fillet ,

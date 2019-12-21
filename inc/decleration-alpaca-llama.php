@@ -5,7 +5,7 @@ function prefix_admin_declarationAlpacaLlama() {
 	global $wpdb;
 
 	// Whats inserted
-	$wpdb->insert( meatorders ,
+	$wpdb->insert( 'meatorders' ,
 		array(
 			'unid'          => '$unid' ,
 			'animal'        => 'alpacallama' ,

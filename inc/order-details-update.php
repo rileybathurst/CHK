@@ -7,7 +7,7 @@ function prefix_admin_orderdetailsupdate() {
 	global $wpdb;
 
 	// Whats inserted
-	$wpdb->update( meatorders ,
+	$wpdb->update( 'meatorders' ,
 
 	array(
 		'name'   => $_POST['name'] ,

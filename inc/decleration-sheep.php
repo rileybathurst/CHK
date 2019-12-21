@@ -6,7 +6,7 @@ function prefix_admin_declarationSheep() {
 	global $wpdb;
 
 	// Whats inserted
-	$wpdb->insert( meatorders ,
+	$wpdb->insert( 'meatorders' ,
 		array(
 			'unid'          => '$unid' ,
 			'animal'        => 'sheep' ,

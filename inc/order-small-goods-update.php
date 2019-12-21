@@ -5,7 +5,7 @@ function prefix_admin_ordersmallgoodsupdate() {
 	global $wpdb;
 
 	// Whats inserted
-	$wpdb->update( meatorders ,
+	$wpdb->update( 'meatorders' ,
 
 	array(
 		't_porkherb'          => $_POST['t_porkherb'] ,

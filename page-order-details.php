@@ -43,7 +43,7 @@ $unid = $_GET['n'];
 
 							<?php // search for orders to bring back animal name -->
 								$orders = $wpdb->get_results( 
-										"SELECT * FROM meatorders WHERE unid = '$unid';"
+										"SELECT * FROM 'meatorders' WHERE unid = '$unid';"
 									);
 								foreach ( $orders as $order ) {?>
 									
