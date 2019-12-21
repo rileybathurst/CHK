@@ -17,14 +17,9 @@ function prefix_admin_ordersheepupdate() {
 
 	if (isset($_POST['small_goods'])) {
 		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
+	} else {
+		$url = 0;
 	}
-
-	/* if (isset($_GET['n'])) {
-		$unid = $_GET['n'];
-	} */
-
-	//create small goods variable
-	// $url = $_POST['small']; if($url == 'yes'){$url=1;}else{$url=0;}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' , 
@@ -50,7 +45,7 @@ function prefix_admin_ordersheepupdate() {
 	 // small goods send
 	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );
 	} else {
-		wp_redirect( home_url() . '/confirm-sheep?n=' . $_POST['unid'] . '/test' .  $_POST['small_goods'] );
+		wp_redirect( home_url() . '/confirm-sheep?n=' . $_POST['unid'] );
 	}
 }
 add_action( 'admin_post_ordersheepupdate', 'prefix_admin_ordersheepupdate' );
