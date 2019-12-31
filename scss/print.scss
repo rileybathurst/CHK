@@ -36,7 +36,6 @@
 		display: none;
 	}
 
-	/*
 	body,
 	blockquote cite,
 	blockquote small,
@@ -51,9 +50,8 @@
 	.comment-content h5,
 	.comment-content h6,
 	.entry-content .author-title {
-		font-size: 9pt; // needs to be more tested
+		font-size: 12pt; // pig orders are the largest and this still fits to an A4 print
 	}
-	*/
 
 	blockquote {
 		font-size: 14.25pt;
@@ -247,54 +245,6 @@
 	.site-footer,
 	.widecolumn {
 		padding: 0;
-	}
-
-	.medium-1 {
-	width: 8.33333%;
-	}
-
-	.medium-2 {
-	width: 16.66667%;
-	}
-
-	.medium-3 {
-	width: 25%;
-	}
-
-	.medium-4 {
-	width: 33.33333%;
-	}
-
-	.medium-5 {
-	width: 41.66667%;
-	}
-
-	.medium-6 {
-	width: 50%;
-	}
-
-	.medium-7 {
-	width: 58.33333%;
-	}
-
-	.medium-8 {
-	width: 66.66667%;
-	}
-
-	.medium-9 {
-	width: 75%;
-	}
-
-	.medium-10 {
-	width: 83.33333%;
-	}
-
-	.medium-11 {
-	width: 91.66667%;
-	}
-
-	.medium-12 {
-	width: 100%;
 	}
 
 	.line-higher {
