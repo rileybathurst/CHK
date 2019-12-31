@@ -334,8 +334,8 @@
 	.container {
 		// display: inline;
 		margin: 0;
-		width: 210mm;
-		height: 297mm;
+		width: 210mm; // should I scale this down
+		// height: 297mm; // seems to be throwing an error
 	}
 
 	.set-in .set-in { // little hack to tidy this up with double set ins
