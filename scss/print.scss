@@ -11,7 +11,7 @@
 		display: none;
 	}
 
-	body{
+	body, h1, h2, h3, h4, h5, h6 {
 		font-family: sans-serif;
 	}
 	
@@ -346,10 +346,15 @@
 	.run-the-stripes li:nth-child(odd) {
 		background: none;
 		width: 50%;
+		border-top: 1px dotted black;
 	}
 
 	.single-stripe {
 		background: none;
+	}
+
+	.view-order-options {
+		width: 100%;
 	}
 
 } // print styles
