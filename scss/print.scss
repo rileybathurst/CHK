@@ -333,6 +333,7 @@
 
 	.container {
 		display: inline;
+		margin: 0;
 	}
 
 	.set-in .set-in { // little hack to tidy this up with double set ins
@@ -345,6 +346,10 @@
 	.run-the-stripes li:nth-child(odd) {
 		background: none;
 		width: 50%;
+	}
+
+	.single-stripe {
+		background: none;
 	}
 
 } // print styles

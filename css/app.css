@@ -1834,6 +1834,7 @@ td,
 
   .container {
     display: inline;
+    margin: 0;
   }
 
   .set-in .set-in {
@@ -1846,6 +1847,10 @@ td,
 .run-the-stripes li:nth-child(odd) {
     background: none;
     width: 50%;
+  }
+
+  .single-stripe {
+    background: none;
   }
 }
 
