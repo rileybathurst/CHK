@@ -34,23 +34,24 @@ textarea,
     display: none;
   }
 
+  /*
   body,
-blockquote cite,
-blockquote small,
-pre,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-summary h4,
-.entry-summary h5,
-.entry-summary h6,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6,
-.entry-content .author-title {
-    font-size: 9pt;
+  blockquote cite,
+  blockquote small,
+  pre,
+  .entry-content h4,
+  .entry-content h5,
+  .entry-content h6,
+  .entry-summary h4,
+  .entry-summary h5,
+  .entry-summary h6,
+  .comment-content h4,
+  .comment-content h5,
+  .comment-content h6,
+  .entry-content .author-title {
+  	font-size: 9pt; // needs to be more tested
   }
-
+  */
   blockquote {
     font-size: 14.25pt;
   }

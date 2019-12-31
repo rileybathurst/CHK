@@ -36,6 +36,7 @@
 		display: none;
 	}
 
+	/*
 	body,
 	blockquote cite,
 	blockquote small,
@@ -50,8 +51,9 @@
 	.comment-content h5,
 	.comment-content h6,
 	.entry-content .author-title {
-		font-size: 9pt;
+		font-size: 9pt; // needs to be more tested
 	}
+	*/
 
 	blockquote {
 		font-size: 14.25pt;

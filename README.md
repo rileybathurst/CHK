@@ -18,6 +18,7 @@ Things to do
 - what is the site map? it doesnt have an extension
 - how good are the animals if they become svg and whats the saving on that?
 - deer // alpaca leg second choice
+- clean out the print css
 
 contact us has some strange stuff going on with inline styles which could be kinda confusing in  a gutenberg style maybe I just remove them at this stage
 
