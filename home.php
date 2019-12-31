@@ -222,7 +222,11 @@
 		?>
 	</div><!-- columns -->
 
-	<img src="http://localhost:8888/chk/wp-content/uploads/2016/03/iStock_000021247297_recipe.jpg" alt="cooking" class="home-image hide-for-print" loading="lazy"> <!-- this is its own area and needs to be written into the theme in a better way including as a responsive picture element and come from the wp customizer -->
+	<picture class="home-image hide-for-print">
+		 <!-- this is its own area and needs to be written into the theme in a better way including come from the wp customizer -->
+		<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000021247297_recipe.jpg" alt="cooking"  type="image/webp">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/iStock_000021247297_recipe.jpg" alt="cooking" loading="lazy">
+	</picture>
 
 </div> <!-- .container -->
 	

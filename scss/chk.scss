@@ -1083,7 +1083,8 @@ margin-top: 20px;
 
 .container > main,
 .container > div,
-.container > img {
+.container > img,
+.container > picture {
 	flex: 1 0 33em;
 	// paddings have to be nested due to background colors
 }
@@ -1094,6 +1095,10 @@ margin-top: 20px;
 
 .container > main > div { // due to the flex on the layer below I have to nest the padding
 	padding: $regular-space;
+}
+
+.container > picture > img {
+	width: 100%;
 }
 
 .animals {

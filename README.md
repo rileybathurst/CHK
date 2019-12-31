@@ -10,7 +10,7 @@ sass scss/app.scss css/app.css --watch
 
 sass scss/print.scss css/print.css --watch
 
-## Removing Foundation
+## Updates
 
 Things to do
 
@@ -19,6 +19,7 @@ Things to do
 - how good are the animals if they become svg and whats the saving on that?
 - deer // alpaca leg second choice
 - clean out the print css
+- test the inc/welcome-email.php Im not sure about the variables
 
 contact us has some strange stuff going on with inline styles which could be kinda confusing in  a gutenberg style maybe I just remove them at this stage
 
@@ -39,6 +40,9 @@ Regular expressions with
 ## Setup
 
 /inc/contact.php has been added to gitignore to remove the captcha secret key so a straight build wont work.
+Developer email find all $developer should be off by default
+- inc/con1.php
+- inc/contact.php
 
 ## WP Plugins
 

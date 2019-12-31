@@ -2,7 +2,8 @@
 	<div class="set-in">
 
 		<?php wp_nav_menu( array(
-			'theme_location'	=> 'footer' // this is slightly unusal as it would normally be the primary menu but we are doing things slightly different
+			'theme_location'	=> 'footer', // this is slightly unusal as it would normally be the primary menu but we are doing things slightly different
+			'menu_id'			=> 'menu-footer'
 		) ); ?>
 
 		<p class="clear">Canterbury Homekill <?php echo date ('Y'); ?></p>

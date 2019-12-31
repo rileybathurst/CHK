@@ -18,8 +18,8 @@ function prefix_admin_con1() {
 		);
 
 		//email confirmations
-		// $to = 'riley@rileybathurst.com'; // developer account should be off by default
-		// $tochk = 'info@canterburyhomekill.co.nz';
+		// $developer = 'riley@rileybathurst.com'; // developer account should be off by default
+		$tochk = 'info@canterburyhomekill.co.nz';
 		$tosender = $_POST['email'];
 
 		$subject = 'Canterbury Homekill Order: ' . $_POST['unid'];
@@ -323,10 +323,9 @@ function prefix_admin_con1() {
 			return 'text/html';
 	}
 
-	// wp_mail($to , $subject , $message );
+	// wp_mail($developer , $subject , $message );
 	wp_mail($tosender , $subject , $message );
-	// wp_mail($to , $subject , $message );
-	// wp_mail($tochk , $subject , $message );
+	wp_mail($tochk , $subject , $message );
 
 	wp_redirect( home_url() . '/thanks' );
 	exit;

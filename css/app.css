@@ -1023,7 +1023,8 @@ label {
 
 .container > main,
 .container > div,
-.container > img {
+.container > img,
+.container > picture {
   flex: 1 0 33em;
 }
 
@@ -1033,6 +1034,10 @@ label {
 
 .container > main > div {
   padding: 0.9375em;
+}
+
+.container > picture > img {
+  width: 100%;
 }
 
 .animals {
