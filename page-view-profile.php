@@ -61,7 +61,7 @@ if (isset($_GET['offset'])) {
 								LIMIT $offset , $items_per_page
 								;"
 							); ?>
-							<div id="view-profile--orders" class="run-the-stripes">
+							<div id="view-profile--orders" class="run-the-stripes"> <!-- quite possibly should have a p tag inside this -->
 								<?php foreach ( $orders as $order ) 
 								{
 									echo '<div>
