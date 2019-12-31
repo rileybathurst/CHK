@@ -338,8 +338,9 @@ td,
   }
 
   .container {
-    display: inline;
     margin: 0;
+    width: 210mm;
+    height: 297mm;
   }
 
   .set-in .set-in {
@@ -351,7 +352,6 @@ td,
 .stripe, .run-the-stripes div:nth-child(odd),
 .run-the-stripes li:nth-child(odd) {
     background: none;
-    width: 50%;
   }
 
   .single-stripe {

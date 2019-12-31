@@ -332,8 +332,10 @@
 	}
 
 	.container {
-		display: inline;
+		// display: inline;
 		margin: 0;
+		width: 210mm;
+		height: 297mm;
 	}
 
 	.set-in .set-in { // little hack to tidy this up with double set ins
@@ -345,7 +347,7 @@
 	.stripe, .run-the-stripes div:nth-child(odd),
 	.run-the-stripes li:nth-child(odd) {
 		background: none;
-		width: 50%;
+		// width: 50%; make the borders line up
 	}
 
 	.single-stripe {
