@@ -1,18 +1,1817 @@
-/* Error: expected "}".
- *     ,
- * 317 | } // print styles
- *     |                  ^
- *     '
- *   scss/print.scss 317:18  @import
- *   scss/app.scss 2:9       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 317 \2502  } // print styles\a     \2502                   ^\a     \2575 \a   scss/print.scss 317:18  @import\a   scss/app.scss 2:9       root stylesheet';
+@charset "UTF-8";
+/* sass variables */
+html {
+  margin: 0;
 }
+
+body {
+  margin: 0;
+  background: #333;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #fff;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+p,
+li,
+legend,
+label {
+  line-height: 1.563em;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* 
+body {
+  line-height: 1.45;
+  color: #333;
+}
+
+p {margin-bottom: 1.25em;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Griffy', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0; // where is this coming from is it a cross browser thing or just once?
+  font-size: 3.052em;
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;} */
+/*
+h3 {
+	/* Medium up screens */
+/* @media (min-width: map-get($breakpoints, medium)) {
+		font-size: 2.441rem; // this is normally h2
+	}
+} */
+/*
+hr {
+	width: 100%; // needed sometimes to test things but I think I would rather run defaults at the moment
+}
+*/
+a {
+  color: #b9202f;
+}
+
+a:hover {
+  color: #FF482A;
+}
+
+.serif {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.san-serif {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.screen-reader {
+  display: none;
+}
+
+.show-for-medium {
+  /* visibility: hidden;
+  @media (min-width: map-get($breakpoints, medium)) {
+  	visibility: visible;
+  } */
+  display: none;
+}
+@media (min-width: 640px) {
+  .show-for-medium {
+    display: inherit;
+  }
+}
+
+.show-for-large {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-for-large {
+    display: inline;
+  }
+}
+
+.hide-for-large {
+  display: inherit;
+}
+@media (min-width: 1024px) {
+  .hide-for-large {
+    display: none;
+  }
+}
+
+blockquote {
+  border: 4px #b9202f solid;
+  border-radius: 0.2em;
+  padding: 0.46875em;
+  font-size: 1.2rem;
+  color: #b9202f;
+  background: #222;
+  margin: 0;
+}
+blockquote p {
+  margin: 0.46875em;
+}
+
+select {
+  background: #222;
+  border-radius: 0.2em;
+  color: #fefefe;
+  border: 2px solid #888;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:hover {
+  border-color: #888;
+}
+
+select:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+
+select option {
+  font-weight: normal;
+  padding: 0.9375em;
+}
+
+.clear {
+  clear: both;
+}
+
+.keep-all {
+  word-break: keep-all;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  color: #b9202f;
+}
+
+input[type=checkbox] + label, input[type=radio] + label {
+  display: initial;
+}
+
+.callout.alert {
+  background: #222;
+  border: 2px #b9202f solid;
+  color: #b9202f;
+}
+
+.is-invalid-label, .form-error {
+  color: #b9202f;
+}
+
+/*
+[type='text'], // get rid of the ones I'm not using
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+	color: $background; // this doesnt seem to matter I guess it sits different than body color?
+} */
+textarea {
+  min-height: 10em;
+}
+
+.field-visibility-settings-notoggle,
+#buddypress .standard-form p.description {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.off-canvas {
+  min-height: 100%;
+  /* needed to fill the frame */
+  z-index: 0;
+  position: absolute;
+  background: #333;
+  color: #b9202f;
+  padding: 0.9375em;
+}
+
+.offcanvas ul {
+  line-height: 1.5rem;
+}
+
+.off-canvas .button {
+  color: #fff;
+}
+
+.off-canvas .button:hover {
+  color: #b9202f;
+}
+
+.menu.vertical > li {
+  border-top: 1px solid #b9202f;
+  padding: 1.5em;
+}
+
+.menu.vertical > li:first-child,
+.menu.vertical > li:nth-child(2) {
+  border-top: none;
+}
+
+.off-canvas label {
+  color: #fefefe;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  border-top: none;
+}
+
+.off-canvas a {
+  color: #b9202f;
+}
+
+.off-canvas a:hover,
+.off-canvas a:focus {
+  color: #FF482A;
+}
+
+.top-bar {
+  background: #aaa;
+  color: #333;
+  padding: 0.9375em;
+  border-bottom: 3px solid #aaa;
+  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.top-bar--together {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 640px) {
+  .top-bar--together {
+    align-items: baseline;
+  }
+}
+
+.top-bar--contact {
+  margin-right: 0;
+}
+
+/* .top-bar input {
+	width: 15em; // can this be a min or max width?
+} */
+header {
+  display: grid;
+  max-width: 100%;
+}
+
+.top-background-image {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.top-background-image img {
+  width: 100%;
+}
+
+header > .site-logo {
+  grid-row: 1;
+  grid-column: 1/3;
+  max-width: 22em;
+  place-self: center;
+}
+
+header > .site-logo > a,
+header > .site-logo > a > img {
+  max-width: 100%;
+}
+
+.custom-logo {
+  max-width: 44em;
+  height: auto;
+  margin: 1em auto;
+}
+
+header > .small-nav {
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 4;
+}
+
+.over-background {
+  background: #333;
+}
+
+.small-nav > button {
+  float: right;
+  margin: 0.9375em;
+}
+
+.menu-icon {
+  width: auto;
+  height: auto;
+  font-size: 1.5rem;
+}
+@media (min-width: 640px) {
+  .menu-icon {
+    font-size: 2rem;
+  }
+}
+
+.menu-icon::after {
+  background: none;
+  box-shadow: none;
+}
+
+.menu-icon:hover::after {
+  background: none;
+  box-shadow: none;
+}
+
+.medium-up-menu li {
+  text-align: center;
+  font-size: 1.61rem;
+}
+
+button,
+.button,
+input[type=submit],
+#buddypress button,
+#buddypress .button,
+#buddypress input[type=submit] {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.9375em;
+  margin: 0.9375em;
+  font-size: 0.9375em;
+  background: #b9202f;
+  transition: all 300ms;
+  color: #fff;
+  border: #b9202f 3px solid;
+  border-radius: 0.2em;
+  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+button:hover, button:focus, .button:hover, .button:focus,
+input[type=submit]:hover, input[type=submit]:focus,
+#buddypress button:hover,
+#buddypress button:focus,
+#buddypress .button:hover,
+#buddypress .button:focus,
+#buddypress input[type=submit]:hover,
+#buddypress input[type=submit]:focus {
+  border: rgba(0, 0, 0, 0.1) 3px solid;
+  background: #fff;
+  color: #b9202f;
+}
+
+.fake-button {
+  margin: 0 0 0.9375em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.9375em;
+  font-size: 0.9375em;
+  background: #b9202f;
+  font-weight: normal !important;
+  transition: all 300ms;
+  color: #fff;
+  border: #b9202f 4px solid;
+  border-radius: 0.1em;
+  vertical-align: middle;
+  line-height: 1rem;
+}
+
+input[type=text],
+textarea,
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+#buddypress .standard-form #basic-details-section input[type=password],
+#buddypress .standard-form #blog-details-section input#signup_blog_url,
+#buddypress #commentform input[type=text],
+#buddypress #commentform textarea,
+#buddypress .form-allowed-tags,
+#buddypress .standard-form#signup_form input[type=text],
+#buddypress .standard-form#signup_form textarea {
+  width: calc(100% - 3.75em);
+  padding: 0.9375em;
+  margin: 0.9375em;
+}
+
+#small-order input[type=number] {
+  width: auto;
+}
+
+#buddypress .standard-form #profile-details-section {
+  clear: both;
+  float: left;
+}
+
+#buddypress .standard-form #basic-details-section,
+#buddypress .standard-form #blog-details-section,
+#buddypress .standard-form #profile-details-section {
+  width: 100%;
+}
+
+#profile-details-section h4 {
+  display: none;
+}
+
+.field-visibility-settings-toggle {
+  display: none;
+}
+
+#buddypress .standard-form#signup_form div div.error {
+  width: 100%;
+}
+
+#buddypress #pass-strength-result {
+  color: #333;
+}
+
+#buddypress .standard-form#signup_form div div.error {
+  background: #888;
+}
+
+input[type=text]:focus,
+textarea:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=password]:focus {
+  /* color | style | width */
+  outline: #b9202f solid 3px;
+  outline-offset: 0.234375em;
+  border: 3px solid transparent;
+}
+
+#side_log {
+  background: #333;
+  background: pink;
+  display: flex;
+  padding: 0.9375em;
+  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  border-radius: 0.2em;
+}
+
+/* #side_log p, #side_log label, #side_log input {
+	float: left; // why would any of these not be floated left?
+	margin-right: 1rem;
+}
+
+#side_log label {
+	height: 2.4375rem; // repeat of the other log in not fixing the height is safer?
+	padding-top: .6rem; // is this a hack to get it to sit inline?
+}
+
+#side_log input[type="checkbox"] {
+	width: auto; // why would it not be?
+	margin-top: .4rem; // use a standard measure
+}
+
+#side_log input[type="submit"] {
+	width: auto;
+	padding: .7rem; // use a standard measure
+	line-height: 1rem; // why would it not be?
+	margin-bottom: 0; // why am I dropping off all the margin-bottom?
+}
+
+#side_log h1, #side_log h2, #side_log h3, #side_log h4, #side_log h5, #side_log h6, #side_log p,#side_log p, #side_log label {
+	margin-bottom: 0; // why am I dropping off all the margin-bottom?
+} */
+.login-username input,
+.login-password input {
+  width: calc(100% - 2.9205em);
+  padding: 0.9375em;
+  margin: 0;
+  caret-color: #b9202f;
+  border: solid 3px #888;
+  border-radius: 0.2em;
+}
+
+.is-style-stripes,
+.stripes {
+  padding-left: 0;
+  list-style: none;
+}
+
+.run-the-stripes.ul-stripes {
+  padding-left: 0;
+}
+
+.is-style-stripes li,
+.stripes li,
+.stripe,
+.run-the-stripes div,
+.run-the-stripes li {
+  padding: 0.625em 0.9375em;
+}
+
+.is-style-stripes li:nth-child(odd),
+.stripes li:nth-child(odd),
+.stripe,
+.run-the-stripes > div:nth-child(odd),
+.run-the-stripes > li:nth-child(odd) {
+  background: #222;
+  border-radius: 0.2em;
+}
+
+.run-the-stripes li {
+  list-style: none;
+}
+
+.is-style-stripes li:last-child,
+.stripes li:last-child {
+  margin-bottom: 0.9375em;
+}
+
+.light-back .is-style-stripes li:nth-child(odd),
+.light-back .stripes li:nth-child(odd),
+.lightback .stripe {
+  background: #333;
+}
+
+.stripe-breaker {
+  margin-top: -0.9375rem;
+  margin-bottom: -0.9375rem;
+  font-size: 1.875rem;
+  color: #333;
+}
+
+.stripes li:nth-child(even) .stripe-breaker {
+  color: #222;
+}
+
+.light-back .stripes li:nth-child(odd) .stripe-breaker {
+  color: #888;
+}
+
+.single-stripe {
+  padding: 0.625em 0.9375em;
+  background: #222;
+  border-radius: 0.2em;
+}
+
+#view-profile--orders > div > a {
+  padding: 0.9375em 0;
+  display: inline-block;
+}
+
+/*
+.stripe { // a sneaky way of making singular objects behave
+	// not sure what this was but keep it around until I know
+}
+*/
+.line-higher {
+  line-height: 2.5rem;
+}
+
+.a2 a {
+  color: #fff;
+}
+
+.a2 a:hover {
+  color: #888;
+}
+
+.a3 a {
+  color: #b9202f;
+}
+
+a3 a:hover {
+  color: #333;
+}
+
+.a4 a {
+  color: #333;
+}
+
+.a4 a:hover {
+  color: #b9202f;
+}
+
+.highlights {
+  color: #b9202f;
+}
+
+.seconds {
+  color: #fff;
+}
+
+.postfix {
+  margin-left: 0.9375em;
+}
+
+.second-background {
+  background: #222;
+  padding-top: 0.4em;
+}
+
+.any-center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.inline {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+.inline li {
+  float: left;
+  list-style: none;
+  margin-right: 0.9375em;
+  margin-left: 0;
+}
+
+/* Border - neds better documentation
+-------------------------------------------------------------- */
+.main-border {
+  border-top: 3px solid #fefefe;
+  border-bottom: 3px solid #fefefe;
+}
+@media (min-width: 66em) {
+  .main-border {
+    border: 3px solid #fefefe;
+  }
+}
+
+.border-slim {
+  border-top: 1.5px solid #999;
+}
+
+.navi a {
+  margin-left: 1em;
+}
+
+/* Spacer
+-------------------------------------------------------------- */
+.spacer {
+  margin-right: 0.9375em;
+}
+
+/* Center an inline list - based on inline-list */
+.centered-inline-list {
+  margin: 0 auto 1.0625rem auto;
+  margin-left: -1.375rem;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+.centered-inline-list > li {
+  list-style: none;
+  margin-left: 1.375rem;
+  display: inline-block;
+}
+
+.centered-inline-list > li > * {
+  display: block;
+}
+
+label {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.9375em;
+}
+
+#map-canvas {
+  height: 20rem;
+  width: 100%;
+}
+
+.gallery img {
+  margin-top: 20px;
+}
+
+/* Flag Banner
+-------------------------------------------------------------- */
+.flagbanner:before {
+  content: url("../img/flag-before.png");
+  position: absolute;
+  z-index: 2;
+  margin-left: -87px;
+  overflow: visible;
+}
+
+/* .flagbanner {
+	position: relative;
+	margin-top: $regular-space; // do this in one line?
+	margin-bottom: $regular-space;
+} */
+.flagbanner:after {
+  content: url("../img/flag-after.png");
+  position: absolute;
+  z-index: 2;
+  float: left;
+}
+
+.flagbuttonbanner {
+  display: inline-block;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background: #333;
+  border: #fff 3px solid;
+  margin-right: -20px;
+  line-height: 3rem;
+}
+
+/* Banners
+-------------------------------------------------------------- */
+.banner:before {
+  content: url("../img/button-end-left.png");
+  position: absolute;
+  z-index: 2;
+  margin-left: -22px;
+}
+
+.banner {
+  position: relative;
+  margin-left: 15px;
+}
+
+.banner:after {
+  content: url("../img/button-end-right.png");
+  position: absolute;
+  z-index: 2;
+  float: left;
+}
+
+.button-banner {
+  display: inline-block;
+  padding: 0 1rem;
+  background: #b9202f;
+  line-height: 51px;
+  margin-top: 0;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+}
+
+.any-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Banner Dark
+-------------------------------------------------------------- */
+.bannerdark:before {
+  content: url("../img/bannerdark-end-left.png");
+  position: absolute;
+}
+
+.bannerdark {
+  position: relative;
+}
+
+.bannerdark:after {
+  content: url("../img/bannerdark-end-right.png");
+}
+
+.buttonbannerdark {
+  margin-left: 1.2em;
+  float: left;
+  background: #000;
+  color: #fff;
+  padding: 1rem 0.1rem;
+  font-size: 1rem;
+}
+
+.buttonbannerdark:hover {
+  background: #000;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.accross {
+  margin-left: 7rem;
+}
+
+.nudge {
+  margin-left: 3rem;
+}
+
+/* Round
+-------------------------------------------------------------- */
+.round {
+  border-radius: 50%;
+  border: 5px solid #fbfbfb;
+}
+
+.outer {
+  border-radius: 50%;
+  border: 3px solid #fbfbfb;
+  padding: 1rem 0;
+  display: block;
+}
+
+.tap {
+  margin-left: 3rem;
+}
+
+/* Full
+-------------------------------------------------------------- */
+.bright {
+  background: #fff;
+  color: #000;
+}
+
+.bright a {
+  color: #b9202f;
+}
+
+.bright a:hover {
+  color: #333;
+}
+
+.soft, .soft:before, .soft:after {
+  background: #666;
+  margin-bottom: 0;
+  color: #000;
+}
+
+.bright h2 {
+  color: #000;
+}
+
+.back-to-black {
+  background: #333;
+  border: 2px solid #000;
+  margin-right: 6px;
+  margin-left: -6px;
+}
+
+.light-back {
+  background: #888;
+}
+.light-back hr {
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  border-color: #fefefe;
+  margin: 0.9375em;
+}
+
+/* Off
+-------------------------------------------------------------- */
+.off {
+  position: absolute;
+  top: 500px;
+  left: 60%;
+  height: 400px;
+}
+
+.center-button {
+  padding: 0.5em 1em;
+  margin: -0.9375em;
+  line-height: 1.5;
+  /* Medium up screens */
+}
+@media (min-width: 640px) {
+  .center-button {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .center-button {
+    font-size: 1.9375rem;
+  }
+}
+
+.fade {
+  transition: opacity 1s ease-in-out;
+}
+
+.fade a:hover {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.fade:hover {
+  opacity: 0.8;
+}
+
+.fade-to-red img {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.fade-to-red img:hover {
+  opacity: 1;
+}
+
+.img-min-100 img {
+  min-width: 100%;
+}
+
+/* 
+	3 - Sticky
+	Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress 
+--------------------------------------------------------------- */
+.featured-title {
+  display: none;
+}
+
+.sticky {
+  position: relative;
+}
+
+.sticky .featured-title {
+  background: #888;
+  display: block;
+  color: #888;
+}
+
+.extra-right {
+  margin-right: 0.9375em;
+}
+
+.hover-back:hover {
+  background-color: #b9202f;
+  background-blend-mode: screen;
+  transition: background-color 0.5s ease;
+}
+
+.unicode {
+  speak: none;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.cross {
+  color: #888;
+}
+
+.no-bottom {
+  margin-bottom: 0;
+}
+
+.border-spacing-top-bar {
+  border-spacing: 0.9375em 0px;
+}
+
+.container {
+  width: 100%;
+  max-width: 66em;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.875em auto 0 auto;
+}
+
+.container > main,
+.container > div,
+.container > img {
+  flex: 1 0 33em;
+}
+
+.container > .no-side {
+  min-width: 66em;
+}
+
+.container > main > div {
+  padding: 0.9375em;
+}
+
+.animals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.animals > div {
+  flex: 1 0 16.5em;
+}
+
+.animals > div > h3 {
+  margin-top: -0.46875em;
+}
+
+.animals-link {
+  background: #b9202f;
+  padding: 0.46875em;
+  color: #fefefe;
+  border: 3px solid #b9202f;
+  border-radius: 0.2em;
+}
+
+.animals-link:hover {
+  color: #222;
+}
+
+footer {
+  max-width: 66em;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.8125em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 0.9375em;
+}
+@media (min-width: 640px) {
+  footer {
+    border: 3px solid #fefefe;
+  }
+}
+
+footer img {
+  display: none;
+}
+@media (min-width: 33em) {
+  footer img {
+    display: inline;
+    max-width: calc(100% - 1.875em);
+    padding: 0.9375em;
+  }
+}
+
+#minimenu {
+  background: #333;
+  position: fixed;
+  z-index: 3;
+  width: 33%;
+  left: 100%;
+  transition: all 3s;
+  padding: 0.9375em;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.minimenu-open {
+  transform: translate3d(-100%, 0, 0);
+  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+}
+
+#minimenu:target {
+  background: palegoldenrod;
+  transform: translate3d(-100%, 0, 0);
+}
+
+#minimenu > .minimenu-logo {
+  max-width: 50%;
+  margin: 0.9375em auto;
+}
+#minimenu > .minimenu-logo > a > img {
+  max-width: 100%;
+}
+
+#minimenu > div > ul {
+  margin: 0;
+  padding: 0;
+}
+
+#minimenu > div > ul > li {
+  list-style: none;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0.9375em;
+  padding: 0.9375em;
+  border-radius: 0.2em;
+  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.25);
+  font-size: 1.25em;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* #minimenu > div > ul > li > a {
+	// color: $white; // Im not sure about this I like keeping to a "correct" color scheme
+} */
+#loginform {
+  background: #888;
+  color: #222;
+  padding: 0.9375em;
+}
+
+#mediummenu {
+  background: #333;
+  grid-row: 2;
+  grid-column: 1/3;
+  max-width: 67rem;
+  margin: 0 auto;
+  border: 3px solid #fefefe;
+  font-size: 2.441em;
+}
+
+#mediummenu > div > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#mediummenu > div > ul > li {
+  margin: 0.46875em 0.9375em;
+}
+
+.page-layout {
+  width: 100vw;
+  display: grid;
+}
+.page-layout .top-background-image {
+  grid-row: 1/3;
+  grid-column: 1;
+}
+.page-layout header {
+  grid-row: 1;
+  grid-column: 1;
+}
+.page-layout .container {
+  grid-row: 2;
+  grid-column: 1;
+}
+.page-layout footer {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+.home-image {
+  align-self: flex-start;
+}
+
+.is-style-light-back {
+  background: #888;
+  padding: 0.9375em;
+  border: solid 3px #333;
+  border-radius: 0.2em;
+}
+
+.home-contact iframe {
+  width: 100%;
+}
+
+.set-in {
+  margin: 0.9375em;
+}
+
+#sidebar > img {
+  width: 100%;
+  height: auto;
+}
+
+@supports (-webkit-appearance: none) {
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  fieldset label {
+    margin-left: 0.46875em;
+  }
+
+  /* 	AKA, only do this if `-webkit-appearance: none` is supported. 
+  Which means IE11 and Opera Mini will get the old browser-styled checkbox. 
+  Which works just fine. Old browsers can get old looking things. */
+  input[type=radio],
+fieldset input[type=radio] {
+    /*  Remove the default styling.
+    	`-webkit-appearance` is not an official CSS property 
+    	& likely never will be. But it's also in 95% of browsers, 
+    	non-webkit included, yes, as a `-webkit` property. 
+    	Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
+    	Plus it *will* stick around. Browsers can't remove it. 
+    	So use it like this...                                 */
+    -webkit-appearance: none;
+    /* Style the radio button container. */
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid #888;
+    margin: 0.3rem 0 0 0;
+    padding: 0;
+  }
+
+  input[type=radio]:checked,
+fieldset input[type=radio]:checked {
+    /* Prepare for placing the new checkmark. */
+    position: relative;
+    border: 2px solid #b9202f;
+    /* Do a bug fix to keep iOS from adding dark background. */
+    background: none;
+  }
+
+  input[id=radio]:checked::after,
+fieldset input[type=radio]:checked::after {
+    /* Place (position) the new “filled-in” blob. */
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: #b9202f;
+    border-radius: 50%;
+    content: "";
+  }
+
+  /* Focus styles. */
+  fieldset:focus-within {
+    border-color: #b9202f;
+  }
+
+  fieldset:focus-within legend {
+    color: #b9202f;
+  }
+
+  input[type=radio]:focus,
+fieldset input[type=radio]:focus {
+    border: 1px solid #b9202f;
+  }
+
+  /* 	AKA, only do this if `-webkit-appearance: none` is supported. 
+  Which means IE11 and Opera Mini will get the old browser-styled checkbox. 
+  Which works just fine. Old browsers can get old looking things. */
+  input[type=checkbox] {
+    /*  Remove the default styling.
+    	`-webkit-appearance` is not an official CSS property 
+    	& likely never will be. But it's also in 95% of browsers, 
+    	non-webkit included, yes, as a `-webkit` property. 
+    	Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
+    	Plus it *will* stick around. Browsers can't remove it. 
+    	So use it like this...                                 */
+    -webkit-appearance: none;
+    /* Style the box. */
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 2px solid #888;
+  }
+
+  input[type=checkbox]:focus {
+    border: 2px solid #b9202f;
+  }
+
+  input[type=checkbox]:checked {
+    /* Prepare for placing the new checkmark. */
+    position: relative;
+    /* Do a bug fix to keep iOS from adding dark background. */
+    background: none;
+    border-color: #b9202f;
+  }
+
+  input[type=checkbox]:checked::after {
+    /* Place (position) the new checkmark. */
+    position: absolute;
+    top: 0.36rem;
+    left: 0.12rem;
+    /*  Create a checkmark in CSS. 
+    	Could use an SVG or `content: "✓";` instead. 
+    	This is a box, turned 45 degs, with a 
+    	left and bottom border to make the checkmark.
+    	Created using an empty pseudo-element.*/
+    content: "";
+    width: 1rem;
+    height: 0.3rem;
+    border: 4px solid #b9202f;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+  }
+}
+.form-inline {
+  display: flex;
+  align-items: baseline;
+}
+.form-inline label {
+  margin: 0.9375em;
+}
+
+.preselected-options {
+  background: #888;
+  border: 3px solid #888;
+  border-radius: 0.2em;
+  padding: 0.46875em 0;
+}
+
+.custom-check:after {
+  top: 0.36rem;
+  left: 0.12rem;
+  /*  Create a checkmark in CSS. 
+  	Overwrites the "✓"
+  	This is a box, turned 45 degs, with a 
+  	left and bottom border to make the checkmark.
+  	Created using an empty pseudo-element.*/
+  content: "";
+  width: 1rem;
+  height: 0.3rem;
+  border: 4px solid #b9202f;
+  border-right: none;
+  border-top: none;
+  transform: rotate(-45deg);
+  display: inline-block;
+  margin-left: 0.9375em;
+  margin-right: 0.46875em;
+}
+
+.login-remeber input[type=checkbox] {
+  border-color: #222;
+}
+
+.wp-block-image {
+  margin: 0;
+}
+
+#menu-footer {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+#menu-footer li {
+  margin-right: 0.9375em;
+}
+
+#buddypress div.dir-search {
+  margin: 0;
+  float: initial;
+}
+
+#buddypress div.dir-search input[type=text], #buddypress li.groups-members-search input[type=text] {
+  font-size: initial;
+  padding: 0.9375em;
+}
+
+#buddypress div.item-list-tabs ul li.last {
+  float: inherit;
+  margin: 0.9375em;
+}
+
+#members-dir-list {
+  margin: 0.9375em;
+}
+
+#buddypress div.pagination .pag-count {
+  margin-left: 0;
+}
+
+#buddypress div.pagination {
+  font-size: inherit;
+}
+
+#buddypress ul.item-list li div.item-title, #buddypress ul.item-list li h3, #buddypress ul.item-list li h4 {
+  font-size: inherit;
+}
+
+#buddypress #activity-filter-select {
+  float: left;
+  width: 100%;
+}
+
+#buddypress div.item-list-tabs#subnav ul li.last {
+  margin-top: 0.9375em;
+}
+
+#buddypress > #item-nav,
+#buddypress > #item-body {
+  margin: 0.9375em;
+}
+
+#buddypress table.profile-fields tr td.label {
+  width: 50%;
+}
+
+.buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links) {
+  box-shadow: initial;
+}
+
+#dir-members-search-form,
+#dir-activity-search-form {
+  background: #fefefe;
+  padding: 0.46875em;
+}
+
+#dir-members-search-submit,
+#dir-activity-search-submit {
+  margin: 0 !important;
+  padding: 0.46875em !important;
+}
+
+#dir-members-search-form .dashicons-search {
+  vertical-align: initial;
+}
+
+#members-order-select > .select-wrap,
+#activity-filter-by {
+  background: #fefefe;
+  color: #222;
+}
+
+#members-order-by {
+  color: #222;
+}
+
+.buddypress-wrap .bp-feedback.help .bp-icon, .buddypress-wrap .bp-feedback.info .bp-icon {
+  background: #b9202f;
+}
+
+#dir-filters {
+  margin-top: 1.3em;
+}
+
+.half {
+  display: flex;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.half > div,
+.half > h3 {
+  width: 50%;
+}
+
+.view-order-options {
+  display: flex;
+  background: none !important;
+  padding: 0;
+}
+.view-order-options > div {
+  width: 50%;
+  padding-left: 0;
+}
+
+/**
+ * 15.0 - Print
+ */
+@media print {
+  /* @page { need to do some research on this
+  	size: A4;
+  } */
+  .hide-for-print {
+    display: none;
+  }
+
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+  }
+
+  form,
+button,
+input,
+select,
+textarea,
+.navigation,
+.main-navigation,
+.social-navigation,
+.sidebar,
+.content-bottom-widgets,
+.header-image,
+.page-links,
+.edit-link,
+.comment-respond,
+.comment-edit-link,
+.comment-reply-link,
+.comment-metadata .edit-link,
+.pingback .edit-link {
+    display: none;
+  }
+
+  body,
+blockquote cite,
+blockquote small,
+pre,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-summary h4,
+.entry-summary h5,
+.entry-summary h6,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6,
+.entry-content .author-title {
+    font-size: 10pt;
+    line-height: 12pt;
+  }
+
+  blockquote {
+    font-size: 14.25pt;
+  }
+
+  .site-title,
+.page-title,
+.comments-title,
+.entry-content h2,
+.entry-summary h2,
+.comment-content h2,
+.widecolumn h2 {
+    font-size: 17.25pt;
+  }
+
+  .site-description {
+    display: block;
+  }
+
+  .entry-title {
+    font-size: 24.75pt;
+    line-height: 1.2727272727;
+    margin-bottom: 1.696969697em;
+  }
+
+  .format-aside .entry-title,
+.format-image .entry-title,
+.format-video .entry-title,
+.format-quote .entry-title,
+.format-gallery .entry-title,
+.format-status .entry-title,
+.format-link .entry-title,
+.format-audio .entry-title,
+.format-chat .entry-title {
+    font-size: 17.25pt;
+    line-height: 1.304347826;
+    margin-bottom: 1.826086957em;
+  }
+
+  .entry-content h1,
+.entry-summary h1,
+.comment-content h1 {
+    font-size: 21pt;
+  }
+
+  .entry-content h3,
+.entry-summary h3,
+.comment-content h3,
+body:not(.search-results) .entry-summary {
+    font-size: 14.25pt;
+  }
+
+  .site-description,
+.author-bio,
+.entry-footer,
+.sticky-post,
+.taxonomy-description,
+.entry-caption,
+.comment-metadata,
+.comment-notes,
+.comment-awaiting-moderation,
+.site-info,
+.wp-caption .wp-caption-text,
+.gallery-caption {
+    font-size: 9.75pt;
+  }
+
+  body,
+.site {
+    background: none !important;
+    /* Brute force since user agents all print differently. */
+  }
+
+  body,
+blockquote cite,
+blockquote small,
+.site-branding .site-title a,
+.entry-title a,
+.comment-author {
+    color: #1a1a1a !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  blockquote,
+.page-header,
+.comments-title {
+    border-color: #1a1a1a !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  blockquote,
+.site-description,
+body:not(.search-results) .entry-summary,
+body:not(.search-results) .entry-summary blockquote,
+.author-bio,
+.entry-footer,
+.entry-footer a,
+.sticky-post,
+.taxonomy-description,
+.entry-caption,
+.comment-author,
+.comment-metadata a,
+.comment-notes,
+.comment-awaiting-moderation,
+.site-info,
+.site-info a,
+.wp-caption .wp-caption-text,
+.gallery-caption {
+    color: #686868 !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  code,
+hr {
+    background-color: #d1d1d1 !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  pre,
+abbr,
+acronym,
+table,
+th,
+td,
+.author-info,
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback,
+.no-comments {
+    border-color: #d1d1d1 !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  a {
+    color: #007acc !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  .entry-content a,
+.entry-summary a,
+.taxonomy-description a,
+.comment-content a,
+.pingback .comment-body > a {
+    box-shadow: none;
+    border-bottom: 1px solid #007acc !important;
+    /* Make sure color schemes don't affect to print */
+  }
+
+  .site {
+    margin: 5%;
+  }
+
+  .site-inner {
+    max-width: none;
+  }
+
+  .site-header {
+    padding: 0 0 1.75em;
+  }
+
+  .site-branding {
+    margin-top: 0;
+    margin-bottom: 1.75em;
+  }
+
+  .site-main {
+    margin-bottom: 3.5em;
+  }
+
+  .entry-header,
+.entry-footer,
+.page-header,
+.page-content,
+.entry-content,
+.entry-summary,
+.post-thumbnail,
+.comments-area {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .post-thumbnail,
+.site-main > article {
+    margin-bottom: 3.5em;
+  }
+
+  .entry-content blockquote.alignleft,
+.entry-content blockquote.alignright {
+    border-width: 4px 0 0 0;
+    padding: 0.9473684211em 0 0;
+    width: -webkit-calc(50% - 0.736842105em);
+    width: calc(50% - 0.736842105em);
+  }
+
+  body:not(.search-results) .entry-header + .entry-summary {
+    margin-top: -1.473684211em;
+  }
+
+  .site-footer,
+.widecolumn {
+    padding: 0;
+  }
+
+  .line-higher {
+    line-height: 12pt;
+  }
+
+  .unicode {
+    color: #ff0000 !important;
+    line-height: 0.5rem;
+  }
+
+  .border-slim {
+    border-top: 1px dashed #999;
+  }
+
+  /* .print-highlights {
+  	// color: $highlight !important; 5.0 this doesnt work
+  } */
+  .over-background {
+    background: none;
+  }
+
+  .is-style-stripes li:nth-child(2n+1) {
+    background: none;
+    border: none;
+  }
+
+  .light-back,
+.is-style-light-back {
+    background: none;
+    border: none;
+  }
+
+  .animals-link {
+    background: none;
+    border: none;
+  }
+
+  .container {
+    margin: 0;
+    width: 210mm;
+  }
+
+  .set-in .set-in {
+    margin: 0;
+  }
+
+  .is-style-stripes li:nth-child(odd),
+.stripes li:nth-child(odd),
+.stripe, .run-the-stripes div:nth-child(odd),
+.run-the-stripes li:nth-child(odd) {
+    background: none;
+  }
+
+  .single-stripe {
+    background: none;
+  }
+
+  .view-order-options {
+    width: 100% !important;
+  }
+
+  .run-the-stripes > div {
+    border-top: 1px dashed #999;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
