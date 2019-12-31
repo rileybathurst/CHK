@@ -346,7 +346,6 @@
 	.run-the-stripes li:nth-child(odd) {
 		background: none;
 		width: 50%;
-		border-top: 1px dotted black;
 	}
 
 	.single-stripe {
@@ -354,7 +353,11 @@
 	}
 
 	.view-order-options {
-		width: 100%;
+		width: 100% !important; // try get this higher on the specificity
+	}
+
+	.run-the-stripes > div {
+		border-top: 1px dashed #999;
 	}
 
 } // print styles
