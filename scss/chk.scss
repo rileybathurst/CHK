@@ -175,9 +175,17 @@ blockquote {
 
 select { // https://css-tricks.com/styling-a-select-like-its-2019/
 	background: $black;
-	border-radius: $global-border-radius;
+	// border-radius: $global-border-radius;
 	color: $white;
 	border: 2px solid $tertiary;
+	padding: $regular-space;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 100%;
+	max-width: 100%; 
+	display: block;
+	font-size: 1em;
+	cursor: pointer; 
 }
 
 select::-ms-expand {
@@ -190,13 +198,19 @@ select:focus {
 	border-color: #aaa;
 	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222; 
+	color: white; 
 	outline: none;
 }
 select option {
 	font-weight:normal;
 	padding: $regular-space;
 }
+
+
+
+
+
+
 
 .clear {
 	clear: both;

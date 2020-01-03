@@ -5,6 +5,7 @@ Start of weekly work with a clean github
 ## Sass
 
 sass scss/app.scss css/app.css --watch
+sass scss/app.scss --style=compressed css/app.css --watch
 
 ### Print Styles
 
@@ -15,19 +16,12 @@ sass scss/print.scss css/print.css --watch
 Things to do
 
 - how much of home can be made in Gutenberg
-- what is the site map? it doesnt have an extension
 - how good are the animals if they become svg and whats the saving on that?
 - deer // alpaca leg second choice
 - clean out the print css
 - test the inc/welcome-email.php Im not sure about the variables
 
 contact us has some strange stuff going on with inline styles which could be kinda confusing in  a gutenberg style maybe I just remove them at this stage
-
-I don't know if the top level of the primary menu is very useful?
-
-good reminder I should have built the index.php pages first and then to the home which is more complicated rather than building backwards
-
-meatorders from live for checking
 
 there might need to be some work done on the order pages to deal with secondary numbers when something is checked, order small goods is an example at the moment
 

@@ -40,7 +40,7 @@ $unid = $_GET['n'];
 								<div class="form-inline">
 									<input id="b_fillet" type="checkbox" name="b_fillet" required checked>
 									<label for="b_fillet">Fillet</label>
-									<select name="fillet_bf" id="fillet_bf" required>
+									<select name="fillet_bf" id="fillet_bf" required class="select-css">
 										<option value="" disabled selected>Select</option>
 										<option name="fillet_bf" value="steak">Steak</option>
 										<option name="fillet_bf" value="whole">Whole</option>
