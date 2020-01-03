@@ -20,6 +20,7 @@ Things to do
 - deer // alpaca leg second choice
 - clean out the print css
 - test the inc/welcome-email.php Im not sure about the variables
+- https://canterburyhomekill.co.nz/prices/ title size
 
 contact us has some strange stuff going on with inline styles which could be kinda confusing in  a gutenberg style maybe I just remove them at this stage
 

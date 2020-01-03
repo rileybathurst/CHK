@@ -51,7 +51,7 @@
 				value: 
 					props.attributes.content +
 					
-					'<img src="http://localhost:8888/chk/wp-content/uploads/2019/09/CHK-logo.png" alt="img">' +
+					'<img src="https://canterburyhomekill.co.nz/wp-content/uploads/2019/09/CHK-logo.png" alt="img">' +
 					'<img src="../img/pig.png" alt="pig" />' // +
 					// alignment
 					// props.attributes.alignment +
