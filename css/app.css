@@ -1055,7 +1055,7 @@ label {
 }
 
 .animals > div {
-  flex: 1 0 16.5em;
+  flex: 0 0 16.5em;
 }
 
 .animals > div > h3 {
@@ -1505,6 +1505,15 @@ fieldset input[type=radio]:focus {
   padding: 0 0.9375em 0 0;
 }
 
+.animals-svg {
+  margin: 0 1.875em;
+  padding: 0.9375em;
+}
+
+.animals-before-svg {
+  width: calc(100% - 3em);
+}
+
 /**
  * 15.0 - Print
  */
@@ -1556,7 +1565,7 @@ pre,
 .comment-content h6,
 .entry-content .author-title {
     font-size: 10pt;
-    line-height: 12pt;
+    line-height: 10pt;
   }
 
   blockquote {
@@ -1608,6 +1617,7 @@ pre,
 .comment-content h3,
 body:not(.search-results) .entry-summary {
     font-size: 14.25pt;
+    margin: 0 0.5em;
   }
 
   .site-description,
@@ -1761,10 +1771,9 @@ td,
     padding: 0;
   }
 
-  .line-higher {
-    line-height: 12pt;
-  }
-
+  /* .line-higher {
+  	line-height: 12pt;
+  } */
   .unicode {
     color: #ff0000 !important;
     line-height: 0.5rem;
@@ -1802,7 +1811,8 @@ td,
     width: 210mm;
   }
 
-  .set-in .set-in {
+  .set-in,
+.set-in .set-in {
     margin: 0;
   }
 
@@ -1819,10 +1829,16 @@ td,
 
   .view-order-options {
     width: 100% !important;
+    padding: 0 !important;
   }
 
   .run-the-stripes > div {
     border-top: 1px dashed #999;
+  }
+
+  .print-top-line {
+    border: none !important;
+    padding-top: 0 !important;
   }
 }
 

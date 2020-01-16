@@ -1124,7 +1124,8 @@ margin-top: 20px;
 }
 
 .animals > div { 
-	flex: 1 0 16.5em; // let the alpaca grow
+	// flex: 1 0 16.5em; // let the alpaca grow
+	flex: 0 0 16.5em; // stops the alpaca growing no its svg
 }
 
 .animals > div > h3 {
@@ -1590,4 +1591,13 @@ footer img {
 		width: 50%;
 		padding: 0 $regular-space 0 0; // only right
 	}
+}
+
+.animals-svg {
+	margin: 0 $regular-space*2;
+	padding: $regular-space;
+}
+
+.animals-before-svg {
+	width: calc(100% - 3em);
 }
