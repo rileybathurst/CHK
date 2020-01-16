@@ -51,7 +51,7 @@
 	.comment-content h6,
 	.entry-content .author-title {
 		font-size: 10pt; // pig orders are the largest and this still fits to an A4 print
-		line-height: 12pt;
+		line-height: 10pt;
 	}
 
 	blockquote {
@@ -249,9 +249,9 @@
 		padding: 0;
 	}
 
-	.line-higher {
+	/* .line-higher {
 		line-height: 12pt;
-	}
+	} */
 
 	.unicode {
 		color: #ff0000 !important;
@@ -292,6 +292,7 @@
 		// height: 297mm; // seems to be throwing an error
 	}
 
+	.set-in,
 	.set-in .set-in { // little hack to tidy this up with double set ins
 		margin: 0;
 	}
@@ -310,6 +311,7 @@
 
 	.view-order-options {
 		width: 100% !important; // try get this higher on the specificity
+		padding: 0 !important;
 	}
 
 	.run-the-stripes > div {
