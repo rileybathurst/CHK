@@ -166,7 +166,9 @@
 <div>
 	<?php if ($order->pb_baconstrips == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
-	<?php } else { echo " "; } ?>
+	<?php } else { ?>
+		<span class="unicode spacer">✗</span>
+	<?php } ?>
 	<strong>Bacon Strips</strong>
 </div>
 
