@@ -101,6 +101,7 @@ pre,
 .comment-content h3,
 body:not(.search-results) .entry-summary {
     font-size: 14.25pt;
+    margin: 0 0.5em;
   }
 
   .site-description,
@@ -316,6 +317,11 @@ td,
 
   .run-the-stripes > div {
     border-top: 1px dashed #999;
+  }
+
+  .print-top-line {
+    border: none;
+    padding-top: 0;
   }
 }
 

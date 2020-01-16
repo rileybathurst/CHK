@@ -48,7 +48,7 @@ $unid = $_GET['n'];
 
 										<div class="run-the-stripes">
 											<!-- unid -->
-											<div>
+											<div class="print-top-line">
 												Order Number
 												| 
 												<strong class="print-highlights">
