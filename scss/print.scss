@@ -317,8 +317,8 @@
 	}
 
 	.print-top-line {
-		border: none;
-		padding-top: 0;
+		border: none !important;
+		padding-top: 0 !important;
 	}
 
 } // print styles
