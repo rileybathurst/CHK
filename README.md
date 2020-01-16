@@ -53,7 +53,8 @@ Currently building a seperate dist folder this includes
 
 ### Sass Compressed
 
-sass scss/app.scss --style=compressed dist/css/app.css
+- sass scss/app.scss --style=compressed dist/css/app.css
+- sass scss/print.scss --style=compressed css/print.css
 
 ### PHP Compressed
 
