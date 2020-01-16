@@ -675,6 +675,8 @@ input[type="password"]:focus {
 	padding: $small-space $regular-space;
 	background: $quaternary;
 	border-radius: $global-border-radius;
+
+	margin-top: 0;
 }
 
 #view-profile--orders > div > a{
@@ -1571,8 +1573,7 @@ footer img {
 
 .half {
 	display: flex;
-	padding-left: 0 !important; // fix the specificty
-	padding-right: 0  !important; // fix the specificty
+	padding: 0 !important; // fix the specificty
 }
 
 .half > div, // view-order needs some works
@@ -1587,6 +1588,6 @@ footer img {
 
 	> div {
 		width: 50%;
-		padding-left: 0;
+		padding: 0 $regular-space 0 0; // only right
 	}
 }

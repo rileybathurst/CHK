@@ -5,7 +5,6 @@ Start of weekly work with a clean github
 ## Sass
 
 sass scss/app.scss css/app.css --watch
-sass scss/app.scss --style=compressed css/app.css --watch
 
 ### Print Styles
 
@@ -46,3 +45,18 @@ Developer email find all $developer should be off by default
 - wp cache or jetpack, currently not setup
 - yoast until I do all the work for seo
 - gutenberg? am I needing any advanced features?
+
+## Dist
+
+Not ready yet.
+Currently building a seperate dist folder this includes
+
+### Sass Compressed
+
+sass scss/app.scss --style=compressed dist/css/app.css
+
+### PHP Compressed
+
+[PHP Cleaner](https://github.com/rileybathurst/php-cleaner)
+
+Doing something else with gulp could be useful
