@@ -5,7 +5,7 @@
 	<?php if ($order->v_shoulder == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Shoulder</span></strong>
 
@@ -21,7 +21,7 @@
 	<?php if ($order->v_loin == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Loin</strong>
 
@@ -37,7 +37,7 @@
 	<?php if ($order->v_leg == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Leg</strong>
 

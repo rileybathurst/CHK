@@ -6,7 +6,7 @@
 	<?php if ($order->b_fillet == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 		<strong>Fillet</strong>
 
@@ -22,7 +22,7 @@
 	<?php if ($order->b_porterhouse == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Porterhouse</strong>
 
@@ -36,7 +36,7 @@
 	<?php if ($order->b_tbone == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>T-Bone</strong>
 </div>
@@ -46,7 +46,7 @@
 	<?php if ($order->b_ribeye == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Ribeye</strong>
 
@@ -156,7 +156,7 @@
 	<?php if ($order->b_skirtsteak == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Skirt Steak</strong>
 		

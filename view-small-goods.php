@@ -5,7 +5,7 @@
 	<?php if ( $order->t_porkherb == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Pork &amp; Herb</strong>
 
@@ -19,7 +19,7 @@
 	<?php if ($order->t_lambmint == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Lamb &amp; Mint</strong>
 
@@ -33,7 +33,7 @@
 	<?php if ($order->t_bratwurst == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Bratwurst</strong>
 
@@ -47,7 +47,7 @@
 	<?php if ($order->t_bratwurst_fennel == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Bratwurst w/ Fennel</strong>
 
@@ -61,7 +61,7 @@
 	<?php if ($order->t_texan_chile == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Texan Chile</strong>
 
@@ -75,7 +75,7 @@
 	<?php if ($order->t_chorizo == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Chorizo</strong>
 
@@ -89,7 +89,7 @@
 	<?php if ($order->t_tomatobasil == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Tomato &amp; Basil</strong>
 
@@ -103,7 +103,7 @@
 	<?php if ($order->t_herbgarlic == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Herb &amp; Garlic</strong>
 
@@ -117,7 +117,7 @@
 	<?php if ($order->t_peppersonion == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Green Capsicum &amp; Onion</strong>
 
@@ -131,7 +131,7 @@
 	<?php if ($order->t_gf_capsicum == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Green Capsicum Onion <em>- GF</em></strong>
 
@@ -145,7 +145,7 @@
 	<?php if ($order->t_plain == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Plain</strong>
 
@@ -159,7 +159,7 @@
 	<?php if ($order->t_gf_plain == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Plain <em>- GF</em></strong>
 
@@ -173,7 +173,7 @@
 	<?php if ($order->t_saveloys == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Saveloys</strong>
 
@@ -187,7 +187,7 @@
 	<?php if ($order->t_gf_saveloys == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Saveloys <em>- GF</em></strong>
 
@@ -201,7 +201,7 @@
 	<?php if ($order->t_create == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Create</strong>
 
@@ -215,7 +215,7 @@
 	<?php if ($order->t_patties == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Patties</strong>
 
@@ -229,7 +229,7 @@
 	<?php if ($order->t_gf_patties == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Patties <em>- GF</em></strong>
 	
@@ -243,7 +243,7 @@
 	<?php if ($order->t_salami == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
-		<span class="unicode spacer">✗</span>
+		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Salami</strong>
 
