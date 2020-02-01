@@ -82,6 +82,13 @@ function chk_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'chk_scripts' );
 
+// update jquery as google lighthouse is showing vulnerabilities
+function my_enqueued_assets() {
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'script-name', '//code.jquery.com/jquery-2.2.3.min.js', array(), '2.2.3' );
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueued_assets' );
+
 // remove p from posts - was making some wierd stuff with flagbanner and extremely custom styling
 // I think with gutenberg I can now remove this
 remove_filter( 'the_content', 'wpautop' );

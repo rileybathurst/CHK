@@ -70,7 +70,10 @@ hr {
 }
 */
 a {
-  color: #b9202f;
+  background: #b9202f;
+  color: #fefefe;
+  padding: 0.3125em;
+  border-radius: 5px;
 }
 
 a:hover {
@@ -914,6 +917,7 @@ label {
 
 .light-back {
   background: #888;
+  color: #222;
 }
 .light-back hr {
   border-style: solid;
@@ -1394,8 +1398,11 @@ fieldset input[type=radio]:focus {
   flex-wrap: wrap;
 }
 
-#menu-footer li {
-  margin-right: 0.9375em;
+#menu-footer li a {
+  display: inline-block;
+  margin: 0.46875em;
+  padding: 0.9375em;
+  color: white;
 }
 
 #buddypress div.dir-search {
@@ -1507,11 +1514,34 @@ fieldset input[type=radio]:focus {
 
 .animals-svg {
   margin: 0 1.875em;
-  padding: 0.9375em;
+  padding: 1.5rem;
 }
 
 .animals-before-svg {
   width: calc(100% - 3em);
+}
+
+#mediummenu > div > ul > li {
+  margin: 0.469em 0.6375em;
+}
+
+.light-back {
+  background: #e3e3e3;
+  color: #0a0a0a;
+}
+.light-back label {
+  color: black;
+}
+.light-back hr {
+  border-color: black;
+}
+
+svg path {
+  fill: black;
+}
+
+.round {
+  border-color: black;
 }
 
 /**

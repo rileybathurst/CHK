@@ -114,7 +114,10 @@ hr {
 */
 
 a {
-	color: $highlight;
+	background: $highlight;
+	color: $white;
+	padding: $regular-space/3;
+	border-radius: 5px;
 }
 
 a:hover {
@@ -982,6 +985,7 @@ margin-top: 20px;
 
 .light-back {
 	background: $tertiary;
+	color: $black;
 
 	hr {
 		border-style: solid;
@@ -1480,8 +1484,12 @@ footer img {
 	// justify-content: space-between;
 }
 
-#menu-footer li {
-	margin-right: $regular-space;
+#menu-footer li a {
+	// margin-right: $regular-space;
+	display: inline-block;
+	margin: $regular-space/2;
+	padding: $regular-space;
+	color: white;
 }
 
 #buddypress div.dir-search {
@@ -1595,9 +1603,38 @@ footer img {
 
 .animals-svg {
 	margin: 0 $regular-space*2;
-	padding: $regular-space;
+	padding: 1.5rem;
 }
 
 .animals-before-svg {
 	width: calc(100% - 3em);
 }
+
+
+// -------------------------------------------------------
+
+
+#mediummenu > div > ul > li {
+	margin: 0.469em 0.6375em;
+  }
+
+  .light-back {
+	background: #e3e3e3;
+	color: #0a0a0a;
+
+	label {
+		color: black;
+	}
+
+	hr {
+		border-color: black;
+	}
+  }
+
+  svg path {
+	  fill: black;
+  }
+
+  .round {
+	  border-color: black;
+  }

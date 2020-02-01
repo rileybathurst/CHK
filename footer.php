@@ -9,7 +9,10 @@
 		<p class="clear">Canterbury Homekill <?php echo date ('Y'); ?></p>
 	</div>
 
-	<img src="<?php echo get_template_directory_uri(); ?>/img/pig.png" alt="pig" class="show-for-medium" loading="lazy" > <!-- this should come from the customizer -->
+	<picture>
+		<source set="<?php echo get_template_directory_uri(); ?>/img/pig.webp" type="image/webp"><!-- this isnt much smaller but its helping for google audit -->
+		<img src="<?php echo get_template_directory_uri(); ?>/img/pig.png" alt="pig" class="show-for-medium" loading="lazy" > <!-- this should come from the customizer -->
+	</picture>
 
 </footer>
 

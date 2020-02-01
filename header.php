@@ -128,7 +128,7 @@
 					<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_medium.webp" media="(min-width: 640px)" type="image/webp">
 					<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_medium.jpg" media="(min-width: 640px)">
 					<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_small.webp" type="image/webp">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_small.jpg" loading="lazy">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/iStock_000051038948_small.jpg" alt="steak on a cutting board" loading="lazy">
 				</picture>
 			</div>
 			<header class="hide-for-print">
