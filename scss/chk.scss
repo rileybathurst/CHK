@@ -657,6 +657,7 @@ input[type="password"]:focus {
 .light-back .stripes li:nth-child(odd),
 .lightback .stripe {
 	background: $background;
+	color: white;
 }
 
 .stripe-breaker { // does this just reset the stripes?
