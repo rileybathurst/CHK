@@ -31,7 +31,7 @@ Prices may vary regarding size.
 | Price         | Description   |
 | -----------   | -----------   |
 | 2.50 each     | French Racks  |
-| 2.50 each leg | Boned Hind Legs    |
+| 2.50 each leg | Boned Hind Legs |
 | 2.50 each leg | Leg Steaks    |
 | 15 each       | Mutton Ham    |
 | 2.50 each     | Seasoning     |
@@ -95,7 +95,7 @@ Vacuum Packed in Family Sized Packs
 
 | Price       | Description |
 | ----------- | ----------- |
-| 1.75        | per kg to process/package    |
+| 1.75        | per kg to process/package |
 
 ## Beef
 
@@ -166,16 +166,16 @@ Minimum Orders of 5kg
 
 ### Gourmet Sausages Flavours
 
-| Price         | Description        |
-| ------------- | ------------------ |
-| Pork & Herb   | GF
-| Lamb & Mint   | GF
-| Bratwurst     | GF
+| Price                | Description        |
+| -------------------- | ------------------ |
+| Pork & Herb          | GF
+| Lamb & Mint          | GF
+| Bratwurst            | GF
 | Bratwurst w/ Fennel* | GF
-| Texan Chile | GF
-| Chorizo | GF
-| Tomato & Basil | GF
-| Herb & Garlic | GF
+| Texan Chile          | GF
+| Chorizo              | GF
+| Tomato & Basil       | GF
+| Herb & Garlic       | GF
 Green Capsicum & Onion* Seasonal – Staff Will Advise
 
 ---
@@ -184,10 +184,10 @@ Green Capsicum & Onion* Seasonal – Staff Will Advise
 
 Minimum order of 8kg
 
-| Price         | Description        |
-| ------------- | ------------------ |
-| $5 | per kg Patties                |
-| $6 | per kg Gluten Free Patties    |
+| Price | Description                |
+| ----- | -------------------------- |
+| $5    | per kg Patties             |
+| $6    | per kg Gluten Free Patties |
 
 ---
 
@@ -197,8 +197,8 @@ Minimum order of 8kg
 
 | Price         | Description        |
 | ------------- | ------------------ |
-| $5            | per kg bulk
-| $5.50         | per kg packaged
+| $5            | per kg bulk        |
+| $5.50         | per kg packaged    |
 
 ---
 
@@ -208,7 +208,7 @@ Minimum of 4 per flavour
 
 | Price         | Description        |
 | ------------- | ------------------ |
-| $10 each      |tailored made to suit your taste
+| $10 each      | tailored made to suit your taste |
 
 ## Delivery
 
@@ -223,9 +223,9 @@ Prices may vary regarding travelling.
 Delivery Prices*
 *Prices may vary due to animal size and amount
 
-| Price         | Description        |
-| ------------- | ------------------ |
-| $5            | per sheep
-| $10           | per pig
-| $10           | per deer
-| $30           | per cow
+| Price         | Description |
+| ------------- | ----------- |
+| $5            | per sheep   |
+| $10           | per pig     |
+| $10           | per deer    |
+| $30           | per cow     |
