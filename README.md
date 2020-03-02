@@ -4,11 +4,11 @@ Start of weekly work with a clean github
 
 ## Sass
 
-sass scss/app.scss css/app.css --watch
+```sass scss/app.scss css/app.css --watch```
 
 ### Print Styles
 
-sass scss/print.scss css/print.css --watch
+```sass scss/print.scss css/print.css --watch```
 
 ## Updates
 
