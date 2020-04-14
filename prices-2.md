@@ -17,7 +17,7 @@ Deer    | 25          | Skin only (Not killed, wild, dropped off dead with skin 
 ------- | ----------- | ----------- |
 Beef    | 175         | Per Cow     |
 ------- | ----------- | ----------- |
-Alpaca / Llama | 75   | Per Alpaca / Llama |
+Alpaca / Llama | 70   | Per Alpaca / Llama |
 
 ## Processing Charges
 

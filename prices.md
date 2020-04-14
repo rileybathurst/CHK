@@ -120,7 +120,7 @@ Vacuum Packed in Family Sized Packs
 
 | Price       | Description        |
 | ----------- | ------------------ |
-| 75          | Per Alpaca / Llama |
+| 70          | Per Alpaca / Llama |
 
 ### Processing Charges - Standard
 
