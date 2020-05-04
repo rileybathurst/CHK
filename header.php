@@ -67,7 +67,7 @@
 			) );
 			
 			if ( is_user_logged_in() ) { ?>
-				<button href=" php echo home_url(); ?>/logout" class="">logout</button>
+				<button href="<?php echo home_url(); ?>/logout" class="">logout</button>
 			<?php } else { ?>
 				<h2>Login</h2>  
 				<?php 
@@ -77,7 +77,7 @@
 					);
 					wp_login_form( $mini_login );
 				?>
-				<button href=" php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>" class="button drop">Sign Up</button>
+				<button href="<?php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>" class="button drop">Sign Up</button>
 			<?php } ?>
 			<hr>
 		</div>
