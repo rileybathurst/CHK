@@ -222,7 +222,7 @@
 				
 				<p>Become a member to be able to search previous orders and have your sigin in information auto fill.</p>
 				<!-- <button><a href=" php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>" class="button drop left">Sign Up</a> this is a button -->
-				<button>Sign Up</button> <!-- needs to be linked up -->
+				<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('register')->ID); ?>" class="button">Sign Up</a>
 			</div>
 					
 		<?php } ?>

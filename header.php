@@ -107,7 +107,8 @@
 						?>
 					</div> -->
 
-					<button href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('register')->ID); ?>" class="">Sign Up</button>
+					<!-- <button href=" php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>">Sign Up</button> -->
+					<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('register')->ID); ?>" class="button">Sign Up</a>
 					<!-- why would a customer sign up should go here -->
 				</div>
 			<?php } ?>
