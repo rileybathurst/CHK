@@ -409,6 +409,7 @@ input[type=submit],
   display: inline-block;
   text-decoration: none;
   font-family: sans-serif;
+  -webkit-appearance: none;
 }
 
 button:hover, button:focus, .button:hover, .button:focus,
@@ -497,7 +498,7 @@ input[type=password],
 }
 
 .buddypress-wrap .register-page .layout-wrap {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .buddypress-wrap .standard-form input:not(.small) {
@@ -525,7 +526,7 @@ input[type=password]:focus {
 }
 
 .buddypress-wrap.extended-default-reg .register-page .extended-profile {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 
 .signup-form input[type=text],
@@ -1516,7 +1517,7 @@ fieldset input[type=radio]:focus {
 }
 
 .buddypress-wrap .bp-feedback.help .bp-icon, .buddypress-wrap .bp-feedback.info .bp-icon {
-  background: #b9202f;
+  background: #b9202f !important;
 }
 
 #dir-filters {
