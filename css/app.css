@@ -496,6 +496,14 @@ input[type=password],
   background: #888;
 }
 
+.buddypress-wrap .register-page .layout-wrap {
+  flex-direction: column;
+}
+
+.buddypress-wrap .standard-form input:not(.small) {
+  margin: 0;
+}
+
 input[type=text]:focus,
 textarea:focus,
 input[type=email]:focus,
@@ -506,6 +514,32 @@ input[type=password]:focus {
   outline: #b9202f solid 3px;
   outline-offset: 0.234375em;
   border: 3px solid transparent;
+}
+
+/* .pw-weak {
+	margin-left: $regular-space;
+} */
+.pw-checkbox {
+  width: 1.6rem !important;
+  margin-right: 0.9375em !important;
+}
+
+.buddypress-wrap.extended-default-reg .register-page .extended-profile {
+  padding-left: 0;
+}
+
+.signup-form input[type=text],
+.signup-form input[type=email] {
+  width: calc(100% - 0.9375rem) !important;
+}
+
+.signup-form input[type=submit] {
+  width: auto !important;
+}
+
+.password-input-wrapper input[type=password] {
+  margin: 0 !important;
+  width: calc(100% - 1.875em) !important;
 }
 
 #side_log {
@@ -1036,6 +1070,7 @@ label {
 .container > img,
 .container > picture {
   flex: 1 0 33em;
+  max-width: 100%;
 }
 
 .container > .no-side {

@@ -21,8 +21,8 @@ $global-border-radius: 0.2em;
 
 $font-stack: Georgia, Times, 'Times New Roman', serif;
 
-$regular-space: .9375em; 
-$small-space: .625em; // remove this I can just use math
+$regular-space: 0.9375em; 
+$small-space: 0.625em; // remove this I can just use math
 
 $shadow: -$regular-space/2 0px $regular-space/2 rgba(0,0,0,0.5);
 
@@ -541,10 +541,19 @@ input[type="password"],
 }
 
 #buddypress #pass-strength-result {
-	color: $background; // what is this overwritting?
+	color: $background; // this changes once a password has been input
+	// margin-left: $regular-space;
 }
 #buddypress .standard-form#signup_form div div.error {
 	background: $tertiary; // use an error color for an error?
+}
+
+.buddypress-wrap .register-page .layout-wrap {
+	flex-direction: column; // the register page defaults to a two column layout in an already two column spot
+}
+
+.buddypress-wrap .standard-form input:not(.small) {
+	margin: 0;
 }
 
 input[type=text]:focus,
@@ -558,6 +567,36 @@ input[type="password"]:focus {
 	outline-offset: $regular-space/4;
 
 	border: $global-border-width solid transparent; // firefox reset
+}
+
+/* .pw-weak {
+	margin-left: $regular-space;
+} */
+
+.pw-checkbox { // is hidden except for a weak password
+	// width: auto !important;
+	// -webkit-appearance: initial !important;
+	width: 1.6rem !important; // this is the custom checkbox I use width overwrites the .buddypress-wrap .standard-form input:not(.small) I have used to get the longer forms to fit inside the boxes
+	// margin-bottom: 0 !important; // overwrites the buddypress css .register-page .signup-form .default-profile input
+	margin-right: $regular-space !important; // overwrites the buddypress css .register-page .signup-form .default-profile input
+}
+
+.buddypress-wrap.extended-default-reg .register-page .extended-profile {
+	padding-left: 0;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"] {
+	width: calc(100% - 0.9375rem) !important; // $regular-space overwrites buddypress css .buddypress-wrap .standard-form input:not(.small), .buddypress-wrap .standard-form textarea
+}
+
+.signup-form input[type="submit"] {
+	width: auto !important; // overwrites .buddypress-wrap .standard-form input:not(.small), .buddypress-wrap .standard-form textarea
+}
+
+.password-input-wrapper input[type="password"] { // this seems weird and could be better but it only shows when the show hide password box is toggled and therefore needs th important options
+	margin: 0 !important;
+	width: calc(100% - 1.875em) !important; // regular space*2
 }
 
 // #SIDE_LOG // I presume this is the side log in?
@@ -1105,6 +1144,7 @@ margin-top: 20px;
 .container > picture {
 	flex: 1 0 33em;
 	// paddings have to be nested due to background colors
+	max-width: 100%; // keep it under control below 33em
 }
 
 .container > .no-side {
