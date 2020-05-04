@@ -549,7 +549,7 @@ input[type="password"],
 }
 
 .buddypress-wrap .register-page .layout-wrap {
-	flex-direction: column; // the register page defaults to a two column layout in an already two column spot
+	flex-direction: column !important; // the register page defaults to a two column layout in an already two column spot !important is needed for the live sites due to how css files stack
 }
 
 .buddypress-wrap .standard-form input:not(.small) {
@@ -582,7 +582,7 @@ input[type="password"]:focus {
 }
 
 .buddypress-wrap.extended-default-reg .register-page .extended-profile {
-	padding-left: 0;
+	padding-left: 0 !important; // important needed dude to css stack on live sites
 }
 
 .signup-form input[type="text"],
@@ -1611,7 +1611,7 @@ footer img {
 }
 
 .buddypress-wrap .bp-feedback.help .bp-icon, .buddypress-wrap .bp-feedback.info .bp-icon {
-	background: $highlight;
+	background: $highlight !important; // overwrites the buddypress css important is needed on test but not on localhost
 }
 
 #dir-filters {
