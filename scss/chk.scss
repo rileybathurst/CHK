@@ -457,6 +457,8 @@ input[type="submit"],
 	display: inline-block;
 	text-decoration: none;
 	font-family: sans-serif;
+
+	-webkit-appearance: none; // -webkit-appearance: push-button; if the default for ios devices and giving a weird glare and rounded corners
 }
 
 button:hover, button:focus, .button:hover, .button:focus, 
