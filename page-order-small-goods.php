@@ -57,98 +57,98 @@ $unid = $_GET['n'];
 							<!-- sg_porkherb t_porkherb -->
 							<div>
 								<label for="sg_porkherb">Pork &amp; Herb <em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_porkherb" name="t_porkherb" />
+								<input type="number" pattern="\d*" id="t_porkherb" name="t_porkherb" />
 								<span class="postfix">KG</span><!-- this might be easier if I just rename it as its only a regular space left -->
 							</div>	
 
 								<!-- sg_lambmint t_lambmint -->
 							<div>
 								<label for="sg_lambmint">Lamb &amp; Mint <em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_lambmint" name="t_lambmint" />
+								<input type="number" pattern="\d*" id="t_lambmint" name="t_lambmint" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_bratwurst t_bratwurst -->
 							<div>
 								<label for="sg_bratwurst">Bratwurst <em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_bratwurst" name="t_bratwurst" />
+								<input type="number" pattern="\d*" id="t_bratwurst" name="t_bratwurst" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_bratwurst_fennel t_bratwurst_fennel -->   
 							<div>
 								<label for="sg_bratwurst_fennel">Bratwurst with Fennel<em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_bratwurst_fennel" name="t_bratwurst_fennel" />
+								<input type="number" pattern="\d*" id="t_bratwurst_fennel" name="t_bratwurst_fennel" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_texan_chile t_texan_chile -->
 							<div>
 								<label for="sg_texan_chile">Texan Chile <em>- GF</em></label>	
-								<input type="number" placeholder="5" pattern="\d*" id="t_texan_chile" name="t_texan_chile" />
+								<input type="number" pattern="\d*" id="t_texan_chile" name="t_texan_chile" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_chorizo t_chorizo -->
 							<div>
 								<label for="sg_chorizo">Chorizo <em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_chorzio" name="t_chorizo" />
+								<input type="number" pattern="\d*" id="t_chorzio" name="t_chorizo" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_tomatobasil t_tomatobasil -->
 							<div>
 								<label for="sg_tomatobasil">Tomato &amp; Basil <em>- GF</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_tomatobasil" name="t_tomatobasil" />
+								<input type="number" pattern="\d*" id="t_tomatobasil" name="t_tomatobasil" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_herbgarlic t_herbgarlic -->
 							<div>
 								<label for="sg_herbgarlic">Herb &amp; Garlic <em>- GF</em></label>
-								<input type="number" placeholder="5"  pattern="\d*" id="t_herbgarlic" name="t_herbgarlic" />
+								<input type="number"  pattern="\d*" id="t_herbgarlic" name="t_herbgarlic" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_peppersonion t_peppersonion -->
 							<div>
 								<label for="sg_peppersonion">Green Capsicum &amp; Onion</label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_peppersonion" name="t_peppersonion" />
+								<input type="number" pattern="\d*" id="t_peppersonion" name="t_peppersonion" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_gf_capsicum t_gf_capsicum -->
 							<div>
 								<label for="sg_gf_capsicum">Green Capsicum &amp; Onion -<br /><em>Gluten Free</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_gf_capsicum" name="t_gf_capsicum" />
+								<input type="number" pattern="\d*" id="t_gf_capsicum" name="t_gf_capsicum" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_plain t_plain -->
 							<div>
 								<label for="sg_plain">Plain</label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_plain" name="t_plain" />
+								<input type="number" pattern="\d*" id="t_plain" name="t_plain" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_gf_plain t_gf_plain -->
 							<div>
 								<label for="sg_gf_plain">Plain - <em>Gluten Free</em></label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_gf_plain" name="t_gf_plain" />
+								<input type="number" pattern="\d*" id="t_gf_plain" name="t_gf_plain" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_saveloys t_saveloys -->
 							<div>
 								<label for="sg_saveloys">Saveloys -<em> Minimum of 8kg</em></label>
-								<input type="number" placeholder="8" pattern="\d*" id="t_saveloys" name="t_saveloys" />
+								<input type="number" pattern="\d*" id="t_saveloys" name="t_saveloys" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_gf_saveloys t_gf_saveloys -->
 							<div>
 								<label for="sg_gf_saveloys">Saveloys - <em>Gluten Free</em> -<em> Minimum of 8kg</em></label>
-								<input type="number" placeholder="8" pattern="\d*" id="t_gf_saveloys" name="t_gf_saveloys" />
+								<input type="number" pattern="\d*" id="t_gf_saveloys" name="t_gf_saveloys" />
 								<span class="postfix">KG</span>
 							</div>
 	
@@ -162,7 +162,7 @@ $unid = $_GET['n'];
 							<!-- sg_create t_create -->
 							<div>
 								<label for="sg_create">Build Your Own </label>
-								<input type="number" placeholder="5" pattern="\d*" id="t_create" name="t_create" />
+								<input type="number" pattern="\d*" id="t_create" name="t_create" />
 								<span class="postfix">KG</span>
 							</div>
 
@@ -173,14 +173,14 @@ $unid = $_GET['n'];
 							<!-- sg_patties t_patties -->
 							<div>
 								<label for="sg_patties">Patties - <em>Minimum of 8kg</em></label>
-								<input type="number" placeholder="8" pattern="\d*" id="t_patties" name="t_patties" />
+								<input type="number" pattern="\d*" id="t_patties" name="t_patties" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- sg_gf-patties t_gf-patties -->
 							<div>
 								<label for="sg_gf_patties">Patties - <em>Gluten Free <br />- Minimum of 8kg</em></label>
-								<input type="number" placeholder="8" pattern="\d*" id="t_gf_patties" name="t_gf_patties" />
+								<input type="number" pattern="\d*" id="t_gf_patties" name="t_gf_patties" />
 								<span class="postfix">KG</span>
 							</div>
 
@@ -191,7 +191,7 @@ $unid = $_GET['n'];
 							<!-- sg_salami t_salami salami_t salami_s -->
 							<div>
 								<label for="sg_salami">Salami -<em> Minimum of 4 per flavour</em></label>
-								<input type="number" placeholder="4" pattern="\d*" id="t_salami" name="t_salami" />
+								<input type="number" pattern="\d*" id="t_salami" name="t_salami" />
 
 								<select id="salami_t" name="salami_t">
 									<option value="" disabled selected>Select</option>
