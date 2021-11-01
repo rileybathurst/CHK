@@ -43,6 +43,10 @@ if ( ! function_exists( 'chk_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#editor-styles
+		add_theme_support( 'editor-styles' );
+		add_editor_style( '/css/editor-styles.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'chk_setup' );
@@ -161,9 +165,10 @@ add_action( 'admin_post_viewresults', 'prefix_admin_viewresults' );
 add_action( 'admin_post_nopriv_viewresults', 'prefix_admin_viewresults' );
 
 // redirect login to home for customers to not have to deal with wordpress when it provides them very little functionality
+/* 🚨 this is having problems locally it needs to be live on the server
 add_filter( 'login_redirect', function( $url, $query, $user ) {
 	return home_url();
-}, 10, 3 );
+}, 10, 3 ); */
 
 function logout_redirect()
 {

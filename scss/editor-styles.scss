@@ -1,0 +1,41 @@
+// The naming of variables is messy here they should be in a single file
+
+:root {
+  // apple pencils
+  --lead: hsl(0, 0%, 10%);
+  --tungsten: hsl(0, 0%, 20%);
+  --iron: hsl(0, 0%, 30%);
+  --steel: hsl(0, 0%, 40%);
+  --nickel: hsl(0, 0%, 50%);
+  --aluminium: hsl(0, 0%, 60%);
+  --magnesium: hsl(0, 0%, 70%);
+  --silver: hsl(0, 0%, 80%);
+  --mercury: hsl(0, 0%, 90%);
+
+  // spacing
+  --small-space: 0.625em; // bad naming
+  --regular-space: 0.9375em; // bad naming
+
+  --quarternary: #222;
+  --quarternary: hsl(0, 0%, 13%);
+  --border-radius: 0.2em;
+}
+
+/* body {
+  // color: #fff;
+} */
+
+.is-style-stripes {
+
+  li {
+    padding: var(--small-space) var(--regular-space);
+    
+  }
+
+  li:nth-child(odd) {
+    // background: var(--lead);
+    background: var(--mercury); // do this in light mode as I'm not doing both in the editor
+    border-radius: var(--border-radius);
+  }
+
+}

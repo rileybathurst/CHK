@@ -83,6 +83,7 @@ $unid = $_GET['n'];
 										<option value="half">Half</option>
 										<option value="third">Third</option>
 										<option value="sliced">Sliced</option>
+										<option value="ham steaks">Ham Steaks</option>
 									</select>
 								</div>
 
@@ -107,6 +108,11 @@ $unid = $_GET['n'];
 										<option value="half">Half</option>
 										<option value="third">Third</option>
 									</select>
+								</div>
+
+								<!-- ps_bostonbutt  -->
+								<div>
+									<input id="ps_bostonbutt" name="ps_bostonbutt" type="checkbox"><label for="ps_bostonbutt">Boston Butt - Pulled Pork</label>
 								</div>
 
 								<hr>
@@ -137,6 +143,7 @@ $unid = $_GET['n'];
 										<option value="half">Half</option>
 										<option value="third">Third</option>
 										<option value="sliced">Sliced</option>
+										<option value="boneless">Boneless Roast</option>
 									</select>
 								</div>
 
@@ -148,6 +155,16 @@ $unid = $_GET['n'];
 								<!-- pl_baconchops -->
 								<div>
 									<input id="pl_baconchops" name="pl_baconchops" type="checkbox"><label for="pl_baconchops">Bacon Chops</label>
+								</div>
+
+								<!-- pl_bellybacon -->
+								<div>
+									<input id="pl_bellybacon" name="pl_bellybacon" type="checkbox"><label for="pl_baconchops">Loin Belly Bacon</label>
+								</div>
+
+								<!-- pb_rolled -->
+								<div>
+									<input id="pb_rolled" name="pb_rolled" type="checkbox"><label for="pb_rolled">Belly Bacon Rolled With Loin Bacon</label>
 								</div>
 
 								<hr>
@@ -167,11 +184,6 @@ $unid = $_GET['n'];
 									<input id="pb_baconstrips" name="pb_baconstrips" type="checkbox"><label for="pb_baconstrips">Bacon Strips</label>
 								</div>
 
-								<!-- pb_rolled -->
-								<div>
-									<input id="pb_rolled" name="pb_rolled" type="checkbox"><label for="pb_rolled">Belly Bacon Rolled With Loin Bacon</label>
-								</div>
-
 							<!-- pb_whole whole_pb - now labeled as roast -->
 								<div>
 									<input id="pb_whole" name="pb_whole" type="checkbox">
@@ -182,12 +194,21 @@ $unid = $_GET['n'];
 										<option value="whole">Whole</option>
 										<option value="half">Half</option>
 										<option value="third">Third</option>
+										<option value="boneless">Bonless</option>
 									</select>
 								</div>
 
-								<!-- pb_strips -->
+								<!-- pb_marinate marinate_pb -->
 								<div>
-									<input id="pb_strips" name="pb_strips" type="checkbox"><label for="pb_strips">Strips</label>
+									<input id="pb_marinate" name="pb_marinate" type="checkbox">
+									<label for="pb_marinate">Roast</label>
+
+									<select id="marinate_pb" name="marinate_pb">
+										<option value="" disabled selected>Select</option>
+										<option value="whole">Whole</option>
+										<option value="half">Half</option>
+										<option value="third">Third</option>
+									</select>
 								</div>
 
 								<hr>
@@ -266,6 +287,20 @@ $unid = $_GET['n'];
 								<!-- pg_bacon -->
 								<div>
 									<input id="pg_bacon" name="pg_bacon" type="checkbox"><label for="pg_bacon">Bacon</label>
+								</div>
+
+								<!-- pg_hocks hocks_pg -->
+								<div>
+									<input id="pg_hocks" name="pg_hocks" type="checkbox">
+									<label for="pg_hocks">Hocks</label>
+
+									<select id="hocks_pg" name="hocks_pg">
+										<option value="" disabled selected>Select</option>
+										<option value="whole">Whole</option>
+										<option value="mince">Mince</option>
+										<option value="sausage">sausage</option>
+										<option value="bacon">bacon</option>
+									</select>
 								</div>
 
 								<!-- order small goods and special instructions -->        

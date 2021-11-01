@@ -6,6 +6,12 @@
 sass scss/app.scss css/app.css --watch
 ```
 
+### Editor Styles
+
+```bash
+sass scss/editor-styles.scss css/editor-styles.css --watch
+```
+
 ### Print Styles
 
 ```bash
