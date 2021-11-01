@@ -36,7 +36,7 @@ Deer    |             |              |
 ------- | ----------- | ------------ |
 Pig     |             |              |
 ------- | ----------- | ------------ |
-        | 1.40        | Per KG       |
+        | 1.50        | Per KG       |
         | 20          | Bacon        | Per forequarter, loin and leg(third)
         | 16          | Bacon        | Belly (Streaky)
         | 12          | Pickled Pork |

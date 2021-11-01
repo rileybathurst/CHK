@@ -1,16 +1,20 @@
 # Canterbury Homekill
 
-Start of weekly work with a clean github
-
 ## Sass
 
-```sass scss/app.scss css/app.css --watch```
+```bash
+sass scss/app.scss css/app.css --watch
+```
 
 ### Print Styles
 
-```sass scss/print.scss css/print.css --watch```
+```bash
+sass scss/print.scss css/print.css --watch
+```
 
 ## Updates
+
+Theres a lot to do It's kind of documented in Asana but also depends on budgets
 
 Things to do
 
