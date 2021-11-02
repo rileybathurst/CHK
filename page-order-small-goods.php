@@ -52,7 +52,7 @@ $unid = $_GET['n'];
 
 							<hr>
 
-							<!-- part of order-small-goods-....php -->
+							<!-- part of order-small-goods php -->
 
 							<!-- sg_porkherb t_porkherb -->
 							<div>
@@ -86,6 +86,13 @@ $unid = $_GET['n'];
 							<div>
 								<label for="sg_texan_chile">Texan Chile <em>- GF</em></label>	
 								<input type="number" pattern="\d*" id="t_texan_chile" name="t_texan_chile" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- sg_texan_chilli_cheese -->
+							<div>
+								<label for="sg_texan_chilli_cheese">Texan Chilli – smoked with cheese</label>	
+								<input type="number" pattern="\d*" id="sg_texan_chilli_cheese" name="sg_texan_chilli_cheese" />
 								<span class="postfix">KG</span>
 							</div>
 
@@ -124,9 +131,44 @@ $unid = $_GET['n'];
 								<span class="postfix">KG</span>
 							</div>
 
+							<!-- sg_steak_onion -->
+							<div>
+								<label for="sg_steak_onion">Steak and Onion</label>
+								<input type="number" pattern="\d*" id="sg_steak_onion" name="sg_steak_onion" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- sg_manuka_honey_hickory -->
+							<div>
+								<label for="sg_manuka_honey_hickory">Manuka Honey and Hickory</label>
+								<input type="number" pattern="\d*" id="sg_manuka_honey_hickory" name="sg_manuka_honey_hickory" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- sg_old_english -->
+							<div>
+								<label for="sg_old_english">Old English</label>
+								<input type="number" pattern="\d*" id="sg_old_english" name="sg_old_english" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- sg_boerewors -->
+							<div>
+								<label for="sg_boerewors">Boerewors</label>
+								<input type="number" pattern="\d*" id="sg_boerewors" name="sg_boerewors" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- sg_cheese_krnasky -->
+							<div>
+								<label for="sg_cheese_krnasky">Cheese Kransky - smoked</label>
+								<input type="number" pattern="\d*" id="sg_cheese_krnasky" name="sg_cheese_krnasky" />
+								<span class="postfix">KG</span>
+							</div>
+
 							<!-- sg_plain t_plain -->
 							<div>
-								<label for="sg_plain">Plain</label>
+								<label for="sg_plain">Plain - Bulk</label>
 								<input type="number" pattern="\d*" id="t_plain" name="t_plain" />
 								<span class="postfix">KG</span>
 							</div>
@@ -138,15 +180,17 @@ $unid = $_GET['n'];
 								<span class="postfix">KG</span>
 							</div>
 
-							<!-- sg_saveloys t_saveloys -->
+							<!-- sg_hogg_casing -->
 							<div>
-								<label for="sg_saveloys">Saveloys -<em> Minimum of 8kg</em></label>
-								<input type="number" pattern="\d*" id="t_saveloys" name="t_saveloys" />
-								<span class="postfix">KG</span>
+								<p>All small goods are made with collagen casings, hogg casings are available at $1.50 per kg additional charge</p>
+								<label for="sg_hogg_casing">Hogg Casings</label>
+								<input type="checkbox" id="sg_hogg_casing" name="sg_hogg_casing" />
 							</div>
 
+							<!-- sg_gormet_cheese -->
 							<div>
-									<p>All small goods are made with collagen casings, hogg casings are available at $1.50 per kg additional charge</p>
+								<label for="sg_gormet_cheese">Add cheese to gourmet sausages - <br/><em>additional $1.50 per kg</em></label>
+								<input type="checkbox" id="sg_gormet_cheese" name="sg_gormet_cheese" />
 							</div>
 	
 							<hr>
@@ -203,6 +247,73 @@ $unid = $_GET['n'];
 									<option value="mild">Mild</option>
 								</select>
 							</div>
+
+							<hr>
+
+							<h4>CHEERIO</h4>
+
+							<!-- sg_cheerio -->
+							<div>
+								<label for="sg_cheerio">Cheerio</label>
+								<input type="number" pattern="\d*" id="sg_cheerio" name="sg_cheerio" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<hr>
+
+							<h4>FRANKFURTER</h4>
+
+							<!-- sg_frankfurter -->
+							<div>
+								<label for="sg_frankfurter">Frankfurter</label>
+								<input type="number" pattern="\d*" id="sg_frankfurter" name="sg_frankfurter" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<hr>
+
+							<h4>BIERSTICKS</h4>
+
+							<!-- sg_biersticks -->
+							<div>
+								<label for="sg_biersticks"><em>Minimum order 5kg</em></label>
+								<input type="number" pattern="\d*" id="sg_biersticks" name="sg_biersticks" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<hr>
+
+							<h4>RISSOLES</h4>
+
+							<!-- sg_rissoles rissoles_sg -->
+							<div>
+								<label for="sg_salami">
+								crumbed and hand rolled<br />
+								<em> Minimum order of 5kg</em>
+								</label>
+								<input type="number" pattern="\d*" id="sg_rissoles" name="sg_rissoles" />
+								<span class="postfix">KG</span>
+
+								<select id="rissoles_sg" name="rissoles_sg">
+									<option value="" disabled selected>Select</option>
+									<option value="pork-pineapple">Pork and Pineapple</option>
+									<option value="bacon-onion">Bacon and Onion</option>
+									<option value="steak-onion">Steak and Onion</option>
+									<option value="venison-bacon-onion">Venison, Bacon and Onion</option>
+								</select>
+
+								<hr />
+
+								<h4>KOFTAS</h4>
+
+								<!-- sg_koftas -->
+								<div>
+									<label for="sg_koftas">Beef, Lamb and Venison only</label>
+									<input type="number" pattern="\d*" id="sg_koftas" name="sg_koftas" />
+									<span class="postfix">KG</span>
+								</div>
+
+								<hr>
 
 							<input type="submit" value="Submit">
 

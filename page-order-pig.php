@@ -201,7 +201,7 @@ $unid = $_GET['n'];
 								<!-- pb_marinate marinate_pb -->
 								<div>
 									<input id="pb_marinate" name="pb_marinate" type="checkbox">
-									<label for="pb_marinate">Roast</label>
+									<label for="pb_marinate">Marinate Cook in a Bag</label>
 
 									<select id="marinate_pb" name="marinate_pb">
 										<option value="" disabled selected>Select</option>
@@ -303,7 +303,7 @@ $unid = $_GET['n'];
 									</select>
 								</div>
 
-								<!-- order small goods and special instructions -->        
+								<!-- order small goods and special instructions -->
 								<?php include("order-extra.php"); ?>
 							
 								<!-- next -->

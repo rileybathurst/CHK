@@ -301,6 +301,24 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
+									<!-- b_brisket brisket_bf -->
+									<div>
+										<p>
+											<?php if ($order->b_brisket == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_mince" value="<?php echo $order->b_brisket; ?>">
+											<strong>Brisket</strong>
+
+											<?php if ($order->b_brisket == 1) { 
+												echo $order->brisket_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="brisket_bf" value="<?php echo $order->brisket_bf; ?>">
+										</p>
+									</div>
+
 									<!-- spins -->
 									<div>
 										<p>

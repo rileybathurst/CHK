@@ -172,3 +172,17 @@
 	<?php } else { echo ' '; } ?>
 	<strong>Mince</span></strong>
 </div>
+
+<!-- b_brisket brisket_bf -->
+<div>
+	<?php if ($order->b_brisket == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Brisket</strong>
+		
+	<?php if ($order->b_brisket == 1) { 
+		echo $order->brisket_bf;
+	} else { echo ' '; } ?>
+</div>

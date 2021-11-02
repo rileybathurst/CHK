@@ -93,19 +93,19 @@ $unid = $_GET['n'];
 									</select>
 								</div>
 
-								<!-- v_excess-trim excess-trim_v -->
+								<!-- v_excess_trim excess_trim_v -->
 								<div>
-									<input  name="v_excess-trim" id="v_excess-trim" type="checkbox">
-									<label for="v_excess-trim">Excess Trim</label>
+									<input  name="v_excess_trim" id="v_excess_trim" type="checkbox">
+									<label for="v_excess_trim">Excess Trim</label>
 
-									<select name="excess-trim_v" id="excess-trim_v" required>
+									<select name="excess_trim_v" id="excess_trim_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="excess-trim_v" value="mince">Mince</option>
-										<option name="excess-trim_v" value="small goods">Small Goods</option>
+										<option name="excess_trim_v" value="mince">Mince</option>
+										<option name="excess_trim_v" value="small goods">Small Goods</option>
 									</select>
 								</div>
 
-								<!-- order small goods and special instructions -->        
+								<!-- order small goods and special instructions -->
 								<?php include("order-extra.php"); ?>
 							
 								<!-- next -->

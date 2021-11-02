@@ -181,6 +181,21 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
+									<!-- ps_bostonbutt -->
+									<div>
+										<p>
+											<?php if ($order->ps_bostonbutt == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="ps_bostonbutt" value="<?php echo $order->ps_bostonbutt; ?>">
+											<strong>Boston Butt - Pulled Pork</strong>
+										</p>
+									</div>
+
+									<!-- /Shoulder -->
+
 									<hr>
 
 									<!-- LOIN -->
@@ -256,6 +271,34 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
+									<!-- pl_bellybacon -->
+									<div>
+										<p>
+											<?php if ($order->pl_bellybacon == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="pl_bellybacon" value="<?php echo $order->pl_bellybacon; ?>">
+											<strong>Loin Belly Bacon</strong>
+										</p>
+									</div>
+
+									<!-- pb_rolled -->
+									<div>
+										<p>
+											<?php if ($order->pb_rolled == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="pb_rolled" value="<?php echo $order->pb_rolled; ?>">
+											<strong>Belly Bacon Rolled With Loin Bacon</strong>
+										</p>
+									</div>
+
+									<!-- /Loin -->
+
 									<hr>
 
 									<!-- BELLY -->
@@ -287,19 +330,6 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- pb_rolled -->
-									<div>
-										<p>
-											<?php if ($order->pb_rolled == 1) { ?>
-												<span class="unicode check spacer">✓</span>
-											<?php } else { ?>
-												<span class="unicode cross spacer">✗</span>
-											<?php } ?>
-											<input type="hidden" name="pb_rolled" value="<?php echo $order->pb_rolled; ?>">
-											<strong>Belly Bacon Rolled With Loin Bacon</strong>
-										</p>
-									</div>
-
 									<!-- pb_whole whole_pb -->
 									<div>
 										<p>
@@ -318,18 +348,25 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- pb_strips -->
+									<!-- pb_marinate marinate_pb -->
 									<div>
 										<p>
-											<?php if ($order->pb_strips == 1) { ?>
+											<?php if ($order->pb_marinate == 1) { ?>
 												<span class="unicode check spacer">✓</span>
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="pb_strips" value="<?php echo $order->pb_strips; ?>">
-											<strong>Strips</strong>
+											<input type="hidden" name="pb_whole" value="<?php echo $order->pb_marinate; ?>">
+											<strong>Marinate Cook in a Bag</strong>
+
+											<?php if ($order->pb_marinate == 1) { 
+												echo $order->marinate_pb;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="marinate_pb" value="<?php echo $order->marinate_pb; ?>">
 										</p>
 									</div>
+
+									<!-- /Belly -->
 
 									<hr>
 
@@ -359,7 +396,7 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- pg_pressedham  pressedham_cook pressedham_size -->
+									<!-- pg_pressedham pressedham_cook pressedham_size -->
 									<div>
 										<p>
 											<?php if ($order->pg_pressedham == 1) { ?>
@@ -451,6 +488,26 @@ $unid = $_GET['n'];
 											<strong>Bacon</strong>
 										</p>
 									</div>
+
+									<!-- pg_hocks hocks_pg -->
+									<div>
+										<p>
+											<?php if ($order->pg_hocks == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="pg_hocks" value="<?php echo $order->pg_hocks; ?>">
+											<strong>Hocks</strong>
+
+											<?php if ($order->pg_hocks == 1) { 
+												echo $order->hocks_pg;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="hocks_pg" value="<?php echo $order->hocks_pg; ?>">
+										</p>
+									</div>
+
+									<!-- /Leg -->
 
 									<!-- spins -->
 									<div>

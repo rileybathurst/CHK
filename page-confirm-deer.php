@@ -95,7 +95,7 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- v_leg -->
+									<!-- v_leg v_leg_whole_half -->
 									<div>
 										<p>
 											<?php if ($order->v_leg == 1) { ?>
@@ -115,6 +115,24 @@ $unid = $_GET['n'];
 												echo $order->v_leg_whole_half;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="v_leg_whole_half" value="<?php echo $order->v_leg_whole_half; ?>">
+										</p>
+									</div>
+
+									<!-- v_excess_trim excess_trim_v -->
+									<div>
+										<p>
+											<?php if ($order->v_excess_trim == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="v_excess_trim" value="<?php echo $order->v_excess_trim; ?>">
+											<strong>Excess Trim</strong>
+											
+											<?php if ($order->v_excess_trim == 1) { 
+												echo $order->v_excess_trim;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="excess_trim_v" value="<?php echo $order->excess_trim_v; ?>">
 										</p>
 									</div>
 

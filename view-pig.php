@@ -77,7 +77,7 @@
 	<?php } ?>
 	<strong>Diced</strong>
 </div>
-			
+
 <!-- ps_roastjointed roastjointed_ps -->
 <div>
 	<?php if ($order->ps_roastjointed == 1) { ?>
@@ -91,6 +91,17 @@
 		echo $order->roastjointed_ps;
 	} else { echo '&nbsp;'; } ?>
 </div>
+
+<!-- ps_bostonbutt -->
+<div>
+	<?php if ($order->ps_bostonbutt == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Boston Butt - Pulled Pork</strong>
+</div>
+
 
 <!--PORK - Loin -->
 <h3>PORK - LOIN</h3>
@@ -138,7 +149,7 @@
 	<?php } ?>
 	<strong>Bacon</strong>
 </div>
-			
+
 <!-- pl_baconchops -->
 <div>
 	<?php if ($order->pl_baconchops == 1) { ?>
@@ -147,6 +158,26 @@
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Bacon Chops</strong>
+</div>
+
+<!-- pl_bellybacon -->
+<div>
+	<?php if ($order->pl_bellybacon == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Loin Belly Bacon</strong>
+</div>
+
+<!-- pb_rolled -->
+<div>
+	<?php if ($order->pb_rolled == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Belly Bacon Rolled With Loin Bacon</strong>
 </div>
 
 <!--PORK - Belly -->
@@ -172,16 +203,6 @@
 	<strong>Bacon Strips</strong>
 </div>
 
-<!-- pb_rolled -->
-<div>
-	<?php if ($order->pb_rolled == 1) { ?>
-		<span class="unicode highlights spacer">✓</span>
-	<?php } else { ?>
-		<span class="unicode spacer hide-for-print">✗</span>
-	<?php } ?>
-	<strong>Belly Bacon With Loin Bacon</strong>
-</div>
-
 <!-- pb_whole whole_pb -->
 <div>
 	<?php if ($order->pb_whole == 1) { ?>
@@ -196,16 +217,22 @@
 	} else { echo " "; } ?>
 </div>
 
-<!-- pb_strips -->
+<!-- pb_marinate marinate_pb -->
 <div>
-	<?php if ($order->pb_strips == 1) { ?>
+	<?php if ($order->pb_marinate == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Belly Strips</strong>
+	<strong>Marinate Cook in a Bag</strong>
+
+	<?php if ($order->marinate_pb == 1) { 
+		echo $order->marinate_pb;
+	} else { echo " "; } ?>
 </div>
-		
+
+
+
 <!--PORK - Leg -->
 <h3>PORK - LEG</h3>
 
@@ -297,4 +324,18 @@
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Bacon</strong>
+</div>
+
+<!--pg_hocks hocks_pg -->
+<div>
+	<?php if ($order->pg_hocks == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Hocks</strong>
+
+	<?php if ($order->pg_hocks == 1) { 
+		echo $order->hocks_pg;
+	} else { echo '&nbsp;'; } ?>
 </div>

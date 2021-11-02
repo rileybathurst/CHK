@@ -29,27 +29,27 @@
 						<hr>
 
 						<!-- pig -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Pig')->post_title); ?></a></h3>
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>"><?php echo (get_page_by_title('Pig')->post_title); ?></a></h3>
 						<?php echo (get_page_by_title('Pig')->post_content); ?>
 						<hr>
 
 						<!-- deer -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Deer')->post_title); ?></a></h3>
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>"><?php echo (get_page_by_title('Deer')->post_title); ?></a></h3>
 						<?php echo (get_page_by_title('Deer')->post_content); ?>
 						<hr>
 
 						<!-- beef -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Beef')->post_title); ?></a></h3>
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>"><?php echo (get_page_by_title('Beef')->post_title); ?></a></h3>
 						<?php echo (get_page_by_title('Beef')->post_content); ?>
 						<hr>
 
 						<!-- Alpaca Llama -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Alpaca Llama')->post_title); ?></a></h3>
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('alpaca llama')->ID); ?>"><?php echo (get_page_by_title('Alpaca Llama')->post_title); ?></a></h3>
 						<?php echo (get_page_by_title('Alpaca Llama')->post_content); ?>
 						<hr>
 
 						<!-- small goods -->
-						<h3><a href="<?php echo home_url(); ?>/order"><?php echo (get_page_by_title('Small Goods')->post_title); ?></a></h3>
+						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('small goods')->ID); ?>"><?php echo (get_page_by_title('Small Goods')->post_title); ?></a></h3>
 						<?php echo (get_page_by_title('Small Goods')->post_content); ?>
 						<hr>
 
