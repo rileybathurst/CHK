@@ -145,11 +145,8 @@ $unid = $_GET['n'];
 								<span class="postfix">KG</span>
 							</div>
 
-							<!-- sg_gf_saveloys t_gf_saveloys -->
 							<div>
-								<label for="sg_gf_saveloys">Saveloys - <em>Gluten Free</em> -<em> Minimum of 8kg</em></label>
-								<input type="number" pattern="\d*" id="t_gf_saveloys" name="t_gf_saveloys" />
-								<span class="postfix">KG</span>
+									<p>All small goods are made with collagen casings, hogg casings are available at $1.50 per kg additional charge</p>
 							</div>
 	
 							<hr>

@@ -17,9 +17,11 @@ for (let item of siteLogo_el) { // newer browsers only
     item.addEventListener('click', remover, false);
 }
 
-// only some of the elements have an additional option
-// currently this is just disabled but maybe it should be hidden?
-// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+
+// http://canterburyhomekill.co.nz/order-deer/
+// Some of Leg options have an additional option field
+// leg roast and leg primals have whole and half options
+// ham has options for whole, half and third
 
 let leg_v = document.getElementById("leg_v");
 let v_leg_whole_half = document.getElementById("v_leg_whole_half");
@@ -27,56 +29,32 @@ let v_leg_third = document.getElementById("v_leg_third");
 
 let legs_whole_half = ['leg roast', 'leg primals'];
 
-// console.log(leg_v);
-// console.log(leg_v.option);
-// console.log(leg_v.selectedIndex);
-
+// this has to be on top
 leg_v.addEventListener('change', (event) => {
 
-    // console.log("changed");
-    // console.log(event.target.value);
+    if (legs_whole_half.includes(event.target.value) && v_leg_whole_half.value === "third") {
+        // console.log("🦄");
 
-    if (legs_whole_half.includes(event.target.value) && v_leg_whole_half == "third") {
-        // console.log("leg roast or primals and third");
-        
+        v_leg_whole_half.value = "";
         v_leg_whole_half.removeAttribute("disabled", "");
         v_leg_third.setAttribute("disabled", "");
 
-
-        // console.log("🦖");
-        // console.log(v_leg_whole_half);
-
-        v_leg_third.removeAttribute("selected", "");
-
-
     } else if (legs_whole_half.includes(event.target.value)) {
-
-        v_leg_whole_half.addEventListener('change', (event) => {
-            // this runs when it moves to third not when it moves above
-            if (event.target.value == "third") {
-                console.log("🐰");
-                // console.log(v_leg_whole_half);
-                console.log(v_leg_whole_half.selectedIndex);
-                v_leg_whole_half.selectedIndex = 1;
-            }
-        });
-
-        // console.log("🦄");
-        // console.log(v_leg_whole_half);
+        // console.log("🦖");
 
         v_leg_whole_half.removeAttribute("disabled", "");
         v_leg_third.setAttribute("disabled", "");
 
     } else if (event.target.value == "ham") {
+        // console.log("🐮");
+
         v_leg_whole_half.removeAttribute("disabled", "");
         v_leg_third.removeAttribute("disabled", "");
+
     } else {
+        // console.log("🍔");
+
         v_leg_whole_half.setAttribute("disabled", "");
     }
 
-/*     if (v_leg_whole_half == "third") {
-
-        finish this 
-        
-    } */
 });

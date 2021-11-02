@@ -93,21 +93,17 @@ $unid = $_GET['n'];
 									</select>
 								</div>
 
-								<!-- <script>
-									this is jquery so that needs to be removed and converted to js
-									$(document).ready(function () {
-										$("#leg_v").change(function () {
-											var val = $(this).val();
-											if (val == "leg roast") {
-												$("#v_leg_whole_half").html("<option value='whole'>Whole</option><option value='half'>Half</option>");
-											} else if (val == "leg primals") {
-												$("#v_leg_whole_half").html("<option value='whole'>Whole</option><option value='half'>Half</option>");
-											} else {
-												$("#v_leg_whole_half").html("<option value='v_leg_whole_half' disabled>NA</option>");
-											}
-										});
-									});
-								</script> -->
+								<!-- v_excess-trim excess-trim_v -->
+								<div>
+									<input  name="v_excess-trim" id="v_excess-trim" type="checkbox">
+									<label for="v_excess-trim">Excess Trim</label>
+
+									<select name="excess-trim_v" id="excess-trim_v" required>
+										<option value="" disabled selected>Select</option>
+										<option name="excess-trim_v" value="mince">Mince</option>
+										<option name="excess-trim_v" value="small goods">Small Goods</option>
+									</select>
+								</div>
 
 								<!-- order small goods and special instructions -->        
 								<?php include("order-extra.php"); ?>
