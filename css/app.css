@@ -147,6 +147,15 @@ select {
   cursor: pointer;
 }
 
+select:disabled {
+  color: #888;
+  text-decoration: line-through;
+}
+
+option:disabled {
+  text-decoration: line-through;
+}
+
 select::-ms-expand {
   display: none;
 }

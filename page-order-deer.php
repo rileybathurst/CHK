@@ -45,11 +45,11 @@ $unid = $_GET['n'];
 
 									<select name="shoulder_v" id="shoulder_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="shoulder_v" value="rolled">Rolled</option>
-										<option name="shoulder_v" value="rolled seasoned">Rolled and Seasoned</option>
-										<option name="shoulder_v" value="diced">Diced</option>
-										<option name="shoulder_v" value="small goods">Small Goods</option>
+										<option name="shoulder_v" value="stew">Stew</option>
 										<option name="shoulder_v" value="mince">Mince</option>
+										<option name="shoulder_v" value="small goods">Small Goods</option>
+										<option name="shoulder_v" value="roast">Roast</option>
+										<option name="shoulder_v" value="smoked shoulder patties">Smoked Shoulder Patties</option>
 									</select>
 								</div>
 
@@ -69,25 +69,32 @@ $unid = $_GET['n'];
 								<!-- deer leg v_leg leg_v -->
 								<div>
 									<input id="v_leg" name="v_leg" type="checkbox">
-									<label for="v_leg">Leg</label>
+									<label for="v_leg">Leg (Size option depends on choice)</label>
 											
 									<select name="leg_v" id="leg_v">
 										<option value="" disabled selected>Select</option>
-										<option name="leg_v" value="leg roast">Leg Roast</option>
-										<option name="leg_v" value="leg primals">Leg Primal's</option>
+										<option name="leg_v" value="leg roast">Leg Roast</option><!-- options for whole / half -->
+										<option name="leg_v" value="leg primals">Leg Primal's</option><!-- options for whole / half -->
 										<option name="leg_v" value="leg steaks">Leg Steaks</option>
-										<option name="leg_v" value="schnitzel">Schnitzel</option>
 										<option name="leg_v" value="mince">Mince</option>
 										<option name="leg_v" value="small goods">Small Goods</option>
-										<option name="leg_v" value="diced">Diced</option>
+										<option name="leg_v" value="bacon">Bacon</option>
+										<option name="leg_v" value="corned primal">Corned Primal</option>
+										<option name="leg_v" value="ham">Ham</option><!-- options for whole / half / third -->
 									</select>
 									
-									<select name="v_leg_whole_half" id="v_leg_whole_half">
-										<option value="">Select</option>
+									<!-- this should only come up with leg roast, leg primals, ham -->
+									<!-- written into /js/app.sj -->
+									<select name="v_leg_whole_half" id="v_leg_whole_half" disabled>
+										<option value="" disabled selected>Select</option>
+										<option name="v_leg_whole_half" value="whole">whole</option>
+										<option name="v_leg_whole_half" value="half">Half</option>
+										<option name="v_leg_whole_half" id="v_leg_third" value="third">Third</option>
 									</select>
 								</div>
 
 								<!-- <script>
+									this is jquery so that needs to be removed and converted to js
 									$(document).ready(function () {
 										$("#leg_v").change(function () {
 											var val = $(this).val();
