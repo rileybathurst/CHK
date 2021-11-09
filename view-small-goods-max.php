@@ -341,11 +341,11 @@
 		echo $order->t_salami . ' #';
 	<!-- } else { echo '&nbsp;'; } -->
 
-	if ($order->t_salami >= 1) { -->
+	<!-- if ($order->t_salami >= 1) { -->
 		echo $order->salami_s .'&nbsp;';
 	<!-- } else { echo '&nbsp;'; } -->
 
-	if ($order->t_salami >= 1) { -->
+	<!-- if ($order->t_salami >= 1) { -->
 		echo $order->salami_t;
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>

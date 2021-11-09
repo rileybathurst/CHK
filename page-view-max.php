@@ -198,8 +198,9 @@ $unid = $_GET['n'];
 												SPECIAL INSTRUCTIONS
 												| 
 												<strong>
-													<?php echo $order->spins; ?>
-													// 📣 turn these off when not in use
+													<!-- php echo $order->spins; ?> -->
+													<!-- 📣 turn these off when not in use -->
+													Etiam commodo in diam nec faucibus. Fusce at ultrices sapien. Nulla facilisi. Vivamus non enim augue. Aenean in tempor enim. Sed pretium nibh metus, ultrices ultricies enim congue ac. In fringilla sem lacus, a dignissim erat luctus feugiat. Proin cursus venenatis sapien, non facilisis magna commodo in.
 												</strong>
 											</div>
 
