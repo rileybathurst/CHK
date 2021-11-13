@@ -36,4 +36,14 @@ $deer = '
 		'</em> '.
 		$_POST['v_leg_whole_half'].
 	'</p>
+
+	<p>
+		Excess Trim
+		<strong>'.
+			$_POST['v_excess_trim'].
+		'</strong>
+		<em> '.
+			$_POST['excess_trim_v'].
+		'</em>
+	</p>
 ';

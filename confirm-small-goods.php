@@ -60,18 +60,18 @@
 	</p>
 </div>
 
-<!-- sg_texan_chilli_cheese -->
+<!-- t_texan_chilli_cheese -->
 <div>
 	<p>
 		Texan Chilli – smoked with cheese
-		<?php if ($order->sg_texan_chilli_cheese != '') { 
-			echo $order->sg_texan_chilli_cheese . ' KG';
+		<?php if ($order->t_texan_chilli_cheese != '') { 
+			echo $order->t_texan_chilli_cheese . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_texan_chilli_cheese" value="<?php echo $order->sg_texan_chilli_cheese; ?>">
+		<input type="hidden" name="t_texan_chilli_cheese" value="<?php echo $order->t_texan_chilli_cheese; ?>">
 	</p>
 </div>
 
-<!-- sg_chorizo t_chorizo -->
+<!-- t_chorizo t_chorizo -->
 <div>
 	<p>
 		Chorizo
@@ -124,54 +124,54 @@
 	</p>
 </div>
 
-<!-- sg_steak_onion -->
+<!-- t_steak_onion -->
 <div>
 	<p>Steak and Onion
-		<?php if ($order->sg_steak_onion != '') { 
-			echo $order->sg_steak_onion . ' KG';
+		<?php if ($order->t_steak_onion != '') { 
+			echo $order->t_steak_onion . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_steak_onion" value="<?php echo $order->sg_steak_onion; ?>">
+		<input type="hidden" name="t_steak_onion" value="<?php echo $order->t_steak_onion; ?>">
 	</p>
 </div>
 
-<!-- sg_manuka_honey_hickory -->
+<!-- t_manuka_honey_hickory -->
 <div>
 	<p>Manuka Honey and Hickory
-		<?php if ($order->sg_manuka_honey_hickory != '') { 
-			echo $order->sg_manuka_honey_hickory . ' KG';
+		<?php if ($order->t_manuka_honey_hickory != '') { 
+			echo $order->t_manuka_honey_hickory . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_manuka_honey_hickory" value="<?php echo $order->sg_manuka_honey_hickory; ?>">
+		<input type="hidden" name="t_manuka_honey_hickory" value="<?php echo $order->t_manuka_honey_hickory; ?>">
 	</p>
 </div>
 
-<!-- sg_old_english -->
+<!-- t_old_english -->
 <div>
 	<p>Old English
-		<?php if ($order->sg_old_english != '') { 
-			echo $order->sg_old_english . ' KG';
+		<?php if ($order->t_old_english != '') { 
+			echo $order->t_old_english . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_old_english" value="<?php echo $order->sg_old_english; ?>">
+		<input type="hidden" name="t_old_english" value="<?php echo $order->t_old_english; ?>">
 	</p>
 </div>
 
-<!-- sg_boerewors -->
+<!-- t_boerewors -->
 <div>
 	<p>Boerewors
-		<?php if ($order->sg_boerewors != '') { 
-			echo $order->sg_boerewors . ' KG';
+		<?php if ($order->t_boerewors != '') { 
+			echo $order->t_boerewors . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_boerewors" value="<?php echo $order->sg_boerewors; ?>">
+		<input type="hidden" name="t_boerewors" value="<?php echo $order->t_boerewors; ?>">
 	</p>
 </div>
 
-<!-- sg_cheese_krnasky -->
+<!-- t_cheese_krnasky -->
 <div>
 	<p>
 		Cheese Kransky - smoked
-		<?php if ($order->sg_cheese_krnasky != '') { 
-			echo $order->sg_cheese_krnasky . ' KG';
+		<?php if ($order->t_cheese_krnasky != '') { 
+			echo $order->t_cheese_krnasky . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_cheese_krnasky" value="<?php echo $order->sg_cheese_krnasky; ?>">
+		<input type="hidden" name="t_cheese_krnasky" value="<?php echo $order->t_cheese_krnasky; ?>">
 	</p>
 </div>
 
@@ -304,14 +304,14 @@
 
 <h3>CHEERIO</h3>
 
-<!-- sg_cheerio -->
+<!-- t_cheerio -->
 <div>
 	<p>
 		Cheerio
-		<?php if ($order->sg_cheerio != '') { 
-			echo $order->sg_cheerio . ' KG';
+		<?php if ($order->t_cheerio != '') { 
+			echo $order->t_cheerio . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_cheerio" value="<?php echo $order->sg_cheerio; ?>">
+		<input type="hidden" name="t_cheerio" value="<?php echo $order->t_cheerio; ?>">
 	</p>
 </div>
 
@@ -319,14 +319,14 @@
 
 <h3>FRANKFURTER</h3>
 
-<!-- sg_frankfurter -->
+<!-- t_frankfurter -->
 <div>
 	<p>
 		Frankfurter
-		<?php if ($order->sg_frankfurter != '') { 
-			echo $order->sg_frankfurter . ' KG';
+		<?php if ($order->t_frankfurter != '') { 
+			echo $order->t_frankfurter . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_frankfurter" value="<?php echo $order->sg_frankfurter; ?>">
+		<input type="hidden" name="t_frankfurter" value="<?php echo $order->t_frankfurter; ?>">
 	</p>
 </div>
 
@@ -334,14 +334,14 @@
 
 <h3>BIERSTICKS</h3>
 
-<!-- sg_biersticks -->
+<!-- t_biersticks -->
 <div>
 	<p>
 		Biersticks
-		<?php if ($order->sg_biersticks != '') { 
-			echo $order->sg_biersticks . ' KG';
+		<?php if ($order->t_biersticks != '') { 
+			echo $order->t_biersticks . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_biersticks" value="<?php echo $order->sg_biersticks; ?>">
+		<input type="hidden" name="t_biersticks" value="<?php echo $order->t_biersticks; ?>">
 	</p>
 </div>
 
@@ -349,19 +349,19 @@
 
 <h3>RISSOLES</h3>
 
-<!-- sg_rissoles rissoles_sg -->
+<!-- t_rissoles rissoles_t -->
 <div>
 	<p>
 		Rissoles
-		<?php if ($order->sg_rissoles != '') { 
-			echo $order->sg_rissoles . ' KG';
+		<?php if ($order->t_rissoles != '') { 
+			echo $order->t_rissoles . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_bierssg_rissolesticks" value="<?php echo $order->sg_rissoles; ?>">
+		<input type="hidden" name="t_bierst_rissolesticks" value="<?php echo $order->t_rissoles; ?>">
 	
-		<?php if ($order->sg_rissoles != '') { 
-			echo $order->rissoles_sg;
+		<?php if ($order->t_rissoles != '') { 
+			echo $order->rissoles_t;
 		}; ?>
-		<input type="hidden" name="rissoles_sg" value="<?php echo $order->rissoles_sg; ?>">
+		<input type="hidden" name="rissoles_t" value="<?php echo $order->rissoles_t; ?>">
 	</p>
 </div>
 
@@ -369,13 +369,13 @@
 
 <h3>KOFTAS</h3>
 
-<!-- sg_koftas -->
+<!-- t_koftas -->
 <div>
 	<p>
 		Koftas
-		<?php if ($order->sg_koftas != '') { 
-			echo $order->sg_koftas . ' KG';
+		<?php if ($order->t_koftas != '') { 
+			echo $order->t_koftas . ' KG';
 		}; ?>
-		<input type="hidden" name="sg_koftas" value="<?php echo $order->sg_koftas; ?>">
+		<input type="hidden" name="t_koftas" value="<?php echo $order->t_koftas; ?>">
 	</p>
 </div>

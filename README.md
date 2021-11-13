@@ -48,6 +48,9 @@ Developer email find all $developer should be off by default
 - inc/con1.php
 - inc/contact.php
 
+This needs to work as a backup
+meatorders-database.txt
+
 ## WP Plugins
 
 - buddypress - we might be able to get away with removing it? would remove user profiles?

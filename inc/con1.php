@@ -1,4 +1,5 @@
 <?php
+// confirmation of where this comes from
 // deals with variable set through form _POST
 function prefix_admin_con1() {
 
@@ -32,7 +33,7 @@ function prefix_admin_con1() {
 		<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<title>Untitled Document</title>
+				<title>Canterbury Homekill</title>
 			</head>
 
 			<body bgcolor="#ebebeb">
@@ -169,6 +170,13 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
+											Texan Chilli – smoked with cheese
+											<strong>'.
+												$_POST['t_texan_chilli_cheese'].
+											'</strong>
+										</p>
+
+										<p>
 											Chorizo Sausages
 											<strong>'.
 												$_POST['t_chorizo'].
@@ -202,6 +210,41 @@ function prefix_admin_con1() {
 												$_POST['t_gf_capsicum'].
 											'</strong>
 										</p>
+									
+										<p>
+											Steak and Onion Sausages
+											<strong>'.
+												$_POST['t_steak_onion'].
+											'</strong>
+										</p>
+
+										<p>
+											Manuka Honey and Hickory Sausages
+											<strong>'.
+												$_POST['t_manuka_honey_hickory'].
+											'</strong>
+										</p>
+
+										<p>
+											Old English Sausages
+											<strong>'.
+												$_POST['t_old_english'].
+											'</strong>
+										</p>
+
+										<p>
+											Boerewors
+											<strong>'.
+												$_POST['t_boerewors'].
+											'</strong>
+										</p>
+
+										<p>
+											Cheese Kransky - smoked
+											<strong>'.
+												$_POST['t_cheese_krnasky'].
+											'</strong>
+										</p>
 
 										<p>
 											Plain Sausages
@@ -225,9 +268,16 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
-											Saveloys <em>- GF</em>
+											Hogg Casings
 											<strong>'.
-												$_POST['t_gf_saveloys'].
+												$_POST['sg_hogg_casing'].
+											'</strong>
+										</p>
+
+										<p>
+											Add cheese to gourmet sausages
+											<strong>'.
+												$_POST['sg_gormet_cheese'].
 											'</strong>
 										</p>
 
@@ -262,6 +312,44 @@ function prefix_admin_con1() {
 											'</em>
 											<strong> '.
 												$_POST['salami_s'].
+											'</strong>
+										</p>
+
+										<p>
+											Cheerio
+											<strong>'.
+												$_POST['t_cheerio'].
+											'</strong>
+										</p>
+
+										<p>
+											Frankfurter
+											<strong>'.
+												$_POST['t_frankfurter'].
+											'</strong>
+										</p>
+
+										<p>
+											Biersticks
+											<strong>'.
+												$_POST['t_biersticks'].
+											'</strong>
+										</p>
+
+										<p>
+											Rissoles
+											<strong>'.
+												$_POST['t_rissoles'].
+											'</strong>
+											<em> '.
+												$_POST['rissoles_t'].
+											'</em>
+										</p>
+
+										<p>
+											Koftas
+											<strong>'.
+												$_POST['t_koftas'].
 											'</strong>
 										</p>
 

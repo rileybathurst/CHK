@@ -236,7 +236,7 @@
 <!--PORK - Leg -->
 <h3>PORK - LEG</h3>
 
-<!--Ham on the Bone -->
+<!-- pg_hamonthebone hamonthebone_cook hamonthebone_size -->
 <div>
 	<?php if ($order->pg_hamonthebone == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -254,7 +254,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!--Pressed Ham -->
+<!-- pg_pressedham pressedham_cook pressedham_size -->
 <div>
 	<?php if ($order->pg_pressedham == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -272,7 +272,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!--Roast -->
+<!-- pg_roast roast_pg -->
 <div>
 	<?php if ($order->pg_roast == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -286,7 +286,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!--Mince -->
+<!-- pg_mince -->
 <div>
 	<?php if ($order->pg_mince == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -296,7 +296,7 @@
 	<strong>Mince</strong>
 </div>
 			
-<!--Diced -->
+<!-- pg_diced -->
 <div>
 	<?php if ($order->pg_diced == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -306,7 +306,7 @@
 	<strong>Diced</strong>
 </div>
 
-<!--Leg Steaks -->
+<!-- pg_legsteaks -->
 <div>
 	<?php if ($order->pg_legsteaks == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -316,7 +316,7 @@
 	<strong>Leg Steaks</strong>
 </div>
 
-<!--Bacon -->
+<!-- pg_bacon -->
 <div>
 	<?php if ($order->pg_bacon == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>

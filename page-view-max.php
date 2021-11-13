@@ -5,9 +5,8 @@
 */
 get_header(); ?>
 
-/* define variable for url bar .php?n=
-$unid = $_GET['n'];
-*/
+<!-- define variable for url bar .php?n=
+$unid = $_GET['n']; -->
 
 <div class="container main-border over-background">
 	<main class="no-side">
@@ -53,7 +52,7 @@ $unid = $_GET['n'];
 												Order Number
 												| 
 												<strong class="print-highlights">
-													<!--php echo $order->unid; ?>
+													<!-- php echo $order->unid; -->
 													1001
 												</strong>
 											</div>
@@ -73,7 +72,7 @@ $unid = $_GET['n'];
 													| 
 													<strong>
 														<!-- php echo $order->timenow; -->
-														check how this is written
+														2020-11-20 08:25:21
 													</strong>
 												</div>
 											</div>
@@ -94,7 +93,7 @@ $unid = $_GET['n'];
 												| 
 												<strong>
 													<!-- php echo $order->add1; ?> -->
-													PO Box 2673 Olympic Valley. This might need to be longer
+													PO Box 2673 Olympic Valley. CA. 96146. This might need to be longer
 												</strong>
 											</div>
 
@@ -115,7 +114,7 @@ $unid = $_GET['n'];
 													| 
 													<strong>
 														<!-- php echo $order->phone2; -->
-														530 386-6296
+														(530) 386-6296
 														<!-- // 📣 this can be hidden if not used -->
 													</strong>
 												</div>
@@ -157,7 +156,7 @@ $unid = $_GET['n'];
 													| 
 													<strong>
 														<!-- php echo $order->declaration; ?> -->
-														check the references here
+														DecFarmer
 													</strong>
 												</div>
 											</div>
@@ -206,29 +205,29 @@ $unid = $_GET['n'];
 
 											<hr class="hide-for-print">
 
-											<?php if(current_user_can('administrator')) { ?>
+											<!-- php if(current_user_can('administrator')) { -->
 
 												<div class="hide-for-print">
-													<a href="<?php echo home_url(); ?>/view-all" class="button san-serif">Back to all orders</a>
+													<a href="<!-- php echo home_url(); -->/view-all" class="button san-serif">Back to all orders</a>
 
 													<!-- back and forward -->
-													<?php
-													$above = $unid + 1;
-													$below = $unid - 1;
-													?>
+													<!-- php
+														$above = $unid + 1;
+														$below = $unid - 1;
+													-->
 
-													<a href="<?php esc_url( home_url( '/' ) ); ?>view-order/?n=<?php echo $above; ?>" aria-label="Next" class="button san-serif">Next Order</a>
-													<?php if ($unid>0)  { ?><a href="<?php esc_url( home_url( '/' ) ); ?>view-order/?n=<?php echo $below; ?>" aria-label="Previous" class="button san-serif">Previous Order</a><?php } ;?>
+													<!-- <a href=" php esc_url( home_url( '/' ) ); ?>view-order/?n= php echo $above; ?>" aria-label="Next" class="button san-serif">Next Order</a>
+													php if ($unid>0)  { ?><a href=" php esc_url( home_url( '/' ) ); ?>view-order/?n=php echo $below; ?>" aria-label="Previous" class="button san-serif">Previous Order</a> php } ;-->
 												</div>
 
-											<?php } else { // if admin ?>
+											<!-- php } else { // if admin ?>
 												<div class="hide-for-print">
-													<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('view profile')->ID); ?>" class="button san-serif">Back to your orders</a>
+													<a href=" php echo home_url(); ?>/?page_id= php echo (get_page_by_title('view profile')->ID); ?>" class="button san-serif">Back to your orders</a>
 												</div>
-											<?php } ?>
+											php } ?>
 
-										</div><!-- run the stripes -->
-									<!-- php } // For each
+										</div>
+									php } // For each
 									
 								} else { ?> logged in -->
 

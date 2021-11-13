@@ -1,177 +1,134 @@
 1	unidPrimary	int(11)			No	None		AUTO_INCREMENT
-	2	name	varchar(255)	latin1_swedish_ci		No	None		
-	3	animal	varchar(20)	latin1_swedish_ci		No	None		
-	4	add1	varchar(255)	latin1_swedish_ci		No	None		
-	5	add2	varchar(255)	latin1_swedish_ci		Yes	NULL		
-	6	add3	varchar(255)	latin1_swedish_ci		Yes	NULL		
-	7	phone	varchar(255)	latin1_swedish_ci		No	None		
-	8	phone2	varchar(255)	latin1_swedish_ci		No	None		
-	9	phone3	varchar(255)	latin1_swedish_ci		No	None		
-	10	email	varchar(255)	latin1_swedish_ci		No	None		
-	11	amp	text	latin1_swedish_ci		No	None		
-	12	amd	text	latin1_swedish_ci		No	None		
-	13	weight	varchar(255)	latin1_swedish_ci		No	None		
-	14	people	varchar(255)	latin1_swedish_ci		No	None		
-	15	b_fillet	int(1)			No	0		
-	16	fillet_bf	varchar(20)	latin1_swedish_ci		No	None		
-	17	b_porterhouse	int(1)			No	0		
-	18	porterhouse_bf	varchar(20)	latin1_swedish_ci		No	None		
-	19	b_tbone	int(1)			No	0		
-	20	tbone_bf	varchar(20)	latin1_swedish_ci		No	None		
-	21	b_ribeye	int(1)			No	0		
-	22	ribeye_bf	varchar(20)	latin1_swedish_ci		No	None		
-	23	b_rumpsteak	int(1)			No	0		
-	24	b_rump	int(1)			No	0		
-	25	rump_bf	varchar(20)	latin1_swedish_ci		No	None		
-	26	b_topside	int(1)			No	0		
-	27	topside_bf	varchar(20)	latin1_swedish_ci		No	None		
-	28	b_rolledroast	int(1)			No	0		
-	29	rolledroast_bf	varchar(20)	latin1_swedish_ci		No	None		
-	30	b_weinerschnitzel	int(1)			No	0		
-	31	weinerschnitzel_bf	varchar(20)	latin1_swedish_ci		No	None		
-	32	b_silverside	int(1)			No	0		
-	33	silverside	varchar(20)	latin1_swedish_ci		Yes	NULL		
-	34	silverside_bf	varchar(20)	latin1_swedish_ci		No	None		
-	35	b_blade	int(1)			No	0		
-	36	blade	varchar(20)	latin1_swedish_ci		Yes	NULL		
-	37	blade_bf	varchar(20)	latin1_swedish_ci		No	None		
-	38	b_shinfillet	int(1)			No	0		
-	39	shinfillet_bf	varchar(20)	latin1_swedish_ci		No	None		
-	40	b_chucksteak	int(1)			No	0		
-	41	chucksteak_bf	varchar(20)	latin1_swedish_ci		No	None		
-	42	b_skirtsteak	int(1)			No	0		
-	43	skirtsteak_bf	varchar(20)	latin1_swedish_ci		No	None		
-	44	b_mince	int(1)			No	0		
-	45	b_sausages	int(1)			No	0		
-	46	b_peppersonion	int(1)			No	0		
-	47	s_weight	varchar(10)	latin1_swedish_ci		No	0kg		
-	48	s_porkherb	int(1)			No	0		
-	49	s_lambmint	int(1)			No	0		
-	50	s_bratwurst	int(1)			No	0		
-	51	s_spicymexican	int(1)			No	0		
-	52	s_chorizo	int(1)			No	0		
-	53	s_tomatoonion	int(1)			No	0		
-	54	s_herbgarlic	int(1)			No	0		
-	55	s_saveloys	int(1)			No	0		
-	56	s_patties	int(1)			No	0		
-	57	s_salami	int(1)			No	0		
-	58	s_biltong	int(1)			No	0		
-	59	l_roll	int(1)			No	0		
-	60	l_shoulder	int(1)			No	0		
-	61	shoulder_lb	varchar(20)	latin1_swedish_ci		No	None		
-	62	l_s_chops	int(1)			No	0		
-	63	l_loin	int(1)			No	0		
-	64	l_loin_chops	int(1)			No	0		
-	65	loin_lb	varchar(25)	latin1_swedish_ci		No	None		
-	66	l_flaps	int(1)			No	None		
-	67	flaps_lb	varchar(20)	latin1_swedish_ci		No	None		
-	68	l_leg	int(1)			No	0		
-	69	l_leg_chops	int(1)			No	0		
-	70	leg_lb	varchar(20)	latin1_swedish_ci		No	None		
-	71	p_roll	int(1)			No	0		
-	72	p_shoulder	int(1)			No	0		
-	73	p_s_chops	int(1)			No	0		
-	74	p_s_bacon	int(1)			No	0		
-	75	p_loin	int(1)			No	0		
-	76	p_loin_chops	int(1)			No	0		
-	77	p_loin_bacon	int(1)			No	0		
-	78	p_leg	int(1)			No	0		
-	79	p_leg_chops	int(1)			No	0		
-	80	p_leg_bacon	int(1)			No	0		
-	81	p_stuffing	int(1)			No	0		
-	82	p_pickled	int(1)			No	0		
-	83	h_leg_w	int(1)			No	0		
-	84	h_leg_h	int(1)			No	0		
-	85	h_leg_t	int(1)			No	0		
-	86	h_leg_s	int(1)			No	0		
-	87	v_shoulder	int(1)			No	0		
-	88	shoulder_v	varchar(20)	latin1_swedish_ci		No	None		
-	89	v_loin	int(1)			No	0		
-	90	loin_v	varchar(20)	latin1_swedish_ci		No	None		
-	91	v_leg	int(1)			No	0		
-	92	leg_v	varchar(20)	latin1_swedish_ci		No	None		
-	93	v_leg_whole_half	varchar(20)	latin1_swedish_ci		No	None		
-	94	ps_rolledshoulder	int(1)			No	0		
-	95	rolledshoulder_ps	varchar(20)	latin1_swedish_ci		No	None		
-	96	ps_bacon	int(1)			No	0		
-	97	ps_pickledpork	int(1)			No	0		
-	98	ps_chops	int(1)			No	0		
-	99	ps_pressedham	int(1)			No	0		
-	100	pressedham_ps	varchar(20)	latin1_swedish_ci		No	None		
-	101	ps_mince	int(1)			No	0		
-	102	ps_dicedpork	int(1)			No	0		
-	103	ps_roastjointed	int(1)			No	0		
-	104	roastjointed_ps	varchar(20)	latin1_swedish_ci		No	None		
-	105	pl_chops	int(1)			No	0		
-	106	pl_loinsteaks	int(1)			No	0		
-	107	pl_roastjointed	int(1)			No	0		
-	108	roastjointed_pl	varchar(20)	latin1_swedish_ci		No	None		
-	109	pl_bacon	int(1)			No	0		
-	110	pl_baconchops	int(1)			No	0		
-	111	pb_bacon	int(1)			No	0		
-	112	pb_baconstrips	int(1)			No	0		
-	113	pb_rolled	int(1)			No	0		
-	114	pb_whole	int(1)			No	0		
-	115	whole_pb	varchar(20)	latin1_swedish_ci		No	None		
-	116	pb_strips	int(1)			No	0		
-	117	pg_hamonthebone	int(1)			No	0		
-	118	hamonthebone_cook	varchar(20)	latin1_swedish_ci		No	None		
-	119	hamonthebone_size	varchar(20)	latin1_swedish_ci		No	None		
-	120	pg_pressedham	int(1)			No	0		
-	121	pressedham_cook	varchar(20)	latin1_swedish_ci		No	None		
-	122	pressedham_size	varchar(20)	latin1_swedish_ci		No	None		
-	123	pg_roast	int(1)			No	0		
-	124	roast_pg	varchar(20)	latin1_swedish_ci		No	None		
-	125	pg_mince	int(1)			No	0		
-	126	pg_diced	int(1)			No	0		
-	127	pg_legsteaks	int(1)			No	0		
-	128	pg_bacon	int(1)			No	0		
-	129	sg_porkherb	int(1)			No	0		
-	130	t_porkherb	varchar(20)	latin1_swedish_ci		No	None		
-	131	sg_lambmint	int(1)			No	0		
-	132	t_lambmint	varchar(20)	latin1_swedish_ci		No	None		
-	133	sg_bratwurst	int(1)			No	0		
-	134	t_bratwurst	varchar(20)	latin1_swedish_ci		No	None		
-	135	sg_bratwurst_fennel	int(1)			No	0		
-	136	t_bratwurst_fennel	varchar(20)	latin1_swedish_ci		Yes	NULL		
-	137	sg_spicyitalian	int(1)			No	0		
-	138	t_spicyitalian	varchar(20)	latin1_swedish_ci		No	None		
-	139	sg_texan_chile	int(1)			No	0		
-	140	t_texan_chile	varchar(20)	latin1_swedish_ci		Yes	NULL		
-	141	sg_chorizo	int(1)			No	0		
-	142	t_chorizo	varchar(20)	latin1_swedish_ci		No	None		
-	143	sg_tomatobasil	int(1)			No	0		
-	144	t_tomatobasil	varchar(20)	latin1_swedish_ci		No	None		
-	145	sg_herbgarlic	int(1)			No	0		
-	146	t_herbgarlic	varchar(20)	latin1_swedish_ci		No	None		
-	147	sg_peppersonion	int(1)			No	0		
-	148	t_peppersonion	varchar(20)	latin1_swedish_ci		No	None		
-	149	sg_gf_capsicum	varchar(11)	latin1_swedish_ci		No	None		
-	150	t_gf_capsicum	varchar(20)	latin1_swedish_ci		No	None		
-	151	sg_plain	int(1)			No	0		
-	152	t_plain	varchar(20)	latin1_swedish_ci		No	None		
-	153	sg_gf_plain	int(11)			No	None		
-	154	t_gf_plain	varchar(20)	latin1_swedish_ci		No	None		
-	155	sg_saveloys	int(1)			No	0		
-	156	t_saveloys	varchar(20)	latin1_swedish_ci		No	None		
-	157	sg_gf_saveloys	int(11)			No	None		
-	158	t_gf_saveloys	varchar(255)	latin1_swedish_ci		No	None		
-	159	sg_create	int(11)			No	None		
-	160	t_create	varchar(20)	latin1_swedish_ci		No	None		
-	161	sg_patties	int(1)			No	0		
-	162	t_patties	varchar(20)	latin1_swedish_ci		No	None		
-	163	sg_gf_patties	int(11)			No	None		
-	164	t_gf_patties	varchar(20)	latin1_swedish_ci		No	None		
-	165	sg_salami	int(1)			No	0		
-	166	t_salami	varchar(20)	latin1_swedish_ci		No	None		
-	167	salami_t	varchar(20)	latin1_swedish_ci		No	None		
-	168	salami_s	varchar(20)	latin1_swedish_ci		No	None		
-	169	sg_biltong	int(1)			No	0		
-	170	t_biltong	varchar(20)	latin1_swedish_ci		No	None		
-	171	spins	text	latin1_swedish_ci		Yes	NULL		
-	172	small	int(11)			No	1		
-	173	declareyes	int(1)			No	0		
-	174	iipp	varchar(15)	latin1_swedish_ci		No	None		
-	175	timenow	timestamp		on update CURRENT_TIMESTAMP	No	CURRENT_TIMESTAMP		ON UPDATE CURRENT_TIMESTAMP
-	176	confirm	varchar(1)	latin1_swedish_ci		No	None		
-	177	declaration	varchar(255)	latin1_swedish_ci		No	None		
+2	name	varchar(255)	latin1_swedish_ci		No	None		
+3	animal	varchar(20)	latin1_swedish_ci		No	None		
+4	add1	varchar(255)	latin1_swedish_ci		No	None		
+5	phone	varchar(255)	latin1_swedish_ci		No	None		
+6	phone2	varchar(255)	latin1_swedish_ci		No	None		
+7	email	varchar(255)	latin1_swedish_ci		No	None		
+8	amp	text	latin1_swedish_ci		No	None		
+9	people	varchar(255)	latin1_swedish_ci		No	None		
+10	b_fillet	int(1)			No	0		
+11	fillet_bf	varchar(20)	latin1_swedish_ci		No	None		
+12	b_porterhouse	int(1)			No	0		
+13	porterhouse_bf	varchar(20)	latin1_swedish_ci		No	None		
+14	b_tbone	int(1)			No	0		
+15	b_ribeye	int(1)			No	0		
+16	ribeye_bf	varchar(20)	latin1_swedish_ci		No	None		
+17	b_rump	int(1)			No	0		
+18	rump_bf	varchar(20)	latin1_swedish_ci		No	None		
+19	b_topside	int(1)			No	0		
+20	topside_bf	varchar(20)	latin1_swedish_ci		No	None		
+21	b_rolledroast	int(1)			No	0		
+22	rolledroast_bf	varchar(20)	latin1_swedish_ci		No	None		
+23	b_weinerschnitzel	int(1)			No	0		
+24	weinerschnitzel_bf	varchar(20)	latin1_swedish_ci		No	None		
+25	b_silverside	int(1)			No	0		
+26	silverside_bf	varchar(20)	latin1_swedish_ci		No	None		
+27	b_blade	int(1)			No	0		
+28	blade_bf	varchar(20)	latin1_swedish_ci		No	None		
+29	b_shinfillet	int(1)			No	0		
+30	shinfillet_bf	varchar(20)	latin1_swedish_ci		No	None		
+31	b_chucksteak	int(1)			No	0		
+32	chucksteak_bf	varchar(20)	latin1_swedish_ci		No	None		
+33	b_skirtsteak	int(1)			No	0		
+34	skirtsteak_bf	varchar(20)	latin1_swedish_ci		No	None		
+35	b_mince	int(1)			No	0		
+36	b_brisket	int(1)			No	0		
+37	brisket_bf	varchar(20)	latin1_swedish_ci		No	None		
+38	l_shoulder	int(1)			No	0		
+39	shoulder_lb	varchar(20)	latin1_swedish_ci		No	None		
+40	l_loin	int(1)			No	0		
+41	loin_lb	varchar(25)	latin1_swedish_ci		No	None		
+42	l_flaps	int(1)			No	None		
+43	flaps_lb	varchar(20)	latin1_swedish_ci		No	None		
+44	l_leg	int(1)			No	0		
+45	leg_lb	varchar(20)	latin1_swedish_ci		No	None		
+46	v_shoulder	int(1)			No	0		
+47	shoulder_v	varchar(20)	latin1_swedish_ci		No	None		
+48	v_loin	int(1)			No	0		
+49	loin_v	varchar(20)	latin1_swedish_ci		No	None		
+50	v_leg	int(1)			No	0		
+51	leg_v	varchar(20)	latin1_swedish_ci		No	None		
+52	v_leg_whole_half	varchar(20)	latin1_swedish_ci		No	None		
+53	v_excess_trim	int(1)			No	0		
+54	excess_trim_v	varchar(20)	latin1_swedish_ci		No	None		
+55	ps_rolledshoulder	int(1)			No	0		
+56	rolledshoulder_ps	varchar(20)	latin1_swedish_ci		No	None		
+57	ps_bacon	int(1)			No	0		
+58	ps_pickledpork	int(1)			No	0		
+59	ps_chops	int(1)			No	0		
+60	ps_pressedham	int(1)			No	0		
+61	pressedham_ps	varchar(20)	latin1_swedish_ci		No	None		
+62	ps_mince	int(1)			No	0		
+63	ps_dicedpork	int(1)			No	0		
+64	ps_roastjointed	int(1)			No	0		
+65	roastjointed_ps	varchar(20)	latin1_swedish_ci		No	None		
+66	ps_bostonbutt	int(1)			No	0		
+67	pl_chops	int(1)			No	0		
+68	pl_loinsteaks	int(1)			No	0		
+69	pl_roastjointed	int(1)			No	0		
+70	roastjointed_pl	varchar(20)	latin1_swedish_ci		No	None		
+71	pl_bacon	int(1)			No	0		
+72	pl_baconchops	int(1)			No	0		
+73	pl_bellybacon	int(1)			No	0		
+74	pb_bacon	int(1)			No	0		
+75	pb_baconstrips	int(1)			No	0		
+76	pb_rolled	int(1)			No	0		
+77	pb_whole	int(1)			No	0		
+78	whole_pb	varchar(20)	latin1_swedish_ci		No	None		
+79	pb_marinate	int(1)			No	0		
+80	marinate_pb	varchar(20)	latin1_swedish_ci		No	None		
+81	pg_hamonthebone	int(1)			No	0		
+82	hamonthebone_cook	varchar(20)	latin1_swedish_ci		No	None		
+83	hamonthebone_size	varchar(20)	latin1_swedish_ci		No	None		
+84	pg_pressedham	int(1)			No	0		
+85	pressedham_cook	varchar(20)	latin1_swedish_ci		No	None		
+86	pressedham_size	varchar(20)	latin1_swedish_ci		No	None		
+87	pg_roast	int(1)			No	0		
+88	roast_pg	varchar(20)	latin1_swedish_ci		No	None		
+89	pg_mince	int(1)			No	0		
+90	pg_diced	int(1)			No	0		
+91	pg_legsteaks	int(1)			No	0		
+92	pg_bacon	int(1)			No	0		
+93	pg_hocks	int(1)			No	0		
+94	hocks_pg	varchar(20)	latin1_swedish_ci		No	None		
+95	t_porkherb	varchar(20)	latin1_swedish_ci		No	None		
+96	t_lambmint	varchar(20)	latin1_swedish_ci		No	None		
+97	t_bratwurst	varchar(20)	latin1_swedish_ci		No	None		
+98	t_bratwurst_fennel	varchar(20)	latin1_swedish_ci		Yes	NULL		
+99	t_texan_chile	varchar(20)	latin1_swedish_ci		Yes	NULL		
+100	t_texan_chilli_cheese	varchar(20)	latin1_swedish_ci		Yes	NULL		
+101	t_chorizo	varchar(20)	latin1_swedish_ci		No	None		
+102	t_tomatobasil	varchar(20)	latin1_swedish_ci		No	None		
+103	t_herbgarlic	varchar(20)	latin1_swedish_ci		No	None		
+104	t_peppersonion	varchar(20)	latin1_swedish_ci		No	None		
+105	t_gf_capsicum	varchar(20)	latin1_swedish_ci		No	None		
+106	t_steak_onion	varchar(20)	latin1_swedish_ci		No	None		
+107	t_manuka_honey_hickory	varchar(20)	latin1_swedish_ci		No	None		
+108	t_old_english	varchar(20)	latin1_swedish_ci		No	None		
+109	t_boerewors	varchar(20)	latin1_swedish_ci		No	None		
+110	t_cheese_krnasky	varchar(20)	latin1_swedish_ci		No	None		
+111	t_plain	varchar(20)	latin1_swedish_ci		No	None		
+112	t_gf_plain	varchar(20)	latin1_swedish_ci		No	None		
+113	t_saveloys	varchar(20)	latin1_swedish_ci		No	None		
+114	sg_hogg_casing	varchar(255)	latin1_swedish_ci		No	None		
+115	sg_gormet_cheese	varchar(255)	latin1_swedish_ci		No	None		
+116	t_create	varchar(20)	latin1_swedish_ci		No	None		
+117	t_patties	varchar(20)	latin1_swedish_ci		No	None		
+118	t_gf_patties	varchar(20)	latin1_swedish_ci		No	None		
+119	t_salami	varchar(20)	latin1_swedish_ci		No	None		
+120	salami_t	varchar(20)	latin1_swedish_ci		No	None		
+121	salami_s	varchar(20)	latin1_swedish_ci		No	None		
+122	t_cheerio	varchar(20)	latin1_swedish_ci		No	None		
+123	t_frankfurter	varchar(20)	latin1_swedish_ci		No	None		
+124	t_biersticks	varchar(20)	latin1_swedish_ci		No	None		
+125	t_rissoles	varchar(20)	latin1_swedish_ci		No	None		
+126	rissoles_t	varchar(20)	latin1_swedish_ci		No	None		
+127	t_koftas	varchar(20)	latin1_swedish_ci		No	None		
+128	spins	text	latin1_swedish_ci		Yes	NULL		
+129	small	int(11)			No	1		
+130	declareyes	int(1)			No	0		
+131	iipp	varchar(15)	latin1_swedish_ci		No	None		
+132	timenow	timestamp		on update CURRENT_TIMESTAMP	No	CURRENT_TIMESTAMP		ON UPDATE CURRENT_TIMESTAMP
+133	confirm	varchar(1)	latin1_swedish_ci		No	None		
+134	declaration	varchar(255)	latin1_swedish_ci		No	None		

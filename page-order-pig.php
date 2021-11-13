@@ -298,8 +298,8 @@ $unid = $_GET['n'];
 										<option value="" disabled selected>Select</option>
 										<option value="whole">Whole</option>
 										<option value="mince">Mince</option>
-										<option value="sausage">sausage</option>
-										<option value="bacon">bacon</option>
+										<option value="sausage">Sausage</option>
+										<option value="bacon">Bacon</option>
 									</select>
 								</div>
 

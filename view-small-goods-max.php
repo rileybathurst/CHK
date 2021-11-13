@@ -10,7 +10,8 @@
 	<strong>Pork and Herb</strong>
 
 	<!-- php if ( $order->t_porkherb >= 1) { -->
-		echo $order->t_porkherb . 'KG';
+		<!-- echo $order->t_porkherb . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 			
@@ -24,7 +25,8 @@
 	<strong>Lamb and Mint</strong>
 
 	<!-- php if ( $order->t_lambmint >= 1) { -->
-		echo $order->t_lambmint . 'KG';
+		<!-- echo $order->t_lambmint . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -38,7 +40,8 @@
 	<strong>Bratwurst</strong>
 
 	<!-- php if ( $order->t_bratwurst >= 1) { -->
-		echo $order->t_bratwurst . 'KG';
+		<!-- echo $order->t_bratwurst . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -52,7 +55,8 @@
 	<strong>Bratwurst w/ Fennel</strong>
 
 	<!-- php if ( $order->t_bratwurst_fennel >= 1) { -->
-		echo $order->t_bratwurst_fennel . 'KG';
+		<!-- echo $order->t_bratwurst_fennel . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -66,7 +70,8 @@
 	<strong>Texan Chile</strong>
 
 	<!-- php if ( $order->t_texan_chile >= 1) { -->
-		echo $order->t_texan_chile . 'KG';
+		<!-- echo $order->t_texan_chile . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -80,7 +85,8 @@
 	<strong>Texan Chilli – smoked with cheese</strong>
 
 	<!-- php if ( $order->sg_texan_chilli_cheese >= 1) { -->
-		echo $order->sg_texan_chilli_cheese . 'KG';
+		<!-- echo $order->sg_texan_chilli_cheese . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -94,7 +100,8 @@
 	<strong>Chorizo</strong>
 
 	<!-- php if ( $order->t_chorizo >= 1) { -->
-		echo $order->t_chorizo . 'KG';
+		<!-- echo $order->t_chorizo . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -108,7 +115,8 @@
 	<strong>Tomato and Basil</strong>
 
 	<!-- php if ( $order->t_tomatobasil >= 1) { -->
-		echo $order->t_tomatobasil . 'KG';
+		<!-- echo $order->t_tomatobasil . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -122,7 +130,8 @@
 	<strong>Herb and Garlic</strong>
 
 	<!-- php if ( $order->t_herbgarlic >= 1) { -->
-		echo $order->t_herbgarlic . 'KG';
+		<!-- echo $order->t_herbgarlic . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -136,7 +145,8 @@
 	<strong>Green Capsicum and Onion</strong>
 
 	<!-- php if ( $order->t_peppersonion >= 1) { -->
-		echo $order->t_peppersonion . 'KG';
+		<!-- echo $order->t_peppersonion . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -150,7 +160,8 @@
 	<strong>Green Capsicum Onion <em>- GF</em></strong>
 
 	<!-- php if ( $order->t_gf_capsicum >= 1) { -->
-		echo $order->t_gf_capsicum . 'KG';
+		<!-- echo $order->t_gf_capsicum . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -164,7 +175,8 @@
 	<strong>Steak and Onion</strong>
 
 	<!-- php if ( $order->sg_steak_onion >= 1) { -->
-		echo $order->sg_steak_onion . 'KG';
+		<!-- echo $order->sg_steak_onion . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -178,7 +190,8 @@
 	<strong>Manuka Honey and Hickory</strong>
 
 	<!-- php if ( $order->sg_manuka_honey_hickory >= 1) { -->
-		echo $order->sg_manuka_honey_hickory . 'KG';
+		<!-- echo $order->sg_manuka_honey_hickory . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -192,7 +205,8 @@
 	<strong>Old English</strong>
 
 	<!-- php if ( $order->sg_old_english >= 1) { -->
-		echo $order->sg_old_english . 'KG';
+		<!-- echo $order->sg_old_english . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -206,7 +220,8 @@
 	<strong>Boerewors</strong>
 
 	<!-- php if ( $order->sg_boerewors >= 1) { -->
-		echo $order->sg_boerewors . 'KG';
+		<!-- echo $order->sg_boerewors . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -220,7 +235,8 @@
 	<strong>Cheese Kransky - smoked</strong>
 
 	<!-- php if ( $order->sg_cheese_krnasky >= 1) { -->
-		echo $order->sg_cheese_krnasky . 'KG';
+		<!-- echo $order->sg_cheese_krnasky . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -234,7 +250,8 @@
 	<strong>Plain Bulk</strong>
 
 	<!-- php if ( $order->t_plain >= 1) { -->
-		echo $order->t_plain . 'KG';
+		<!-- echo $order->t_plain . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -248,7 +265,8 @@
 	<strong>Plain <em>- GF</em></strong>
 
 	<!-- php if ( $order->t_gf_plain >= 1) { -->
-		echo $order->t_gf_plain . 'KG';
+		<!-- echo $order->t_gf_plain . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -262,7 +280,8 @@
 	<strong>Saveloys</strong>
 
 	<!-- php if ( $order->t_saveloys >= 1) { -->
-		echo $order->t_saveloys . 'KG';
+		<!-- echo $order->t_saveloys . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -296,7 +315,8 @@
 	<strong>Create</strong>
 
 	<!-- php if ( $order->t_create >= 1) { -->
-		echo $order->t_create . 'KG';
+		<!-- echo $order->t_create . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -310,7 +330,8 @@
 	<strong>Patties</strong>
 
 	<!-- php if ( $order->t_patties >= 1) { -->
-		echo $order->t_patties . 'KG';
+		<!-- echo $order->t_patties . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -324,7 +345,8 @@
 	<strong>Patties <em>- GF</em></strong>
 	
 	<!-- php if ( $order->t_gf_patties >= 1) { -->
-		echo $order->t_gf_patties . 'KG';
+		<!-- echo $order->t_gf_patties . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -338,15 +360,18 @@
 	<strong>Salami</strong>
 
 	<!-- php if ( $order->t_salami >= 1) { -->
-		echo $order->t_salami . ' #';
+		<!-- echo $order->t_salami . ' #'; -->
+		10
 	<!-- } else { echo '&nbsp;'; } -->
 
 	<!-- if ($order->t_salami >= 1) { -->
-		echo $order->salami_s .'&nbsp;';
+		<!-- echo $order->salami_s .'&nbsp;'; -->
+		Danish Garlic
 	<!-- } else { echo '&nbsp;'; } -->
 
 	<!-- if ($order->t_salami >= 1) { -->
-		echo $order->salami_t;
+		<!-- echo $order->salami_t; -->
+		Strong
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -360,7 +385,8 @@
 	<strong>Cheerio</strong>
 
 	<!-- php if ( $order->sg_cheerio >= 1) { -->
-		echo $order->sg_cheerio . 'KG';
+		<!-- echo $order->sg_cheerio . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -374,7 +400,8 @@
 	<strong>Frankfurter</strong>
 
 	<!-- php if ( $order->sg_frankfurter >= 1) { -->
-		echo $order->sg_frankfurter . 'KG';
+		<!-- echo $order->sg_frankfurter . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -388,11 +415,12 @@
 	<strong>Biersticks</strong>
 
 	<!-- php if ( $order->sg_biersticks >= 1) { -->
-		echo $order->sg_biersticks . 'KG';
+		<!-- echo $order->sg_biersticks . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
-<!-- sg_rissoles rissoles_sg -->
+<!-- sg_rissoles rissoles_t -->
 <div>
 	<!-- php if ( $order->sg_rissoles >= 1) { -->
 		<span class="unicode highlights spacer">✓</span>
@@ -402,11 +430,13 @@
 	<strong>Rissoles</strong>
 
 	<!-- php if ( $order->sg_rissoles >= 1) { -->
-		echo $order->sg_rissoles . 'KG';
+		<!-- echo $order->sg_rissoles . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } -->
 
 	<!-- if ($order->sg_rissoles >= 1) { -->
-		echo $order->rissoles_sg;
+		<!-- echo $order->rissoles_t; -->
+		Venison, Bacon and Onion
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -420,6 +450,7 @@
 	<strong>Koftas</strong>
 
 	<!-- php if ( $order->sg_koftas >= 1) { -->
-		echo $order->sg_koftas . 'KG';
+		<!-- echo $order->sg_koftas . 'KG'; -->
+		10KG
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>

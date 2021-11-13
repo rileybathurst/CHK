@@ -139,4 +139,14 @@ $beef = '
 			$_POST['b_mince'].
 		'</strong>
 	</p>
+
+	<p>
+	Brisket
+	<strong>'.
+		$_POST['b_brisket'].
+	'</strong>
+	<em> '.
+		$_POST['brisket_bf'].
+	'</em>
+</p>
 ';

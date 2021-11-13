@@ -10,8 +10,8 @@
 	<strong>Rolled Shoulder</strong>
 
 	<!-- php if ($order->ps_rolledshoulder == 1) { -->
-		echo $order->rolledshoulder_ps;
-    something something which is the longest
+		<!-- echo $order->rolledshoulder_ps; -->
+		Whole
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -56,7 +56,7 @@
 
 	<!-- php if ($order->ps_pressedham == 1) {  -->
 		<!-- echo $order->pressedham_ps; -->
-    something the longest
+		Ham Steaks
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -91,7 +91,7 @@
 
 	<!-- php if ($order->ps_roastjointed == 1) {  -->
 		<!-- echo $order->roastjointed_ps; -->
-    echo the thing here
+		Boneless Roast
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -139,7 +139,7 @@
 
 	<!-- php if ($order->pl_roastjointed == 1) { -->
 		<!-- echo $order->roastjointed_pl; -->
-    echo all the things
+		Boneless Roast
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -217,7 +217,7 @@
 
 	<!-- php if ($order->pb_whole == 1) {  -->
 		<!-- echo $order->whole_pb; -->
-    echo whole
+		Bonless
 	<!-- } else { echo " "; } ?> -->
 </div>
 
@@ -232,7 +232,7 @@
 
 	<!-- php if ($order->marinate_pb == 1) { -->
 		<!-- echo $order->marinate_pb; -->
-    echo marinate
+    Whole
 	<!-- } else { echo " "; } ?> -->
 </div>
 
@@ -249,12 +249,12 @@
 
 	<!-- php if ($order->pg_hamonthebone == 1) {  -->
 		<!-- echo $order->hamonthebone_cook . '&nbsp;'; -->
-    echo the cook
+    Cooked
 	<!-- } else { echo '&nbsp;'; }  -->
 
 		<!-- if ($order->pg_hamonthebone == 1) {  -->
 		<!-- echo $order->hamonthebone_size; -->
-    echo the size
+    Whole
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -269,12 +269,12 @@
 
 	<!-- php if ($order->pg_pressedham == 1) {  -->
 		<!-- echo $order->pressedham_cook . '&nbsp;'; -->
-    echo the pressed cook
+    Cooked
 	<!-- } else { echo '&nbsp;'; } -->
 
 	<!-- if ($order->pg_pressedham == 1) {  -->
 		<!-- echo $order->pressedham_size; -->
-    echo the pressed size
+    Ham Steaks
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -288,8 +288,8 @@
 	<strong>Roast</strong>
 
 	<!-- php if ($order->pg_roast == 1) {  -->
-		echo $order->roast_pg;
-    echo the roast
+		<!-- echo $order->roast_pg; -->
+    Whole
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>
 
@@ -344,6 +344,6 @@
 
 	<!-- php if ($order->pg_hocks == 1) {  -->
 		<!-- echo $order->hocks_pg; -->
-    echo the hocks
+    sausage
 	<!-- } else { echo '&nbsp;'; } ?> -->
 </div>

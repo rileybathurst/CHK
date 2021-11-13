@@ -73,6 +73,12 @@ $pig = '
 		'</em>
 	</p>
 
+	<p>
+		Boston Butt - Pulled Pork
+		<strong>'.
+			$_POST['ps_bostonbutt'].
+		'</strong>
+	</p>
 	<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
 
 	<strong>Loin</strong>
@@ -117,6 +123,20 @@ $pig = '
 		'</strong>
 	</p>
 
+	<p>
+		Loin Belly Bacon
+		<strong>'.
+			$_POST['pl_bellybacon'].
+		'</strong>
+	</p>
+
+	<p>
+		Rolled
+		<strong>'.
+			$_POST['pb_rolled'].
+		'</strong>
+	</p>
+
 	<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
 
 	<strong>Belly</strong>
@@ -138,13 +158,6 @@ $pig = '
 	</p>
 
 	<p>
-		Rolled
-		<strong>'.
-			$_POST['pb_rolled'].
-		'</strong>
-	</p>
-
-	<p>
 		Roast
 		<strong>'.
 			$_POST['pb_whole'].
@@ -155,10 +168,13 @@ $pig = '
 	</p>
 
 	<p>
-		Strips
+		Marinate Cook in a Bag
 		<strong>'.
-			$_POST['pb_strips'].
+			$_POST['pb_marinate'].
 		'</strong>
+		<em> '.
+			$_POST['marinate_pb'].
+		'</em>
 	</p>
 
 	<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
@@ -225,5 +241,15 @@ $pig = '
 		<strong>'.
 			$_POST['pg_bacon'].
 		'</strong>
+	</p>
+
+	<p>
+		Hocks
+		<strong>'.
+			$_POST['pg_hocks'].
+		'</strong>
+		<em> '.
+			$_POST['hocks_pg'].
+		'</em>
 	</p>
 ';

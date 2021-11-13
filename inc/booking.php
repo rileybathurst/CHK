@@ -6,7 +6,7 @@
 function prefix_admin_booking() {
 
 	//email to info@canterburyhomekill.co.nz
-	// $to = 'riley@rileybathurst.com';
+	// $developer = 'riley@rileybathurst.com';
 	$tochk = 'info@canterburyhomekill.co.nz';
 	$to2 = $_POST['email'];
 	
@@ -98,7 +98,7 @@ function prefix_admin_booking() {
 	';
 	
 	add_filter( 'wp_mail_from_name', function( $name ) {
-	   return 'Canterbury Homekill';
+		return 'Canterbury Homekill';
 	});
 	
 	add_filter( 'wp_mail_content_type', 'set_content_type' );
@@ -106,7 +106,7 @@ function prefix_admin_booking() {
 			return 'text/html';
 	}
 	
-	wp_mail($to , $subject , $txt );
+	// wp_mail($developer , $subject , $txt );
 	wp_mail($tochk , $subject , $txt );
 	wp_mail($to2 , $subject , $txt );
 	

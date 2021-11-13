@@ -1,6 +1,6 @@
 <h3 class="single-stripe">SMALL GOODS</h3>
 
-<!-- t_porkherb t_porkherb -->
+<!-- t_porkherb -->
 <div>
 	<?php if ( $order->t_porkherb >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -14,7 +14,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 			
-<!-- t_lambmint t_lambmint -->
+<!-- t_lambmint -->
 <div>
 	<?php if ($order->t_lambmint >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -28,7 +28,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_bratwurst t_bratwurst -->
+<!-- t_bratwurst -->
 <div>
 	<?php if ($order->t_bratwurst >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -42,7 +42,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_bratwurst_fennel t_bratwurst_fennel -->
+<!-- t_bratwurst_fennel -->
 <div>
 	<?php if ($order->t_bratwurst_fennel >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -56,7 +56,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_texan_chile t_texan_chile -->
+<!-- t_texan_chile -->
 <div>
 	<?php if ($order->t_texan_chile >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -70,21 +70,21 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_texan_chilli_cheese -->
+<!-- t_texan_chilli_cheese -->
 <div>
-	<?php if ($order->sg_texan_chilli_cheese >= 1) { ?>
+	<?php if ($order->t_texan_chilli_cheese >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Texan Chilli – smoked with cheese</strong>
 
-	<?php if ($order->sg_texan_chilli_cheese >= 1) { 
-		echo $order->sg_texan_chilli_cheese . 'KG';
+	<?php if ($order->t_texan_chilli_cheese >= 1) { 
+		echo $order->t_texan_chilli_cheese . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_chorizo t_chorizo -->
+<!-- t_chorizo -->
 <div>
 	<?php if ($order->t_chorizo >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -98,7 +98,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_tomatobasil t_tomatobasil -->
+<!-- t_tomatobasil -->
 <div>
 	<?php if ($order->t_tomatobasil >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -112,7 +112,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_herbgarlic t_herbgarlic -->
+<!-- t_herbgarlic -->
 <div>
 	<?php if ($order->t_herbgarlic >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -126,7 +126,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_peppersonion t_peppersonion -->
+<!-- t_peppersonion -->
 <div>
 	<?php if ($order->t_peppersonion >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -140,7 +140,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_gf_capsicum t_gf_capsicum -->
+<!-- t_gf_capsicum -->
 <div>
 	<?php if ($order->t_gf_capsicum >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -154,77 +154,77 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_steak_onion -->
+<!-- t_steak_onion -->
 <div>
-	<?php if ($order->sg_steak_onion >= 1) { ?>
+	<?php if ($order->t_steak_onion >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Steak and Onion</strong>
 
-	<?php if ($order->sg_steak_onion >= 1) { 
-		echo $order->sg_steak_onion . 'KG';
+	<?php if ($order->t_steak_onion >= 1) { 
+		echo $order->t_steak_onion . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_manuka_honey_hickory -->
+<!-- t_manuka_honey_hickory -->
 <div>
-	<?php if ($order->sg_manuka_honey_hickory >= 1) { ?>
+	<?php if ($order->t_manuka_honey_hickory >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Manuka Honey and Hickory</strong>
 
-	<?php if ($order->sg_manuka_honey_hickory >= 1) { 
-		echo $order->sg_manuka_honey_hickory . 'KG';
+	<?php if ($order->t_manuka_honey_hickory >= 1) { 
+		echo $order->t_manuka_honey_hickory . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_old_english -->
+<!-- t_old_english -->
 <div>
-	<?php if ($order->sg_old_english >= 1) { ?>
+	<?php if ($order->t_old_english >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Old English</strong>
 
-	<?php if ($order->sg_old_english >= 1) { 
-		echo $order->sg_old_english . 'KG';
+	<?php if ($order->t_old_english >= 1) { 
+		echo $order->t_old_english . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_boerewors -->
+<!-- t_boerewors -->
 <div>
-	<?php if ($order->sg_boerewors >= 1) { ?>
+	<?php if ($order->t_boerewors >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Boerewors</strong>
 
-	<?php if ($order->sg_boerewors >= 1) { 
-		echo $order->sg_boerewors . 'KG';
+	<?php if ($order->t_boerewors >= 1) { 
+		echo $order->t_boerewors . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_cheese_krnasky -->
+<!-- t_cheese_krnasky -->
 <div>
-	<?php if ($order->sg_cheese_krnasky >= 1) { ?>
+	<?php if ($order->t_cheese_krnasky >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Cheese Kransky - smoked</strong>
 
-	<?php if ($order->sg_cheese_krnasky >= 1) { 
-		echo $order->sg_cheese_krnasky . 'KG';
+	<?php if ($order->t_cheese_krnasky >= 1) { 
+		echo $order->t_cheese_krnasky . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_plain t_plain -->
+<!-- t_plain -->
 <div>
 	<?php if ($order->t_plain >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -238,7 +238,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_gf_plain t_gf_plain -->
+<!-- t_gf_plain -->
 <div>
 	<?php if ($order->t_gf_plain >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -252,7 +252,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_saveloys t_saveloys -->
+<!-- t_saveloys -->
 <div>
 	<?php if ($order->t_saveloys >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -286,7 +286,7 @@
 	<strong>Add cheese to gourmet sausages</strong>
 </div>
 
-<!-- t_create t_create -->
+<!-- t_create -->
 <div>
 	<?php if ($order->t_create >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -300,7 +300,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_patties t_patties -->
+<!-- t_patties -->
 <div>
 	<?php if ($order->t_patties >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -314,7 +314,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_gf_patties t_gf_patties -->
+<!-- t_gf_patties -->
 <div>
 	<?php if ($order->t_gf_patties >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -328,7 +328,7 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_salami t_salami salami_t salami_s -->
+<!-- t_salami salami_t salami_s -->
 <div>
 	<?php if ($order->t_salami >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -350,76 +350,76 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_cheerio -->
+<!-- t_cheerio -->
 <div>
-	<?php if ($order->sg_cheerio >= 1) { ?>
+	<?php if ($order->t_cheerio >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Cheerio</strong>
 
-	<?php if ($order->sg_cheerio >= 1) { 
-		echo $order->sg_cheerio . 'KG';
+	<?php if ($order->t_cheerio >= 1) { 
+		echo $order->t_cheerio . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_frankfurter -->
+<!-- t_frankfurter -->
 <div>
-	<?php if ($order->sg_frankfurter >= 1) { ?>
+	<?php if ($order->t_frankfurter >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Frankfurter</strong>
 
-	<?php if ($order->sg_frankfurter >= 1) { 
-		echo $order->sg_frankfurter . 'KG';
+	<?php if ($order->t_frankfurter >= 1) { 
+		echo $order->t_frankfurter . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_biersticks -->
+<!-- t_biersticks -->
 <div>
-	<?php if ($order->sg_biersticks >= 1) { ?>
+	<?php if ($order->t_biersticks >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Biersticks</strong>
 
-	<?php if ($order->sg_biersticks >= 1) { 
-		echo $order->sg_biersticks . 'KG';
+	<?php if ($order->t_biersticks >= 1) { 
+		echo $order->t_biersticks . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_rissoles rissoles_sg -->
+<!-- t_rissoles rissoles_t -->
 <div>
-	<?php if ($order->sg_rissoles >= 1) { ?>
+	<?php if ($order->t_rissoles >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Rissoles</strong>
 
-	<?php if ($order->sg_rissoles >= 1) { 
-		echo $order->sg_rissoles . 'KG';
+	<?php if ($order->t_rissoles >= 1) { 
+		echo $order->t_rissoles . 'KG';
 	} else { echo '&nbsp;'; }
 
-	if ($order->sg_rissoles >= 1) { 
-		echo $order->rissoles_sg;
+	if ($order->t_rissoles >= 1) { 
+		echo $order->rissoles_t;
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- sg_koftas -->
+<!-- t_koftas -->
 <div>
-	<?php if ($order->sg_koftas >= 1) { ?>
+	<?php if ($order->t_koftas >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Koftas</strong>
 
-	<?php if ($order->sg_koftas >= 1) { 
-		echo $order->sg_koftas . 'KG';
+	<?php if ($order->t_koftas >= 1) { 
+		echo $order->t_koftas . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>

@@ -31,7 +31,7 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_tbone tbone_bf -->
+<!-- b_tbone -->
 <div>
 	<?php if ($order->b_tbone == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -165,7 +165,7 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_mince mince_bf -->
+<!-- b_mince -->
 <div>
 	<?php if ($order->b_mince == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>

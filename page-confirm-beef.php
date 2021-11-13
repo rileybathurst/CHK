@@ -309,7 +309,7 @@ $unid = $_GET['n'];
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="b_mince" value="<?php echo $order->b_brisket; ?>">
+											<input type="hidden" name="b_brisket" value="<?php echo $order->b_brisket; ?>">
 											<strong>Brisket</strong>
 
 											<?php if ($order->b_brisket == 1) { 

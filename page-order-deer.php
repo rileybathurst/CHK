@@ -60,13 +60,15 @@ $unid = $_GET['n'];
 
 									<select name="loin_v" id="loin_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="loin_v" value="saddle chops">Saddle Chops</option>
+										<option name="loin_v" value="stew">Stew</option>
 										<option name="loin_v" value="mince">Mince</option>
 										<option name="loin_v" value="small goods">Small Goods</option>
+										<option name="loin_v" value="roast">Roast</option>
+										<option name="loin_v" value="smoked shoulder patties">Smoked Shoulder Patties</option>
 									</select>
 								</div>
 			
-								<!-- deer leg v_leg leg_v -->
+								<!-- v_leg leg_v -->
 								<div>
 									<input id="v_leg" name="v_leg" type="checkbox">
 									<label for="v_leg">Leg (Size option depends on choice)</label>
