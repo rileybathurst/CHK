@@ -39,12 +39,12 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_gf_patties'           => $_POST['t_gf_patties'] ,
 		't_salami'               => $_POST['t_salami'] ,
 		'salami_t'               => $_POST['salami_t'] ,
-		'salami_s'               => $_POST['salami_s']
-		't_cheerio'              => $_POST['t_cheerio']
-		't_frankfurter'          => $_POST['t_frankfurter']
-		't_biersticks'           => $_POST['t_biersticks']
-		't_rissoles'             => $_POST['t_rissoles']
-		'rissoles_t'             => $_POST['rissoles_t']
+		'salami_s'               => $_POST['salami_s'],
+		't_cheerio'              => $_POST['t_cheerio'],
+		't_frankfurter'          => $_POST['t_frankfurter'],
+		't_biersticks'           => $_POST['t_biersticks'],
+		't_rissoles'             => $_POST['t_rissoles'],
+		'rissoles_t'             => $_POST['rissoles_t'],
 		't_koftas'               => $_POST['t_koftas']
 	) ,
 
