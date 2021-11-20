@@ -14,6 +14,10 @@
 	body, h1, h2, h3, h4, h5, h6 {
 		font-family: sans-serif;
 	}
+
+	h3 {
+		margin: 0;
+	}
 	
 	form,
 	button,
@@ -262,7 +266,7 @@
 		border-top: 1px dashed #999;
 	}
 	/* .print-highlights {
-		// color: $highlight !important; 5.0 this doesnt work
+		color: $highlight !important; 5.0 this doesnt work
 	} */
 
 	.over-background {
@@ -312,6 +316,7 @@
 	.view-order-options {
 		width: 100% !important; // try get this higher on the specificity
 		padding: 0 !important;
+		border: none !important;
 	}
 
 	.run-the-stripes > div {
@@ -321,6 +326,38 @@
 	.print-top-line {
 		border: none !important;
 		padding-top: 0 !important;
+	}
+
+	.half {
+		div {
+			border-left: 1px dashed #999;
+			flex: 1;
+		}
+
+		div:first-child {
+			border-left: none;
+		}
+	}
+
+	.rts-flex { // run the stripes
+		display: flex;
+		padding: 0 !important;
+
+		div {
+			border-left: 1px dashed #999;
+		}
+
+		div:first-child {
+			border-left: none;
+		}
+
+		.rts-1 {
+			flex: 1;
+		}
+
+		.rts-2 {
+			flex: 2;
+		}
 	}
 
 } // print styles

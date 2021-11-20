@@ -13,7 +13,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
@@ -74,7 +79,7 @@ a {
 }
 
 a:hover {
-  color: #FF482A;
+  color: #ff482a;
 }
 
 .serif {
@@ -203,7 +208,8 @@ label {
   color: #b9202f;
 }
 
-input[type=checkbox] + label, input[type=radio] + label {
+input[type=checkbox] + label,
+input[type=radio] + label {
   display: initial;
 }
 
@@ -213,7 +219,8 @@ input[type=checkbox] + label, input[type=radio] + label {
   color: #b9202f;
 }
 
-.is-invalid-label, .form-error {
+.is-invalid-label,
+.form-error {
   color: #b9202f;
 }
 
@@ -293,7 +300,7 @@ textarea {
 
 .off-canvas a:hover,
 .off-canvas a:focus {
-  color: #FF482A;
+  color: #ff482a;
 }
 
 .top-bar {
@@ -421,8 +428,12 @@ input[type=submit],
   -webkit-appearance: none;
 }
 
-button:hover, button:focus, .button:hover, .button:focus,
-input[type=submit]:hover, input[type=submit]:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus,
 #buddypress button:hover,
 #buddypress button:focus,
 #buddypress .button:hover,
@@ -540,7 +551,7 @@ input[type=password]:focus {
 
 .signup-form input[type=text],
 .signup-form input[type=email] {
-  width: calc(100% - 0.9375rem) !important;
+  width: calc( 100% - 0.9375rem ) !important;
 }
 
 .signup-form input[type=submit] {
@@ -589,7 +600,7 @@ input[type=password]:focus {
 } */
 .login-username input,
 .login-password input {
-  width: calc(100% - 2.9205em);
+  width: calc( 100% - 2.9205em );
   padding: 0.9375em;
   margin: 0;
   caret-color: #b9202f;
@@ -688,7 +699,7 @@ input[type=password]:focus {
   color: #b9202f;
 }
 
-a3 a:hover {
+.a3 a:hover {
   color: #333;
 }
 
@@ -940,7 +951,9 @@ label {
   color: #333;
 }
 
-.soft, .soft:before, .soft:after {
+.soft,
+.soft:before,
+.soft:after {
   background: #666;
   margin-bottom: 0;
   color: #000;
@@ -1197,7 +1210,7 @@ footer img {
 }
 
 /* #minimenu > div > ul > li > a {
-	// color: $white; // Im not sure about this I like keeping to a "correct" color scheme
+	color: $white; // Im not sure about this I like keeping to a "correct" color scheme
 } */
 #loginform {
   background: #888;
@@ -1290,12 +1303,12 @@ footer img {
   input[type=radio],
 fieldset input[type=radio] {
     /*  Remove the default styling.
-    	`-webkit-appearance` is not an official CSS property 
-    	& likely never will be. But it's also in 95% of browsers, 
-    	non-webkit included, yes, as a `-webkit` property. 
-    	Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
-    	Plus it *will* stick around. Browsers can't remove it. 
-    	So use it like this...                                 */
+    `-webkit-appearance` is not an official CSS property 
+    & likely never will be. But it's also in 95% of browsers, 
+    non-webkit included, yes, as a `-webkit` property. 
+    Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
+    Plus it *will* stick around. Browsers can't remove it. 
+    So use it like this...                                 */
     -webkit-appearance: none;
     /* Style the radio button container. */
     width: 1.5rem;
@@ -1347,12 +1360,12 @@ fieldset input[type=radio]:focus {
   Which works just fine. Old browsers can get old looking things. */
   input[type=checkbox] {
     /*  Remove the default styling.
-    	`-webkit-appearance` is not an official CSS property 
-    	& likely never will be. But it's also in 95% of browsers, 
-    	non-webkit included, yes, as a `-webkit` property. 
-    	Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
-    	Plus it *will* stick around. Browsers can't remove it. 
-    	So use it like this...                                 */
+    `-webkit-appearance` is not an official CSS property 
+    & likely never will be. But it's also in 95% of browsers, 
+    non-webkit included, yes, as a `-webkit` property. 
+    Firefox, Edge, Chrome, Opera all implemented `-webkit-appearance`.  
+    Plus it *will* stick around. Browsers can't remove it. 
+    So use it like this...                                 */
     -webkit-appearance: none;
     /* Style the box. */
     width: 1.6rem;
@@ -1378,10 +1391,10 @@ fieldset input[type=radio]:focus {
     top: 0.36rem;
     left: 0.12rem;
     /*  Create a checkmark in CSS. 
-    	Could use an SVG or `content: "✓";` instead. 
-    	This is a box, turned 45 degs, with a 
-    	left and bottom border to make the checkmark.
-    	Created using an empty pseudo-element.*/
+    Could use an SVG or `content: "✓";` instead. 
+    This is a box, turned 45 degs, with a 
+    left and bottom border to make the checkmark.
+    Created using an empty pseudo-element.*/
     content: "";
     width: 1rem;
     height: 0.3rem;
@@ -1410,10 +1423,10 @@ fieldset input[type=radio]:focus {
   top: 0.36rem;
   left: 0.12rem;
   /*  Create a checkmark in CSS. 
-  	Overwrites the "✓"
-  	This is a box, turned 45 degs, with a 
-  	left and bottom border to make the checkmark.
-  	Created using an empty pseudo-element.*/
+  Overwrites the "✓"
+  This is a box, turned 45 degs, with a 
+  left and bottom border to make the checkmark.
+  Created using an empty pseudo-element.*/
   content: "";
   width: 1rem;
   height: 0.3rem;
@@ -1451,7 +1464,8 @@ fieldset input[type=radio]:focus {
   float: initial;
 }
 
-#buddypress div.dir-search input[type=text], #buddypress li.groups-members-search input[type=text] {
+#buddypress div.dir-search input[type=text],
+#buddypress li.groups-members-search input[type=text] {
   font-size: initial;
   padding: 0.9375em;
 }
@@ -1473,7 +1487,9 @@ fieldset input[type=radio]:focus {
   font-size: inherit;
 }
 
-#buddypress ul.item-list li div.item-title, #buddypress ul.item-list li h3, #buddypress ul.item-list li h4 {
+#buddypress ul.item-list li div.item-title,
+#buddypress ul.item-list li h3,
+#buddypress ul.item-list li h4 {
   font-size: inherit;
 }
 
@@ -1525,7 +1541,8 @@ fieldset input[type=radio]:focus {
   color: #222;
 }
 
-.buddypress-wrap .bp-feedback.help .bp-icon, .buddypress-wrap .bp-feedback.info .bp-icon {
+.buddypress-wrap .bp-feedback.help .bp-icon,
+.buddypress-wrap .bp-feedback.info .bp-icon {
   background: #b9202f !important;
 }
 
@@ -1540,7 +1557,7 @@ fieldset input[type=radio]:focus {
 
 .half > div,
 .half > h3 {
-  width: 50%;
+  flex: 1;
 }
 
 .view-order-options {

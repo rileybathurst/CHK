@@ -47,17 +47,17 @@ $unid = $_GET['n']; -->
 									{ -->
 
 										<div class="run-the-stripes">
-											<!-- unid -->
-											<div class="print-top-line">
-												Order Number
-												| 
-												<strong class="print-highlights">
-													<!-- php echo $order->unid; -->
-													1001
-												</strong>
-											</div>
-
 											<div class="half"><!-- print group -->
+												<!-- unid -->
+												<div> <!-- class="print-top-line" -->
+													Order Number
+													| 
+													<strong class="print-highlights">
+														<!-- php echo $order->unid; -->
+														1001
+													</strong>
+												</div>
+
 												<!-- confirm -->
 												<div>
 														<!-- php if ($order->confirm == 1) { -->
@@ -77,29 +77,30 @@ $unid = $_GET['n']; -->
 												</div>
 											</div>
 
-											<!-- name -->
-											<div>
-												Name
-												| 
-												<strong>
-													<!-- php echo $order->name; -->
-													Riley Bathurst
-												</strong>
+											<div class="rts-flex"><!-- print group -->
+												<!-- name -->
+												<div class="rts-1">
+													Name
+													| 
+													<strong>
+														<!-- php echo $order->name; -->
+														Riley Bathurst
+													</strong>
+												</div>
+
+												<!-- add1 -->
+												<div class="rts-2">
+													Address
+													| 
+													<strong>
+														<!-- php echo $order->add1; ?> -->
+														PO Box 2673 Olympic Valley. CA. 96146. This might need to be longer
+													</strong>
+												</div>
 											</div>
 
-											<!-- add1 -->
-											<div>
-												Address
-												| 
-												<strong>
-													<!-- php echo $order->add1; ?> -->
-													PO Box 2673 Olympic Valley. CA. 96146. This might need to be longer
-												</strong>
-											</div>
-
-											<div class="half"><!-- print group -->
-												<!-- phone -->
-												<div>
+											<div class="rts-flex"><!-- print group -->
+												<div class="rts-1">
 													Phone
 													| 
 													<strong>
@@ -108,38 +109,27 @@ $unid = $_GET['n']; -->
 													</strong>
 												</div>
 
-												<!-- phone2 -->
-												<div>
-													Mobile
-													| 
+												<!-- email -->
+												<div class="rts-2">
+													Email | 
 													<strong>
-														<!-- php echo $order->phone2; -->
-														(530) 386-6296
-														<!-- // 📣 this can be hidden if not used -->
+														<!-- php echo $order->email; -->
+														riley@rileybathurst.com
 													</strong>
 												</div>
 											</div>
 
-											<!-- email -->
-											<div>
-												Email | 
-												<strong>
-													<!-- php echo $order->email; -->
-													riley@rileybathurst.com
-												</strong>
-											</div>
-
-											<!-- amp -->
-											<div>
-												Animal To Be Processed
-												| 
-												<strong>
-													<!-- php echo $order->amp; -->
-													Pig
-												</strong>
-											</div>
-
 											<div class="half"><!-- print group -->
+												<!-- amp -->
+												<div>
+													Animal To Be Processed
+													| 
+													<strong>
+														<!-- php echo $order->amp; -->
+														Pig
+													</strong>
+												</div>
+
 												<!-- people -->
 												<div>
 													No. Of People

@@ -1,4 +1,4 @@
-<h3 class="single-stripe">PORK - SHOULDER</h3>
+<div><h3>PORK - SHOULDER</h3></div><!-- class="single-stripe" -->
 
 <!-- ps_rolledshoulder rolledshoulder_ps -->
 <div>
@@ -106,7 +106,7 @@
 </div>
 
 <!--PORK - Loin -->
-<h3>PORK - LOIN</h3>
+<div class="single-stripe"><h3>PORK - LOIN</h3></div>
 
 <!-- pl_chops -->
 <div>
@@ -184,7 +184,7 @@
 </div>
 
 <!--PORK - Belly -->
-<h3>PORK - BELLY</h3>
+<div class="single-stripe"><h3>PORK - BELLY</h3></div>
 
 <!-- pb_bacon -->
 <div>
@@ -236,7 +236,7 @@
 	<!-- } else { echo " "; } ?> -->
 </div>
 
-<h3>PORK - LEG</h3>
+<div class="single-stripe"><h3>PORK - LEG</h3></div>
 
 <!--Ham on the Bone -->
 <div>

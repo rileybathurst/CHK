@@ -1690,7 +1690,7 @@ footer img {
 
 .half > div, // view-order needs some works
 .half > h3 {
-  width: 50%;
+  flex: 1;
 }
 
 .view-order-options {
