@@ -226,7 +226,7 @@
 	<?php } ?>
 	<strong>Marinate Cook in a Bag</strong>
 
-	<?php if ($order->marinate_pb == 1) { 
+	<?php if ($order->pb_marinate == 1) { 
 		echo $order->marinate_pb;
 	} else { echo " "; } ?>
 </div>
