@@ -32,7 +32,7 @@ function prefix_admin_orderdeerupdate() {
 		'v_leg'             =>      $v_leg ,
 		'leg_v'             =>      $_POST['leg_v'] ,
 		'v_leg_whole_half'  =>      $_POST['v_leg_whole_half'] ,
-		'v_excess_trim'     =>      $_POST['v_excess_trim'] ,
+		'v_excess_trim'     =>      $v_excess_trim ,
 		'excess_trim_v'     =>      $_POST['excess_trim_v'] ,
 		'spins'             =>      $spins ,
 		'small'             =>      $url

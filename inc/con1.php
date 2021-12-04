@@ -46,7 +46,7 @@ function prefix_admin_con1() {
 									<td width="596" align="center" style="background-color: #ffffff; border-top: 0px solid #000000; text-align: left; height: 50px;">
 										<img src="'.
 										$theme .
-										'/img/CHK-logo-600.png" alt="canterburyhomekill logo" loading="lazy" />
+										'/img/CHK-logo-600.png" alt="canterburyhomekill logo" />
 									</td>
 								</tr>
 
