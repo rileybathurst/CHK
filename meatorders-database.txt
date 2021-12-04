@@ -122,7 +122,7 @@
 122	t_cheerio	varchar(20)	latin1_swedish_ci		No	None		
 123	t_frankfurter	varchar(20)	latin1_swedish_ci		No	None		
 124	t_biersticks	varchar(20)	latin1_swedish_ci		No	None		
-125	t_rissoles	varchar(20)	latin1_swedish_ci		No	None		
+125	t_rissoles	int(1)			No	1		
 126	rissoles_t	varchar(20)	latin1_swedish_ci		No	None		
 127	t_koftas	varchar(20)	latin1_swedish_ci		No	None		
 128	spins	text	latin1_swedish_ci		Yes	NULL		

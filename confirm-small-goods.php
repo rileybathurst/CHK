@@ -356,7 +356,7 @@
 		<?php if ($order->t_rissoles != '') { 
 			echo $order->t_rissoles . ' KG';
 		}; ?>
-		<input type="hidden" name="t_bierst_rissolesticks" value="<?php echo $order->t_rissoles; ?>">
+		<input type="hidden" name="t_rissoles" value="<?php echo $order->t_rissoles; ?>">
 	
 		<?php if ($order->t_rissoles != '') { 
 			echo $order->rissoles_t;

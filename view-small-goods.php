@@ -402,7 +402,7 @@
 	<strong>Rissoles</strong>
 
 	<?php if ($order->t_rissoles >= 1) { 
-		echo $order->t_rissoles . 'KG';
+		echo $order->t_rissoles . 'KG ';
 	} else { echo '&nbsp;'; }
 
 	if ($order->t_rissoles >= 1) { 
