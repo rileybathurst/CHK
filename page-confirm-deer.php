@@ -130,7 +130,7 @@ $unid = $_GET['n'];
 											<strong>Excess Trim</strong>
 											
 											<?php if ($order->v_excess_trim == 1) { 
-												echo $order->v_excess_trim;
+												echo $order->excess_trim_v;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="excess_trim_v" value="<?php echo $order->excess_trim_v; ?>">
 										</p>
