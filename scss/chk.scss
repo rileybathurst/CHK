@@ -1739,3 +1739,24 @@ svg path {
 .round {
   border-color: black;
 }
+
+.rts-flex { // run the stripes
+  display: flex;
+  padding: 0 !important;
+
+/*   div {
+    border-left: 1px dashed #999;
+  } */
+
+  div:first-child {
+    border-left: none;
+  }
+
+  .rts-1 {
+    flex: 1;
+  }
+
+  .rts-2 {
+    flex: 2;
+  }
+}
