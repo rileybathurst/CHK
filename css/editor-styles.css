@@ -18,6 +18,9 @@
 /* body {
   // color: #fff;
 } */
+.is-style-stripes {
+  list-style: none;
+}
 .is-style-stripes li {
   padding: var(--small-space) var(--regular-space);
 }

@@ -47,16 +47,17 @@ $unid = $_GET['n'];
 									{ ?>
 
 										<div class="run-the-stripes">
-											<!-- unid -->
-											<div class="print-top-line">
-												Order Number
-												| 
-												<strong class="print-highlights">
-													<?php echo $order->unid; ?>
-												</strong>
-											</div>
-
 											<div class="half"><!-- print group -->
+
+												<!-- unid -->
+												<div>
+													Order Number
+													| 
+													<strong class="print-highlights">
+														<?php echo $order->unid; ?>
+													</strong>
+												</div>
+
 												<!-- confirm -->
 												<div>
 													<?php if ($order->confirm == 1) { ?>
@@ -75,8 +76,9 @@ $unid = $_GET['n'];
 												</div>
 											</div>
 
+										<div class="rts-flex"><!-- print group -->
 											<!-- name -->
-											<div>
+											<div class="rts-1">
 												Name
 												| 
 												<strong>
@@ -85,41 +87,36 @@ $unid = $_GET['n'];
 											</div>
 
 											<!-- add1 -->
-											<div>
+											<div class="rts-2">
 												Address
 												| 
 												<strong>
 													<?php echo $order->add1; ?>
 												</strong>
 											</div>
+										</div>
 
-											<div class="half"><!-- print group -->
-												<!-- phone -->
-												<div>
-													Phone
-													| 
-													<strong>
-														<?php echo $order->phone; ?>
-													</strong>
-												</div>
+										<div class="rts-flex"><!-- print group -->
 
-												<!-- phone2 -->
-												<div>
-													Mobile
-													| 
-													<strong>
-														<?php echo $order->phone2; ?>
-													</strong>
-												</div>
+											<!-- phone -->
+											<div class="rts-1">
+												Phone
+												| 
+												<strong>
+													<?php echo $order->phone; ?>
+												</strong>
 											</div>
 
 											<!-- email -->
-											<div>
+											<div class="rts-2">
 												Email | 
 												<strong>
 													<?php echo $order->email; ?>
 												</strong>
 											</div>
+										</div>
+
+										<div class="half"><!-- print group -->
 
 											<!-- amp -->
 											<div>
@@ -130,25 +127,24 @@ $unid = $_GET['n'];
 												</strong>
 											</div>
 
-											<div class="half"><!-- print group -->
-												<!-- people -->
-												<div>
-													No. Of People
-													| 
-													<strong>
-														<?php echo $order->people; ?>
-													</strong>
-												</div>
-
-												<!-- people -->
-												<div>
-													Decleration
-													| 
-													<strong>
-														<?php echo $order->declaration; ?>
-													</strong>
-												</div>
+											<!-- people -->
+											<div>
+												No. Of People
+												| 
+												<strong>
+													<?php echo $order->people; ?>
+												</strong>
 											</div>
+
+											<!-- people -->
+											<div>
+												Decleration
+												| 
+												<strong>
+													<?php echo $order->declaration; ?>
+												</strong>
+											</div>
+										</div>
 
 											<div class="view-order-options"><!-- print group -->
 												<div class="run-the-stripes"><!-- print group -->

@@ -159,7 +159,7 @@ $unid = $_GET['n'];
 
 								<!-- pl_bellybacon -->
 								<div>
-									<input id="pl_bellybacon" name="pl_bellybacon" type="checkbox"><label for="pl_baconchops">Loin Belly Bacon</label>
+									<input id="pl_bellybacon" name="pl_bellybacon" type="checkbox"><label for="pl_bellybacon">Loin Belly Bacon</label>
 								</div>
 
 								<!-- pb_rolled -->
