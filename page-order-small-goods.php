@@ -304,10 +304,10 @@ $unid = $_GET['n'];
 
 								<select id="rissoles_t" name="rissoles_t">
 									<option value="" disabled selected>Select</option>
-									<option value="pork-pineapple">Pork and Pineapple</option>
-									<option value="bacon-onion">Bacon and Onion</option>
-									<option value="steak-onion">Steak and Onion</option>
-									<option value="venison-bacon-onion">Venison, Bacon and Onion</option>
+									<option value="pork pineapple">Pork and Pineapple</option>
+									<option value="bacon onion">Bacon and Onion</option>
+									<option value="steak onion">Steak and Onion</option>
+									<option value="venison bacon onion">Venison, Bacon and Onion</option>
 								</select>
 
 								<hr /> 

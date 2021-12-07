@@ -47,8 +47,8 @@ $unid = $_GET['n'];
 											<option value="chops">Chops</option>
 											<option value="roll">Roll</option>
 											<option value="seasoned">Seasoned</option>
-											<option value="jointed-whole">Jointed whole</option>
-											<option value="jointed-half">Jointed half</option>
+											<option value="jointed whole">Jointed whole</option>
+											<option value="jointed half">Jointed half</option>
 									</select>
 								</div>
 
