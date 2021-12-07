@@ -25,7 +25,6 @@ function prefix_admin_con1() {
 
 		$subject = 'Canterbury Homekill Order: ' . $_POST['unid'];
 
-		// $custom-logo = the_custom_logo(); I presume this doent work but do some testing
 		$theme = get_template_directory_uri();
 
 		$top = '

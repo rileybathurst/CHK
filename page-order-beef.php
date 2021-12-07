@@ -196,7 +196,7 @@ $unid = $_GET['n'];
 										<option name="brisket_bf" value="whole">Whole</option>
 										<option name="brisket_bf" value="half">Half</option>
 										<option name="brisket_bf" value="mince">Mince</option>
-										<option name="brisket_bf" value="smoked-brisket-patties">Smoked Brisket Patties</option>
+										<option name="brisket_bf" value="smoked brisket patties">Smoked Brisket Patties</option>
 									</select>
 								</div>
 
