@@ -167,6 +167,7 @@ $unid = $_GET['n'];
 									<label for="b_chucksteak">Chuck Steak</label>
 									<select name="chucksteak_bf" id="chucksteak_bf" required>
 										<option name="chucksteak_bf" value="" disabled selected>Select</option>
+										<option name="chucksteak_bf" value="chuckroast">Chuck Roast</option>
 										<option name="chucksteak_bf" value="stew">Stew</option>
 										<option name="chucksteak_bf" value="mince">Mince</option>
 										<option name="chucksteak_bf" value="roast">Roast</option>
