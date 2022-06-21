@@ -249,7 +249,7 @@
 	</div><!-- columns -->
 
 	<picture class="home-image hide-for-print">
-		 <!-- this is its own area and needs to be written into the theme in a better way including come from the wp customizer -->
+		<!-- this is its own area and needs to be written into the theme in a better way including come from the wp customizer -->
 		<source srcset="<?php echo get_template_directory_uri(); ?>/img/iStock_000021247297_recipe.webp" type="image/webp">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/iStock_000021247297_recipe.jpg" alt="cooking" loading="lazy">
 	</picture>
