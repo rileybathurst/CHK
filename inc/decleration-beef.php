@@ -1,4 +1,6 @@
 <?php
+// TODO this is showing a warning
+// Warning: Use of undefined constant meatorders - assumed 'meatorders' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/chk/inc/decleration-beef.php on line 11
 // template-animal deals with first step of each animal
 // deals with variable set through form _POST
 // BEEF
@@ -8,7 +10,7 @@ function prefix_admin_declarationBeef() {
 			global $wpdb;
 
 			// Whats inserted
-			$wpdb->insert( meatorders ,
+			$wpdb->insert( 'meatorders' ,
 				array(
 					'unid'          => '$unid' ,
 					'animal'        => 'beef' ,
@@ -22,7 +24,7 @@ function prefix_admin_declarationBeef() {
 			);
 	
 			// this give the unid in the next url
-			 $id = $wpdb->insert_id;
+			$id = $wpdb->insert_id;
 			
 			// Redirect
 			wp_redirect( home_url() . '/order-details?n=' . $id );

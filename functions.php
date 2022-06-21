@@ -120,17 +120,17 @@ add_action('init','df_disable_admin_bar');
 
 // can this be done with wp variables
 // Change the email that root level mail is sent from
-add_filter( 'wp_mail_from', function( $email ) {
+/* add_filter( 'wp_mail_from', function( $email ) {
 	return 'info@canterburyhomekill.co.nz';
 });
 
 add_filter( 'wp_mail_from_name', function( $name ) {
 	return 'Canterbury Homekill';
-});
+}); */
 
 // Bring in all the additional files
 require get_parent_theme_file_path( '/inc/contact.php' );
-require get_parent_theme_file_path( '/inc/welcome-email.php' );
+// require get_parent_theme_file_path( '/inc/welcome-email.php' );
 
 // X Profile
 require get_parent_theme_file_path( '/inc/xprofileupdate.php' );
