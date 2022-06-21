@@ -30,31 +30,34 @@ let v_leg_third = document.getElementById("v_leg_third");
 let legs_whole_half = ['leg roast', 'leg primals'];
 
 // this has to be on top
-leg_v.addEventListener('change', (event) => {
+if (leg_v) {
+    console.log("leg_v exists");
+    leg_v.addEventListener('change', (event) => {
 
-    if (legs_whole_half.includes(event.target.value) && v_leg_whole_half.value === "third") {
-        // console.log("🦄");
+        if (legs_whole_half.includes(event.target.value) && v_leg_whole_half.value === "third") {
+            // console.log("🦄");
 
-        v_leg_whole_half.value = "";
-        v_leg_whole_half.removeAttribute("disabled", "");
-        v_leg_third.setAttribute("disabled", "");
+            v_leg_whole_half.value = "";
+            v_leg_whole_half.removeAttribute("disabled", "");
+            v_leg_third.setAttribute("disabled", "");
 
-    } else if (legs_whole_half.includes(event.target.value)) {
-        // console.log("🦖");
+        } else if (legs_whole_half.includes(event.target.value)) {
+            // console.log("🦖");
 
-        v_leg_whole_half.removeAttribute("disabled", "");
-        v_leg_third.setAttribute("disabled", "");
+            v_leg_whole_half.removeAttribute("disabled", "");
+            v_leg_third.setAttribute("disabled", "");
 
-    } else if (event.target.value == "ham") {
-        // console.log("🐮");
+        } else if (event.target.value == "ham") {
+            // console.log("🐮");
 
-        v_leg_whole_half.removeAttribute("disabled", "");
-        v_leg_third.removeAttribute("disabled", "");
+            v_leg_whole_half.removeAttribute("disabled", "");
+            v_leg_third.removeAttribute("disabled", "");
 
-    } else {
-        // console.log("🍔");
+        } else {
+            // console.log("🍔");
 
-        v_leg_whole_half.setAttribute("disabled", "");
-    }
+            v_leg_whole_half.setAttribute("disabled", "");
+        }
 
-});
+    });
+}
