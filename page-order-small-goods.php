@@ -183,7 +183,7 @@ $unid = $_GET['n'];
 
 							<!-- t_saveloys -->
 							<div>
-								<label for="t_plain">Saveloys</label>
+								<label for="t_saveloys">Saveloys</label>
 								<input type="number" pattern="\d*" id="t_saveloys" name="t_saveloys" />
 								<span class="postfix">KG</span>
 							</div>
