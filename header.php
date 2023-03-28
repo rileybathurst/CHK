@@ -22,27 +22,15 @@
 		});
 	</script>
 
-	<!-- analytics I think I can put this in the footer or jetpack if I use that -->
-	<!-- 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!-- Google Analytics 4 tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PLV33BF2L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-		ga('create', 'UA-12917302-6', 'auto');
-		ga('send', 'pageview');
-	</script> -->
-
-		<!-- June 2021 Updated tag -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12917302-6"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-12917302-6');
-	</script>
+  gtag('config', 'G-7PLV33BF2L');
+</script>
 
 	<!-- recaptcha enqueue this probably in the footer -->
 	<script src='https://www.google.com/recaptcha/api.js'></script>

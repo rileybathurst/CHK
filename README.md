@@ -75,3 +75,9 @@ Currently building a seperate dist folder this includes
 [PHP Cleaner](https://github.com/rileybathurst/php-cleaner)
 
 Doing something else with gulp could be useful
+
+## Email
+
+I'm going through WP Mail SMTP to send emails to Google.
+This doesn't need the pro version 
+I ran this through google cloud to get setup
