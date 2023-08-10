@@ -26,7 +26,10 @@ $unid = $_GET['n'];
 
 						<hr>
 
+						<!-- // TODO: theres a line break in the phone number make sure that can't happen with a span -->
 						<?php the_content(); ?> <!-- always double check the code editor if there are issues with the columns -->
+
+								
 
 						<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 							<fieldset class="run-the-stripes">
@@ -37,6 +40,14 @@ $unid = $_GET['n'];
 								<!-- use the url unid variable in the form to keep it on the same one -->
 								<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 								
+<div class="form-inline">
+	<div>
+	<h3>Mince</h3>
+									<p>Customers will receive mince from trim and any other cuts selected as mince.</p>
+			</div>
+								</div>
+
+								<!-- // TODO: remove the .form-inline and do it programitacally -->
 								<div class="form-inline">
 									<input id="b_fillet" type="checkbox" name="b_fillet" required checked>
 									<label for="b_fillet">Fillet</label>
@@ -64,6 +75,9 @@ $unid = $_GET['n'];
 								<div class="form-inline">
 										<input id="b_tbone" name="b_tbone" type="checkbox">
 										<label for="b_tbone">T-Bone</label>
+										<p>
+											T-Bone is made up from the fillet and porterhouse, if you tick T-Bone they don&apos;t get fillet and porterhouse
+									</p>
 								</div>
 
 								<div class="form-inline">
@@ -184,10 +198,10 @@ $unid = $_GET['n'];
 									</select>
 								</div>
 
-								<div class="form-inline">
+<!-- 								<div class="form-inline">
 									<input id="b_mince" name="b_mince" type="checkbox" required>
 									<label for="b_mince">Mince</label>
-								</div>
+								</div> -->
 
 								<div class="form-inline">
 									<input id="b_brisket" name="b_brisket" type="checkbox" required checked>
