@@ -10,21 +10,21 @@ $white: #fefefe;
 $black: #222;
 
 $background: #333;
-$secondary: #fff; // get rid of this
-$tertiary: #888; // get rid of this
-$quaternary: #222; // get rid of this
+$secondary: #fff; // TODO: get rid of this
+$tertiary: #888; // TODO: get rid of this
+$quaternary: #222; // TODO: get rid of this
 $highlight: #b9202f;
-$highlight-secondary: #ff482a; // this might be better with an rgba?
+$highlight-secondary: #ff482a; // ? this might be better with an rgba?
 
 $global-border-width: 3px;
 $global-border-radius: 0.2em;
 
 $font-stack: Georgia, Times, "Times New Roman", serif;
 
-$regular-space: 0.9375em;
+$regular-space: 0.9375em; // TODO: split this into block and inline
 $small-space: 0.625em; // remove this I can just use math
 
-$shadow: -$regular-space/2 0px $regular-space/2 rgba(0, 0, 0, 0.5);
+$shadow: -$small-space 0px $small-space rgba(0, 0, 0, 0.5);
 
 // CONTENTS
 
@@ -66,7 +66,8 @@ p,
 li, // keep an eye on this it could cause problems
 legend,
 label {
-  line-height: 1.563em; // pretty large due to black on white type
+  line-height: 1.5em; // pretty large due to black on white type
+  // ? a little over 25px? seems like we could round this better
 }
 
 //typescale needs to be implemented
@@ -119,6 +120,10 @@ hr {
 }
 */
 
+/*------------------*/
+//  #LINKS
+/*------------------*/
+
 a {
   color: $highlight;
 }
@@ -126,6 +131,19 @@ a {
 a:hover {
   color: $highlight-secondary;
 }
+
+.register__link {
+  display: inline-block;
+  color: $white;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-block-end: 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+/*------------------*/
+//  #TYPOGRAPHY
+/*------------------*/
 
 .serif {
   // I don't like the way this is named
@@ -136,9 +154,31 @@ a:hover {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
+blockquote {
+  border: 4px $highlight solid;
+  border-radius: $global-border-radius;
+  padding: $small-space;
+  font-size: 1.2rem;
+  color: $highlight;
+  background: $quaternary;
+  margin: 0; // adding this in as its needed for the front page but sure it should be the default?
+
+  p {
+    margin: $small-space;
+  }
+}
+
+/*------------------*/
+//  #A11Y
+/*------------------*/
+
 .screen-reader {
   display: none; // this needs work
 }
+
+/*------------------*/
+//  #VISIBILITY
+/*------------------*/
 
 .show-for-medium {
   /* visibility: hidden;
@@ -163,20 +203,6 @@ a:hover {
   display: inherit;
   @media (min-width: map-get($breakpoints, large)) {
     display: none;
-  }
-}
-
-blockquote {
-  border: 4px $highlight solid;
-  border-radius: $global-border-radius;
-  padding: $regular-space/2;
-  font-size: 1.2rem;
-  color: $highlight;
-  background: $quaternary;
-  margin: 0; // adding this in as its needed for the front page but sure it should be the default?
-
-  p {
-    margin: $regular-space/2;
   }
 }
 
@@ -209,13 +235,13 @@ select::-ms-expand {
   display: none;
 }
 select:hover {
-  border-color: #888;
+  border-color: #888; // TODO: use variables
 }
 select:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  border-color: #aaa; // TODO: use variables
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7); // TODO: use variables
   box-shadow: 0 0 0 3px -moz-mac-focusring;
-  color: white;
+  color: white; // TODO: use variables
   outline: none;
 }
 select option {
@@ -594,7 +620,7 @@ input[type="number"]:focus,
 input[type="password"]:focus {
   /* color | style | width */
   outline: $highlight solid $global-border-width;
-  outline-offset: $regular-space/4;
+  outline-offset: 0.25rem;
 
   border: $global-border-width solid transparent; // firefox reset
 }
@@ -844,13 +870,14 @@ input[type="password"]:focus {
   border-top: $global-border-width solid $white;
   border-bottom: $global-border-width solid $white;
   @media (min-width: 66em) {
+    // TODO: use variables
     // before the container floats only border the top and bottom
     border: $global-border-width solid $white;
   }
 }
 
 .border-slim {
-  border-top: $global-border-width/2 solid #999; // is the color just to be more subtle?
+  border-top: 2px solid #999; // ? is the color just to be more subtle?
 }
 
 .navi a {
@@ -1234,12 +1261,12 @@ label {
 }
 
 .animals > div > h3 {
-  margin-top: -$regular-space/2;
+  margin-top: -$small-space;
 }
 
 .animals-link {
   background: $highlight;
-  padding: $regular-space/2;
+  padding: $small-space;
   color: $white;
   border: $global-border-width solid $highlight;
   border-radius: $global-border-radius;
@@ -1321,7 +1348,7 @@ footer img {
   border-radius: $global-border-radius;
   // text-align: center;
   // box-shadow: $shadow;
-  box-shadow: -$regular-space/2 0px $regular-space/2 rgba(0, 0, 0, 0.25); // half strength shadow if its good it should be a variable
+  box-shadow: -$small-space 0px $small-space rgba(0, 0, 0, 0.25); // half strength shadow if its good it should be a variable
   font-size: 1.25em;
   font-family: sans-serif;
   font-weight: bold;
@@ -1359,7 +1386,7 @@ footer img {
 }
 
 #mediummenu > div > ul > li {
-  margin: $regular-space/2 $regular-space;
+  margin: $small-space $regular-space;
 }
 
 .page-layout {
@@ -1421,7 +1448,7 @@ footer img {
   }
 
   fieldset label {
-    margin-left: $regular-space/2;
+    margin-left: $small-space;
   }
   /* 	AKA, only do this if `-webkit-appearance: none` is supported. 
 	Which means IE11 and Opera Mini will get the old browser-styled checkbox. 
@@ -1538,7 +1565,7 @@ footer img {
   background: $tertiary;
   border: $global-border-width solid $tertiary;
   border-radius: $global-border-radius;
-  padding: $regular-space/2 0;
+  padding: $small-space 0;
 }
 
 // .custom-check {
@@ -1563,7 +1590,7 @@ footer img {
   transform: rotate(-45deg);
   display: inline-block;
   margin-left: $regular-space;
-  margin-right: $regular-space/2;
+  margin-right: $small-space;
 }
 
 .login-remeber input[type="checkbox"] {
@@ -1585,7 +1612,7 @@ footer img {
 #menu-footer li a {
   // margin-right: $regular-space;
   display: inline-block;
-  margin: $regular-space/2;
+  margin: $small-space;
   // padding: $regular-space;
   // color: white;
 }
@@ -1651,13 +1678,13 @@ footer img {
 #dir-members-search-form,
 #dir-activity-search-form {
   background: $white;
-  padding: $regular-space/2;
+  padding: $small-space;
 }
 
 #dir-members-search-submit,
 #dir-activity-search-submit {
   margin: 0 !important; // overwrite generic button
-  padding: $regular-space/2 !important;
+  padding: $small-space !important;
 }
 
 #dir-members-search-form .dashicons-search {
@@ -1740,11 +1767,12 @@ svg path {
   border-color: black;
 }
 
-.rts-flex { // run the stripes
+.rts-flex {
+  // run the stripes
   display: flex;
   padding: 0 !important;
 
-/*   div {
+  /*   div {
     border-left: 1px dashed #999;
   } */
 

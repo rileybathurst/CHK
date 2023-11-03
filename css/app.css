@@ -26,7 +26,7 @@ p,
 li,
 legend,
 label {
-  line-height: 1.563em;
+  line-height: 1.5em;
 }
 
 html {
@@ -74,6 +74,8 @@ hr {
 	width: 100%; // needed sometimes to test things but I think I would rather run defaults at the moment
 }
 */
+/*------------------*/
+/*------------------*/
 a {
   color: #b9202f;
 }
@@ -82,6 +84,17 @@ a:hover {
   color: #ff482a;
 }
 
+.register__link {
+  display: inline-block;
+  color: #fefefe;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-block-end: 1.5rem;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+/*------------------*/
+/*------------------*/
 .serif {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
@@ -90,10 +103,27 @@ a:hover {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
+blockquote {
+  border: 4px #b9202f solid;
+  border-radius: 0.2em;
+  padding: 0.625em;
+  font-size: 1.2rem;
+  color: #b9202f;
+  background: #222;
+  margin: 0;
+}
+blockquote p {
+  margin: 0.625em;
+}
+
+/*------------------*/
+/*------------------*/
 .screen-reader {
   display: none;
 }
 
+/*------------------*/
+/*------------------*/
 .show-for-medium {
   /* visibility: hidden;
   @media (min-width: map-get($breakpoints, medium)) {
@@ -123,19 +153,6 @@ a:hover {
   .hide-for-large {
     display: none;
   }
-}
-
-blockquote {
-  border: 4px #b9202f solid;
-  border-radius: 0.2em;
-  padding: 0.46875em;
-  font-size: 1.2rem;
-  color: #b9202f;
-  background: #222;
-  margin: 0;
-}
-blockquote p {
-  margin: 0.46875em;
 }
 
 select {
@@ -256,8 +273,7 @@ textarea {
 }
 
 .off-canvas {
-  min-height: 100%;
-  /* needed to fill the frame */
+  min-height: 100%; /* needed to fill the frame */
   z-index: 0;
   position: absolute;
   background: #333;
@@ -308,7 +324,7 @@ textarea {
   color: #333;
   padding: 0.9375em;
   border-bottom: 3px solid #aaa;
-  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  box-shadow: -0.625em 0px 0.625em rgba(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -421,7 +437,7 @@ input[type=submit],
   color: #fff;
   border: #b9202f 3px solid;
   border-radius: 0.2em;
-  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  box-shadow: -0.625em 0px 0.625em rgba(0, 0, 0, 0.5);
   display: inline-block;
   text-decoration: none;
   font-family: sans-serif;
@@ -533,7 +549,7 @@ input[type=number]:focus,
 input[type=password]:focus {
   /* color | style | width */
   outline: #b9202f solid 3px;
-  outline-offset: 0.234375em;
+  outline-offset: 0.25rem;
   border: 3px solid transparent;
 }
 
@@ -551,7 +567,7 @@ input[type=password]:focus {
 
 .signup-form input[type=text],
 .signup-form input[type=email] {
-  width: calc( 100% - 0.9375rem ) !important;
+  width: calc(100% - 0.9375rem) !important;
 }
 
 .signup-form input[type=submit] {
@@ -568,7 +584,7 @@ input[type=password]:focus {
   background: pink;
   display: flex;
   padding: 0.9375em;
-  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  box-shadow: -0.625em 0px 0.625em rgba(0, 0, 0, 0.5);
   border: 1px solid #333;
   border-radius: 0.2em;
 }
@@ -600,7 +616,7 @@ input[type=password]:focus {
 } */
 .login-username input,
 .login-password input {
-  width: calc( 100% - 2.9205em );
+  width: calc(100% - 2.9205em);
   padding: 0.9375em;
   margin: 0;
   caret-color: #b9202f;
@@ -760,7 +776,7 @@ input[type=password]:focus {
 }
 
 .border-slim {
-  border-top: 1.5px solid #999;
+  border-top: 2px solid #999;
 }
 
 .navi a {
@@ -1119,12 +1135,12 @@ label {
 }
 
 .animals > div > h3 {
-  margin-top: -0.46875em;
+  margin-top: -0.625em;
 }
 
 .animals-link {
   background: #b9202f;
-  padding: 0.46875em;
+  padding: 0.625em;
   color: #fefefe;
   border: 3px solid #b9202f;
   border-radius: 0.2em;
@@ -1175,7 +1191,7 @@ footer img {
 
 .minimenu-open {
   transform: translate3d(-100%, 0, 0);
-  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.5);
+  box-shadow: -0.625em 0px 0.625em rgba(0, 0, 0, 0.5);
 }
 
 #minimenu:target {
@@ -1202,7 +1218,7 @@ footer img {
   margin: 0.9375em;
   padding: 0.9375em;
   border-radius: 0.2em;
-  box-shadow: -0.46875em 0px 0.46875em rgba(0, 0, 0, 0.25);
+  box-shadow: -0.625em 0px 0.625em rgba(0, 0, 0, 0.25);
   font-size: 1.25em;
   font-family: sans-serif;
   font-weight: bold;
@@ -1238,7 +1254,7 @@ footer img {
 }
 
 #mediummenu > div > ul > li {
-  margin: 0.46875em 0.9375em;
+  margin: 0.625em 0.9375em;
 }
 
 .page-layout {
@@ -1292,16 +1308,14 @@ footer img {
     padding: 0;
     margin: 0;
   }
-
   fieldset label {
-    margin-left: 0.46875em;
+    margin-left: 0.625em;
   }
-
   /* 	AKA, only do this if `-webkit-appearance: none` is supported. 
   Which means IE11 and Opera Mini will get the old browser-styled checkbox. 
   Which works just fine. Old browsers can get old looking things. */
   input[type=radio],
-fieldset input[type=radio] {
+  fieldset input[type=radio] {
     /*  Remove the default styling.
     `-webkit-appearance` is not an official CSS property 
     & likely never will be. But it's also in 95% of browsers, 
@@ -1318,18 +1332,16 @@ fieldset input[type=radio] {
     margin: 0.3rem 0 0 0;
     padding: 0;
   }
-
   input[type=radio]:checked,
-fieldset input[type=radio]:checked {
+  fieldset input[type=radio]:checked {
     /* Prepare for placing the new checkmark. */
     position: relative;
     border: 2px solid #b9202f;
     /* Do a bug fix to keep iOS from adding dark background. */
     background: none;
   }
-
   input[id=radio]:checked::after,
-fieldset input[type=radio]:checked::after {
+  fieldset input[type=radio]:checked::after {
     /* Place (position) the new “filled-in” blob. */
     position: absolute;
     top: 0.3rem;
@@ -1340,21 +1352,17 @@ fieldset input[type=radio]:checked::after {
     border-radius: 50%;
     content: "";
   }
-
   /* Focus styles. */
   fieldset:focus-within {
     border-color: #b9202f;
   }
-
   fieldset:focus-within legend {
     color: #b9202f;
   }
-
   input[type=radio]:focus,
-fieldset input[type=radio]:focus {
+  fieldset input[type=radio]:focus {
     border: 1px solid #b9202f;
   }
-
   /* 	AKA, only do this if `-webkit-appearance: none` is supported. 
   Which means IE11 and Opera Mini will get the old browser-styled checkbox. 
   Which works just fine. Old browsers can get old looking things. */
@@ -1372,11 +1380,9 @@ fieldset input[type=radio]:focus {
     height: 1.6rem;
     border: 2px solid #888;
   }
-
   input[type=checkbox]:focus {
     border: 2px solid #b9202f;
   }
-
   input[type=checkbox]:checked {
     /* Prepare for placing the new checkmark. */
     position: relative;
@@ -1384,7 +1390,6 @@ fieldset input[type=radio]:focus {
     background: none;
     border-color: #b9202f;
   }
-
   input[type=checkbox]:checked::after {
     /* Place (position) the new checkmark. */
     position: absolute;
@@ -1416,7 +1421,7 @@ fieldset input[type=radio]:focus {
   background: #888;
   border: 3px solid #888;
   border-radius: 0.2em;
-  padding: 0.46875em 0;
+  padding: 0.625em 0;
 }
 
 .custom-check:after {
@@ -1436,7 +1441,7 @@ fieldset input[type=radio]:focus {
   transform: rotate(-45deg);
   display: inline-block;
   margin-left: 0.9375em;
-  margin-right: 0.46875em;
+  margin-right: 0.625em;
 }
 
 .login-remeber input[type=checkbox] {
@@ -1456,7 +1461,7 @@ fieldset input[type=radio]:focus {
 
 #menu-footer li a {
   display: inline-block;
-  margin: 0.46875em;
+  margin: 0.625em;
 }
 
 #buddypress div.dir-search {
@@ -1518,13 +1523,13 @@ fieldset input[type=radio]:focus {
 #dir-members-search-form,
 #dir-activity-search-form {
   background: #fefefe;
-  padding: 0.46875em;
+  padding: 0.625em;
 }
 
 #dir-members-search-submit,
 #dir-activity-search-submit {
   margin: 0 !important;
-  padding: 0.46875em !important;
+  padding: 0.625em !important;
 }
 
 #dir-members-search-form .dashicons-search {
@@ -1606,8 +1611,8 @@ svg path {
   display: flex;
   padding: 0 !important;
   /*   div {
-      border-left: 1px dashed #999;
-    } */
+    border-left: 1px dashed #999;
+  } */
 }
 .rts-flex div:first-child {
   border-left: none;
@@ -1629,257 +1634,218 @@ svg path {
   .hide-for-print {
     display: none;
   }
-
   body, h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
   }
-
   h3 {
     margin: 0;
   }
-
   form,
-button,
-input,
-select,
-textarea,
-.navigation,
-.main-navigation,
-.social-navigation,
-.sidebar,
-.content-bottom-widgets,
-.header-image,
-.page-links,
-.edit-link,
-.comment-respond,
-.comment-edit-link,
-.comment-reply-link,
-.comment-metadata .edit-link,
-.pingback .edit-link {
+  button,
+  input,
+  select,
+  textarea,
+  .navigation,
+  .main-navigation,
+  .social-navigation,
+  .sidebar,
+  .content-bottom-widgets,
+  .header-image,
+  .page-links,
+  .edit-link,
+  .comment-respond,
+  .comment-edit-link,
+  .comment-reply-link,
+  .comment-metadata .edit-link,
+  .pingback .edit-link {
     display: none;
   }
-
   body,
-blockquote cite,
-blockquote small,
-pre,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-summary h4,
-.entry-summary h5,
-.entry-summary h6,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6,
-.entry-content .author-title {
+  blockquote cite,
+  blockquote small,
+  pre,
+  .entry-content h4,
+  .entry-content h5,
+  .entry-content h6,
+  .entry-summary h4,
+  .entry-summary h5,
+  .entry-summary h6,
+  .comment-content h4,
+  .comment-content h5,
+  .comment-content h6,
+  .entry-content .author-title {
     font-size: 10pt;
     line-height: 10pt;
   }
-
   blockquote {
     font-size: 14.25pt;
   }
-
   .site-title,
-.page-title,
-.comments-title,
-.entry-content h2,
-.entry-summary h2,
-.comment-content h2,
-.widecolumn h2 {
+  .page-title,
+  .comments-title,
+  .entry-content h2,
+  .entry-summary h2,
+  .comment-content h2,
+  .widecolumn h2 {
     font-size: 17.25pt;
   }
-
   .site-description {
     display: block;
   }
-
   .entry-title {
     font-size: 24.75pt;
     line-height: 1.2727272727;
     margin-bottom: 1.696969697em;
   }
-
   .format-aside .entry-title,
-.format-image .entry-title,
-.format-video .entry-title,
-.format-quote .entry-title,
-.format-gallery .entry-title,
-.format-status .entry-title,
-.format-link .entry-title,
-.format-audio .entry-title,
-.format-chat .entry-title {
+  .format-image .entry-title,
+  .format-video .entry-title,
+  .format-quote .entry-title,
+  .format-gallery .entry-title,
+  .format-status .entry-title,
+  .format-link .entry-title,
+  .format-audio .entry-title,
+  .format-chat .entry-title {
     font-size: 17.25pt;
     line-height: 1.304347826;
     margin-bottom: 1.826086957em;
   }
-
   .entry-content h1,
-.entry-summary h1,
-.comment-content h1 {
+  .entry-summary h1,
+  .comment-content h1 {
     font-size: 21pt;
   }
-
   .entry-content h3,
-.entry-summary h3,
-.comment-content h3,
-body:not(.search-results) .entry-summary {
+  .entry-summary h3,
+  .comment-content h3,
+  body:not(.search-results) .entry-summary {
     font-size: 14.25pt;
     margin: 0 0.5em;
   }
-
   .site-description,
-.author-bio,
-.entry-footer,
-.sticky-post,
-.taxonomy-description,
-.entry-caption,
-.comment-metadata,
-.comment-notes,
-.comment-awaiting-moderation,
-.site-info,
-.wp-caption .wp-caption-text,
-.gallery-caption {
+  .author-bio,
+  .entry-footer,
+  .sticky-post,
+  .taxonomy-description,
+  .entry-caption,
+  .comment-metadata,
+  .comment-notes,
+  .comment-awaiting-moderation,
+  .site-info,
+  .wp-caption .wp-caption-text,
+  .gallery-caption {
     font-size: 9.75pt;
   }
-
   body,
-.site {
-    background: none !important;
-    /* Brute force since user agents all print differently. */
+  .site {
+    background: none !important; /* Brute force since user agents all print differently. */
   }
-
   body,
-blockquote cite,
-blockquote small,
-.site-branding .site-title a,
-.entry-title a,
-.comment-author {
-    color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+  blockquote cite,
+  blockquote small,
+  .site-branding .site-title a,
+  .entry-title a,
+  .comment-author {
+    color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
-
   blockquote,
-.page-header,
-.comments-title {
-    border-color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+  .page-header,
+  .comments-title {
+    border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
-
   blockquote,
-.site-description,
-body:not(.search-results) .entry-summary,
-body:not(.search-results) .entry-summary blockquote,
-.author-bio,
-.entry-footer,
-.entry-footer a,
-.sticky-post,
-.taxonomy-description,
-.entry-caption,
-.comment-author,
-.comment-metadata a,
-.comment-notes,
-.comment-awaiting-moderation,
-.site-info,
-.site-info a,
-.wp-caption .wp-caption-text,
-.gallery-caption {
-    color: #686868 !important;
-    /* Make sure color schemes don't affect to print */
+  .site-description,
+  body:not(.search-results) .entry-summary,
+  body:not(.search-results) .entry-summary blockquote,
+  .author-bio,
+  .entry-footer,
+  .entry-footer a,
+  .sticky-post,
+  .taxonomy-description,
+  .entry-caption,
+  .comment-author,
+  .comment-metadata a,
+  .comment-notes,
+  .comment-awaiting-moderation,
+  .site-info,
+  .site-info a,
+  .wp-caption .wp-caption-text,
+  .gallery-caption {
+    color: #686868 !important; /* Make sure color schemes don't affect to print */
   }
-
   code,
-hr {
-    background-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+  hr {
+    background-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
-
   pre,
-abbr,
-acronym,
-table,
-th,
-td,
-.author-info,
-.comment-list article,
-.comment-list .pingback,
-.comment-list .trackback,
-.no-comments {
-    border-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+  abbr,
+  acronym,
+  table,
+  th,
+  td,
+  .author-info,
+  .comment-list article,
+  .comment-list .pingback,
+  .comment-list .trackback,
+  .no-comments {
+    border-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
-
   a {
-    color: #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    color: #007acc !important; /* Make sure color schemes don't affect to print */
   }
-
   .entry-content a,
-.entry-summary a,
-.taxonomy-description a,
-.comment-content a,
-.pingback .comment-body > a {
+  .entry-summary a,
+  .taxonomy-description a,
+  .comment-content a,
+  .pingback .comment-body > a {
     box-shadow: none;
-    border-bottom: 1px solid #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
   }
-
   .site {
     margin: 5%;
   }
-
   .site-inner {
     max-width: none;
   }
-
   .site-header {
     padding: 0 0 1.75em;
   }
-
   .site-branding {
     margin-top: 0;
     margin-bottom: 1.75em;
   }
-
   .site-main {
     margin-bottom: 3.5em;
   }
-
   .entry-header,
-.entry-footer,
-.page-header,
-.page-content,
-.entry-content,
-.entry-summary,
-.post-thumbnail,
-.comments-area {
+  .entry-footer,
+  .page-header,
+  .page-content,
+  .entry-content,
+  .entry-summary,
+  .post-thumbnail,
+  .comments-area {
     margin-right: 0;
     margin-left: 0;
   }
-
   .post-thumbnail,
-.site-main > article {
+  .site-main > article {
     margin-bottom: 3.5em;
   }
-
   .entry-content blockquote.alignleft,
-.entry-content blockquote.alignright {
+  .entry-content blockquote.alignright {
     border-width: 4px 0 0 0;
     padding: 0.9473684211em 0 0;
     width: -webkit-calc(50% - 0.736842105em);
     width: calc(50% - 0.736842105em);
   }
-
   body:not(.search-results) .entry-header + .entry-summary {
     margin-top: -1.473684211em;
   }
-
   .site-footer,
-.widecolumn {
+  .widecolumn {
     padding: 0;
   }
-
   /* .line-higher {
   	line-height: 12pt;
   } */
@@ -1887,70 +1853,57 @@ td,
     color: #ff0000 !important;
     line-height: 0.5rem;
   }
-
   .border-slim {
     border-top: 1px dashed #999;
   }
-
   /* .print-highlights {
   	color: $highlight !important; 5.0 this doesnt work
   } */
   .over-background {
     background: none;
   }
-
   .is-style-stripes li:nth-child(2n+1) {
     background: none;
     border: none;
   }
-
   .light-back,
-.is-style-light-back {
+  .is-style-light-back {
     background: none;
     border: none;
   }
-
   .animals-link {
     background: none;
     border: none;
   }
-
   .container {
     margin: 0;
     width: 210mm;
   }
-
   .set-in,
-.set-in .set-in {
+  .set-in .set-in {
     margin: 0;
   }
-
   .is-style-stripes li:nth-child(odd),
-.stripes li:nth-child(odd),
-.stripe, .run-the-stripes div:nth-child(odd),
-.run-the-stripes li:nth-child(odd) {
+  .stripes li:nth-child(odd),
+  .stripe, .run-the-stripes div:nth-child(odd),
+  .run-the-stripes li:nth-child(odd) {
     background: none;
   }
-
   .single-stripe {
     background: none;
   }
-
   .view-order-options {
     width: 100% !important;
     padding: 0 !important;
     border: none !important;
   }
-
   .run-the-stripes > div {
     border-top: 1px dashed #999;
   }
-
   .print-top-line {
     border: none !important;
     padding-top: 0 !important;
   }
-
   .half div {
     border-left: 1px dashed #999;
     flex: 1;
@@ -1958,7 +1911,6 @@ td,
   .half div:first-child {
     border-left: none;
   }
-
   .rts-flex {
     display: flex;
     padding: 0 !important;
