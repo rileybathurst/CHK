@@ -231,7 +231,7 @@
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Plain Bulk</strong>
+	<strong>Plain</strong>
 
 	<?php if ($order->t_plain >= 1) { 
 		echo $order->t_plain . 'KG';
