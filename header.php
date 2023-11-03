@@ -77,7 +77,71 @@
 					);
 					wp_login_form( $mini_login );
 				?>
-				<button href="<?php echo home_url(); ?>/?page_id= php echo (get_page_by_title('register')->ID); ?>" class="button drop">Sign Up</button>
+
+<hr />
+
+before
+
+ <?php echo (get_page_by_title('register')->ID); ?>
+
+<!-- php
+	$query = new WP_Query( array( 'name' => 'register' ) );
+	echo $query;
+				-->
+
+	<?php
+	$query = new WP_Query( array( 'pagename' => 'register' ) );
+	// $query = new WP_Query( array( 'name' => 'Hello world!' ) );
+
+/* 	if ( $query->have_posts() ) {
+		echo '<ul>';
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			echo '<li>' . esc_html( get_the_title() ) . '</li>';
+		}
+		echo '</ul>';
+	} else {
+		esc_html_e( 'Sorry, no posts matched your criteria.' );
+	} */
+
+	// echo $query->post->ID;
+
+	// echo '<pre>'; print_r($query); echo '</pre>';
+
+	// this works but its old and deprecated which is annoying
+	// echo (get_page_by_title('register')->ID);
+
+
+	if ( $query->have_posts() ) {
+		echo 'hey';
+		$query->the_post();
+			echo '<li>' . esc_html( get_the_title() ) . '</li>';
+			echo '<li>' . esc_html( get_the_permalink() ) . '</li>';
+	} else {
+		echo 'nope';
+	}
+
+
+
+	// Restore original Post Data.
+	wp_reset_postdata();
+
+	?>
+
+after
+
+<?php $query = new WP_Query( array( 'name' => 'register' ) );
+	if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+					$query->the_post(); ?>
+					<a href="<?php esc_html( get_the_permalink() ); ?>" class="button"><?php esc_html( get_the_permalink() ); ?>Sign Up</a>
+			<?php }
+	}
+	wp_reset_postdata();
+	?>
+
+			<hr />
+
 			<?php } ?>
 			<hr>
 		</div>

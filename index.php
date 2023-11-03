@@ -44,7 +44,7 @@
 				<?php } // if is single
 
 				// pagination
-				if ( $wp_query->max_num_pages > 1 ) : ?>	
+				if ( $wp_query->max_num_pages > 1 ) : ?>
 					<h4>Look deeper into the site</h4>
 					<h4><?php next_posts_link ( '<span class="meta-nav">&larr;</span> Older posts' ) ; ?></h4>
 					<h4><?php previous_posts_link ( '<span class="meta-nav">&rarr;</span> Newer posts' ) ; ?></h4>
