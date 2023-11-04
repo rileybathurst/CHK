@@ -39,12 +39,12 @@ $unid = $_GET['n'];
 										
 								<!-- use the url unid variable in the form to keep it on the same one -->
 								<input type="hidden" name="unid" value="<?php echo $unid; ?>">
-								
-<div class="form-inline">
-	<div>
-	<h3>Mince</h3>
-									<p>Customers will receive mince from trim and any other cuts selected as mince.</p>
-			</div>
+
+								<div class="form-inline">
+									<div>
+										<h3>Mince</h3>
+										<p>Customers will receive mince from trim and any other cuts selected as mince.</p>
+									</div>
 								</div>
 
 								<!-- // TODO: remove the .form-inline and do it programitacally -->

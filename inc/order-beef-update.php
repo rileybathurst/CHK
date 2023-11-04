@@ -63,10 +63,10 @@ function prefix_admin_orderbeefupdate() {
 			// 'b_mince'           => $b_mince ,
 			'b_brisket'         => $b_brisket ,
 			'brisket_bf'        => $_POST['brisket_bf'] ,
-			'b_shortribs'       => $_POST['b_shortribs'] ,
-			'b_smoker'          => $_POST['b_smoker'] ,
-			'b_assistance'      => $_POST['b_assistance'] ,
-			'spins'             => $_POST['spins'],
+			'b_shortribs'       => $b_shortribs ,
+			'b_smoker'          => $b_smoker ,
+			'b_assistance'      => $b_assistance ,
+			'spins'             => $_POST['spins'], 
 			'small'             => $url
 		) ,
 
