@@ -165,14 +165,6 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_mince -->
-<div>
-	<?php if ($order->b_mince == 1) { ?>
-		<span class="unicode highlights spacer">✓</span>
-	<?php } else { echo ' '; } ?>
-	<strong>Mince</span></strong>
-</div>
-
 <!-- b_brisket brisket_bf -->
 <div>
 	<?php if ($order->b_brisket == 1) { ?>
@@ -185,4 +177,34 @@
 	<?php if ($order->b_brisket == 1) { 
 		echo $order->brisket_bf;
 	} else { echo ' '; } ?>
+</div>
+
+<!-- b_shortribs -->
+<div>
+	<?php if ($order->b_shortribs == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Short Ribs</strong>
+</div>
+
+<!-- b_smoker -->
+<div>
+	<?php if ($order->b_smoker == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Alter cut to low and slow smoker style</strong>
+</div>
+
+<!-- b_assistance -->
+<div>
+	<?php if ($order->b_assistance == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Need assistance, not sure if my cuts are correct</strong>
 </div>

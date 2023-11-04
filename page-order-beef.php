@@ -181,10 +181,13 @@ $unid = $_GET['n'];
 									<label for="b_chucksteak">Chuck Steak</label>
 									<select name="chucksteak_bf" id="chucksteak_bf" required>
 										<option name="chucksteak_bf" value="" disabled selected>Select</option>
-										<option name="chucksteak_bf" value="chuckroast">Chuck Roast</option>
+<!-- 										<option name="chucksteak_bf" value="chuckroast">Chuck Roast</option>
 										<option name="chucksteak_bf" value="stew">Stew</option>
 										<option name="chucksteak_bf" value="mince">Mince</option>
-										<option name="chucksteak_bf" value="roast">Roast</option>
+										<option name="chucksteak_bf" value="roast">Roast</option> -->
+										<option name="chucksteak_bf" value="steak">Steak</option>
+										<option name="chucksteak_bf" value="flat">Flat</option>
+										<option name="chucksteak_bf" value="low and slow">Low and Slow</option>
 									</select>
 								</div>
 
@@ -198,10 +201,17 @@ $unid = $_GET['n'];
 									</select>
 								</div>
 
-<!-- 								<div class="form-inline">
-									<input id="b_mince" name="b_mince" type="checkbox" required>
-									<label for="b_mince">Mince</label>
-								</div> -->
+								<div class="form-inline">
+									<input id="b_brisket" name="b_brisket" type="checkbox" required checked>
+									<label for="b_brisket">Brisket</label>
+									<select name="brisket_bf" id="brisket_bf" required>
+										<option name="brisket_bf" value="" disabled selected>Select</option>
+										<option name="brisket_bf" value="whole">Whole</option>
+										<option name="brisket_bf" value="half">Half</option>
+										<option name="brisket_bf" value="mince">Mince</option>
+										<option name="brisket_bf" value="smoked brisket patties">Smoked Brisket Patties</option>
+									</select>
+								</div>
 
 								<div class="form-inline">
 									<input id="b_brisket" name="b_brisket" type="checkbox" required checked>
@@ -213,6 +223,21 @@ $unid = $_GET['n'];
 										<option name="brisket_bf" value="mince">Mince</option>
 										<option name="brisket_bf" value="smoked brisket patties">Smoked Brisket Patties</option>
 									</select>
+								</div>
+
+								<div class="form-inline">
+									<input id="b_shortribs" name="b_shortribs" type="checkbox" required checked>
+									<label for="b_shortribs">Short Ribs</label>
+								</div>
+
+								<div class="form-inline">
+									<input id="b_smoker" name="b_smoker" type="checkbox" required checked>
+									<label for="b_smoker">Alter cut to low and slow smoker style</label>
+								</div>
+
+								<div class="form-inline">
+									<input id="b_assistance" name="b_assistance" type="checkbox" required checked>
+									<label for="b_assistance">Need assistance, not sure if my cuts are correct</label>
 								</div>
 
 								<?php include("order-extra.php"); ?>

@@ -288,19 +288,6 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- b_mince -->
-									<div>
-										<p>
-											<?php if ($order->b_mince == 1) { ?>
-												<span class="unicode check spacer">✓</span>
-											<?php } else { ?>
-												<span class="unicode cross spacer">✗</span>
-											<?php } ?>
-											<input type="hidden" name="b_mince" value="<?php echo $order->b_mince; ?>">
-											<strong>Mince</strong>
-										</p>
-									</div>
-
 									<!-- b_brisket brisket_bf -->
 									<div>
 										<p>
@@ -316,6 +303,45 @@ $unid = $_GET['n'];
 												echo $order->brisket_bf;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="brisket_bf" value="<?php echo $order->brisket_bf; ?>">
+										</p>
+									</div>
+
+									<!-- b_shortribs -->
+									<div>
+										<p>
+											<?php if ($order->b_shortribs == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_shortribs" value="<?php echo $order->b_shortribs; ?>">
+											<strong>Short Ribs</strong>
+										</p>
+									</div>
+
+									<!-- b_smoker -->
+									<div>
+										<p>
+											<?php if ($order->b_smoker == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_smoker" value="<?php echo $order->b_smoker; ?>">
+											<strong>Alter cut to low and slow smoker style</strong>
+										</p>
+									</div>
+
+									<!-- b_assistance -->
+									<div>
+										<p>
+											<?php if ($order->b_assistance == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_assistance" value="<?php echo $order->b_assistance; ?>">
+											<strong>Need assistance, not sure if my cuts are correct</strong>
 										</p>
 									</div>
 

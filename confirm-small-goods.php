@@ -216,7 +216,7 @@
 		<?php } else { ?>
 			<span class="unicode cross spacer">✗</span>
 		<?php } ?>
-		<input type="hidden" name="b_mince" value="<?php echo $order->sg_hogg_casing; ?>">
+		<input type="hidden" name="sg_hogg_casing" value="<?php echo $order->sg_hogg_casing; ?>">
 		<strong>Hogg Casings</strong>
 	</p>
 </div>
@@ -229,7 +229,7 @@
 		<?php } else { ?>
 			<span class="unicode cross spacer">✗</span>
 		<?php } ?>
-		<input type="hidden" name="b_mince" value="<?php echo $order->sg_gormet_cheese; ?>">
+		<input type="hidden" name="sg_gormet_cheese" value="<?php echo $order->sg_gormet_cheese; ?>">
 		<strong>Add cheese to gourmet sausages</strong>
 	</p>
 </div>

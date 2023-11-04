@@ -65,6 +65,7 @@ $unid = $_GET['n'];
 										<option value="seasoned">Seasoned</option>
 										<option value="dog food">Dog Food</option>
 										<option value="sausages">Sausages</option>
+										<option value="spare rib plate">Spare Rib Plate</option>
 									</select>
 								</div>
 

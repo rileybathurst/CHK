@@ -134,19 +134,33 @@ $beef = '
 	</p>
 
 	<p>
-		Mince
+		Brisket
 		<strong>'.
-			$_POST['b_mince'].
+			$_POST['b_brisket'].
+		'</strong>
+		<em> '.
+			$_POST['brisket_bf'].
+		'</em>
+	</p>
+
+	<p>
+		Short Ribs
+		<strong>'.
+			$_POST['b_shortribs'].
 		'</strong>
 	</p>
 
 	<p>
-	Brisket
-	<strong>'.
-		$_POST['b_brisket'].
-	'</strong>
-	<em> '.
-		$_POST['brisket_bf'].
-	'</em>
-</p>
+		Alter cut to low and slow smoker style
+		<strong>'.
+			$_POST['b_smoker'].
+		'</strong>
+	</p>
+
+	<p>
+		Need assistance
+		<strong>'.
+			$_POST['b_assistance'].
+		'</strong>
+	</p>
 ';
