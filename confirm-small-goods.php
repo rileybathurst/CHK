@@ -178,7 +178,7 @@
 <!-- t_plain -->
 <div>
 	<p>
-		Plain Bulk
+		Plain
 		<?php if ($order->t_plain != '') { 
 			echo $order->t_plain . ' KG';
 		}; ?>

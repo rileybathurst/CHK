@@ -187,14 +187,6 @@ $unid = $_GET['n'];
 								<input type="number" pattern="\d*" id="t_saveloys" name="t_saveloys" />
 								<span class="postfix">KG</span>
 							</div>
-							
-							<!-- t_bulk 
-							// TODO this is not yet implemented
-							<div>
-								<label for="t_plain">Bulk</label>
-								<input type="number" pattern="\d*" id="t_saveloys" name="t_saveloys" />
-								<span class="postfix">KG</span>
-							</div> -->
 
 							<!-- sg_hogg_casing -->
 							<div>
