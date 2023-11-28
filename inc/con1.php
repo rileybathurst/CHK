@@ -364,7 +364,9 @@ function prefix_admin_con1() {
 											</span>
 										</td>
 									</tr>
-
+'.
+$_POST['v_fillet'] $_POST['v_backstrap'] $_POST['v_rump'] $_POST['rump_v']
+.'
 							</table>
 						</tr>
 					</tbody>
