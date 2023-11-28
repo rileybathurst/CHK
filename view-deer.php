@@ -25,7 +25,7 @@
 	<?php } ?>
 	<strong>Backstrap</span></strong>
 
-	<?php if ($order->backstrap_v == 1) {
+	<?php if ($order->v_backstrap == 1) {
 		echo $order->backstrap_v;
 	} else {
 		echo ' ';
