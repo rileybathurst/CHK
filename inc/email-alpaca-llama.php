@@ -44,4 +44,11 @@ $alpacallama = '<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px
 			$_POST['leg_lb'].
 		'</em>
 	</p>
+
+	<p>
+		Assistance
+		<strong>'.
+			$_POST['assistance'].
+		'</strong>
+	</p>
 ';

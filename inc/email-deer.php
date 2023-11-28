@@ -45,4 +45,11 @@ $deer = '
 			$_POST['excess_trim_v'].
 		'</em>
 	</p>
+
+	<p>
+		Assistance
+		<strong>'.
+			$_POST['assistance'].
+		'</strong>
+	</p>
 ';

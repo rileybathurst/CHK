@@ -158,9 +158,9 @@ $beef = '
 	</p>
 
 	<p>
-		Need assistance
+		Assistance
 		<strong>'.
-			$_POST['b_assistance'].
+			$_POST['assistance'].
 		'</strong>
 	</p>
 ';

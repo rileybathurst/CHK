@@ -125,13 +125,6 @@ function prefix_admin_con1() {
 										'</strong>
 										</p>
 
-										<p>
-											Assistance
-											<strong>'.
-												$_POST['assistance'].
-											'</strong>
-										</p>
-
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
 
 										<h3>Small Goods Options</h3>

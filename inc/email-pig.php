@@ -252,4 +252,11 @@ $pig = '
 			$_POST['hocks_pg'].
 		'</em>
 	</p>
+
+	<p>
+		Assistance
+		<strong>'.
+			$_POST['assistance'].
+		'</strong>
+	</p>
 ';

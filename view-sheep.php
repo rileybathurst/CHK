@@ -56,3 +56,12 @@
 		echo $order->leg_lb;
 	} else { echo '&nbsp;'; } ?>
 </div>
+
+<div>
+	<?php if ( $order->assistance >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Assistance</strong>
+</div>

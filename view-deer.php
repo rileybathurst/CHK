@@ -2,7 +2,7 @@
 
 <!-- v_fillet fillet_v -->
 <div>
-	<?php if ($order->fillet_v == 1) { ?>
+	<?php if ($order->v_fillet == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
@@ -18,7 +18,7 @@
 
 <!-- v_backstrap backstrap_v -->
 <div>
-	<?php if ($order->backstrap_v == 1) { ?>
+	<?php if ($order->v_backstrap == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
@@ -34,14 +34,14 @@
 
 <!-- v_rump rump_v -->
 <div>
-	<?php if ($order->rump_v == 1) { ?>
+	<?php if ($order->v_rump == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Rump</span></strong>
 
-	<?php if ($order->rump_v == 1) {
+	<?php if ($order->v_rump == 1) {
 		echo $order->v_rump;
 	} else {
 		echo ' ';
@@ -62,4 +62,13 @@
 	} else {
 		echo ' ';
 	} ?>
+</div>
+
+<div>
+	<?php if ( $order->assistance >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Assistance</strong>
 </div>

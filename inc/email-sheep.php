@@ -45,4 +45,11 @@ $sheep = '
 			$_POST['leg_lb'].
 		'</em>
 	</p>
+
+	<p>
+		Assistance
+		<strong>'.
+			$_POST['assistance'].
+		'</strong>
+	</p>
 ';

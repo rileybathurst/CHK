@@ -27,7 +27,7 @@ function prefix_admin_orderdeerupdate() {
 	$wpdb->update( 'meatorders' ,
 
 	array(
-		'v_fillet'         =>      $v_fillet ,
+		'v_fillet'         =>       $v_fillet ,
 		'fillet_v'          =>      $_POST['fillet_v'] ,
 		'v_backstrap'       =>      $v_backstrap ,
 		'backstrap_v'       =>      $_POST['backstrap_v'] ,
