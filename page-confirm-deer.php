@@ -59,64 +59,60 @@ $unid = $_GET['n'];
 									<h4>Deer Options</h4>
 
 									<!-- deer options -->
-									<!-- v_shoulder --> 
+									<!-- v_fillet fillet_v --> 
 									<div>
 										<p>
-											<?php if ($order->v_shoulder == 1) { ?>
+											<?php if ($order->v_fillet == 1) { ?>
 												<span class="unicode check spacer">✓</span>
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_shoulder; ?>">
-											<strong>Shoulder</strong>
+											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_fillet; ?>">
+											<strong>Fillet</strong>
 											
-											<?php if ($order->v_shoulder == 1) { 
-												echo $order->shoulder_v;
+											<?php if ($order->v_fillet == 1) { 
+												echo $order->fillet_v;
 											} else { echo ' '; } ?>
-											<input type="hidden" name="shoulder_v" value="<?php echo $order->shoulder_v; ?>">
+											<input type="hidden" name="fillet_v" value="<?php echo $order->fillet_v; ?>">
 										</p>
 									</div>
 
-									<!-- v_loin -->
+									<!-- v_backstrap backstrap_v --> 
 									<div>
 										<p>
-											<?php if ($order->v_loin == 1) { ?>
+											<?php if ($order->v_backstrap == 1) { ?>
 												<span class="unicode check spacer">✓</span>
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_loin" value="<?php echo $order->v_loin; ?>">
-											<strong>Backstrap and Fillets</strong>
+											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_backstrap; ?>">
+											<strong>Backstrap</strong>
 											
-											<?php if ($order->v_loin == 1) { 
-												echo $order->loin_v;
+											<?php if ($order->v_backstrap == 1) { 
+												echo $order->backstrap_v;
 											} else { echo ' '; } ?>
-											<input type="hidden" name="loin_v" value="<?php echo $order->loin_v; ?>">
+											<input type="hidden" name="backstrap_v" value="<?php echo $order->backstrap_v; ?>">
 										</p>
 									</div>
 
-									<!-- v_leg v_leg_whole_half -->
+									<!-- v_rump rump_v --> 
 									<div>
 										<p>
-											<?php if ($order->v_leg == 1) { ?>
+											<?php if ($order->v_rump == 1) { ?>
 												<span class="unicode check spacer">✓</span>
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_leg" value="<?php echo $order->v_leg; ?>">
-											<strong>Leg</strong>
-
-											<?php if ($order->v_leg == 1) { 
-												echo $order->leg_v;
-											} else { echo ' '; } ?>
-											<input type="hidden" name="leg_v" value="<?php echo $order->leg_v; ?>">
+											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_rump; ?>">
+											<strong>Rump</strong>
 											
-											<?php if ($order->v_leg == 1) { 
-												echo $order->v_leg_whole_half;
+											<?php if ($order->v_rump == 1) { 
+												echo $order->rump_v;
 											} else { echo ' '; } ?>
-											<input type="hidden" name="v_leg_whole_half" value="<?php echo $order->v_leg_whole_half; ?>">
+											<input type="hidden" name="backstrap_v" value="<?php echo $order->rump_v; ?>">
 										</p>
 									</div>
+
 
 									<!-- v_excess_trim excess_trim_v -->
 									<div>
@@ -133,6 +129,19 @@ $unid = $_GET['n'];
 												echo $order->excess_trim_v;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="excess_trim_v" value="<?php echo $order->excess_trim_v; ?>">
+										</p>
+									</div>
+
+									<!-- assistance -->
+									<div>
+										<p>
+											<?php if ($order->assistance == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="assistance" value="<?php echo $order->assistance; ?>">
+											<strong>Need assistance, not sure if my cuts are correct</strong>
 										</p>
 									</div>
 

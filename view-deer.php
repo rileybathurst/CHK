@@ -1,54 +1,48 @@
 <h3 class="single-stripe">DEER</h3>
 
-<!-- v_shoulder shoulder_v -->
+<!-- v_filllet fillet_v -->
 <div>
-	<?php if ($order->v_shoulder == 1) { ?>
+	<?php if ($order->fillet_v == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Shoulder</span></strong>
+	<strong>Fillet</span></strong>
 
-	<?php if ($order->v_shoulder == 1) {
-		echo $order->shoulder_v;
+	<?php if ($order->v_filllet == 1) {
+		echo $order->fillet_v;
 	} else {
 		echo ' ';
 	} ?>
 </div>
 
-<!-- v_loin loin_v -->
+<!-- v_backstrap backstrap_v -->
 <div>
-	<?php if ($order->v_loin == 1) { ?>
+	<?php if ($order->backstrap_v == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Loin</strong>
+	<strong>Backstrap</span></strong>
 
-	<?php if ($order->v_loin == 1) {
-		echo $order->loin_v;
+	<?php if ($order->backstrap_v == 1) {
+		echo $order->v_backstrap;
 	} else {
 		echo ' ';
 	} ?>
 </div>
 
-<!-- v_leg v_leg_whole_half -->
+<!-- v_rump rump_v -->
 <div>
-	<?php if ($order->v_leg == 1) { ?>
+	<?php if ($order->rump_v == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Leg</strong>
+	<strong>Rump</span></strong>
 
-	<?php if ($order->v_leg == 1) {
-		echo $order->leg_v;
-	} else {
-		echo ' ';
-	} ?>
-
-	<?php if ($order->v_leg == 1) {
-		echo $order->v_leg_whole_half;
+	<?php if ($order->rump_v == 1) {
+		echo $order->v_rump;
 	} else {
 		echo ' ';
 	} ?>

@@ -37,68 +37,50 @@ $unid = $_GET['n'];
 								<!-- use the url unid variable in the form to keep it on the same one -->
 								<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 
-								<!-- comes from original naming of venison -->
-								<!-- deer shoulder v_shoulder shoulder_v -->
+								<!-- deer fillet v_fillet fillet_v -->
 								<div>
-									<input  name="v_shoulder" id="v_shoulder" type="checkbox">
-									<label for="v_shoulder">Shoulder</label>
+									<input  name="v_filllet" id="v_filllet" type="checkbox">
+									<label for="v_filllet">Fillet</label>
 
-									<select name="shoulder_v" id="shoulder_v" required>
+									<select name="fillet_v" id="fillet_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="shoulder_v" value="stew">Stew</option>
-										<option name="shoulder_v" value="mince">Mince</option>
-										<option name="shoulder_v" value="small goods">Small Goods</option>
-										<option name="shoulder_v" value="roast">Roast</option>
-										<option name="shoulder_v" value="smoked shoulder patties">Smoked Shoulder Patties</option>
+										<option name="fillet_v" value="whole">Whole</option>
+										<option name="fillet_v" value="mince">Mince</option>
 									</select>
 								</div>
 
-								<!-- deer Backstrap and fillets v_loin loin_v -->
+								<!-- deer backstrap v_backstrap backstrap_v -->
 								<div>
-									<input  name="v_loin" id="v_loin" type="checkbox">
-									<label for="v_loin">Backstrap and Fillets</label>
+									<input  name="v_backstrap" id="v_backstrap" type="checkbox">
+									<label for="v_backstrap">Backstrap</label>
 
-									<select name="loin_v" id="loin_v" required>
+									<select name="backstrap_v" id="backstrap_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="loin_v" value="stew">Stew</option>
-										<option name="loin_v" value="mince">Mince</option>
-										<option name="loin_v" value="small goods">Small Goods</option>
-										<option name="loin_v" value="roast">Roast</option>
-										<option name="loin_v" value="smoked shoulder patties">Smoked Shoulder Patties</option>
+										<option name="backstrap_v" value="whole">Whole</option>
+										<option name="backstrap_v" value="half">Half</option>
+										<option name="fillebackstrap_vt_v" value="mince">Mince</option>
 									</select>
 								</div>
-			
-								<!-- v_leg leg_v -->
+
+								<!-- deer rump v_rump rump_v -->
 								<div>
-									<input id="v_leg" name="v_leg" type="checkbox">
-									<label for="v_leg">Leg (Size option depends on choice)</label>
-											
-									<select name="leg_v" id="leg_v">
+									<input  name="v_rump" id="v_rump" type="checkbox">
+									<label for="v_rump">Rump * Staff suggestion is left whole or mince</label>
+									<p>We can slice into steaks but cooks better in a piece.</p>
+
+									<select name="rump_v" id="rump_v" required>
 										<option value="" disabled selected>Select</option>
-										<option name="leg_v" value="leg roast">Leg Roast</option><!-- options for whole / half -->
-										<option name="leg_v" value="leg primals">Leg Primal's</option><!-- options for whole / half -->
-										<option name="leg_v" value="leg steaks">Leg Steaks</option>
-										<option name="leg_v" value="mince">Mince</option>
-										<option name="leg_v" value="small goods">Small Goods</option>
-										<option name="leg_v" value="bacon">Bacon</option>
-										<option name="leg_v" value="corned primal">Corned Primal</option>
-										<option name="leg_v" value="ham">Ham</option><!-- options for whole / half / third -->
-									</select>
-									
-									<!-- this should only come up with leg roast, leg primals, ham -->
-									<!-- written into /js/app.sj -->
-									<select name="v_leg_whole_half" id="v_leg_whole_half" disabled>
-										<option value="" disabled selected>Select</option>
-										<option name="v_leg_whole_half" value="whole">whole</option>
-										<option name="v_leg_whole_half" value="half">Half</option>
-										<option name="v_leg_whole_half" id="v_leg_third" value="third">Third</option>
+										<option name="rump_v" value="whole">Whole</option>
+										<option name="rump_v" value="legs">Legs</option>
+										<option name="rump_v" value="steak">Steak</option>
+										<option name="rump_v" value="mince">Mince</option>
 									</select>
 								</div>
 
 								<!-- v_excess_trim excess_trim_v -->
 								<div>
 									<input  name="v_excess_trim" id="v_excess_trim" type="checkbox">
-									<label for="v_excess_trim">Excess Trim</label>
+									<label for="v_excess_trim">Trim</label>
 
 									<select name="excess_trim_v" id="excess_trim_v" required>
 										<option value="" disabled selected>Select</option>

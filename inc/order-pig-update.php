@@ -53,6 +53,8 @@ function prefix_admin_orderpigupdate() {
 	$pg_hocks = $_POST['pg_hocks']; if($pg_hocks == 'on'){$pg_hocks=1;}else{$pg_hocks=0;}
 	$hocks_pg = $_POST['hocks_pg'];
 
+	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
+
 	//create small goods variable
 	if (isset($_POST['small_goods'])) {
 		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}
@@ -108,6 +110,7 @@ function prefix_admin_orderpigupdate() {
 		'pg_hocks'          => $pg_hocks ,
 		'hocks_pg'          => $hocks_pg ,
 
+		'assistance'        => $assistance ,
 		'spins'             => $_POST['spins'],
 		'small'             => $url
 	) ,

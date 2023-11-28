@@ -132,6 +132,19 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
+									<!-- assistance -->
+									<div>
+										<p>
+											<?php if ($order->assistance == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="assistance" value="<?php echo $order->assistance; ?>">
+											<strong>Need assistance, not sure if my cuts are correct</strong>
+										</p>
+									</div>
+
 									<!-- spins -->
 									<p>
 										<em>Special instructions</em>

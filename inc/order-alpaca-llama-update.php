@@ -12,7 +12,9 @@ function prefix_admin_orderalpacallamaupdate() {
 	$l_loin = $_POST['l_loin']; if($l_loin == 'on'){$l_loin=1;}else{$l_loin=0;}
 	$loin_lb = $_POST['loin_lb'];
 	$l_leg = $_POST['l_leg']; if($l_leg == 'on'){$l_leg=1;}else{$l_leg=0;}
-	$leg_lb = $_POST['leg_lb'];  
+	$leg_lb = $_POST['leg_lb'];
+
+	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
 
 	//create small goods variable
 	if (isset($_POST['small_goods'])) {
@@ -33,6 +35,7 @@ function prefix_admin_orderalpacallamaupdate() {
 		'loin_lb'          => $loin_lb ,
 		'l_leg'            => $l_leg ,
 		'leg_lb'           => $leg_lb ,
+		'assistance'       => $assistance ,
 		'spins'            => $_POST['spins'],
 		'small'            => $url
 	) ,

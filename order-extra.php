@@ -1,6 +1,11 @@
 <!-- this is inside of a form element -->
 <hr>
 
+<div class="form-inline">
+		<input id="assistance" name="assistance" type="checkbox">
+		<label for="assistance">Need assistance, not sure if my cuts are correct</label>
+</div>
+
 <!-- SMALL GOODS -->
 <h4 class="button-banner">SMALL GOODS</h4>
 <p>Sausages, salamis, patties, saveloys</p>

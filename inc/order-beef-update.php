@@ -22,7 +22,7 @@ function prefix_admin_orderbeefupdate() {
 	$b_brisket          = $_POST['b_brisket']; if($b_brisket == 'on'){$b_brisket=1;}else{$b_brisket=0;}
 	$b_shortribs        = $_POST['b_shortribs']; if($b_shortribs == 'on'){$b_shortribs=1;}else{$b_shortribs=0;}
 	$b_smoker           = $_POST['b_smoker']; if($b_smoker == 'on'){$b_smoker=1;}else{$b_smoker=0;}
-	$b_assistance       = $_POST['b_assistance']; if($b_assistance == 'on'){$b_assistance=1;}else{$b_assistance=0;}
+	$assistance         = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
 
 	//create small goods variable this is a strange variable needs documentation on why i chose url
 	if (isset($_POST['small_goods'])) {
@@ -65,7 +65,7 @@ function prefix_admin_orderbeefupdate() {
 			'brisket_bf'        => $_POST['brisket_bf'] ,
 			'b_shortribs'       => $b_shortribs ,
 			'b_smoker'          => $b_smoker ,
-			'b_assistance'      => $b_assistance ,
+			'assistance'        => $assistance ,
 			'spins'             => $_POST['spins'], 
 			'small'             => $url
 		) ,

@@ -214,17 +214,17 @@ $unid = $_GET['n'];
 								</div>
 
 								<div class="form-inline">
-									<input id="b_shortribs" name="b_shortribs" type="checkbox" required checked>
+									<input id="b_shortribs" name="b_shortribs" type="checkbox">
 									<label for="b_shortribs">Short Ribs</label>
 								</div>
 
 								<div class="form-inline">
-									<input id="b_smoker" name="b_smoker" type="checkbox" required checked>
+									<input id="b_smoker" name="b_smoker" type="checkbox">
 									<label for="b_smoker">Alter cut to low and slow smoker style</label>
 								</div>
 
 								<div class="form-inline">
-									<input id="b_assistance" name="b_assistance" type="checkbox" required checked>
+									<input id="b_assistance" name="b_assistance" type="checkbox">
 									<label for="b_assistance">Need assistance, not sure if my cuts are correct</label>
 								</div>
 
