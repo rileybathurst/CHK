@@ -15,7 +15,7 @@ function prefix_admin_ordersheepupdate() {
 	$leg_lb = $_POST['leg_lb'];
 
 	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
-	$spins = $_POST['spins'];
+	$spins = isset($_POST['spins']) ? sanitize_text_field($_POST['spins']) : '';
 
 	if (isset($_POST['small_goods'])) {
 		$url = $_POST['small_goods']; if($url == 'yes'){$url=1;}else{$url=0;}

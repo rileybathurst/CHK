@@ -23,6 +23,7 @@ function prefix_admin_orderbeefupdate() {
 	$b_shortribs        = $_POST['b_shortribs']; if($b_shortribs == 'on'){$b_shortribs=1;}else{$b_shortribs=0;}
 	$b_smoker           = $_POST['b_smoker']; if($b_smoker == 'on'){$b_smoker=1;}else{$b_smoker=0;}
 	$assistance         = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
+	$spins = isset($_POST['spins']) ? sanitize_text_field($_POST['spins']) : '';
 
 	//create small goods variable this is a strange variable needs documentation on why i chose url
 	if (isset($_POST['small_goods'])) {
@@ -66,7 +67,7 @@ function prefix_admin_orderbeefupdate() {
 			'b_shortribs'       => $b_shortribs ,
 			'b_smoker'          => $b_smoker ,
 			'assistance'        => $assistance ,
-			'spins'             => $_POST['spins'], 
+			'spins'             => $spins, 
 			'small'             => $url
 		) ,
 

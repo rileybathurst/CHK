@@ -12,7 +12,7 @@ function prefix_admin_orderdeerupdate() {
 	$rump_v = $_POST['rump_v'];
 	$v_excess_trim = $_POST['v_excess_trim']; if($v_excess_trim == 'on'){$v_excess_trim=1;}else{$v_excess_trim=0;}
 	$excess_trim_v = $_POST['excess_trim_v'];
-	$spins = $_POST['spins'];
+	$spins = isset($_POST['spins']) ? sanitize_text_field($_POST['spins']) : '';
 
 	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
 
@@ -36,7 +36,7 @@ function prefix_admin_orderdeerupdate() {
 		'v_excess_trim'     =>      $v_excess_trim ,
 		'excess_trim_v'     =>      $_POST['excess_trim_v'] ,
 		'assistance'        =>      $assistance ,
-		'spins'             =>      $spins ,
+		'spins'             =>      'deer test' ,
 		'small'             =>      $url
 	) ,
 

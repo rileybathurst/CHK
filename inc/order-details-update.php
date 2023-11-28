@@ -6,17 +6,25 @@ function prefix_admin_orderdetailsupdate() {
 	// Extremley Important to set
 	global $wpdb;
 
+	$name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+	$add1 = isset($_POST['add1']) ? sanitize_text_field($_POST['add1']) : '';
+	$email = isset($_POST['email']) ? sanitize_text_field($_POST['email']) : '';
+	$phone = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
+	$phone2 = isset($_POST['phone2']) ? sanitize_text_field($_POST['phone2']) : '';
+	$amp = isset($_POST['amp']) ? sanitize_text_field($_POST['amp']) : '';
+	$people = isset($_POST['people']) ? sanitize_text_field($_POST['people']) : '';
+
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
 
 	array(
-		'name'   => $_POST['name'] ,
-		'add1'   => $_POST['add1'] ,
-		'email'  => $_POST['email'] ,
-		'phone'  => $_POST['phone'] ,
-		'phone2' => $_POST['phone2'] ,
-		'amp'    => $_POST['amp'] ,
-		'people' => $_POST['people'] 
+		'name'   => $name ,
+		'add1'   => $add1 ,
+		'email'  => $email ,
+		'phone'  => $phone ,
+		'phone2' => $phone2 ,
+		'amp'    => $amp ,
+		'people' => $people 
 	) ,
 
 	// where

@@ -52,7 +52,7 @@ function prefix_admin_orderpigupdate() {
 	$pg_bacon = $_POST['pg_bacon']; if($pg_bacon == 'on'){$pg_bacon=1;}else{$pg_bacon=0;}
 	$pg_hocks = $_POST['pg_hocks']; if($pg_hocks == 'on'){$pg_hocks=1;}else{$pg_hocks=0;}
 	$hocks_pg = $_POST['hocks_pg'];
-
+	$spins = isset($_POST['spins']) ? sanitize_text_field($_POST['spins']) : '';
 	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
 
 	//create small goods variable
@@ -111,7 +111,7 @@ function prefix_admin_orderpigupdate() {
 		'hocks_pg'          => $hocks_pg ,
 
 		'assistance'        => $assistance ,
-		'spins'             => $_POST['spins'],
+		'spins'             => $spins,
 		'small'             => $url
 	) ,
 
