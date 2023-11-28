@@ -67,7 +67,7 @@ $unid = $_GET['n'];
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_fillet; ?>">
+											<input type="hidden" name="v_fillet" value="<?php echo $order->v_fillet; ?>">
 											<strong>Fillet</strong>
 											
 											<?php if ($order->v_fillet == 1) { 
@@ -85,7 +85,7 @@ $unid = $_GET['n'];
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_backstrap; ?>">
+											<input type="hidden" name="v_backstrap" value="<?php echo $order->v_backstrap; ?>">
 											<strong>Backstrap</strong>
 											
 											<?php if ($order->v_backstrap == 1) { 
@@ -103,13 +103,13 @@ $unid = $_GET['n'];
 											<?php } else { ?>
 												<span class="unicode cross spacer">✗</span>
 											<?php } ?>
-											<input type="hidden" name="v_shoulder" value="<?php echo $order->v_rump; ?>">
+											<input type="hidden" name="v_rump" value="<?php echo $order->v_rump; ?>">
 											<strong>Rump</strong>
 											
 											<?php if ($order->v_rump == 1) { 
 												echo $order->rump_v;
 											} else { echo ' '; } ?>
-											<input type="hidden" name="backstrap_v" value="<?php echo $order->rump_v; ?>">
+											<input type="hidden" name="rump_v" value="<?php echo $order->rump_v; ?>">
 										</p>
 									</div>
 
