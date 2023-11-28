@@ -7,34 +7,33 @@ $deer = '
 	<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>
 
 	<p>
-		Shoulder
+		Fillet
 		<strong>'.
-			$_POST['v_shoulder'].
+			$_POST['v_filllet'].
 		'</strong>
 		<em> '.
-			$_POST['shoulder_v'].
+			$_POST['fillet_v'].
 		'</em>
 	</p>
 
 	<p>
-		Loin
+		Backstrap
 		<strong>'.
-			$_POST['v_loin'].
+			$_POST['v_backstrap'].
 		'</strong>
 		<em> '.
-			$_POST['loin_v'].
+			$_POST['backstrap_v'].
 		'</em>
 	</p>
 
 	<p>
-		Leg
+		Rump
 		<strong>'.
-			$_POST['v_leg'].
+			$_POST['v_rump'].
 		'</strong>
 		<em> '.
-			$_POST['leg_v'].
+			$_POST['rump_v'].
 		'</em> '.
-		$_POST['v_leg_whole_half'].
 	'</p>
 
 	<p>
