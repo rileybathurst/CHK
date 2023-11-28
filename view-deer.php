@@ -1,6 +1,6 @@
 <h3 class="single-stripe">DEER</h3>
 
-<!-- v_filllet fillet_v -->
+<!-- v_fillet fillet_v -->
 <div>
 	<?php if ($order->fillet_v == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -9,7 +9,7 @@
 	<?php } ?>
 	<strong>Fillet</span></strong>
 
-	<?php if ($order->v_filllet == 1) {
+	<?php if ($order->v_fillet == 1) {
 		echo $order->fillet_v;
 	} else {
 		echo ' ';

@@ -39,8 +39,8 @@ $unid = $_GET['n'];
 
 								<!-- deer fillet v_fillet fillet_v -->
 								<div>
-									<input  name="v_filllet" id="v_filllet" type="checkbox">
-									<label for="v_filllet">Fillet</label>
+									<input  name="v_fillet" id="v_fillet" type="checkbox">
+									<label for="v_fillet">Fillet</label>
 
 									<select name="fillet_v" id="fillet_v" required>
 										<option value="" disabled selected>Select</option>

@@ -4,7 +4,7 @@ function prefix_admin_orderdeerupdate() {
 	global $wpdb;
 
 	//create variables
-	$v_filllet = $_POST['v_filllet']; if($v_filllet == 'on'){$v_filllet=1;}else{$v_filllet=0;}
+	$v_fillet = $_POST['v_fillet']; if($v_fillet == 'on'){$v_fillet=1;}else{$v_fillet=0;}
 	$fillet_v = $_POST['fillet_v'];
 	$v_backstrap = $_POST['v_backstrap']; if($v_backstrap == 'on'){$v_backstrap=1;}else{$v_backstrap=0;}
 	$backstrap_v = $_POST['backstrap_v'];
@@ -27,7 +27,7 @@ function prefix_admin_orderdeerupdate() {
 	$wpdb->update( 'meatorders' ,
 
 	array(
-		'v_filllet'         =>      $v_filllet ,
+		'v_fillet'         =>      $v_fillet ,
 		'fillet_v'          =>      $_POST['fillet_v'] ,
 		'v_backstrap'       =>      $v_backstrap ,
 		'backstrap_v'       =>      $_POST['backstrap_v'] ,
@@ -36,7 +36,7 @@ function prefix_admin_orderdeerupdate() {
 		'v_excess_trim'     =>      $v_excess_trim ,
 		'excess_trim_v'     =>      $_POST['excess_trim_v'] ,
 		'assistance'        =>      $assistance ,
-		'spins'             =>      'deer test' ,
+		'spins'             =>      $spins ,
 		'small'             =>      $url
 	) ,
 

@@ -9,7 +9,7 @@ $deer = '
 	<p>
 		Fillet
 		<strong>'.
-			$_POST['v_filllet'].
+			$_POST['v_fillet'].
 		'</strong>
 		<em> '.
 			$_POST['fillet_v'].
