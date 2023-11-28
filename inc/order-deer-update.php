@@ -46,9 +46,9 @@ function prefix_admin_orderdeerupdate() {
 	);
 
 	// small goods send
-	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] . '&s=' . $_POST['spins'] );  
+	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );  
 	}    else   {
-		wp_redirect( home_url() . '/confirm-deer?n=' . $_POST['unid'] . '&s=' . $_POST['spins'] );
+		wp_redirect( home_url() . '/confirm-deer?n=' . $_POST['unid'] );
 	}
 }
 add_action( 'admin_post_orderdeerupdate', 'prefix_admin_orderdeerupdate' );
