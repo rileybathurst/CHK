@@ -26,7 +26,7 @@
 	<strong>Backstrap</span></strong>
 
 	<?php if ($order->backstrap_v == 1) {
-		echo $order->v_backstrap;
+		echo $order->backstrap_v;
 	} else {
 		echo ' ';
 	} ?>
@@ -42,7 +42,7 @@
 	<strong>Rump</span></strong>
 
 	<?php if ($order->v_rump == 1) {
-		echo $order->v_rump;
+		echo $order->rump_v;
 	} else {
 		echo ' ';
 	} ?>
