@@ -173,7 +173,9 @@ blockquote {
 /*------------------*/
 
 .screen-reader {
-  display: none; // this needs work
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /*------------------*/
@@ -799,6 +801,8 @@ input[type="password"]:focus {
   // is this just part of the stripes so the lines are uniform
   line-height: 2.5rem; // type scale?
 }
+
+// ! this is a crazy way of doing this
 
 .a2 a {
   color: $secondary;
@@ -1787,4 +1791,10 @@ svg path {
   .rts-2 {
     flex: 2;
   }
+}
+
+.salami {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }

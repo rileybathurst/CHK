@@ -221,14 +221,14 @@ $unid = $_GET['n'];
 
 							<!-- t_patties -->
 							<div>
-								<label for="t_patties">Patties - <em>Minimum of 8kg</em></label>
+								<label for="t_patties"><em>Minimum of 8kg</em></label>
 								<input type="number" pattern="\d*" id="t_patties" name="t_patties" />
 								<span class="postfix">KG</span>
 							</div>
 
 							<!-- t_gf_patties -->
 							<div>
-								<label for="t_gf_patties">Patties - <em>Gluten Free <br />- Minimum of 8kg</em></label>
+								<label for="t_gf_patties"><em>Gluten Free <br />- Minimum of 8kg</em></label>
 								<input type="number" pattern="\d*" id="t_gf_patties" name="t_gf_patties" />
 								<span class="postfix">KG</span>
 							</div>
@@ -239,7 +239,7 @@ $unid = $_GET['n'];
 
 							<!-- t_salami salami_t salami_s -->
 							<div>
-								<label for="t_salami">Salami -<em> Minimum of 4 per flavour</em></label>
+								<label for="t_salami"><em>Minimum of 4 per flavour</em></label>
 								<input type="number" pattern="\d*" id="t_salami" name="t_salami" />
 
 								<select id="salami_t" name="salami_t">
@@ -255,6 +255,94 @@ $unid = $_GET['n'];
 									<option value="mild">Mild</option>
 								</select>
 							</div>
+							
+
+
+
+
+
+							
+							<div>
+								<h5>Salami</h5>
+								<p><em>Minimum of 4 per flavour</em></p>
+
+								<div class="salami">
+								<label for="salami_danish">Danish Garlic</label>
+								<input type="number" pattern="\d*" id="salami_danish" name="salami_danish" />
+							
+								<select id="salami_danish_s" name="salami_danish_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+								<div class="salami">
+								<label for="salami_pepperoni">Pepperoni</label>
+								<input type="number" pattern="\d*" id="salami_pepperoni" name="salami_pepperoni" />
+							
+								<select id="salami_pepperoni_s" name="salami_pepperoni_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+								<div class="salami">
+								<label for="salami_chilli">Chilli</label>
+								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
+							
+								<select id="salami_chilli_s" name="salami_chilli_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+								<div class="salami">
+								<label for="salami_pepperoni">Roasted Fennel and Garlic</label>
+								<input type="number" pattern="\d*" id="salami_pepperoni" name="salami_pepperoni" />
+							
+								<select id="salami_pepperoni_s" name="salami_pepperoni_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+								<div class="salami">
+								<label for="salami_chilli">Roasted Fennel and Pepperoni</label>
+								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
+							
+								<select id="salami_chilli_s" name="salami_chilli_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+								<div class="salami">
+								<label for="salami_chilli">Jalapeños and cheese </label>
+								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
+							
+								<select id="salami_chilli_s" name="salami_chilli_s">
+									<option value="" disabled selected>Strength</option>
+									<option value="strong">Strong</option>
+									<option value="mild">Mild</option>
+								</select>
+								</div>
+
+
+
+
+							</div>
+
+
+
+
+
+
+							
 
 							<hr>
 
