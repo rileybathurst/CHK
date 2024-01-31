@@ -1797,4 +1797,12 @@ svg path {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  input[type="number"] {
+    width: min-content;
+  }
+
+  select {
+    width: min-content;
+  }
 }
