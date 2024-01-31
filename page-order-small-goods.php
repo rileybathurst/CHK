@@ -261,10 +261,7 @@ $unid = $_GET['n'];
 
 
 
-							
-<!-- 							<div>
-								<h5>Salami</h5>
-								<p><em>Minimum of 4 per flavour</em></p>
+								<!-- <p><em>Minimum of 4 per flavour</em></p> -->
 
 								<div class="salami">
 								<label for="salami_danish">Danish Garlic</label>
@@ -277,6 +274,7 @@ $unid = $_GET['n'];
 								</select>
 								</div>
 
+								<!--
 								<div class="salami">
 								<label for="salami_pepperoni">Pepperoni</label>
 								<input type="number" pattern="\d*" id="salami_pepperoni" name="salami_pepperoni" />
@@ -335,7 +333,7 @@ $unid = $_GET['n'];
 
 
 
-							</div> -->
+							-->
 
 
 

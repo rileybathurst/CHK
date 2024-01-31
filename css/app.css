@@ -119,7 +119,9 @@ blockquote p {
 /*------------------*/
 /*------------------*/
 .screen-reader {
-  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 /*------------------*/
@@ -1622,6 +1624,18 @@ svg path {
 }
 .rts-flex .rts-2 {
   flex: 2;
+}
+
+.salami {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.salami input[type=number] {
+  width: min-content;
+}
+.salami select {
+  width: min-content;
 }
 
 /**
