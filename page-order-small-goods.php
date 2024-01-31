@@ -262,7 +262,7 @@ $unid = $_GET['n'];
 
 
 							
-							<div>
+<!-- 							<div>
 								<h5>Salami</h5>
 								<p><em>Minimum of 4 per flavour</em></p>
 
@@ -335,7 +335,7 @@ $unid = $_GET['n'];
 
 
 
-							</div>
+							</div> -->
 
 
 
