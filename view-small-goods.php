@@ -328,25 +328,125 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
-<!-- t_salami salami_t salami_s -->
+<!-- salami_danish salami_danish_s -->
 <div>
-	<?php if ($order->t_salami >= 1) { ?>
+	<?php if ($order->salami_danish >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
-	<strong>Salami</strong>
+	<strong>Danish Garlic Salami</strong>
 
-	<?php if ($order->t_salami >= 1) { 
-		echo $order->t_salami . ' #';
+	<?php if ($order->salami_danish >= 1) { 
+		echo $order->salami_danish . ' #';
 	} else { echo '&nbsp;'; }
 
-	if ($order->t_salami >= 1) { 
-		echo $order->salami_s .'&nbsp;';
+	if ($order->salami_danish >= 1) { 
+		echo $order->salami_danish_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- salami_pepperoni salami_pepperoni_s -->
+<div>
+	<?php if ($order->salami_pepperoni >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Pepperoni Salami</strong>
+
+	<?php if ($order->salami_pepperoni >= 1) { 
+		echo $order->salami_pepperoni . ' #';
 	} else { echo '&nbsp;'; }
 
-	if ($order->t_salami >= 1) { 
-		echo $order->salami_t;
+	if ($order->salami_pepperoni >= 1) { 
+		echo $order->salami_pepperoni_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- salami_chilli salami_chilli_s -->
+<div>
+	<?php if ($order->salami_chilli >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Chilli Salami</strong>
+
+	<?php if ($order->salami_chilli >= 1) { 
+		echo $order->salami_chilli . ' #';
+	} else { echo '&nbsp;'; }
+
+	if ($order->salami_chilli >= 1) { 
+		echo $order->salami_chilli_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- salami_rf_garlic salami_rf_garlic_s -->
+<div>
+	<?php if ($order->salami_rf_garlic >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Roasted Fennel and Garlic</strong>
+
+	<?php if ($order->salami_rf_garlic >= 1) { 
+		echo $order->salami_rf_garlic . ' #';
+	} else { echo '&nbsp;'; }
+
+	if ($order->salami_rf_garlic >= 1) { 
+		echo $order->salami_rf_garlic_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- salami_rf_pepperoni salami_rf_pepperoni_s -->
+<div>
+	<?php if ($order->salami_rf_pepperoni >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Roasted Fennel and Pepperoni</strong>
+
+	<?php if ($order->salami_rf_pepperoni >= 1) { 
+		echo $order->salami_rf_pepperoni . ' #';
+	} else { echo '&nbsp;'; }
+
+	if ($order->salami_rf_pepperoni >= 1) { 
+		echo $order->salami_rf_pepperoni_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- salami_jalapenos salami_jalapenos_s -->
+<div>
+	<?php if ($order->salami_jalapenos >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Jalapeños and cheese</strong>
+
+	<?php if ($order->salami_jalapenos >= 1) { 
+		echo $order->salami_jalapenos . ' #';
+	} else { echo '&nbsp;'; }
+
+	if ($order->salami_jalapenos >= 1) { 
+		echo $order->salami_jalapenos_s .'&nbsp;';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- t_cheerio -->
+<div>
+	<?php if ($order->t_cheerio >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Cheerio</strong>
+
+	<?php if ($order->t_cheerio >= 1) { 
+		echo $order->t_cheerio . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
 

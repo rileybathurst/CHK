@@ -279,24 +279,99 @@
 
 <h3>Salami</h3>
 
-<!-- t_salami salami_t salam_s -->
+<!-- salami_danish salami_danish_s -->
 <div>
 	<p>
-		Salami
-		<?php if ($order->t_salami != '') { 
-			echo $order->t_salami . ' KG';
+		Danish Garlic Salami
+		<?php if ($order->salami_danish != '') { 
+			echo $order->salami_danish . ' KG';
 			}; ?>
-		<input type="hidden" name="t_salami" value="<?php echo $order->t_salami; ?>">
+		<input type="hidden" name="salami_danish" value="<?php echo $order->salami_danish; ?>">
 		
-		<?php if ($order->t_salami != '') { 
-			echo $order->salami_t;
+		<?php if ($order->salami_danish != '') { 
+			echo $order->salami_danish_s;
 		}; ?>
-		<input type="hidden" name="salami_t" value="<?php echo $order->salami_t; ?>">
+		<input type="hidden" name="salami_danish_s" value="<?php echo $order->salami_danish_s; ?>">
+	</p>
+</div>
 
-		<?php if ($order->t_salami != '') { 
-			echo $order->salami_s;
+<!-- salami_pepperoni salami_pepperoni_s -->
+<div>
+	<p>
+		Pepperoni Salami
+		<?php if ($order->salami_pepperoni != '') { 
+			echo $order->salami_pepperoni . ' KG';
+			}; ?>
+		<input type="hidden" name="salami_pepperoni" value="<?php echo $order->salami_pepperoni; ?>">
+		
+		<?php if ($order->salami_pepperoni != '') { 
+			echo $order->salami_pepperoni_s;
 		}; ?>
-		<input type="hidden" name="salami_s" value="<?php echo $order->salami_s; ?>">
+		<input type="hidden" name="salami_pepperoni_s" value="<?php echo $order->salami_pepperoni_s; ?>">
+	</p>
+</div>
+
+<!-- salami_chilli salami_chilli_s -->
+<div>
+	<p>
+		Chilli Salami
+		<?php if ($order->salami_danish != '') { 
+			echo $order->salami_danish . ' KG';
+			}; ?>
+		<input type="hidden" name="salami_chilli" value="<?php echo $order->salami_chilli; ?>">
+		
+		<?php if ($order->salami_chilli != '') { 
+			echo $order->salami_chilli_s;
+		}; ?>
+		<input type="hidden" name="salami_chilli_s" value="<?php echo $order->salami_chilli_s; ?>">
+	</p>
+</div>
+
+<!-- salami_rf_garlic salami_rf_garlic_s -->
+<div>
+	<p>
+		Roasted Fennel and Garlic Salami
+		<?php if ($order->salami_rf_garlic != '') { 
+			echo $order->salami_rf_garlic . ' KG';
+			}; ?>
+		<input type="hidden" name="salami_rf_garlic" value="<?php echo $order->salami_rf_garlic; ?>">
+		
+		<?php if ($order->salami_rf_garlic != '') { 
+			echo $order->salami_rf_garlic_s;
+		}; ?>
+		<input type="hidden" name="salami_rf_garlic_s" value="<?php echo $order->salami_rf_garlic_s; ?>">
+	</p>
+</div>
+
+<!-- salami_rf_pepperoni salami_rf_pepperoni_s -->
+<div>
+	<p>
+		Roasted Fennel and Pepperoni Salami
+		<?php if ($order->salami_rf_pepperoni != '') { 
+			echo $order->salami_rf_pepperoni . ' KG';
+			}; ?>
+		<input type="hidden" name="salami_rf_pepperoni" value="<?php echo $order->salami_rf_pepperoni; ?>">
+		
+		<?php if ($order->salami_rf_pepperoni != '') { 
+			echo $order->salami_rf_pepperoni_s;
+		}; ?>
+		<input type="hidden" name="salami_rf_pepperoni_s" value="<?php echo $order->salami_rf_pepperoni_s; ?>">
+	</p>
+</div>
+
+<!-- salami_jalapenos salami_jalapenos_s -->
+<div>
+	<p>
+		Jalapeños and cheese Salami
+		<?php if ($order->salami_jalapenos != '') { 
+			echo $order->salami_jalapenos . ' KG';
+			}; ?>
+		<input type="hidden" name="salami_jalapenos" value="<?php echo $order->salami_jalapenos; ?>">
+		
+		<?php if ($order->salami_jalapenos != '') { 
+			echo $order->salami_jalapenos_s;
+		}; ?>
+		<input type="hidden" name="salami_jalapenos_s" value="<?php echo $order->salami_jalapenos_s; ?>">
 	</p>
 </div>
 

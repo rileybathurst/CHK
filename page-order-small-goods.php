@@ -237,34 +237,10 @@ $unid = $_GET['n'];
 
 							<h4>SALAMI</h4>
 
-							<!-- t_salami salami_t salami_s -->
-							<div>
-								<label for="t_salami"><em>Minimum of 4 per flavour</em></label>
-								<input type="number" pattern="\d*" id="t_salami" name="t_salami" />
+								<p><em>Minimum of 4 per flavour</em></p>
 
-								<select id="salami_t" name="salami_t">
-									<option value="" disabled selected>Select</option>
-									<option value="pepperoni">Pepperoni</option>
-									<option value="chilli">Chilli</option>
-									<option value="danish-garlic">Danish Garlic</option>
-								</select>
-							
-								<select id="salami_s" name="salami_s">
-									<option value="" disabled selected>Select</option>
-									<option value="strong">Strong</option>
-									<option value="mild">Mild</option>
-								</select>
-							</div>
-							
-
-
-
-
-
-								<!-- <p><em>Minimum of 4 per flavour</em></p> -->
-
-<!-- 							<div class="salami">
-									<label for="salami_danish">Danish Garlic</label>
+								<div class="salami">
+									<label for="salami_danish">Danish Garlic Salami</label>
 									<input type="number" pattern="\d*" id="salami_danish" name="salami_danish" placeholder="#" />
 								<select id="salami_danish_s" name="salami_danish_s">
 									<option value="" disabled selected>Strength</option>
@@ -272,10 +248,9 @@ $unid = $_GET['n'];
 									<option value="mild">Mild</option>
 								</select>
 								</div>
--->
-								<!--
+
 								<div class="salami">
-								<label for="salami_pepperoni">Pepperoni</label>
+								<label for="salami_pepperoni">Pepperoni Salami</label>
 								<input type="number" pattern="\d*" id="salami_pepperoni" name="salami_pepperoni" />
 							
 								<select id="salami_pepperoni_s" name="salami_pepperoni_s">
@@ -286,7 +261,7 @@ $unid = $_GET['n'];
 								</div>
 
 								<div class="salami">
-								<label for="salami_chilli">Chilli</label>
+								<label for="salami_chilli">Chilli Salami</label>
 								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
 							
 								<select id="salami_chilli_s" name="salami_chilli_s">
@@ -297,10 +272,10 @@ $unid = $_GET['n'];
 								</div>
 
 								<div class="salami">
-								<label for="salami_pepperoni">Roasted Fennel and Garlic</label>
-								<input type="number" pattern="\d*" id="salami_pepperoni" name="salami_pepperoni" />
+								<label for="salami_rf_garlic">Roasted Fennel and Garlic Salami</label>
+								<input type="number" pattern="\d*" id="salami_rf_garlic" name="salami_rf_garlic" />
 							
-								<select id="salami_pepperoni_s" name="salami_pepperoni_s">
+								<select id="salami_rf_garlic_s" name="salami_rf_garlic_s">
 									<option value="" disabled selected>Strength</option>
 									<option value="strong">Strong</option>
 									<option value="mild">Mild</option>
@@ -308,10 +283,10 @@ $unid = $_GET['n'];
 								</div>
 
 								<div class="salami">
-								<label for="salami_chilli">Roasted Fennel and Pepperoni</label>
-								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
+								<label for="salami_rf_pepperoni">Roasted Fennel and Pepperoni Salami</label>
+								<input type="number" pattern="\d*" id="salami_rf_pepperoni" name="salami_rf_pepperoni" />
 							
-								<select id="salami_chilli_s" name="salami_chilli_s">
+								<select id="salami_rf_pepperoni_s" name="salami_rf_pepperoni_s">
 									<option value="" disabled selected>Strength</option>
 									<option value="strong">Strong</option>
 									<option value="mild">Mild</option>
@@ -319,27 +294,15 @@ $unid = $_GET['n'];
 								</div>
 
 								<div class="salami">
-								<label for="salami_chilli">Jalapeños and cheese </label>
-								<input type="number" pattern="\d*" id="salami_chilli" name="salami_chilli" />
+								<label for="salami_jalapenos">Jalapeños and cheese Salami</label>
+								<input type="number" pattern="\d*" id="salami_jalapenos" name="salami_jalapenos" />
 							
-								<select id="salami_chilli_s" name="salami_chilli_s">
+								<select id="salami_jalapenos_s" name="salami_jalapenos_s">
 									<option value="" disabled selected>Strength</option>
 									<option value="strong">Strong</option>
 									<option value="mild">Mild</option>
 								</select>
 								</div>
-
-
-
-
-							-->
-
-
-
-
-
-
-							
 
 							<hr>
 

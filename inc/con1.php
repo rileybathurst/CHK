@@ -302,16 +302,63 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
-											Salami
+											Danish Garlic Salami
 											<strong>'.
-												$_POST['t_salami'].
+												$_POST['salami_danish'].
 											'</strong>
 											<em> '.
-												$_POST['salami_t'].
+												$_POST['salami_danish_s'].
 											'</em>
-											<strong> '.
-												$_POST['salami_s'].
+										</p>
+
+										<p>
+										Pepperoni Salami
+											<strong>'.
+												$_POST['salami_pepperoni'].
 											'</strong>
+											<em> '.
+												$_POST['salami_pepperoni_s'].
+											'</em>
+										</p>
+
+										<p>
+										Chilli Salami
+											<strong>'.
+												$_POST['salami_chilli'].
+											'</strong>
+											<em> '.
+												$_POST['salami_chilli_s'].
+											'</em>
+										</p>
+
+										<p>
+											Roasted Fennel and Garlic Salami
+											<strong>'.
+												$_POST['salami_rf_garlic'].
+											'</strong>
+											<em> '.
+												$_POST['salami_rf_garlic_s'].
+											'</em>
+										</p>
+
+										<p>
+											Roasted Fennel and Pepperoni Salami
+											<strong>'.
+												$_POST['salami_rf_pepperoni'].
+											'</strong>
+											<em> '.
+												$_POST['salami_rf_pepperoni_s'].
+											'</em>
+										</p>
+
+										<p>
+											Jalapeños and cheese Salami
+											<strong>'.
+												$_POST['salami_jalapenos'].
+											'</strong>
+											<em> '.
+												$_POST['salami_jalapenos_s'].
+											'</em>
 										</p>
 
 										<p>
