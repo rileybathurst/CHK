@@ -267,8 +267,8 @@ $unid = $_GET['n'];
 								<label for="salami_danish">Danish Garlic</label>
 								<div>
 									#
-								<input type="number" pattern="\d*" id="salami_danish" name="salami_danish" />
-</div>							
+									<input type="number" pattern="\d*" id="salami_danish" name="salami_danish" />
+								</div>
 								<select id="salami_danish_s" name="salami_danish_s">
 									<option value="" disabled selected>Strength</option>
 									<option value="strong">Strong</option>
