@@ -1637,8 +1637,7 @@ svg path {
   margin: 0;
 }
 .salami input[type=number] {
-  flex: 1 1 4rem;
-  width: min-content;
+  width: 4rem;
 }
 .salami select {
   flex: 1 1 6rem;
