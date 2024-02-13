@@ -1655,6 +1655,19 @@ svg path {
   width: max-content;
 }
 
+/*------------------*/
+/*------------------*/
+label {
+  font-family: var(--font-sans);
+}
+
+/*------------------------------------*/
+.top-bar,
+.activate-page,
+.small-nav {
+  font-family: var(--font-sans);
+}
+
 /*------------------------------------*/
 /* #BUDDYPRESS */
 /*------------------------------------*/
