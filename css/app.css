@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*------------------------------------*/
+/* #VARIABLES */
+/*------------------------------------*/
+:root {
+  /*------------------------------------*/
+  /* #TYPOGRAPHY */
+  /*------------------------------------*/
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 /* sass variables */
 html {
   margin: 0;
@@ -1642,6 +1653,15 @@ svg path {
 .salami select {
   flex: 1 1 6rem;
   width: max-content;
+}
+
+/*------------------------------------*/
+/* #BUDDYPRESS */
+/*------------------------------------*/
+/* Adjust the activate forms */
+/* https://canterburyhomekill.co.nz/activate/ */
+.buddypress-wrap .standard-form input:not(.small) {
+  width: auto;
 }
 
 /**
