@@ -202,9 +202,9 @@ $unid = $_GET['n'];
 
 									<select name="skirtsteak_bf_stewing" id="skirtsteak_bf_stewing" required>
 										<option name="skirtsteak_bf_stewing" value="" disabled selected>Select</option>
-										<option name="skirtsteak_bf_stewing" value="stew">Cross Cut</option>
-										<option name="skirtsteak_bf_stewing" value="mince">Stewing steak</option>
-										<option name="skirtsteak_bf_stewing" value="mince">Flat Iron</option>
+										<option name="skirtsteak_bf_stewing" value="cross cut">Cross Cut</option>
+										<option name="skirtsteak_bf_stewing" value="stewing steak">Stewing steak</option>
+										<option name="skirtsteak_bf_stewing" value="flat iron">Flat Iron</option>
 										<option name="skirtsteak_bf_stewing" value="mince">Mince</option>
 									</select>
 								</div>
