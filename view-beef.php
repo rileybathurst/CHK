@@ -207,16 +207,6 @@
 	<strong>Alter cut to low and slow smoker style</strong>
 </div>
 
-<!-- b_assistance -->
-<div>
-	<?php if ($order->b_assistance == 1) { ?>
-		<span class="unicode highlights spacer">✓</span>
-	<?php } else { ?>
-		<span class="unicode spacer hide-for-print">✗</span>
-	<?php } ?>
-	<strong>Need assistance, not sure if my cuts are correct</strong>
-</div>
-
 <div>
 	<?php if ( $order->assistance >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>

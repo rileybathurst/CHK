@@ -237,11 +237,6 @@ $unid = $_GET['n'];
 									<label for="b_smoker">Alter cut to low and slow smoker style</label>
 								</div>
 
-								<div class="form-inline">
-									<input id="b_assistance" name="b_assistance" type="checkbox">
-									<label for="b_assistance">Need assistance, not sure if my cuts are correct</label>
-								</div>
-
 								<?php include("order-extra.php"); ?>
 
 								<button type="submit" id="add" name="add">Next Step</button>
