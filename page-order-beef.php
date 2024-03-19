@@ -199,6 +199,14 @@ $unid = $_GET['n'];
 										<option name="skirtsteak_bf" value="stew">Stew</option>
 										<option name="skirtsteak_bf" value="mince">Mince</option>
 									</select>
+
+									<select name="skirtsteak_bf_stewing" id="skirtsteak_bf_stewing" required>
+										<option name="skirtsteak_bf_stewing" value="" disabled selected>Select</option>
+										<option name="skirtsteak_bf_stewing" value="stew">Cross Cut</option>
+										<option name="skirtsteak_bf_stewing" value="mince">Stewing steak</option>
+										<option name="skirtsteak_bf_stewing" value="mince">Flat Iron</option>
+										<option name="skirtsteak_bf_stewing" value="mince">Mince</option>
+									</select>
 								</div>
 
 								<div class="form-inline">
@@ -216,6 +224,12 @@ $unid = $_GET['n'];
 								<div class="form-inline">
 									<input id="b_shortribs" name="b_shortribs" type="checkbox">
 									<label for="b_shortribs">Short Ribs</label>
+
+									<select name="shortribs_bf" id="shortribs_bf" required>
+										<option name="shortribs_bf" value="" disabled selected>Select</option>
+										<option name="shortribs_bf" value="full-rib-plate">Full Rib Plate</option>
+										<option name="shortribs_bf" value="spare-ribs">Spare Ribs</option>
+									</select>
 								</div>
 
 								<div class="form-inline">

@@ -151,7 +151,7 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_skirtsteak skirtsteak_bf -->
+<!-- b_skirtsteak skirtsteak_bf skirtsteak_bf_stewing -->
 <div>
 	<?php if ($order->b_skirtsteak == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -162,6 +162,10 @@
 		
 	<?php if ($order->b_skirtsteak == 1) { 
 		echo $order->skirtsteak_bf;
+	} else { echo ' '; } ?>
+
+<?php if ($order->b_skirtsteak == 1) { 
+		echo $order->skirtsteak_bf_stewing;
 	} else { echo ' '; } ?>
 </div>
 
@@ -179,7 +183,7 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_shortribs -->
+<!-- b_shortribs shortribs_bf -->
 <div>
 	<?php if ($order->b_shortribs == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -187,6 +191,10 @@
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Short Ribs</strong>
+
+	<?php if ($order->b_shortribs == 1) { 
+		echo $order->shortribs_bf;
+	} else { echo ' '; } ?>
 </div>
 
 <!-- b_smoker -->

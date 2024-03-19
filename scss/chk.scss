@@ -380,7 +380,7 @@ textarea {
 .top-bar {
   background: #aaa; // this has to belighter than the light back as it looks drker than it is with context
   color: $background; // a11y check these contrast ratios?
-  padding: $regular-space;
+  padding-inline: $regular-space;
   border-bottom: $global-border-width solid #aaa; // work this in with the shadow
   box-shadow: $shadow;
   display: flex;

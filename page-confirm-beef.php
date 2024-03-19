@@ -285,6 +285,11 @@ $unid = $_GET['n'];
 												echo $order->skirtsteak_bf;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="skirtsteak_bf" value="<?php echo $order->skirtsteak_bf; ?>">
+										
+										<?php if ($order->b_skirtsteak == 1) { 
+												echo $order->skirtsteak_bf_stewing;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="skirtsteak_bf_stewing" value="<?php echo $order->skirtsteak_bf_stewing; ?>">
 										</p>
 									</div>
 
@@ -306,7 +311,7 @@ $unid = $_GET['n'];
 										</p>
 									</div>
 
-									<!-- b_shortribs -->
+									<!-- b_shortribs shortribs_bf -->
 									<div>
 										<p>
 											<?php if ($order->b_shortribs == 1) { ?>
@@ -316,6 +321,11 @@ $unid = $_GET['n'];
 											<?php } ?>
 											<input type="hidden" name="b_shortribs" value="<?php echo $order->b_shortribs; ?>">
 											<strong>Short Ribs</strong>
+
+											<?php if ($order->b_shortribs == 1) { 
+												echo $order->shortribs_bf;
+											} else { echo ' '; } ?>
+											<input type="hidden" name="shortribs_bf" value="<?php echo $order->shortribs_bf; ?>">
 										</p>
 									</div>
 

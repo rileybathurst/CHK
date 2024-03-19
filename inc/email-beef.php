@@ -131,6 +131,9 @@ $beef = '
 		<em> '.
 			$_POST['skirtsteak_bf'].
 		'</em>
+		<strong> '.
+			$_POST['skirtsteak_bf_stewing'].
+		'</strong>
 	</p>
 
 	<p>
@@ -148,6 +151,9 @@ $beef = '
 		<strong>'.
 			$_POST['b_shortribs'].
 		'</strong>
+		<em> '.
+			$_POST['shortribs_bf'].
+		'</em>
 	</p>
 
 	<p>
@@ -155,6 +161,7 @@ $beef = '
 		<strong>'.
 			$_POST['b_smoker'].
 		'</strong>
+		
 	</p>
 
 	<p>
