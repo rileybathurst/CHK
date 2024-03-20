@@ -18,6 +18,7 @@ function prefix_admin_orderbeefupdate() {
 	$b_shinfillet       = $_POST['b_shinfillet']; if($b_shinfillet == 'on'){$b_shinfillet=1;}else{$b_shinfillet=0;}
 	$b_chucksteak       = $_POST['b_chucksteak']; if($b_chucksteak == 'on'){$b_chucksteak=1;}else{$b_chucksteak=0;}
 	$b_skirtsteak       = $_POST['b_skirtsteak']; if($b_skirtsteak == 'on'){$b_skirtsteak=1;}else{$b_skirtsteak=0;}
+	$b_crosscut         = $_POST['b_crosscut']; if($b_crosscut == 'on'){$b_crosscut=1;}else{$b_crosscut=0;}
 	// $b_mince         = $_POST['b_mince']; if($b_mince == 'on'){$b_mince=1;}else{$b_mince=0;}
 	$b_brisket          = $_POST['b_brisket']; if($b_brisket == 'on'){$b_brisket=1;}else{$b_brisket=0;}
 	$b_shortribs        = $_POST['b_shortribs']; if($b_shortribs == 'on'){$b_shortribs=1;}else{$b_shortribs=0;}
