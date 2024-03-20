@@ -285,11 +285,24 @@ $unid = $_GET['n'];
 												echo $order->skirtsteak_bf;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="skirtsteak_bf" value="<?php echo $order->skirtsteak_bf; ?>">
-										
-										<?php if ($order->b_skirtsteak == 1) { 
-												echo $order->skirtsteak_bf_stewing;
+										</p>
+									</div>
+
+									<!-- b_crosscut crosscut_bf -->
+									<div>
+										<p>
+											<?php if ($order->b_crosscut == 1) { ?>
+												<span class="unicode check spacer">✓</span>
+											<?php } else { ?>
+												<span class="unicode cross spacer">✗</span>
+											<?php } ?>
+											<input type="hidden" name="b_crosscut" value="<?php echo $order->b_crosscut; ?>">
+											<strong>Cross Cut</strong>
+											
+											<?php if ($order->b_crosscut == 1) { 
+												echo $order->crosscut_bf;
 											} else { echo ' '; } ?>
-											<input type="hidden" name="skirtsteak_bf_stewing" value="<?php echo $order->skirtsteak_bf_stewing; ?>">
+											<input type="hidden" name="crosscut_bf" value="<?php echo $order->crosscut_bf; ?>">
 										</p>
 									</div>
 

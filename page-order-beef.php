@@ -199,13 +199,16 @@ $unid = $_GET['n'];
 										<option name="skirtsteak_bf" value="stew">Stew</option>
 										<option name="skirtsteak_bf" value="mince">Mince</option>
 									</select>
+								</div>
 
-									<select name="skirtsteak_bf_stewing" id="skirtsteak_bf_stewing" required>
-										<option name="skirtsteak_bf_stewing" value="" disabled selected>Select</option>
-										<option name="skirtsteak_bf_stewing" value="cross cut">Cross Cut</option>
-										<option name="skirtsteak_bf_stewing" value="stewing steak">Stewing steak</option>
-										<option name="skirtsteak_bf_stewing" value="flat iron">Flat Iron</option>
-										<option name="skirtsteak_bf_stewing" value="mince">Mince</option>
+								<div class="form-inline">
+									<input id="b_crosscut" name="b_crosscut" type="checkbox" required checked>
+									<label for="b_crosscut">Cross Cut</label>
+									<select name="crosscut_bf" id="crosscut_bf" required>
+										<option name="crosscut_bf" value="" disabled selected>Select</option>
+										<option name="crosscut_bf" value="stewing steak">Stewing steak</option>
+										<option name="crosscut_bf" value="flat iron">Flat Iron</option>
+										<option name="crosscut_bf" value="mince">Mince</option>
 									</select>
 								</div>
 

@@ -131,9 +131,16 @@ $beef = '
 		<em> '.
 			$_POST['skirtsteak_bf'].
 		'</em>
-		<strong> '.
-			$_POST['skirtsteak_bf_stewing'].
+	</p>
+
+	<p>
+		Cross Cut
+		<strong>'.
+			$_POST['b_crosscut'].
 		'</strong>
+		<em> '.
+			$_POST['crosscut_bf'].
+		'</em>
 	</p>
 
 	<p>

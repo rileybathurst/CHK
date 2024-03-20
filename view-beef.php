@@ -151,7 +151,7 @@
 	} else { echo ' '; } ?>
 </div>
 
-<!-- b_skirtsteak skirtsteak_bf skirtsteak_bf_stewing -->
+<!-- b_skirtsteak skirtsteak_bf -->
 <div>
 	<?php if ($order->b_skirtsteak == 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
@@ -163,9 +163,19 @@
 	<?php if ($order->b_skirtsteak == 1) { 
 		echo $order->skirtsteak_bf;
 	} else { echo ' '; } ?>
+</div>
 
-<?php if ($order->b_skirtsteak == 1) { 
-		echo $order->skirtsteak_bf_stewing;
+<!-- b_crosscut crosscut_bf -->
+<div>
+	<?php if ($order->b_crosscut == 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Cross Cut</strong>
+		
+	<?php if ($order->b_crosscut == 1) { 
+		echo $order->crosscut_bf;
 	} else { echo ' '; } ?>
 </div>
 
