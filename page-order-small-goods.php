@@ -370,6 +370,7 @@ $unid = $_GET['n'];
 								</div>
 
 								<hr>
+								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
 
 							<input type="submit" value="Submit">
 

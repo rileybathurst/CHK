@@ -242,6 +242,8 @@ $unid = $_GET['n'];
 
 								<?php include("order-extra.php"); ?>
 
+								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
+
 								<button type="submit" id="add" name="add">Next Step</button>
 							</fieldset>
 						</form>

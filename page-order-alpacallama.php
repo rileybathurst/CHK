@@ -98,6 +98,8 @@ $unid = $_GET['n'];
 								<!-- order small goods and special instructions -->        
 								<?php include("order-extra.php"); ?>
 							
+								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
+
 								<!-- next -->
 								<button type="submit" id="add" name="add">Next Step</button>
 							</fieldset>

@@ -136,6 +136,7 @@ blockquote p {
   width: 0;
   height: 0;
   overflow: hidden;
+  display: inline-block;
 }
 
 /*------------------*/
@@ -1658,6 +1659,13 @@ svg path {
   width: max-content;
 }
 
+.submitted {
+  background-color: #fefefe !important;
+  color: #222 !important;
+  padding: 1rem;
+  font-family: var(--font-sans);
+}
+
 /*------------------*/
 /*------------------*/
 .block {
@@ -1666,14 +1674,11 @@ svg path {
 
 /*------------------*/
 /*------------------*/
-label {
-  font-family: var(--font-sans);
-}
-
-/*------------------------------------*/
+.font-sans,
 .top-bar,
 .activate-page,
-.small-nav {
+.small-nav,
+label {
   font-family: var(--font-sans);
 }
 

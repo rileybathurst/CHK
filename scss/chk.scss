@@ -1815,3 +1815,10 @@ svg path {
     width: max-content;
   }
 }
+
+.submitted {
+  background-color: $white !important;
+  color: $black !important;
+  padding: 1rem;
+  font-family: var(--font-sans);
+}

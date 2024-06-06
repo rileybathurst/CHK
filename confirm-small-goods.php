@@ -454,3 +454,5 @@
 		<input type="hidden" name="t_koftas" value="<?php echo $order->t_koftas; ?>">
 	</p>
 </div>
+
+<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>

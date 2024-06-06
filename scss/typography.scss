@@ -2,14 +2,10 @@
 //  # Typography
 /*------------------*/
 
-label {
-  font-family: var(--font-sans);
-}
-
-/*------------------------------------*/
-
+.font-sans,
 .top-bar,
 .activate-page,
-.small-nav {
+.small-nav,
+label {
   font-family: var(--font-sans);
 }

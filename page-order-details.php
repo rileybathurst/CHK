@@ -14,7 +14,6 @@ $unid = $_GET['n'];
 
 		<!-- Start the main container -->
 		<section role="document" class="set-in">
-
 			<?php if (have_posts()) {
 				while (have_posts()) : the_post(); ?>
 
@@ -25,7 +24,7 @@ $unid = $_GET['n'];
 						<h2><?php the_title(); ?></h2>
 
 						<hr>
-						
+
 						<?php if ( is_user_logged_in() ) { ?>
 							<div class=""></div><!-- is this just left here incase we put something in? -->
 						<?php } else { ?>
@@ -124,6 +123,8 @@ $unid = $_GET['n'];
 								<label for="people">Number of people to be packed for:*</label>
 								<input type="number" placeholder="2 or more" required pattern="\d*" min="2" name="people" id="people">
 							</div>
+							
+							<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
 							
 							<button type="submit">Next Step</button>
 						</form>
