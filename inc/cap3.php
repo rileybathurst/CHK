@@ -31,7 +31,7 @@ $responseKeys = json_decode($response,true);
 
 		$subject = 'cap 3 test: ' . $_POST['name'];
 
-		$txt = $_POST['name'], responseKeys["score"];
+		$txt = $_POST['name']	. ' has submitted the cap 3 form.';
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
