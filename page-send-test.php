@@ -51,14 +51,16 @@
                   }
                 </script>
 
+                <div
+                class="g-recaptcha"
+                data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"
+                >
+                <!-- stay gold -->
+              </div>
+
 								<button
 									type="submit"
 									value="Submit"
-
-									class="g-recaptcha" 
-									data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok" 
-									data-callback='onSubmit' 
-									data-action='submit'
 								>
 									Send
 								</button>
