@@ -13,7 +13,7 @@ function prefix_admin_sendTest() {
 
 	$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt = json_encode($responseKeys);
+	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys);
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
