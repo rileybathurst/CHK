@@ -2,7 +2,7 @@
 // deals with variable set through form _POST
 // this has to be hidden from github due to the recaptcha secret key
 
-function prefix_admin_contact() {
+function prefix_admin_cap3() {
 // Check if captcha has been checked
 $captcha = $_POST['g-recaptcha-response'];
 
