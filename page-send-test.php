@@ -51,19 +51,25 @@
                   }
                 </script>
 
-                <div
+<!-- V3 doesnt like this
+<div
                 class="g-recaptcha"
                 data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"
                 data-callback='onSubmit' 
         data-action='submit'
                 >
-                <!-- ERROR for site owner: Invalid key type -->
-                <!-- stay gold -->
-              </div>
+                ERROR for site owner: Invalid key type
+                stay gold
+              </div> -->
 
 								<button
+                id="submit"
 									type="submit"
-									value="Submit"
+                  value="submit"
+									class="g-recaptcha"
+                data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"
+                data-callback='onSubmit' 
+        data-action='submit'
 								>
 									Send
 								</button>
