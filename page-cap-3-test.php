@@ -83,16 +83,15 @@
 								</textarea> 
 
 								<!-- recaptcha -->
-								<div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div>this can be updated to v3 but not the first thing to do
-
-									<!-- class="g-recaptcha"  -->
-									<!-- data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"  -->
-									<!-- data-callback='onSubmit'  -->
-									<!-- data-action='submit' -->
+								<!-- <div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div>this can be updated to v3 but not the first thing to do -->
 
 								<button
 									type="submit"
 									value="Submit"
+									class="g-recaptcha" 
+									data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok" 
+									data-callback='onSubmit' 
+									data-action='submit'
 								>
 									Send
 								</button>
