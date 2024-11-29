@@ -41,16 +41,13 @@
 									<?php } ?>
 								>
 
-                <script>
+								<script>
                   function onSubmit(token) {
                     document.getElementById("cap3").submit();
                   }
                 </script>
 
 								<button
-									type="submit"
-									value="submit"
-
 									class="g-recaptcha" 
 									data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok" 
 									data-callback='onSubmit' 
