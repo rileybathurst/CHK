@@ -10,7 +10,7 @@ function prefix_admin_sendTest() {
 
 		$subject = 'sendTest test: ' . $_POST['name'];
 
-    $txt = $_POST['name'] . ' has submitted the sendTest form.<br />' . '<br />' . 'reCAPTCHA score: ' . $responseKeys['score'];
+    $txt = $_POST['name'] . ' has submitted the sendTest form.<br />' . '<br />' . 'reCAPTCHA score: ' . $responseKeys['score'] . 'reCAPTCHA sucess: ' . $responseKeys['sucess'];
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
