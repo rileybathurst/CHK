@@ -17,7 +17,7 @@ if(!$captcha){
 console.log('🦄');
 console.log($captcha);
 
-// When the captcha is checked make sure its not spam
+/* // When the captcha is checked make sure its not spam
 $secretKey = "6LcG240qAAAAALJWeiRe_i4SjX9IDbeIPM4PIEoQ";
 
 $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha);
@@ -45,7 +45,7 @@ $responseKeys = json_decode($response,true);
 
 		wp_redirect( home_url() . '/cap-3-thanks' );
 
-	}
+	} */
 
 exit;
 
