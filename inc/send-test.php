@@ -10,13 +10,11 @@ function prefix_admin_sendTest() {
 		exit;
 	}
 
-
-
   $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SECRET_KEY.'&response='.$captcha);
   $responseBody = wp_remote_retrieve_body($response);
   $responseKeys = json_decode($responseBody, true);
 
-	if(responseBody.success == true && responseBody.score > 0.5) {
+	if($responseKeys['success'] == true && $responseKeys['score'] > 0.5) {
 		$developer = 'riley@rileybathurst.com'; // testing email
 
 		$subject = 'sendTest test: ' . $_POST['name'];
