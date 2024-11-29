@@ -14,7 +14,7 @@ function prefix_admin_sendTest() {
 
 	$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys) . '<br /><br />' . $string;
+	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys) . '<br /><br />' . $string. '<br /><br /> email me the secret key' . getenv('RECAPTCHA_SECRET_KEY'); ;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
