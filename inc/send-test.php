@@ -10,6 +10,8 @@ function prefix_admin_sendTest() {
 		exit;
 	}
 
+	if(responseBody.success == true && responseBody.score > 0.5) {
+
   $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SECRET_KEY.'&response='.$captcha);
   $responseBody = wp_remote_retrieve_body($response);
   $responseKeys = json_decode($responseBody, true);
@@ -32,6 +34,9 @@ function prefix_admin_sendTest() {
 		wp_mail($developer , $subject , $txt );
 
 		wp_redirect( home_url() . '/send-test' );
+	} else {
+		wp_redirect( home_url() . '/no-robot' );
+	}
 
 exit;
 
