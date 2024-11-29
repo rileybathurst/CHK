@@ -72,7 +72,6 @@
 									<?php } else { ?>
 										placeholder="phone"
 									<?php } ?>
-								><!-- pattern="[0-9]{3,}" im not sure about this regex it could be nice but needs extra info -->
 
 								<!-- details -->
 								<textarea

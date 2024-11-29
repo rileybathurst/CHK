@@ -4,7 +4,7 @@
 
 function prefix_admin_contact() {
 // Check if captcha has been checked
-$captcha = $_POST['g-recaptcha-response'];
+$captcha = $_POST['g-recaptcha'];
 
 // If no captcha 
 if(!$captcha){
