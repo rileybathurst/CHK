@@ -134,6 +134,7 @@ require get_parent_theme_file_path( '/inc/contact.php' );
 
 // * testing piece that will get removed
 require get_parent_theme_file_path( '/inc/cap3.php' );
+require get_parent_theme_file_path( '/inc/send-test.php' );
 
 // X Profile
 require get_parent_theme_file_path( '/inc/xprofileupdate.php' );
