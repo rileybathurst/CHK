@@ -2,7 +2,7 @@
 
 function prefix_admin_sendTest() {
 
-echo "<script>console.log('🦄');</script>";
+    // echo "<script>console.log('🦄');</script>";
 
 		$developer = 'riley@rileybathurst.com'; // testing email
 

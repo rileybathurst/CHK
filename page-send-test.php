@@ -24,9 +24,9 @@
 							<h3>Send Test</h3>
 
 							<form
-              action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"
-              method="post"
-              >
+							action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"
+							method="post"
+							>
 
 								<!-- hidden inputs submit to the corrent place in wp functions -->
 								<input type="hidden" name="action" value="sendTest">
@@ -34,10 +34,10 @@
 
 								<!-- name -->
 								<input
-                type="text"
-                required
-                name="name"
-                id="name"
+								type="text"
+								required
+								name="name"
+								id="name"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo $current_user->display_name; ?>"
 									<?php } else { ?>
@@ -46,38 +46,27 @@
 								>
 
 								<script>
-                  function onSubmit(token) {
-                    document.getElementById("sendTest").submit();
-                  }
-                </script>
+									function onSubmit(token) {
+										document.getElementById("sendTest").submit();
+									}
+								</script>
 
-<!-- V3 doesnt like this
-<div
-                class="g-recaptcha"
-                data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"
-                data-callback='onSubmit' 
-        data-action='submit'
-                >
-                ERROR for site owner: Invalid key type
-                stay gold
-              </div> -->
-
-						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-						<button
-		id="submit"
-							type="submit"
-		  value="submit"
-						>
-							Send
-						</button>
-						<script src="https://www.google.com/recaptcha/api.js?render=6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"></script>
-						<script>
-		  grecaptcha.ready(function() {
-			grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
-			  document.getElementById('g-recaptcha-response').value = token;
-			});
-		  });
-		</script>
+								<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+								<button
+									id="submit"
+									type="submit"
+									value="submit"
+								>
+									Send
+							</button>
+							<script src="https://www.google.com/recaptcha/api.js?render=6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"></script>
+							<script>
+								grecaptcha.ready(function() {
+									grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
+										document.getElementById('g-recaptcha-response').value = token;
+									});
+								});
+							</script>
 							</form>
 
 						</article>
