@@ -21,7 +21,7 @@
 						<?php post_class(); ?>
 						><!-- post open -->
 
-							<h3>Cap 3 Form</h3>
+							<h3>Send Test</h3>
 
 							<form
               action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"
@@ -33,7 +33,11 @@
 								<input type="hidden" name="data" value="sendTest">
 
 								<!-- name -->
-								<input type="text" required pattern="[a-zA-Z\s]+" name="name" id="name"
+								<input
+                type="text"
+                required
+                name="name"
+                id="name"
 									<?php if ( is_user_logged_in() ) { ?>
 										value="<?php echo $current_user->display_name; ?>"
 									<?php } else { ?>
@@ -41,9 +45,20 @@
 									<?php } ?>
 								>
 
+								<script>
+                  function onSubmit(token) {
+                    document.getElementById("sendTest").submit();
+                  }
+                </script>
+
 								<button
 									type="submit"
 									value="Submit"
+
+									class="g-recaptcha" 
+									data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok" 
+									data-callback='onSubmit' 
+									data-action='submit'
 								>
 									Send
 								</button>
