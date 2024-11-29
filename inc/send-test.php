@@ -4,12 +4,12 @@ function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
 
-	$secret =	getenv('RECAPTCHA_SECRET_KEY');
-
-	if (empty($secret)) {
+	$secret = getenv('RECAPTCHA_SECRET_KEY');
+	if (!$secret) {
 		wp_redirect( home_url() . '/no-secret' );
 		exit;
 	}
+
 
 	$string = 'https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha;
 

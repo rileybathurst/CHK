@@ -54,6 +54,20 @@
 									Send
 							</button>
 
+										<?php
+										$env_path = get_template_directory_uri() . '/env.php';
+										if (file_exists($env_path)) {
+											include($env_path);
+											if (defined('HELLO')) {
+												echo '<p>' . HELLO . '</p>';
+											} else {
+												echo '<p>HELLO constant is not defined in env.php</p>';
+											}
+										} else {
+											echo '<p>env.php file not found <br /> </p>' . $env_path;
+										}
+										?>
+
 							<?php $siteKey = '6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok'; ?>
 
 							<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>

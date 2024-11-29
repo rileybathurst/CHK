@@ -1,5 +1,6 @@
 .DS_Store
 .env
+env.php
 work.md
 inc/contact.php
 dist
