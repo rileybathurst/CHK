@@ -58,8 +58,9 @@
 
 							<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
 							<script>
+								const siteKey = '<?php echo $siteKey; ?>';
 								grecaptcha.ready(function() {
-									grecaptcha.execute($siteKey, {action: 'submit'}).then(function(token) {
+									grecaptcha.execute(siteKey, {action: 'submit'}).then(function(token) {
 										document.getElementById('g-recaptcha').value = token;
 									});
 								});
