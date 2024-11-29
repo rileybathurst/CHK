@@ -4,6 +4,13 @@ function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
 
+	$secret =	getenv('RECAPTCHA_SECRET_KEY');
+
+	if (empty($secret)) {
+		wp_redirect( home_url() . '/no-secret' );
+		exit;
+	}
+
 	$string = 'https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha;
 
   $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha);
