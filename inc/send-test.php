@@ -10,17 +10,18 @@ function prefix_admin_sendTest() {
 		exit;
 	}
 
-	if(responseBody.success == true && responseBody.score > 0.5) {
+
 
   $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SECRET_KEY.'&response='.$captcha);
   $responseBody = wp_remote_retrieve_body($response);
   $responseKeys = json_decode($responseBody, true);
 
-	$developer = 'riley@rileybathurst.com'; // testing email
+	if(responseBody.success == true && responseBody.score > 0.5) {
+		$developer = 'riley@rileybathurst.com'; // testing email
 
-	$subject = 'sendTest test: ' . $_POST['name'];
+		$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt =  'Name: ' . $_POST['name'] . '<br> <br>' . 'Response: ' . $responseBody;
+		$txt =  'Name: ' . $_POST['name'] . '<br> <br>' . 'Response: ' . $responseBody;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
