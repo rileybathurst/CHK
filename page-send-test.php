@@ -64,6 +64,7 @@
 								grecaptcha.ready(function() {
 									grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
 										document.getElementById('g-recaptcha-response').value = token;
+										console.log('reCAPTCHA response:', token);
 									});
 								});
 							</script>
