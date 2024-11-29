@@ -9,11 +9,11 @@ function prefix_admin_sendTest() {
   $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
   $responseKeys = json_decode($response,true);
 
-		$developer = 'riley@rileybathurst.com'; // testing email
+	$developer = 'riley@rileybathurst.com'; // testing email
 
-		$subject = 'sendTest test: ' . $_POST['name'];
+	$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt = $_POST['name'] . ' has submitted the sendTest form.<br />' . '<br />' . 'reCAPTCHA score: ' . $responseKeys['score'] . 'reCAPTCHA success: ' . $responseKeys['success'] . '<br />' . '<br />' . 'Message: ' . $_POST['g-recaptcha'] . '<br />' . $response . '<br />' . json_encode($responseKeys);
+	$txt = json_encode($responseKeys);
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
@@ -26,7 +26,7 @@ function prefix_admin_sendTest() {
 
 		wp_mail($developer , $subject , $txt );
 
-		wp_redirect( home_url() . '/sendTest-thanks' );
+		wp_redirect( home_url() . '/send-test' );
 
 exit;
 
