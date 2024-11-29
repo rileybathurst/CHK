@@ -13,6 +13,9 @@ if(!$captcha){
 	exit;
 }
 
+
+console.log($captcha);
+
 // When the captcha is checked make sure its not spam
 $secretKey = "6LcG240qAAAAALJWeiRe_i4SjX9IDbeIPM4PIEoQ";
 
