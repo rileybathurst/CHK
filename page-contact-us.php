@@ -1,6 +1,6 @@
 <?php
 /*  
- *  Template Name: contact us
+ *  Template Name: cap 3 test
  */ 
 ?>
 
