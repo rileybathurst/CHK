@@ -4,16 +4,17 @@ function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
 
+	$string = 'https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha;
 
-
-  $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
-  $responseKeys = json_decode($response,true);
+  $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha);
+  $responseBody = wp_remote_retrieve_body($response);
+  $responseKeys = json_decode($responseBody, true);
 
 	$developer = 'riley@rileybathurst.com'; // testing email
 
 	$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys);
+	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys) . '<br /><br />' . $string;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
