@@ -1,6 +1,5 @@
 .DS_Store
+.env
 work.md
 inc/contact.php
-# TODO: Remove this once the testing is done
-inc/cap3.php
 dist
