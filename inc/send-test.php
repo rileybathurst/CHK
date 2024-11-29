@@ -4,6 +4,7 @@ function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
 
+	// this comes from wp-config.php and is not in the repo it can be found at https://www.google.com/recaptcha/admin
 	$secret = RECAPTCHA_SECRET_KEY;
 	if (!$secret) {
 		wp_redirect( home_url() . '/no-secret' );

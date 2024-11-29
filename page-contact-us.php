@@ -82,16 +82,27 @@
 									>
 								</textarea> 
 
-								<!-- recaptcha -->
-								<div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div>
-								<!-- this can be updated to v3 but not the first thing to do -->
+								<input type="hidden" id="g-recaptcha" name="g-recaptcha">
 
 								<button
 									type="submit"
 									value="Submit"
+									id="submit"
 								>
 									Send
 								</button>
+
+								<?php $siteKey = '6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok'; ?>
+
+								<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
+								<script>
+									const siteKey = '<?php echo $siteKey; ?>';
+									grecaptcha.ready(function() {
+										grecaptcha.execute(siteKey, {action: 'submit'}).then(function(token) {
+											document.getElementById('g-recaptcha').value = token;
+										});
+									});
+								</script>
 							</form>
 
 						</article>
