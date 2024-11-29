@@ -14,7 +14,7 @@ if(!$captcha){
 }
 
 // When the captcha is checked make sure its not spam
-$secretKey = "6LdEgUcUAAAAAPXndUG0MjwmvFxU72E9xx3PVVas";
+$secretKey = "6LcG240qAAAAALJWeiRe_i4SjX9IDbeIPM4PIEoQ";
 $ip = $_SERVER['REMOTE_ADDR'];
 
 $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
