@@ -64,7 +64,7 @@
 								grecaptcha.ready(function() {
 									grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
 										document.getElementById('g-recaptcha-response').value = token;
-										console.log('reCAPTCHA response:', token);
+										document.getElementById('g-recaptcha-response').value = grecaptcha.getResponse();
 									});
 								});
 							</script>
@@ -78,6 +78,5 @@
 			</section>
 	</main>
 
-	<?php get_sidebar(); ?> <!-- symantically this should be outside the main -->
-</div>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>
