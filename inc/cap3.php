@@ -13,8 +13,7 @@ if(!$captcha){
 	exit;
 }
 
-
-console.log('🦄');
+echo "<script>console.log('🦄');</script>";
 console.log($captcha);
 
 /* // When the captcha is checked make sure its not spam
