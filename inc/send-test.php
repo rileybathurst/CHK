@@ -4,16 +4,13 @@ function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
 
-	$secret = getenv('RECAPTCHA_SECRET_KEY');
+	$secret = RECAPTCHA_SECRET_KEY;
 	if (!$secret) {
 		wp_redirect( home_url() . '/no-secret' );
 		exit;
 	}
 
-
-	$string = 'https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha;
-
-  $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.getenv('RECAPTCHA_SECRET_KEY').'&response='.$captcha);
+  $response = wp_remote_get('https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SECRET_KEY.'&response='.$captcha);
   $responseBody = wp_remote_retrieve_body($response);
   $responseKeys = json_decode($responseBody, true);
 
@@ -21,7 +18,7 @@ function prefix_admin_sendTest() {
 
 	$subject = 'sendTest test: ' . $_POST['name'];
 
-	$txt =  $captcha . '<br /><br />' . json_encode($responseKeys) . '<br /><br />' . $string. '<br /><br /> email me the secret key' . getenv('RECAPTCHA_SECRET_KEY'); ;
+	$txt =  'Name: ' . $_POST['name'] . '<br> <br>' . 'Response: ' . $responseBody;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
