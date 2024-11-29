@@ -1,6 +1,6 @@
 <?php
 /*  
- *  Template Name: contact us
+ *  Template Name: cap 3 test
  */ 
 ?>
 
@@ -34,10 +34,13 @@
 							
 							<h3>Contact Form</h3>
 
-							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+							<form
+              action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"
+              method="post"
+              >
 
-								<input type="hidden" name="action" value="contact"><!-- hidden inputs submit to the corrent place in wp functions -->
-								<input type="hidden" name="data" value="contact">
+								<input type="hidden" name="action" value="cap3"><!-- hidden inputs submit to the corrent place in wp functions -->
+								<input type="hidden" name="data" value="cap3">
 
 								<!-- name -->
 								<input type="text" required pattern="[a-zA-Z\s]+" name="name" id="name"
@@ -84,6 +87,12 @@
 
 								<!-- recaptcha -->
 								<!-- <div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div>this can be updated to v3 but not the first thing to do -->
+
+                <script>
+                  function onSubmit(token) {
+                    document.getElementById("demo-form").submit();
+                  }
+                </script>
 
 								<button
 									type="submit"

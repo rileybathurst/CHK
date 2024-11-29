@@ -132,6 +132,9 @@ add_filter( 'wp_mail_from_name', function( $name ) {
 require get_parent_theme_file_path( '/inc/contact.php' );
 // require get_parent_theme_file_path( '/inc/welcome-email.php' );
 
+// * testing piece that will get removed
+require get_parent_theme_file_path( '/inc/cap3.php' );
+
 // X Profile
 require get_parent_theme_file_path( '/inc/xprofileupdate.php' );
 require get_parent_theme_file_path( '/inc/xprofileaddress.php' );

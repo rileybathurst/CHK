@@ -1,7 +1,7 @@
 <?php
-/*
-	*Template Name: cap 3 test
-*/
+/*  
+ *  Template Name: contact us
+ */ 
 ?>
 
 <!-- posts and pages -->
@@ -32,7 +32,7 @@
 								<?php the_content(); ?>
 							</div>
 							
-							<h3>Cap 3 Form</h3>
+							<h3>Contact Form</h3>
 
 							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 
@@ -84,11 +84,6 @@
 
 								<!-- recaptcha -->
 								<div class="g-recaptcha" data-sitekey="6LdEgUcUAAAAAAXTbz8HDCt4MunPvI6l4tmtrMzL"></div>this can be updated to v3 but not the first thing to do
-
-									<!-- class="g-recaptcha"  -->
-									<!-- data-sitekey="6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"  -->
-									<!-- data-callback='onSubmit'  -->
-									<!-- data-action='submit' -->
 
 								<button
 									type="submit"
