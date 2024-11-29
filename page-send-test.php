@@ -59,10 +59,24 @@
 								>
 									Send
 							</button>
+
+							<button
+								id="test-recaptcha"
+								type="button"
+								value="test-recaptcha"
+							>
+								Test Recaptcha
+							</button>
+
 							<script src="https://www.google.com/recaptcha/api.js?render=6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"></script>
 							<script>
 								grecaptcha.ready(function() {
 									grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
+										document.getElementById('test-recaptcha').addEventListener('click', function() {
+											grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'test'}).then(function(token) {
+												alert('Recaptcha response: ' + token);
+											});
+										});
 										document.getElementById('g-recaptcha-response').value = token;
 										document.getElementById('g-recaptcha-response').value = grecaptcha.getResponse();
 									});
