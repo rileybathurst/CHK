@@ -14,6 +14,7 @@ if(!$captcha){
 }
 
 
+console.log('🦄');
 console.log($captcha);
 
 // When the captcha is checked make sure its not spam
