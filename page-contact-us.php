@@ -1,7 +1,7 @@
 <?php
-/*  
- *  Template Name: cap 3 test
- */ 
+/*
+	*Template Name: cap 3 test
+*/
 ?>
 
 <!-- posts and pages -->
@@ -32,7 +32,7 @@
 								<?php the_content(); ?>
 							</div>
 							
-							<h3>Contact Form</h3>
+							<h3>Cap 3 Form</h3>
 
 							<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 
