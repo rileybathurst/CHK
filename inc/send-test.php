@@ -1,14 +1,16 @@
 <?php
 
 function prefix_admin_sendTest() {
-
-    // echo "<script>console.log('🦄');</script>";
+    
+  $captcha = $_POST['g-recaptcha'];
+  $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
+  $responseKeys = json_decode($response,true);
 
 		$developer = 'riley@rileybathurst.com'; // testing email
 
 		$subject = 'sendTest test: ' . $_POST['name'];
 
-		$txt = $_POST['name']	. ' has submitted the sendTest form.';
+		$txt = $_POST['name']	. ' has submitted the sendTest form.' . $responseKeys;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
