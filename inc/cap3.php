@@ -16,10 +16,7 @@ if(!$captcha){
 echo "<script>console.log('🦄');</script>";
 echo "<script>console.log($captcha);</script>";
 
-// When the captcha is checked make sure its not spam
-$secretKey = getenv('RECAPTCHA_SECRET_KEY');
-
-$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha);
+$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
 $responseKeys = json_decode($response,true);
 
 // ! this is where it also needs the and score of 0.5
