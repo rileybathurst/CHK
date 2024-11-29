@@ -51,7 +51,7 @@
 									}
 								</script>
 
-								<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+								<input type="hidden" id="g-recaptcha" name="g-recaptcha">
 								<button
 									id="submit"
 									type="submit"
@@ -68,6 +68,8 @@
 								Test Recaptcha
 							</button>
 
+							<!-- site key = 6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok -->
+
 							<script src="https://www.google.com/recaptcha/api.js?render=6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"></script>
 							<script>
 								grecaptcha.ready(function() {
@@ -77,8 +79,8 @@
 												alert('Recaptcha response: ' + token);
 											});
 										});
-										document.getElementById('g-recaptcha-response').value = token;
-										document.getElementById('g-recaptcha-response').value = grecaptcha.getResponse();
+										document.getElementById('g-recaptcha').value = token;
+										document.getElementById('g-recaptcha').value = grecaptcha.getResponse();
 									});
 								});
 							</script>

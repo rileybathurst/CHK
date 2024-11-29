@@ -3,6 +3,9 @@
 function prefix_admin_sendTest() {
     
   $captcha = $_POST['g-recaptcha'];
+
+	
+
   $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
   $responseKeys = json_decode($response,true);
 
