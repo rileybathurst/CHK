@@ -45,12 +45,6 @@
 									<?php } ?>
 								>
 
-								<script>
-									function onSubmit(token) {
-										document.getElementById("sendTest").submit();
-									}
-								</script>
-
 								<input type="hidden" id="g-recaptcha" name="g-recaptcha">
 								<button
 									id="submit"
@@ -60,27 +54,13 @@
 									Send
 							</button>
 
-							<button
-								id="test-recaptcha"
-								type="button"
-								value="test-recaptcha"
-							>
-								Test Recaptcha
-							</button>
+							<?php $siteKey = '6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok'; ?>
 
-							<!-- site key = 6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok -->
-
-							<script src="https://www.google.com/recaptcha/api.js?render=6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok"></script>
+							<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $siteKey; ?>"></script>
 							<script>
 								grecaptcha.ready(function() {
-									grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'submit'}).then(function(token) {
-										document.getElementById('test-recaptcha').addEventListener('click', function() {
-											grecaptcha.execute('6LcG240qAAAAAEIEo3YRUIoKwf44GNqk_3ruJIok', {action: 'test'}).then(function(token) {
-												alert('Recaptcha response: ' + token);
-											});
-										});
+									grecaptcha.execute($siteKey, {action: 'submit'}).then(function(token) {
 										document.getElementById('g-recaptcha').value = token;
-										document.getElementById('g-recaptcha').value = grecaptcha.getResponse();
 									});
 								});
 							</script>
