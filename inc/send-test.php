@@ -10,11 +10,18 @@ function prefix_admin_sendTest() {
 
 		$subject = 'sendTest test: ' . $_POST['name'];
 
-		$txt = $_POST['name']	. ' has submitted the sendTest form.<br />' . $responseKeys["success"] . '<br />' . $responseKeys["score"];
+		$txt = $_POST['name']	. ' has submitted the sendTest form.<br />' . 
+    . '<br />' . print_r($responseKeys, true)
+    ;
 
 		add_filter( 'wp_mail_from_name', function( $name ) {
 			return 'Canterbury Homekill';
 		});
+
+    add_filter( 'wp_mail_content_type', 'set_content_type' );
+		function set_content_type( $content_type ) {
+			return 'text/html';
+		}
 
 		wp_mail($developer , $subject , $txt );
 
