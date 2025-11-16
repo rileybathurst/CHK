@@ -172,7 +172,7 @@ sausage
 | *$0.20 per kg | Additional For Fennel In Bratwurst Sausages            |
 | *$1.50 per kg | Additional charge for Hogg Casings                     |
 | *$1.50 per kg | Additional to add cheese to gourmet sausages           |
-| $.50 kg       | labelling for individual packs                         |
+| $0.50 kg       | labelling for individual packs                         |
 
 ---
 
