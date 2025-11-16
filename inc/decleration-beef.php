@@ -1,8 +1,4 @@
 <?php
-// TODO this is showing a warning
-// Warning: Use of undefined constant meatorders - assumed 'meatorders' (this will throw an Error in a future version of PHP) in /var/www/html/wp-content/themes/chk/inc/decleration-beef.php on line 11
-// template-animal deals with first step of each animal
-// deals with variable set through form _POST
 // BEEF
 function prefix_admin_declarationBeef() {
 

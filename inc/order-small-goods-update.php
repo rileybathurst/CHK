@@ -61,8 +61,8 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_biersticks'           => $_POST['t_biersticks'],
 		't_rissoles'             => $_POST['t_rissoles'],
 		'rissoles_t'             => $_POST['rissoles_t'],
-		't_koftas'               => $_POST['t_koftas']
-		't_bbq_grill_stick'      => $_POST['t_bbq_grill_stick']
+		't_koftas'               => $_POST['t_koftas'],
+		't_bbq_grill_stick'      => $_POST['t_bbq_grill_stick'],
 		'bbq_grill_stick_t'      => $_POST['bbq_grill_stick_t']
 	) ,
 

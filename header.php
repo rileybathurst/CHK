@@ -112,7 +112,7 @@
 			<!-- show for either login state -->
 			
 			<?php $contact = get_page_by_title('Contact Us');
-			if ( $contact == '') { //no page throw an error purposley so it's obvious -->
+			if ( $contact == '') { //no page throw an error purposley so it's obvious
 				if(current_user_can('administrator')) { // but only to an admin ?>
 					No Contact Us page
 				<?php } // admin
@@ -149,10 +149,10 @@
 				</div>
 
 				<!-- medium up nav -->
-			<nav id="mediummenu" class="show-for-medium hide-for-print"> <!-- medium up nav -->
-				<?php wp_nav_menu( array(
-					'theme_location' => 'primary'
-				) ); ?>
-			</nav>
+				<nav id="mediummenu" class="show-for-medium hide-for-print"> <!-- medium up nav -->
+					<?php wp_nav_menu( array(
+						'theme_location' => 'primary'
+					) ); ?>
+				</nav>
 
-		</header>
+			</header>

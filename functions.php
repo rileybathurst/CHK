@@ -130,7 +130,6 @@ add_filter( 'wp_mail_from_name', function( $name ) {
 
 // Bring in all the additional files
 require get_parent_theme_file_path( '/inc/contact.php' );
-// require get_parent_theme_file_path( '/inc/welcome-email.php' );
 
 // * testing piece that will get removed
 require get_parent_theme_file_path( '/inc/cap3.php' );
@@ -155,7 +154,7 @@ require get_parent_theme_file_path( '/inc/order-pig-update.php' );
 require get_parent_theme_file_path( '/inc/order-deer-update.php' );
 require get_parent_theme_file_path( '/inc/order-sheep-update.php' );
 require get_parent_theme_file_path( '/inc/order-alpaca-llama-update.php' );
-require get_parent_theme_file_path( '/inc/order-small-goods-update.php' );
+// require get_parent_theme_file_path( '/inc/order-small-goods-update.php' );
 
 require get_parent_theme_file_path( '/inc/con1.php' );
 require get_parent_theme_file_path( '/inc/booking.php' );

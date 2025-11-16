@@ -16,6 +16,8 @@
 
 </footer>
 
+</div><!-- .page-layout -->
+
 <?php wp_footer(); ?>
 
 </body>
