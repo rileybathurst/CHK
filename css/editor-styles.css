@@ -1,0 +1,32 @@
+:root {
+  --lead: hsl(0, 0%, 10%);
+  --tungsten: hsl(0, 0%, 20%);
+  --iron: hsl(0, 0%, 30%);
+  --steel: hsl(0, 0%, 40%);
+  --nickel: hsl(0, 0%, 50%);
+  --aluminium: hsl(0, 0%, 60%);
+  --magnesium: hsl(0, 0%, 70%);
+  --silver: hsl(0, 0%, 80%);
+  --mercury: hsl(0, 0%, 90%);
+  --small-space: 0.625em;
+  --regular-space: 0.9375em;
+  --quarternary: #222;
+  --quarternary: hsl(0, 0%, 13%);
+  --border-radius: 0.2em;
+}
+
+/* body {
+  // color: #fff;
+} */
+.is-style-stripes {
+  list-style: none;
+}
+.is-style-stripes li {
+  padding: var(--small-space) var(--regular-space);
+}
+.is-style-stripes li:nth-child(odd) {
+  background: var(--mercury);
+  border-radius: var(--border-radius);
+}
+
+/*# sourceMappingURL=editor-styles.css.map */
