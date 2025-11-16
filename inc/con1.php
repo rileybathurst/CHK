@@ -273,12 +273,12 @@ function prefix_admin_con1() {
 											'</strong>
 										</p>
 
-`										<p>
+										<p>
 											Hogg Casings
 											<strong>'.
 												$_POST['sg_hogg_casing'].
 											'</strong>
-										</p>`
+										</p>
 
 										<p>
 											Add cheese to gourmet sausages
@@ -326,7 +326,7 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
-										Pepperoni Salami
+											Pepperoni Salami
 											<strong>'.
 												$_POST['salami_pepperoni'].
 											'</strong>
@@ -336,7 +336,7 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
-										Chilli Salami
+											Chilli Salami
 											<strong>'.
 												$_POST['salami_chilli'].
 											'</strong>
