@@ -2,7 +2,7 @@
 // SHEEP
 function prefix_admin_declarationSheep() {
 
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	// Whats inserted

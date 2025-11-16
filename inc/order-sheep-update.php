@@ -1,7 +1,7 @@
 <?php
 // SHEEP
 function prefix_admin_ordersheepupdate() {
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	//create variables

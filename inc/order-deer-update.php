@@ -1,28 +1,28 @@
 <?php
 function prefix_admin_orderdeerupdate() {
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	//create variables
-	$v_fillet = $_POST['v_fillet']; if($v_fillet == 'on'){$v_fillet=1;}else{$v_fillet=0;}
-	$fillet_v = $_POST['fillet_v'];
-	$v_backstrap = $_POST['v_backstrap']; if($v_backstrap == 'on'){$v_backstrap=1;}else{$v_backstrap=0;}
-	$backstrap_v = $_POST['backstrap_v'];
-	$v_rump = $_POST['v_rump']; if($v_rump == 'on'){$v_rump=1;}else{$v_rump=0;}
-	$rump_v = $_POST['rump_v'];
-	$v_shoulder = $_POST['v_shoulder']; if($v_shoulder == 'on'){$v_shoulder=1;}else{$v_shoulder=0;}
-	$shoulder_v = $_POST['shoulder_v'];
-	$v_loin = $_POST['v_loin']; if($v_loin == 'on'){$v_loin=1;}else{$v_loin=0;}
-	$loin_v = $_POST['loin_v'];
-	$v_bellies = $_POST['v_bellies']; if($v_bellies == 'on'){$v_bellies=1;}else{$v_bellies=0;}
-	$bellies_v = $_POST['bellies_v'];
-	$v_leg = $_POST['v_leg']; if($v_leg == 'on'){$v_leg=1;}else{$v_leg=0;}
-	$leg_v = $_POST['leg_v'];
-	$v_excess_trim = $_POST['v_excess_trim']; if($v_excess_trim == 'on'){$v_excess_trim=1;}else{$v_excess_trim=0;}
-	$excess_trim_v = $_POST['excess_trim_v'];
+	$v_fillet = isset($_POST['v_fillet']) && $_POST['v_fillet'] == 'on' ? 1 : 0;
+	$fillet_v = isset($_POST['fillet_v']) ? $_POST['fillet_v'] : '';
+	$v_backstrap = isset($_POST['v_backstrap']) && $_POST['v_backstrap'] == 'on' ? 1 : 0;
+	$backstrap_v = isset($_POST['backstrap_v']) ? $_POST['backstrap_v'] : '';
+	$v_rump = isset($_POST['v_rump']) && $_POST['v_rump'] == 'on' ? 1 : 0;
+	$rump_v = isset($_POST['rump_v']) ? $_POST['rump_v'] : '';
+	$v_shoulder = isset($_POST['v_shoulder']) && $_POST['v_shoulder'] == 'on' ? 1 : 0;
+	$shoulder_v = isset($_POST['shoulder_v']) ? $_POST['shoulder_v'] : '';
+	$v_loin = isset($_POST['v_loin']) && $_POST['v_loin'] == 'on' ? 1 : 0;
+	$loin_v = isset($_POST['loin_v']) ? $_POST['loin_v'] : '';
+	$v_bellies = isset($_POST['v_bellies']) && $_POST['v_bellies'] == 'on' ? 1 : 0;
+	$bellies_v = isset($_POST['bellies_v']) ? $_POST['bellies_v'] : '';
+	$v_leg = isset($_POST['v_leg']) && $_POST['v_leg'] == 'on' ? 1 : 0;
+	$leg_v = isset($_POST['leg_v']) ? $_POST['leg_v'] : '';
+	$v_excess_trim = isset($_POST['v_excess_trim']) && $_POST['v_excess_trim'] == 'on' ? 1 : 0;
+	$excess_trim_v = isset($_POST['excess_trim_v']) ? $_POST['excess_trim_v'] : '';
 	$spins = isset($_POST['spins']) ? sanitize_text_field($_POST['spins']) : '';
 
-	$assistance = $_POST['assistance']; if($assistance == 'on'){$assistance=1;}else{$assistance=0;}
+	$assistance = isset($_POST['assistance']) && $_POST['assistance'] == 'on' ? 1 : 0;
 
 	//create small goods variable
 	if (isset($_POST['small_goods'])) {
@@ -35,22 +35,22 @@ function prefix_admin_orderdeerupdate() {
 	$wpdb->update( 'meatorders' ,
 
 	array(
-		'v_fillet'          =>       $v_fillet ,
-		'fillet_v'          =>      $_POST['fillet_v'] ,
+		'v_fillet'          =>      $v_fillet ,
+		'fillet_v'          =>      $fillet_v ,
 		'v_backstrap'       =>      $v_backstrap ,
-		'backstrap_v'       =>      $_POST['backstrap_v'] ,
+		'backstrap_v'       =>      $backstrap_v ,
 		'v_rump'            =>      $v_rump ,
-		'rump_v'            =>      $_POST['rump_v'] ,
+		'rump_v'            =>      $rump_v ,
 		'v_shoulder'        =>      $v_shoulder ,
-		'shoulder_v'        =>      $_POST['shoulder_v'] ,
+		'shoulder_v'        =>      $shoulder_v ,
 		'v_loin'            =>      $v_loin ,
-		'loin_v'            =>      $_POST['loin_v'] ,
+		'loin_v'            =>      $loin_v ,
 		'v_bellies'         =>      $v_bellies ,
-		'bellies_v'         =>      $_POST['bellies_v'] ,
+		'bellies_v'         =>      $bellies_v ,
 		'v_leg'             =>      $v_leg ,
-		'leg_v'             =>      $_POST['leg_v'] ,
+		'leg_v'             =>      $leg_v ,
 		'v_excess_trim'     =>      $v_excess_trim ,
-		'excess_trim_v'     =>      $_POST['excess_trim_v'] ,
+		'excess_trim_v'     =>      $excess_trim_v ,
 		'assistance'        =>      $assistance ,
 		'spins'             =>      $spins ,
 		'small'             =>      $url
@@ -62,9 +62,12 @@ function prefix_admin_orderdeerupdate() {
 	);
 
 	// small goods send
-	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );  
-	}    else   {
+	if ($url == 1) {
+		wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );
+		exit();
+	} else {
 		wp_redirect( home_url() . '/confirm-deer?n=' . $_POST['unid'] );
+		exit();
 	}
 }
 add_action( 'admin_post_orderdeerupdate', 'prefix_admin_orderdeerupdate' );

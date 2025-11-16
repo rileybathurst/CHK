@@ -3,7 +3,7 @@
 // deals with variable set through form _POST
 function prefix_admin_orderdetailsupdate() {
 
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	$name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';

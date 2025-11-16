@@ -1,7 +1,7 @@
 <?php
 // ALPACA LLAMA
 function prefix_admin_declarationAlpacaLlama() {
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	// Whats inserted

@@ -2,7 +2,7 @@
 // BEEF
 function prefix_admin_declarationBeef() {
 
-	// Extremley Important to set
+	// Extremely Important to set
 			global $wpdb;
 
 			// Whats inserted

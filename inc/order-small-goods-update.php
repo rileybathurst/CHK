@@ -2,7 +2,7 @@
 // SMALL GOODS
 
 function prefix_admin_ordersmallgoodsupdate() {
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	// create boolean variables

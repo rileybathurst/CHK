@@ -2,7 +2,7 @@
 // deals with variable set through form _POST
 function prefix_admin_xprofileaddmobile() {
 
-	// Extremley Important to set
+	// Extremely Important to set
 			global $wpdb;
 	
 			// Whats inserted

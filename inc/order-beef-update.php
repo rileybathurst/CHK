@@ -1,7 +1,7 @@
 <?php
 // deals with variable set through form _POST
 function prefix_admin_orderbeefupdate() {
-	// Extremley Important to set
+	// Extremely Important to set
 	global $wpdb;
 
 	//create variables
