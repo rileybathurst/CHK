@@ -10,15 +10,13 @@ if ( ! function_exists( 'chk_setup' ) ) :
 		/* Let WordPress manage the document title. */
 		add_theme_support( 'title-tag' );
 
-		// This theme uses wp_nav_menu() in two locations.
-		register_nav_menus( array(
-			'primary'		=> __( 'Primary Menu', 'text_domain' ),
-			'secondary'		=> __( 'Seconday Menu', 'text_domain' ),
-			'footer'		=> __( 'Footer Menu', 'text_domain' ),
-			'social'		=> __( 'Social Links Menu', 'text_domain' ),
-		) );
-
-		/*
+	// This theme uses wp_nav_menu() in two locations.
+	register_nav_menus( array(
+		'primary'		=> 'Primary Menu',
+		'secondary'		=> 'Secondary Menu',
+		'footer'		=> 'Footer Menu',
+		'social'		=> 'Social Links Menu',
+	) );		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
@@ -154,7 +152,7 @@ require get_parent_theme_file_path( '/inc/order-pig-update.php' );
 require get_parent_theme_file_path( '/inc/order-deer-update.php' );
 require get_parent_theme_file_path( '/inc/order-sheep-update.php' );
 require get_parent_theme_file_path( '/inc/order-alpaca-llama-update.php' );
-// require get_parent_theme_file_path( '/inc/order-small-goods-update.php' );
+require get_parent_theme_file_path( '/inc/order-small-goods-update.php' );
 
 require get_parent_theme_file_path( '/inc/con1.php' );
 require get_parent_theme_file_path( '/inc/booking.php' );
