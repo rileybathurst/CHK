@@ -2,7 +2,7 @@
 /*
  * Template Name: prices
  */
- get_header(); ?>
+get_header(); ?>
 
 <div class="container main-border over-background">
 	<main>
@@ -24,41 +24,95 @@
 						<?php the_content(); ?>
 
 						<!-- sheep -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('sheep')->ID); ?>"><?php echo (get_page_by_title('Sheep')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Sheep')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('sheep');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Sheep
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Sheep')->post_content); ?>
+								<hr>
+						<?php } ?>
 
 						<!-- pig -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('pig')->ID); ?>"><?php echo (get_page_by_title('Pig')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Pig')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('pig');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Pig
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Pig')->post_content); ?>
+								<hr>
+						<?php } ?>
 
 						<!-- deer -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('deer')->ID); ?>"><?php echo (get_page_by_title('Deer')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Deer')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('deer');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Deer
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Deer')->post_content); ?>
+								<hr>
+						<?php } ?>
 
 						<!-- beef -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('beef')->ID); ?>"><?php echo (get_page_by_title('Beef')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Beef')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('beef');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Beef
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Beef')->post_content); ?>
+								<hr>
+						<?php } ?>
 
 						<!-- Alpaca Llama -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('alpaca llama')->ID); ?>"><?php echo (get_page_by_title('Alpaca Llama')->post_title); ?></a></h3>
+						<?php $page = get_page_by_path('alpaca-llama');
+							if ($page) { ?>
+						<h3>
+							<a href="<?php echo get_permalink($page->ID); ?>">
+								Alpaca Llama
+							</a>
+						</h3>
 						<?php echo (get_page_by_title('Alpaca Llama')->post_content); ?>
 						<hr>
 
 						<!-- small goods -->
-						<h3><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('small goods')->ID); ?>"><?php echo (get_page_by_title('Small Goods')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Small Goods')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('small-goods');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Small Goods
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Small Goods')->post_content); ?>
+								<hr>
+						<?php } ?>
 
 						<!-- delivery -->
-						<h3><a href="<?php echo home_url(); ?>/order"><?php echo (get_page_by_title('Delivery')->post_title); ?></a></h3>
-						<?php echo (get_page_by_title('Delivery')->post_content); ?>
-						<hr>
+						<?php $page = get_page_by_path('delivery');
+							if ($page) { ?>
+								<h3>
+									<a href="<?php echo get_permalink($page->ID); ?>">
+										Delivery
+									</a>
+								</h3>
+								<?php echo (get_page_by_title('Delivery')->post_content); ?>
+								<hr>
+						<?php } ?>
 
-						<a href="<?php echo home_url(); ?>/order" class="button"><?php echo (get_page_by_title('Order')->post_title); ?></a>
+						<!-- order link -->
+						<?php $page = get_page_by_path('order');
+							if ($page) { ?>
+							<a href="<?php echo get_permalink($page->ID); ?>" class="button">
+								Order
+							</a>
+						<?php } ?>
 
 					</article>
 				<?php endwhile; // while have posts

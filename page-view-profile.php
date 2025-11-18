@@ -139,7 +139,15 @@ if (isset($_GET['offset'])) {
 
 						<!-- <div>Anything need to be changed?</div> I dont think this makes sense being here -->
 
-						<div><a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('update')->ID); ?>" class="button">Update Info</a></div></div>
+						
+						<?php $page = get_page_by_path('update');
+							if ($page) { ?>
+						<div>
+							<a href="<?php echo get_permalink($page->ID); ?>" class="button">
+								Update Info
+							</a>
+						</div>
+					</div>
 				</ul>
 			</div>
 		</div>

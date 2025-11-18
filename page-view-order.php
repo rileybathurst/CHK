@@ -204,7 +204,14 @@ $unid = $_GET['n'];
 
 											<?php } else { // if admin ?>
 												<div class="hide-for-print">
-													<a href="<?php echo home_url(); ?>/?page_id=<?php echo (get_page_by_title('view profile')->ID); ?>" class="button san-serif">Back to your orders</a>
+													
+
+												<?php $page = get_page_by_path('view-profile');
+													if ($page) { ?>
+													<a href="<?php echo get_permalink($page->ID); ?>" class="button san-serif">
+														Back to your orders
+													</a>
+												<?php } ?>
 												</div>
 											<?php } ?>
 
