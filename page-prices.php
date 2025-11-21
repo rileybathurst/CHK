@@ -31,9 +31,11 @@ get_header(); ?>
 										Sheep
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Sheep')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
+
+
 
 						<!-- pig -->
 						<?php $page = get_page_by_path('pig');
@@ -43,7 +45,7 @@ get_header(); ?>
 										Pig
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Pig')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
 
@@ -55,7 +57,7 @@ get_header(); ?>
 										Deer
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Deer')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
 
@@ -67,7 +69,7 @@ get_header(); ?>
 										Beef
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Beef')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
 
@@ -79,7 +81,7 @@ get_header(); ?>
 								Alpaca Llama
 							</a>
 						</h3>
-						<?php echo (get_page_by_title('Alpaca Llama')->post_content); ?>
+						<?php echo ($page->post_content); ?>
 						<hr>
 
 						<!-- small goods -->
@@ -90,7 +92,7 @@ get_header(); ?>
 										Small Goods
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Small Goods')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
 
@@ -102,7 +104,7 @@ get_header(); ?>
 										Delivery
 									</a>
 								</h3>
-								<?php echo (get_page_by_title('Delivery')->post_content); ?>
+								<?php echo ($page->post_content); ?>
 								<hr>
 						<?php } ?>
 

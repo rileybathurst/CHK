@@ -6,29 +6,20 @@
 			<h2>Welcome to <?php echo get_bloginfo( 'name' ); ?> Ltd</h2> <!-- this is probably a little slower but its fine for now -->
 
 			<hr>
-			<?php $intro = get_page_by_title('Intro');
-			if ( $intro == '') {
-				if(current_user_can('administrator')) { // but only to an admin ?>
-					<p>No Intro page</p>
-				<?php } // admin
-			} else { ?>
-				<p><?php echo (get_page_by_title('Intro')->post_content); ?></p><!-- not quite sure why this isnt bringing in the p tags by default -->
-			<?php } 
+			
+			<?php $page = get_page_by_path('intro');
+				if ($page) { echo ($page->post_content); 
+			} ?>
 				
-			$page = get_page_by_path('about');
+			<?php $page = get_page_by_path('about');
 			if ($page) { ?>
 				<h3><a href="<?php echo get_permalink($page->ID); ?>" class="register__link">Read More About Us</a></h3>
 				<hr> <!-- purposley inside the if incase we dont have it looks wierd -->
 			<?php } ?>
 
-			<?php $how =  get_page_by_title('HOW CHK WORKS');
-			if ( $how == '') {
-				if(current_user_can('administrator')) { // but only to an admin ?>
-					<p>No HOW CHK WORKS page</p>
-				<?php } // admin
-			} else { ?>
-				<?php echo (get_page_by_title('HOW CHK WORKS')->post_content); ?>
-			<?php }
+			<?php $page = get_page_by_path('how-chk-works');
+				if ($page) { echo ($page->post_content); 
+			}
 
 			$page = get_page_by_path('prices');
 			if ($page) { ?>
@@ -44,16 +35,9 @@
 
 			<div class="set-in"> <!-- this cant be higher level as the animals go all the way to the edge -->
 
-				<?php $page = get_page_by_path('order');
-				if ($page) { ?>
-				<!-- this has a double set in which makes things go wrong in a print style -->
-					<h3 class="set-in">
-						<a href="<?php echo get_permalink($page->ID); ?>" class="register__link">
-							Order
-							<?php echo (get_page_by_title('order')->post_content); ?>
-						</a>
-					</h3>
-				<?php } ?>
+			<?php $page = get_page_by_path('order');
+				if ($page) { echo ($page->post_content); 
+			} ?>
 
 			</div>
 
