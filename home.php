@@ -125,16 +125,9 @@
 		
 	</div> <!-- the second area -->
 
-	<div class="home-contact"><!-- seconday set of grid to allow for margins on 1 or 2 columns // outside of row on purpose -->
-		<?php $page = get_page_by_path('contact-us');
-		if ($page) { ?>
-			<a href="<?php echo get_permalink($page->ID); ?>" class="top-bar--contact">Sign Up</a>
-		<?php } else {
-			if(current_user_can('administrator')) { ?>
-			No Contact Us page
-			<?php }
-		} ?>
-	</div><!-- columns -->
+	<div class="home-contact">
+		<!-- stay gold -->
+	</div>
 
 	<picture class="home-image hide-for-print">
 		<!-- this is its own area and needs to be written into the theme in a better way including come from the wp customizer -->
