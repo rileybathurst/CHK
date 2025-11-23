@@ -20,8 +20,8 @@ Prices may vary regarding size.
 | Price       | Description |
 | ----------- | ----------- |
 | 32.50       | Rams Price may vary due to location on property. |
-| 30          | per lamb    |
-| 30          | large sheep |
+| 40          | per lamb    |
+| 45          | large sheep |
 | 20          | Mutton Hams |
 
 ---
@@ -55,7 +55,7 @@ Prices may vary regarding size.
 
 | Price       | Description  |
 | ----------- | ------------ |
-| 1.40        | Per KG       |
+| 1.90        | Per KG       |
 | 20          | Bacon        | Per forequarter, loin and leg(third)
 | 16          | Bacon        | Belly (Streaky)
 | 12          | Pickled Pork |
