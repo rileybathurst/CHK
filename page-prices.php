@@ -33,12 +33,10 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-
-
-						<!-- pig -->
-						<?php $page = get_page_by_path('pig');
+						// pig
+						$page = get_page_by_path('pig');
 							if ($page) { ?>
 								<h3>
 									<a href="<?php echo get_permalink($page->ID); ?>">
@@ -47,10 +45,10 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-						<!-- deer -->
-						<?php $page = get_page_by_path('deer');
+						// deer
+						$page = get_page_by_path('deer');
 							if ($page) { ?>
 								<h3>
 									<a href="<?php echo get_permalink($page->ID); ?>">
@@ -59,10 +57,10 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-						<!-- beef -->
-						<?php $page = get_page_by_path('beef');
+						// beef
+						$page = get_page_by_path('beef');
 							if ($page) { ?>
 								<h3>
 									<a href="<?php echo get_permalink($page->ID); ?>">
@@ -71,21 +69,22 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-						<!-- Alpaca Llama -->
-						<?php $page = get_page_by_path('alpaca-llama');
-							if ($page) { ?>
-						<h3>
-							<a href="<?php echo get_permalink($page->ID); ?>">
-								Alpaca Llama
-							</a>
-						</h3>
-						<?php echo ($page->post_content); ?>
-						<hr>
+						// Alpaca Llama
+						$page = get_page_by_path('alpaca-llama');
+						if ($page) { ?>
+							<h3>
+								<a href="<?php echo get_permalink($page->ID); ?>">
+									Alpaca Llama
+								</a>
+							</h3>
+							<?php echo ($page->post_content); ?>
+							<hr>
+						<?php }
 
-						<!-- small goods -->
-						<?php $page = get_page_by_path('small-goods');
+						// small goods
+						$page = get_page_by_path('small-goods');
 							if ($page) { ?>
 								<h3>
 									<a href="<?php echo get_permalink($page->ID); ?>">
@@ -94,10 +93,10 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-						<!-- delivery -->
-						<?php $page = get_page_by_path('delivery');
+						// delivery
+						$page = get_page_by_path('delivery');
 							if ($page) { ?>
 								<h3>
 									<a href="<?php echo get_permalink($page->ID); ?>">
@@ -106,10 +105,10 @@ get_header(); ?>
 								</h3>
 								<?php echo ($page->post_content); ?>
 								<hr>
-						<?php } ?>
+						<?php }
 
-						<!-- order link -->
-						<?php $page = get_page_by_path('order');
+						// order link
+						$page = get_page_by_path('order');
 							if ($page) { ?>
 							<a href="<?php echo get_permalink($page->ID); ?>" class="button">
 								Order
