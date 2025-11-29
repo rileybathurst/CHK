@@ -5,6 +5,8 @@
 
 get_header();
 
+// TODO: $current_email is used directly in the query without escaping.
+
 //define name variable from url bar .php?n=
 if (isset($_GET['n'])) {
 	$unid = $_GET['n'];
@@ -126,35 +128,32 @@ if (isset($_GET['offset'])) {
 
 				<?php $current_user = wp_get_current_user(); ?>
 
-					<div class="run-the-stripes"> 
-						<div>Name: <?php echo $current_user->display_name; ?></div>
+				<div class="run-the-stripes"> 
+					<div>Name: <?php echo $current_user->display_name; ?></div>
 
-						<div>email: <?php echo $current_user->user_email; ?></div>
+					<div>email: <?php echo $current_user->user_email; ?></div>
 
-						<div>Address: <?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?></div>
+					<div>Address: <?php echo bp_get_profile_field_data('field=address&user_id='.bp_loggedin_user_id()); ?></div>
 
-						<div>Phone: <?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?></div>
+					<div>Phone: <?php echo bp_get_profile_field_data('field=phone&user_id='.bp_loggedin_user_id()); ?></div>
 
-						<div>Mobile: <?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?></div>
+					<div>Mobile: <?php echo bp_get_profile_field_data('field=mobile&user_id='.bp_loggedin_user_id()); ?></div>
 
-						<!-- <div>Anything need to be changed?</div> I dont think this makes sense being here -->
-
-						
-						<?php $page = get_page_by_path('update');
-							if ($page) { ?>
-						<div>
-							<a href="<?php echo get_permalink($page->ID); ?>" class="button">
-								Update Info
-							</a>
-						</div>
-					</div>
-				</ul>
+					<!-- <div>Anything need to be changed?</div> I dont think this makes sense being here -->
+					
+					<?php $page = get_page_by_path('update');
+						if ($page) { ?>
+							<div>
+								<a href="<?php echo get_permalink($page->ID); ?>" class="button">
+									Update Info
+								</a>
+							</div>
+					<?php } ?>
+				</div>
 			</div>
 		</div>
-	<?php } else {
-		get_sidebar();
-	} ?>
-
-</div><!-- row -->
+<?php } else {
+	get_sidebar();
+} ?></div><!-- row -->
 
 <?php get_footer(); ?>
