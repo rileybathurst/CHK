@@ -193,10 +193,6 @@
 	} else { echo ' '; } ?>
 	<?php if ($order->b_brisket == 1) { 
 		echo $order->brisket_bf;
-	} else { echo ' '; } 
-
-	if ($order->b_brisket == 1) { 
-		echo $order->brisket_bag;
 	} else { echo ' '; } ?>
 </div>
 

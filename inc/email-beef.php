@@ -150,8 +150,7 @@ $beef = '
 		'</strong>
 		<em> '.
 			$_POST['brisket_bf'].
-		'</em> '.
-		$_POST['brisket_bag'].
+		'</em>'.
 	'</p>
 
 	<p>

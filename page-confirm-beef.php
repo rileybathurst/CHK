@@ -321,11 +321,6 @@ $unid = $_GET['n'];
 												echo $order->brisket_bf;
 											} else { echo ' '; } ?>
 											<input type="hidden" name="brisket_bf" value="<?php echo $order->brisket_bf; ?>">
-											
-											<?php if ($order->b_brisket == 1) { 
-												echo $order->brisket_bag;
-											} else { echo ' '; } ?>
-											<input type="hidden" name="brisket_bag" value="<?php echo $order->brisket_bag; ?>">
 										</p>
 									</div>
 

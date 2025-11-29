@@ -217,18 +217,16 @@ $unid = $_GET['n'];
 									<label for="b_brisket">Brisket</label>
 									<select name="brisket_bf" id="brisket_bf" required>
 										<option name="brisket_bf" value="" disabled selected>Select</option>
-										<option name="brisket_bf" value="whole">Whole</option>
-										<option name="brisket_bf" value="half">Half</option>
-										<option name="brisket_bf" value="mince">Mince</option>
+										<option name="brisket_bf" value="whole">Standard brisket: Whole</option>
+										<option name="brisket_bf" value="half">Standard brisket: Half</option>
+										<option name="brisket_bf" value="thirds">Standard brisket: Thirds</option>
+										<option name="brisket_bf" value="mince">Brisket into Mince</option>
+										<option name="brisket_bf" value="sliced">Sliced Brisket</option>
 										<option name="brisket_bf" value="smoked brisket patties">Smoked Brisket Patties</option>
+										<option name="brisket_bf" value="oven bag sweet spicy">Brisket in oven bag: Sweet and Spicy</option>
+										<option name="brisket_bf" value="oven bag bbq">Brisket in oven bag: BBQ</option>
 									</select>
 									
-									<select name="brisket_bag" id="brisket_bag" required>
-										<option name="brisket_bag" value="" disabled selected>Oven Bag</option>
-										<option name="brisket_bag" value="Plain">Plain</option>
-										<option name="brisket_bag" value="BBQ Rub">BBQ Rub</option>
-										<option name="brisket_bag" value="Sweet and Spicy">Sweet and Spicy</option>
-									</select>
 								</div>
 
 								<div class="form-inline">
