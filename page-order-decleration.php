@@ -68,6 +68,12 @@ $animal = $_GET['a'];
 										<input id="confirm" name="confirm" type="checkbox" required>
 										<label for="confirm">I understand this is not a booking form. <em>I have already booked my animal in either by <a href="contact.php">email enquiry</a> or phone <a href="tel:03-313-4771">(03) 313 4771</a></em></label>
 								</div>
+								
+								<div>
+									<h3>$15 Fuel Surcharge</h3>
+									<p>There is now a surcharge travelling onsite due to the ongoing fuel crisis. It doesn’t matter if you’re down the road or on the peninsula. It’s just to help cover the costs.</p>
+										<hr />
+								</div>
 
 								<button type="submit" id="submit" name="submit">Next Step</button>
 							</fieldset>
