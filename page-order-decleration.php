@@ -70,7 +70,7 @@ $animal = $_GET['a'];
 								</div>
 								
 								<div>
-									<h3>$15 Fuel Surcharge</h3>
+									<h3>$20 Fuel Surcharge</h3>
 									<p>There is now a surcharge travelling onsite due to the ongoing fuel crisis. It doesn’t matter if you’re down the road or on the peninsula. It’s just to help cover the costs.</p>
 										<hr />
 								</div>
