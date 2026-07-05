@@ -262,7 +262,7 @@ function prefix_admin_con1() {
 										<p>
 											Thai Green Curry
 											<strong>'.
-												$_POST['thai_green_curry'].
+												$_POST['t_thai_green_curry'].
 											'</strong>
 										</p>
 

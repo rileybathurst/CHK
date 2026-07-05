@@ -32,7 +32,7 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_cheese_krnasky'       => isset($_POST['t_cheese_krnasky']) ? $_POST['t_cheese_krnasky'] : '' ,
 		't_jalapeno_cheese'       => isset($_POST['t_jalapeno_cheese']) ? $_POST['t_jalapeno_cheese'] : '' ,
 		't_jalapeno_cheese_smoked'       => isset($_POST['t_jalapeno_cheese_smoked']) ? $_POST['t_jalapeno_cheese_smoked'] : '' ,
-		'thai_green_curry'       => isset($_POST['thai_green_curry']) ? $_POST['thai_green_curry'] : '' ,
+		't_thai_green_curry'       => isset($_POST['t_thai_green_curry']) ? $_POST['t_thai_green_curry'] : '' ,
 		't_plain'                => isset($_POST['t_plain']) ? $_POST['t_plain'] : '' ,
 		't_gf_plain'             => isset($_POST['t_gf_plain']) ? $_POST['t_gf_plain'] : '' ,
 		't_saveloys'             => isset($_POST['t_saveloys']) ? $_POST['t_saveloys'] : '' ,
