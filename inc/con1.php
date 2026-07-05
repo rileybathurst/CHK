@@ -248,7 +248,7 @@ function prefix_admin_con1() {
 										<p>
 											Jalapeno Cheese
 											<strong>'.
-												$_POST['t_jalapeno_cheese '].
+												$_POST['t_jalapeno_cheese'].
 											'</strong>
 										</p>
 
