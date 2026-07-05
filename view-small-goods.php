@@ -226,14 +226,14 @@
 
 <!-- t_jalapeno_cheese  -->
 <div>
-	<?php if ($order->t_jalapeno_cheese  >= 1) { ?>
+	<?php if ($order->t_jalapeno_cheese >= 1) { ?>
 		<span class="unicode highlights spacer">✓</span>
 	<?php } else { ?>
 		<span class="unicode spacer hide-for-print">✗</span>
 	<?php } ?>
 	<strong>Jalapeno Cheese</strong>
 
-	<?php if ($order->t_jalapeno_cheese >= 1) { 
+	<?php if ($order->t_jalapeno_cheese >= 1) { 
 		echo $order->t_jalapeno_cheese . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>
