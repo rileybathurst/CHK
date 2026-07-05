@@ -2,28 +2,18 @@
  * 15.0 - Print
  */
 @media print {
-
   /* @page { need to do some research on this
-    size: A4;
+  	size: A4;
   } */
   .hide-for-print {
     display: none;
   }
-
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  body, h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
   }
-
   h3 {
     margin: 0;
   }
-
   form,
   button,
   input,
@@ -44,7 +34,6 @@
   .pingback .edit-link {
     display: none;
   }
-
   body,
   blockquote cite,
   blockquote small,
@@ -62,11 +51,9 @@
     font-size: 10pt;
     line-height: 10pt;
   }
-
   blockquote {
     font-size: 14.25pt;
   }
-
   .site-title,
   .page-title,
   .comments-title,
@@ -76,17 +63,14 @@
   .widecolumn h2 {
     font-size: 17.25pt;
   }
-
   .site-description {
     display: block;
   }
-
   .entry-title {
     font-size: 24.75pt;
     line-height: 1.2727272727;
     margin-bottom: 1.696969697em;
   }
-
   .format-aside .entry-title,
   .format-image .entry-title,
   .format-video .entry-title,
@@ -100,13 +84,11 @@
     line-height: 1.304347826;
     margin-bottom: 1.826086957em;
   }
-
   .entry-content h1,
   .entry-summary h1,
   .comment-content h1 {
     font-size: 21pt;
   }
-
   .entry-content h3,
   .entry-summary h3,
   .comment-content h3,
@@ -114,7 +96,6 @@
     font-size: 14.25pt;
     margin: 0 0.5em;
   }
-
   .site-description,
   .author-bio,
   .entry-footer,
@@ -129,30 +110,23 @@
   .gallery-caption {
     font-size: 9.75pt;
   }
-
   body,
   .site {
-    background: none !important;
-    /* Brute force since user agents all print differently. */
+    background: none !important; /* Brute force since user agents all print differently. */
   }
-
   body,
   blockquote cite,
   blockquote small,
   .site-branding .site-title a,
   .entry-title a,
   .comment-author {
-    color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+    color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
-
   blockquote,
   .page-header,
   .comments-title {
-    border-color: #1a1a1a !important;
-    /* Make sure color schemes don't affect to print */
+    border-color: #1a1a1a !important; /* Make sure color schemes don't affect to print */
   }
-
   blockquote,
   .site-description,
   body:not(.search-results) .entry-summary,
@@ -171,16 +145,12 @@
   .site-info a,
   .wp-caption .wp-caption-text,
   .gallery-caption {
-    color: #686868 !important;
-    /* Make sure color schemes don't affect to print */
+    color: #686868 !important; /* Make sure color schemes don't affect to print */
   }
-
   code,
   hr {
-    background-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+    background-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
-
   pre,
   abbr,
   acronym,
@@ -192,46 +162,35 @@
   .comment-list .pingback,
   .comment-list .trackback,
   .no-comments {
-    border-color: #d1d1d1 !important;
-    /* Make sure color schemes don't affect to print */
+    border-color: #d1d1d1 !important; /* Make sure color schemes don't affect to print */
   }
-
   a {
-    color: #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    color: #007acc !important; /* Make sure color schemes don't affect to print */
   }
-
   .entry-content a,
   .entry-summary a,
   .taxonomy-description a,
   .comment-content a,
-  .pingback .comment-body>a {
+  .pingback .comment-body > a {
     box-shadow: none;
-    border-bottom: 1px solid #007acc !important;
-    /* Make sure color schemes don't affect to print */
+    border-bottom: 1px solid #007acc !important; /* Make sure color schemes don't affect to print */
   }
-
   .site {
     margin: 5%;
   }
-
   .site-inner {
     max-width: none;
   }
-
   .site-header {
     padding: 0 0 1.75em;
   }
-
   .site-branding {
     margin-top: 0;
     margin-bottom: 1.75em;
   }
-
   .site-main {
     margin-bottom: 3.5em;
   }
-
   .entry-header,
   .entry-footer,
   .page-header,
@@ -243,12 +202,10 @@
     margin-right: 0;
     margin-left: 0;
   }
-
   .post-thumbnail,
-  .site-main>article {
+  .site-main > article {
     margin-bottom: 3.5em;
   }
-
   .entry-content blockquote.alignleft,
   .entry-content blockquote.alignright {
     border-width: 4px 0 0 0;
@@ -256,16 +213,13 @@
     width: -webkit-calc(50% - 0.736842105em);
     width: calc(50% - 0.736842105em);
   }
-
-  body:not(.search-results) .entry-header+.entry-summary {
+  body:not(.search-results) .entry-header + .entry-summary {
     margin-top: -1.473684211em;
   }
-
   .site-footer,
   .widecolumn {
     padding: 0;
   }
-
   /* .line-higher {
   	line-height: 12pt;
   } */
@@ -273,108 +227,80 @@
     color: #ff0000 !important;
     line-height: 0.5rem;
   }
-
   .border-slim {
     border-top: 1px dashed #999;
   }
-
   /* .print-highlights {
   	color: $highlight !important; 5.0 this doesnt work
   } */
   .over-background {
     background: none;
   }
-
   .is-style-stripes li:nth-child(2n+1) {
     background: none;
     border: none;
   }
-
   .light-back,
   .is-style-light-back {
     background: none;
     border: none;
   }
-
   .animals-link {
     background: none;
     border: none;
   }
-
   .container {
     margin: 0;
     width: 210mm;
   }
-
   .set-in,
   .set-in .set-in {
     margin: 0;
   }
-
   .is-style-stripes li:nth-child(odd),
   .stripes li:nth-child(odd),
-  .stripe,
-  .run-the-stripes div:nth-child(odd),
+  .stripe, .run-the-stripes div:nth-child(odd),
   .run-the-stripes li:nth-child(odd) {
     background: none;
   }
-
   .single-stripe {
     background: none;
   }
-
   .view-order-options {
     width: 100% !important;
     padding: 0 !important;
     border: none !important;
   }
-
-  .run-the-stripes>div {
+  .run-the-stripes > div {
     border-top: 1px dashed #999;
+    padding: 0.5em 0.9375em;
   }
-
   .print-top-line {
     border: none !important;
     padding-top: 0 !important;
   }
-
   .half div {
     border-left: 1px dashed #999;
     flex: 1;
   }
-
   .half div:first-child {
     border-left: none;
   }
-
   .rts-flex {
     display: flex;
     padding: 0 !important;
   }
-
   .rts-flex div {
     border-left: 1px dashed #999;
   }
-
   .rts-flex div:first-child {
     border-left: none;
   }
-
   .rts-flex .rts-1 {
     flex: 1;
   }
-
   .rts-flex .rts-2 {
     flex: 2;
-  }
-
-  /* custom sizing to fit to a4 */
-  .is-style-stripes li,
-  .stripes li,
-  .stripe,
-  .run-the-stripes div,
-  .run-the-stripes li {
-    padding: 0.5em 0.9375em;
   }
 }
 
