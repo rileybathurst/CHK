@@ -368,6 +368,7 @@
     flex: 2;
   }
 
+  /* custom sizing to fit to a4 */
   .is-style-stripes li,
   .stripes li,
   .stripe,
