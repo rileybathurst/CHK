@@ -175,6 +175,39 @@
 	</p>
 </div>
 
+<!-- t_jalapeno_cheese -->
+<div>
+	<p>
+		Jalapeno Cheese
+		<?php if ($order->t_jalapeno_cheese != '') { 
+			echo $order->t_jalapeno_cheese . ' KG';
+		}; ?>
+		<input type="hidden" name="t_jalapeno_cheese" value="<?php echo $order->t_jalapeno_cheese; ?>">
+	</p>
+</div>
+
+<!-- t_jalapeno_cheese_smoked -->
+<div>
+	<p>
+		Jalapeno Cheese - smoked
+		<?php if ($order->t_jalapeno_cheese_smoked != '') { 
+			echo $order->t_jalapeno_cheese_smoked . ' KG';
+		}; ?>
+		<input type="hidden" name="t_jalapeno_cheese_smoked" value="<?php echo $order->t_jalapeno_cheese_smoked; ?>">
+	</p>
+</div>
+
+<!-- t_thai_green_curry -->
+<div>
+	<p>
+		Thai Green Curry
+		<?php if ($order->t_thai_green_curry != '') { 
+			echo $order->t_thai_green_curry . ' KG';
+		}; ?>
+		<input type="hidden" name="t_thai_green_curry" value="<?php echo $order->t_thai_green_curry; ?>">
+	</p>
+</div>
+
 <!-- t_plain -->
 <div>
 	<p>

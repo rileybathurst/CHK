@@ -9,16 +9,16 @@
 	
 	<?php wp_head(); ?> 
 
-	<script> // documentation on this?
+	<script> // TODO: documentation on this as register page dopesnt work this is defintley a mess
 		var url = document.location.href;
 		jQuery(document).ready(function() {
-		//copy profile name to account name during registration
-		if (url.indexOf("register/") >= 0) {
-			jQuery('label[for=signup_username],#signup_username').css('display','none');
-			jQuery('#field_1').blur(function(){
-				jQuery("#signup_username").val(jQuery("#field_1").val());
-			});
-		}
+			//copy profile name to account name during registration
+			if (url.indexOf("register/") >= 0) {
+				jQuery('label[for=signup_username],#signup_username').css('display','none');
+				jQuery('#field_1').blur(function(){
+					jQuery("#signup_username").val(jQuery("#field_1").val());
+				});
+			}
 		});
 	</script>
 

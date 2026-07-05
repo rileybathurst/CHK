@@ -246,6 +246,27 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
+											Jalapeno Cheese
+											<strong>'.
+												$_POST['t_jalapeno_cheese '].
+											'</strong>
+										</p>
+
+										<p>
+											Jalapeno Cheese - smoked
+											<strong>'.
+												$_POST['t_jalapeno_cheese_smoked'].
+											'</strong>
+										</p>
+
+										<p>
+											Thai Green Curry
+											<strong>'.
+												$_POST['thai_green_curry'].
+											'</strong>
+										</p>
+
+										<p>
 											Plain Sausages
 											<strong>'.
 												$_POST['t_plain'].

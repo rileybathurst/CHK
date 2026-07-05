@@ -167,6 +167,26 @@ $unid = $_GET['n'];
 								<span class="postfix">KG</span>
 							</div>
 
+							<!-- t_jalapeno_cheese -->
+							<div>
+								<label for="t_jalapeno_cheese">Jalapeno Cheese</label>
+								<input type="number" pattern="\d*" id="t_jalapeno_cheese" name="t_jalapeno_cheese" />
+								<span class="postfix">KG</span>
+							</div>
+							<!-- t_jalapeno_cheese_smoked -->
+							<div>
+								<label for="t_jalapeno_cheese_smoked">Jalapeno Cheese - smoked</label>
+								<input type="number" pattern="\d*" id="t_jalapeno_cheese_smoked" name="t_jalapeno_cheese_smoked" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- t_thai_green_curry -->
+							<div>
+								<label for="t_thai_green_curry">Thai Green Curry</label>
+								<input type="number" pattern="\d*" id="t_thai_green_curry" name="t_thai_green_curry" />
+								<span class="postfix">KG</span>
+							</div>
+
 							<!-- t_plain -->
 							<div>
 								<label for="t_plain">Plain</label>
