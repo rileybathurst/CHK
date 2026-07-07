@@ -7,12 +7,12 @@ get_header();
 
 //define name variable from url bar .php?r=
 if (isset($_GET['r'])) {
-	$result = $_GET['r'];
+	$result = sanitize_text_field(wp_unslash($_GET['r']));
 }
 
 //define variable for url bar .php?offset=
 if (isset($_GET['offset'])) {
-	$off = $_GET['offset'];
+	$off = absint($_GET['offset']);
 } else {
 	$off = 0;
 }
@@ -61,16 +61,17 @@ if (isset($_GET['offset'])) {
 								$items_per_page = 100;
 
 								// set the offset the page number with a zero after
-								$offset = $off . 00;
+								$offset = absint($off) * 100;
+								$search = '%' . $wpdb->esc_like($result) . '%';
 
 
 								// It would be nicer to not query twice 
-								$rowcount = $wpdb->get_var("SELECT COUNT(*) FROM 
-									meatorders
-									WHERE ( name LIKE '$result%' OR name LIKE '%$result' OR email LIKE '$result%' OR email LIKE '%$result' AND confirm = 1 )
-									ORDER by unid desc
-									LIMIT $offset , $items_per_page
-									;"
+								$rowcount = $wpdb->get_var(
+									$wpdb->prepare(
+										"SELECT COUNT(*) FROM meatorders WHERE (name LIKE %s OR email LIKE %s) AND confirm = 1",
+										$search,
+										$search
+									)
 								); ?>
 
 								<h3>Returned <?php echo $rowcount; ?> Results</h3>
@@ -79,14 +80,14 @@ if (isset($_GET['offset'])) {
 								<?php } else {
 
 									// then search for orders
-									$orders = $wpdb->get_results( 
-										"
-										SELECT * 
-										FROM meatorders
-										WHERE ( name LIKE '$result%' OR name LIKE '%$result' OR email LIKE '$result%' OR email LIKE '%$result' AND confirm = 1 )
-										ORDER by unid desc
-										LIMIT $offset , $items_per_page
-										;"
+									$orders = $wpdb->get_results(
+										$wpdb->prepare(
+											"SELECT * FROM meatorders WHERE (name LIKE %s OR email LIKE %s) AND confirm = 1 ORDER by unid desc LIMIT %d , %d",
+											$search,
+											$search,
+											$offset,
+											$items_per_page
+										)
 									);
 									foreach ( $orders as $order ) 
 									{

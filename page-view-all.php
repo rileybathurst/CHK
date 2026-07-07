@@ -7,12 +7,12 @@ get_header();
 
 //define variable for url bar .php?n=
 if (isset($_GET['n'])) {
-	$unid = $_GET['n'];
+	$unid = sanitize_text_field(wp_unslash($_GET['n']));
 }
 
 //define variable for url bar .php?offset=
 if (isset($_GET['offset'])) {
-	$off = $_GET['offset'];
+	$off = absint($_GET['offset']);
 } else {
 	$off = 0;
 }
@@ -60,17 +60,21 @@ if (isset($_GET['offset'])) {
 								$items_per_page = 100;
 
 								// set the offset the page number with a zero after
-								$offset = $off . 00;
+								$offset = absint($off) * 100;
 
 								// then search for orders -->
-								$orders = $wpdb->get_results( 
-									"
-									SELECT * 
-									FROM meatorders
-									WHERE confirm = 1
-									ORDER by unid desc
-									LIMIT $offset , $items_per_page
-									"
+								$orders = $wpdb->get_results(
+									$wpdb->prepare(
+										"
+										SELECT *
+										FROM meatorders
+										WHERE confirm = 1
+										ORDER by unid desc
+										LIMIT %d , %d
+										",
+										$offset,
+										$items_per_page
+									)
 								);
 								foreach ( $orders as $order ) 
 								{ ?>

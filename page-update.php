@@ -7,7 +7,7 @@ get_header();
 
 //define name variable from url bar .php?n=
 if (isset($_GET['n'])) {
-	$unid = $_GET['n'];
+	$unid = sanitize_text_field(wp_unslash($_GET['n']));
 }
 ?>
 

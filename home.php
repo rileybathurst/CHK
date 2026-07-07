@@ -50,19 +50,11 @@
 				
 				<?php // then search for orders -->
 				$table_name = "meatorders"; // there might be good reason to put this in the header if this doesnt exist then very little of the site should work, it should throw a full admin error
-				if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name) {
+					if($wpdb->get_var( $wpdb->prepare( "SHOW TABLES LIKE %s", $table_name ) ) == $table_name) {
 
 					echo "<p>Your most recent order was:</p>";
 					
-					$orders = $wpdb->get_results( 
-						"
-						SELECT * 
-						FROM meatorders
-						WHERE email = '$current_user->user_email'
-						ORDER by unid desc
-						LIMIT 1;
-						"
-					);
+					$orders = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM meatorders WHERE email = %s ORDER by unid desc LIMIT 1", $current_user->user_email ) );
 					foreach ( $orders as $order ) { ?>
 						<ul class="stripes">  <!-- its only ever one Im not 100% sure it should be a link even tho its an easy way to get visual consistency -->
 							<li> <!-- keep thinking about if this should all be a php echo or keep going in and out -->

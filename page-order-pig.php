@@ -6,7 +6,7 @@
 get_header();
 
 //define variable for url bar .php?n=
-$unid = $_GET['n'];
+$unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 ?>
 
 <div class="container main-border over-background">

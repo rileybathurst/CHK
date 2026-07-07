@@ -5,7 +5,7 @@
 get_header();
 
 // define variable for url bar .php?n=
-$unid = $_GET['n'];
+$unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 ?>
 
 <div class="container main-border over-background">
@@ -36,13 +36,7 @@ $unid = $_GET['n'];
 								$current_email = $current_user->user_email;
 
 								// then search for orders -->
-								$orders = $wpdb->get_results( 
-									"
-									SELECT * 
-									FROM meatorders
-									WHERE unid = '$unid';
-									"
-								);
+								$orders = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM meatorders WHERE unid = %s", $unid ) );
 								foreach ( $orders as $order )
 									{ ?>
 

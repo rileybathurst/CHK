@@ -6,7 +6,7 @@
 get_header();
 
 //define variable for url bar .php?n=
-$unid = $_GET['n'];
+$unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 ?>
 
 <div class="container main-border over-background">
@@ -37,9 +37,7 @@ $unid = $_GET['n'];
 							<fieldset class="run-the-stripes">
 
 							<?php // search for orders to bring back animal name -->
-								$orders = $wpdb->get_results( 
-										"SELECT * FROM meatorders WHERE unid = '$unid';"
-									);
+								$orders = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM meatorders WHERE unid = %s", $unid ) );
 								foreach ( $orders as $order ) {?>
 									
 									<input type="hidden" name="action" value="orderdetailsupdate">

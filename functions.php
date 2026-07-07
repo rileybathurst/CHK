@@ -159,7 +159,8 @@ require get_parent_theme_file_path( '/inc/booking.php' );
 
 // view results search query _POST
 function prefix_admin_viewresults() {
-	wp_redirect( home_url() . '/view-results/?r=' . $_POST['name']  );  
+	$search_name = isset($_POST['name']) ? sanitize_text_field( wp_unslash( $_POST['name'] ) ) : '';
+	wp_redirect( home_url() . '/view-results/?r=' . rawurlencode( $search_name ) );  
 	exit;
 }
 add_action( 'admin_post_viewresults', 'prefix_admin_viewresults' );

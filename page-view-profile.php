@@ -9,11 +9,11 @@ get_header();
 
 //define name variable from url bar .php?n=
 if (isset($_GET['n'])) {
-	$unid = $_GET['n'];
+	$unid = sanitize_text_field(wp_unslash($_GET['n']));
 }
 
 if (isset($_GET['offset'])) {
-	$off = $_GET['offset'];
+	$off = absint($_GET['offset']);
 } else {
 	$off = 0;
 }
@@ -51,18 +51,23 @@ if (isset($_GET['offset'])) {
 							$items_per_page = 100;
 
 							// set the offset the page number with a zero after
-							$offset = $off . 00;
+							$offset = absint($off) * 100;
 
 							// then search for orders -->
-							$orders = $wpdb->get_results( 
-								"
-								SELECT * 
-								FROM meatorders
-								WHERE ( email = '$current_email' AND confirm = 1 )
-								ORDER by unid desc
-								LIMIT $offset , $items_per_page
-								;"
-							); ?>
+							$orders = $wpdb->get_results(
+								$wpdb->prepare(
+									"
+									SELECT *
+									FROM meatorders
+									WHERE email = %s AND confirm = 1
+									ORDER by unid desc
+									LIMIT %d , %d
+									",
+									$current_email,
+									$offset,
+									$items_per_page
+								)
+							);
 							<div id="view-profile--orders" class="run-the-stripes"> <!-- quite possibly should have a p tag inside this -->
 								<?php foreach ( $orders as $order ) 
 								{

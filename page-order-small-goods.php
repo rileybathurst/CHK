@@ -7,7 +7,7 @@
 get_header();
 
 //define variable for url bar .php?n=
-$unid = $_GET['n'];
+$unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 ?>
 
 <div class="container main-border over-background">
@@ -38,7 +38,7 @@ $unid = $_GET['n'];
 							<!-- use the url unid variable in the form to keep it on the same one -->
 							<input type="hidden" name="unid" value="<?php echo $unid; ?>">
 
-							<?php $orders = $wpdb->get_results("SELECT * FROM meatorders WHERE unid = '$unid';");
+							<?php $orders = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM meatorders WHERE unid = %s", $unid ) );
 								foreach ( $orders as $order ) { ?>
 
 								<!-- take the animal through so it can confirm to the right one -->

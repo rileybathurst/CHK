@@ -1,7 +1,5 @@
 <?php
-  $orders = $wpdb->get_results( 
-      "SELECT * FROM meatorders WHERE unid = '$unid';"
-    );
+  $orders = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM meatorders WHERE unid = %s", sanitize_text_field(wp_unslash($unid)) ) );
   foreach ( $orders as $order ) {
     if ( $order->confirm == 1 ) { ?>
       <div class="submitted">
