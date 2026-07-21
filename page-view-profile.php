@@ -67,25 +67,21 @@ if (isset($_GET['offset'])) {
 									$offset,
 									$items_per_page
 								)
-							);
-							<div id="view-profile--orders" class="run-the-stripes"> <!-- quite possibly should have a p tag inside this -->
+							); ?>
+							<div id="view-profile--orders" class="run-the-stripes">
+							<!-- quite possibly should have a p tag inside this -->
 								<?php foreach ( $orders as $order ) 
 								{
 									echo '<div>
 										<a href="' . home_url() . '/view-order?n=' . $order->unid . '">'.
-
 											$order->unid . 
-
 										'</a> | ' . 
-
 										$order->amp .
-
 										' | ' .
-
 										$order->timenow .
-
 									'</div>';
 								} ?>
+						
 							</div>
 
 							<!-- create variable -->

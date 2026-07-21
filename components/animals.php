@@ -77,5 +77,19 @@
                     <a href="<?php echo get_permalink($page->ID); ?>" class="animals-link">Alpaca / llama</a>
                 </h3>
             </div>
+        <?php }
+        
+        $page = get_page_by_path('pies');
+        if ($page) { ?>
+            <div>
+                <a href="<?php echo get_permalink($page->ID); ?>">
+                    <div class="round any-center hover-back animals-svg">
+                        <?php get_template_part('components/pie-svg'); ?>   
+                    </div>
+                </a>
+                <h3 class="text-center">
+                    <a href="<?php echo get_permalink($page->ID); ?>" class="animals-link">Pies</a>
+                </h3>
+            </div>
         <?php } ?>
     </div>

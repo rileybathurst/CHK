@@ -44,17 +44,46 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<h3>Pies</h3>									
 								</div>
 
-								<div class="form-inline">
-
-									<label for="b_fillet">Family Pie</label>
-									<select name="fillet_bf" id="fillet_bf" required class="select-css">
+								<div class="stripe">
+										<input type="radio" name="small_goods" id="yes" value="yes"/>
+										<label for="b_fillet">Steak Pie</label>
+										<select name="fillet_bf" id="fillet_bf" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="fillet_bf" value="steak">Steak N Cheese</option>
-										<option name="fillet_bf" value="whole">Steak</option>
-										<option name="fillet_bf" value="half">Mince N Cheese </option>
-										<option name="fillet_bf" value="third">Mince</option>
+										<option name="fillet_bf" value="steak">Family Size</option>
+										<option name="fillet_bf" value="whole">Smaller</option>
 									</select>
-								</div>
+									</div>
+									<div>
+										<input type="radio" name="small_goods" id="no" value="no"/>
+										<label for="no">Steak N Cheese</label>
+										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<option value="" disabled selected>Select</option>
+										<option name="fillet_bf" value="steak">Family Size</option>
+										<option name="fillet_bf" value="whole">Smaller</option>
+									</select>
+									</div>
+									<div>
+										<input type="radio" name="small_goods" id="no" value="no"/>
+										<label for="no">Mince</label>
+										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<option value="" disabled selected>Select</option>
+										<option name="fillet_bf" value="steak">Family Size</option>
+										<option name="fillet_bf" value="whole">Smaller</option>
+									</select>
+									</div>
+									<div>
+										<input type="radio" name="small_goods" id="no" value="no"/>
+										<label for="no">Mince N Cheese</label>
+										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<option value="" disabled selected>Select</option>
+										<option name="fillet_bf" value="steak">Family Size</option>
+										<option name="fillet_bf" value="whole">Smaller</option>
+									</select>
+									</div>
+									<div>
+										<input type="radio" name="small_goods" id="no" value="no"/>
+										<label for="no">Big Sausage Rolls</label>
+									</div>
 
 								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
 
