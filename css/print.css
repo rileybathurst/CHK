@@ -273,7 +273,7 @@
   }
   .run-the-stripes > div:not(:first-child) {
     border-top: 1px dashed #999;
-    padding: 0.5em 0.9375em;
+    padding: 0.4em 0.9375em;
   }
   .print-top-line {
     border: none !important;
