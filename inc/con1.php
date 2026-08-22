@@ -234,28 +234,28 @@ function prefix_admin_con1() {
 										<p>
 											Cheeseburger - GF
 											<strong>'.
-												$_POST['t_cheeseburger'].
+												$_POST['t_cheeseburger_gf'].
 											'</strong>
 										</p>
 
 										<p>
 											Carbonara - GF
 											<strong>'.
-												$_POST['t_carbonara'].
+												$_POST['t_carbonara_gf'].
 											'</strong>
 										</p>
 
 										<p>
 											Bolognese - GF
 											<strong>'.
-												$_POST['t_bolognese'].
+												$_POST['t_bolognese_gf'].
 											'</strong>
 										</p>
 
 										<p>
 											Nacho Cheese - GF
 											<strong>'.
-												$_POST['t_nacho_cheese'].
+												$_POST['t_nacho_cheese_gf'].
 											'</strong>
 										</p>
 
