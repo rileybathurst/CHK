@@ -153,6 +153,34 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 								<span class="postfix">KG</span>
 							</div>
 
+							<!-- t_cheeseburger_gf -->
+							<div>
+								<label for="t_cheeseburger_gf">Cheeseburger - GF</label>
+								<input type="number" pattern="\d*" id="t_cheeseburger_gf" name="t_cheeseburger_gf" />
+								<span class="postfix">KG</span>
+							</div>
+
+							<!-- t_carbonara_gf -->
+							<div>
+								<label for="t_carbonara_gf">Carbonara - GF</label>
+								<input type="number" pattern="\d*" id="t_carbonara_gf" name="t_carbonara_gf" />
+								<span class="postfix">KG</span>
+							</div>
+							
+							<!-- t_bolognese_gf -->
+							<div>
+								<label for="t_bolognese_gf">Bolognese - GF</label>
+								<input type="number" pattern="\d*" id="t_bolognese_gf" name="t_bolognese_gf" />
+								<span class="postfix">KG</span>
+							</div>
+							
+							<!-- t_nacho_cheese_gf -->
+							<div>
+								<label for="t_nacho_cheese_gf">Nacho Cheese - GF</label>
+								<input type="number" pattern="\d*" id="t_nacho_cheese_gf" name="t_nacho_cheese_gf" />
+								<span class="postfix">KG</span>
+							</div>
+
 							<!-- t_boerewors -->
 							<div>
 								<label for="t_boerewors">Boerewors</label>
@@ -394,6 +422,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									<option value="steak onion">Steak and Onion</option>
 									<option value="venison bacon onion">Venison, Bacon and Onion</option>
 								</select>
+							</div>
 
 								<hr /> 
 
@@ -421,6 +450,18 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									<option value="BBQ">BBQ</option>
 									<option value="sweet and spicy">Sweet and Spicy</option>
 								</select>
+								</div>
+
+								<hr>
+
+								<!-- t_bolognese_meatballs -->
+								<h4>MEATBALLS</h4>
+
+							<div>
+								<label for="t_bolognese_meatballs">Bolognese Meatballs - GF</label>
+								<input type="number" pattern="\d*" id="t_bolognese_meatballs" name="t_bolognese_meatballs" />
+								<span class="postfix">KG</span>
+							</div>
 
 								<hr /> 
 

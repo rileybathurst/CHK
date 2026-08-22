@@ -232,6 +232,34 @@ function prefix_admin_con1() {
 										</p>
 
 										<p>
+											Cheeseburger - GF
+											<strong>'.
+												$_POST['t_cheeseburger'].
+											'</strong>
+										</p>
+
+										<p>
+											Carbonara - GF
+											<strong>'.
+												$_POST['t_carbonara'].
+											'</strong>
+										</p>
+
+										<p>
+											Bolognese - GF
+											<strong>'.
+												$_POST['t_bolognese'].
+											'</strong>
+										</p>
+
+										<p>
+											Nacho Cheese - GF
+											<strong>'.
+												$_POST['t_nacho_cheese'].
+											'</strong>
+										</p>
+
+										<p>
 											Boerewors
 											<strong>'.
 												$_POST['t_boerewors'].
@@ -452,6 +480,13 @@ function prefix_admin_con1() {
 											<em> '.
 												$_POST['bbq_grill_stick_t'].
 											'</em>
+										</p>
+										
+										<p>
+											Bolognese Meatballs - GF
+											<strong>'.
+												$_POST['t_bolognese_meatballs'].
+											'</strong>
 										</p>
 
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>   

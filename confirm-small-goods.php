@@ -154,6 +154,45 @@
 	</p>
 </div>
 
+<!-- t_cheeseburger_gf -->
+<div>
+	<p>Cheeseburger - GF
+		<?php if ($order->t_cheeseburger_gf != '') { 
+			echo $order->t_cheeseburger_gf . ' KG';
+		}; ?>
+		<input type="hidden" name="t_cheeseburger_gf" value="<?php echo $order->t_cheeseburger_gf; ?>">
+	</p>
+</div>
+
+<!-- t_carbonara_gf -->
+<div>
+	<p>Carbonara - GF
+		<?php if ($order->t_carbonara_gf != '') { 
+			echo $order->t_carbonara_gf . ' KG';
+		}; ?>
+		<input type="hidden" name="t_carbonara_gf" value="<?php echo $order->t_carbonara_gf; ?>">
+	</p>
+</div>
+<!-- t_bolognese_gf -->
+<div>
+	<p>Bolognese - GF
+		<?php if ($order->t_bolognese_gf != '') { 
+			echo $order->t_bolognese_gf . ' KG';
+		}; ?>
+		<input type="hidden" name="t_bolognese_gf" value="<?php echo $order->t_bolognese_gf; ?>">
+	</p>
+</div>
+
+<!-- t_nacho_cheese_gf -->
+<div>
+	<p>Nacho Cheese - GF
+		<?php if ($order->t_nacho_cheese_gf != '') { 
+			echo $order->t_nacho_cheese_gf . ' KG';
+		}; ?>
+		<input type="hidden" name="t_nacho_cheese_gf" value="<?php echo $order->t_nacho_cheese_gf; ?>">
+	</p>
+</div>
+
 <!-- t_boerewors -->
 <div>
 	<p>Boerewors
@@ -532,6 +571,19 @@
 			echo $order->bbq_grill_stick_t;
 		}; ?>
 		<input type="hidden" name="bbq_grill_stick_t" value="<?php echo $order->bbq_grill_stick_t; ?>">
+	</p>
+</div>
+
+<h3>BOLOGNESE MEATBALLS - GF</h3>
+
+<!-- t_bolognese_meatballs -->
+<div>
+	<p>
+		Bolognese Meatballs - GF
+		<?php if ($order->t_bolognese_meatballs != '') { 
+			echo $order->t_bolognese_meatballs . ' KG';
+		}; ?>
+		<input type="hidden" name="t_bolognese_meatballs" value="<?php echo $order->t_bolognese_meatballs; ?>">
 	</p>
 </div>
 

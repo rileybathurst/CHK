@@ -44,6 +44,8 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<h3>Pies</h3>									
 								</div>
 
+								<!-- // ! still on b_fillet label -->
+
 								<div class="stripe">
 										<input type="radio" name="small_goods" id="yes" value="yes"/>
 										<label for="b_fillet">Steak Pie</label>

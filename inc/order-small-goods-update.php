@@ -28,7 +28,10 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_steak_onion'          => isset($_POST['t_steak_onion']) ? $_POST['t_steak_onion'] : '' ,
 		't_manuka_honey_hickory' => isset($_POST['t_manuka_honey_hickory']) ? $_POST['t_manuka_honey_hickory'] : '' ,
 		't_old_english'          => isset($_POST['t_old_english']) ? $_POST['t_old_english'] : '' ,
-		't_boerewors'            => isset($_POST['t_boerewors']) ? $_POST['t_boerewors'] : '' ,
+		't_cheeseburger_gf'      => isset($_POST['t_cheeseburger_gf']) ? $_POST['t_cheeseburger_gf'] : '' ,
+		't_carbonara_gf'         => isset($_POST['t_carbonara_gf']) ? $_POST['t_carbonara_gf'] : '' ,
+		't_bolognese_gf'         => isset($_POST['t_bolognese_gf']) ? $_POST['t_bolognese_gf'] : '' ,
+		't_nacho_cheese_gf'      => isset($_POST['t_nacho_cheese_gf']) ? $_POST['t_nacho_cheese_gf'] : '' ,
 		't_cheese_krnasky'       => isset($_POST['t_cheese_krnasky']) ? $_POST['t_cheese_krnasky'] : '' ,
 		't_jalapeno_cheese'       => isset($_POST['t_jalapeno_cheese']) ? $_POST['t_jalapeno_cheese'] : '' ,
 		't_jalapeno_cheese_smoked'       => isset($_POST['t_jalapeno_cheese_smoked']) ? $_POST['t_jalapeno_cheese_smoked'] : '' ,
@@ -66,7 +69,8 @@ function prefix_admin_ordersmallgoodsupdate() {
 		'rissoles_t'             => isset($_POST['rissoles_t']) ? $_POST['rissoles_t'] : '',
 		't_koftas'               => isset($_POST['t_koftas']) ? $_POST['t_koftas'] : '',
 		't_bbq_grill_stick'      => isset($_POST['t_bbq_grill_stick']) ? $_POST['t_bbq_grill_stick'] : '',
-		'bbq_grill_stick_t'      => isset($_POST['bbq_grill_stick_t']) ? $_POST['bbq_grill_stick_t'] : ''
+		'bbq_grill_stick_t'      => isset($_POST['bbq_grill_stick_t']) ? $_POST['bbq_grill_stick_t'] : '',
+		't_bolognese_meatballs'      => isset($_POST['t_bolognese_meatballs']) ? $_POST['t_bolognese_meatballs'] : '',
 	) ,
 
 	// where

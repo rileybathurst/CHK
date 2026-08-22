@@ -196,6 +196,62 @@
 	} else { echo '&nbsp;'; } ?>
 </div>
 
+<!-- t_cheeseburger_gf -->
+<div>
+	<?php if ($order->t_cheeseburger_gf >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Cheeseburger - GF</strong>
+
+	<?php if ($order->t_cheeseburger_gf >= 1) { 
+		echo $order->t_cheeseburger_gf . 'KG';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- t_carbonara_gf -->
+<div>
+	<?php if ($order->t_carbonara_gf >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Carbonara - GF</strong>
+
+	<?php if ($order->t_carbonara_gf >= 1) { 
+		echo $order->t_carbonara_gf . 'KG';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- t_bolognese_gf -->
+<div>
+	<?php if ($order->t_bolognese_gf >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Bolognese - GF</strong>
+
+	<?php if ($order->t_bolognese_gf >= 1) { 
+		echo $order->t_bolognese_gf . 'KG';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- t_nacho_cheese_gf -->
+<div>
+	<?php if ($order->t_nacho_cheese_gf >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Nacho Cheese - GF</strong>
+
+	<?php if ($order->t_nacho_cheese_gf >= 1) { 
+		echo $order->t_nacho_cheese_gf . 'KG';
+	} else { echo '&nbsp;'; } ?>
+</div>
+
 <!-- t_boerewors -->
 <div>
 	<?php if ($order->t_boerewors >= 1) { ?>
@@ -609,5 +665,19 @@
 
 	if ($order->t_bbq_grill_stick >= 1) { 
 		echo $order->bbq_grill_stick_t;
+	} else { echo '&nbsp;'; } ?>
+</div>
+
+<!-- t_bolognese_meatballs -->
+<div>
+	<?php if ($order->t_bolognese_meatballs >= 1) { ?>
+		<span class="unicode highlights spacer">✓</span>
+	<?php } else { ?>
+		<span class="unicode spacer hide-for-print">✗</span>
+	<?php } ?>
+	<strong>Bolognese Meatballs - GF</strong>
+
+	<?php if ($order->t_bolognese_meatballs >= 1) { 
+		echo $order->t_bolognese_meatballs . 'KG';
 	} else { echo '&nbsp;'; } ?>
 </div>

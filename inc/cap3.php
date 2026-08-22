@@ -13,13 +13,10 @@ if(!$captcha){
 	exit;
 }
 
-// echo "<script>console.log('🦄');</script>";
-// echo "<script>console.log($captcha);</script>";
-
 $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".getenv('RECAPTCHA_SECRET_KEY')."&response=".$captcha);
 $responseKeys = json_decode($response,true);
 
-// ! this is where it also needs the and score of 0.5
+// * this is where it also needs the and score of 0.5
 	if(intval($responseKeys["success"]) !== 1) {
 
 	// Spam
@@ -27,6 +24,7 @@ $responseKeys = json_decode($response,true);
 
 	} else {
 
+	// ? this maybe could / shold be removed / hidden
 		// $developer = 'riley@rileybathurst.com'; // testing email
 
 		$subject = 'cap 3 test: ' . $_POST['name'];
