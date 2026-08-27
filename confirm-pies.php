@@ -36,7 +36,7 @@
 <!-- pie_mince pie_mince_size -->
 <div>
 	<p>
-		Minced Meat Pies
+		Mince Pies
 		<?php if ($order->pie_mince == 1) { ?>
 			<span class="unicode check spacer">✓</span>
 			&nbsp;<?php echo $order->pie_mince_size; ?>
@@ -51,7 +51,7 @@
 <!-- pie_mince_cheese pie_mince_cheese_size -->
 <div>
 	<p>
-		Minced Meat and Cheese Pies
+		Mince and Cheese Pies
 		<?php if ($order->pie_mince_cheese == 1) { ?>
 			<span class="unicode check spacer">✓</span>
 			&nbsp;<?php echo $order->pie_mince_cheese_size; ?>

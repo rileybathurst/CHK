@@ -47,8 +47,8 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<label for="pie_steak">Steak Pie</label>
 										<select name="pie_steak_size" id="pie_steak_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="pie_steak_size" value="steak">Family Size</option>
-										<option name="pie_steak_size" value="whole">Smaller</option>
+										<option name="pie_steak_size" value="family">Family Size</option>
+										<option name="pie_steak_size" value="smaller">Smaller</option>
 									</select>
 									</div>
 									<div>
@@ -56,8 +56,8 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<label for="pie_steak_cheese">Steak N Cheese</label>
 										<select name="pie_steak_cheese_size" id="pie_steak_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="pie_steak_cheese_size" value="steak">Family Size</option>
-										<option name="pie_steak_cheese_size" value="whole">Smaller</option>
+										<option name="pie_steak_cheese_size" value="family">Family Size</option>
+										<option name="pie_steak_cheese_size" value="smaller">Smaller</option>
 									</select>
 									</div>
 									<div>
@@ -65,8 +65,8 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<label for="pie_mince">Mince</label>
 										<select name="pie_mince_size" id="pie_mince_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="pie_mince_size" value="steak">Family Size</option>
-										<option name="pie_mince_size" value="whole">Smaller</option>
+										<option name="pie_mince_size" value="family">Family Size</option>
+										<option name="pie_mince_size" value="smaller">Smaller</option>
 									</select>
 									</div>
 									<div>
@@ -74,8 +74,8 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<label for="pie_mince_cheese">Mince N Cheese</label>
 										<select name="pie_mince_cheese_size" id="pie_mince_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="pie_mince_cheese_size" value="steak">Family Size</option>
-										<option name="pie_mince_cheese_size" value="whole">Smaller</option>
+										<option name="pie_mince_cheese_size" value="family">Family Size</option>
+										<option name="pie_mince_cheese_size" value="smaller">Smaller</option>
 									</select>
 									</div>
 									<div>
