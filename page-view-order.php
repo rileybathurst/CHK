@@ -168,6 +168,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 
 												<div class="run-the-stripes"><!-- print group -->
 													<?php include("view-small-goods.php"); ?>
+													<?php include("view-pies.php"); ?>
 												</div>
 											</div>
 
@@ -198,7 +199,6 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 
 											<?php } else { // if admin ?>
 												<div class="hide-for-print">
-													
 
 												<?php $page = get_page_by_path('view-profile');
 													if ($page) { ?>

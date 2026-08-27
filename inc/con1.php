@@ -489,6 +489,53 @@ function prefix_admin_con1() {
 											'</strong>
 										</p>
 
+										<p>
+											Steak Pies
+											<strong>'.
+												$_POST['pie_steak'].
+											'</strong>
+											<em> '.
+												$_POST['pie_steak_size'].
+											'</em>
+										</p>
+
+										<p>
+											Steak & Cheese Pies
+											<strong>'.
+												$_POST['pie_steak_cheese'].
+											'</strong>
+											<em> '.
+												$_POST['pie_steak_cheese_size'].
+											'</em>
+										</p>
+
+										<p>
+											Mince Pies
+											<strong>'.
+												$_POST['pie_mince'].
+											'</strong>
+											<em> '.
+												$_POST['pie_mince_size'].
+											'</em>
+										</p>
+
+										<p>
+											Mince & Cheese Pies
+											<strong>'.
+												$_POST['pie_mince_cheese'].
+											'</strong>
+											<em> '.
+												$_POST['pie_mince_cheese_size'].
+											'</em>
+										</p>
+
+										<p>
+											Big Sausage Rolls
+											<strong>'.
+												$_POST['pie_big_sausage_rolls'].
+											'</strong>
+										</p>
+
 										<hr style="color:#d9d9d9;background-color:#d9d9d9;min-height:1px;border:none;"/>   
 									</tr>
 
