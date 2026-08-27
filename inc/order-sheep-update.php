@@ -22,6 +22,11 @@ function prefix_admin_ordersheepupdate() {
 	} else {
 		$url = 0;
 	}
+	if (isset($_POST['pies'])) {
+		$pie = $_POST['pies']; if($pie == 'yes'){$pie=1;}else{$pie=0;}
+	} else {
+		$pie = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' , 
@@ -37,7 +42,8 @@ function prefix_admin_ordersheepupdate() {
 		'leg_lb'           => $leg_lb ,
 		'assistance'       => $assistance ,
 		'spins'            => $spins ,
-		'small'            => $url
+		'small'            => $url,
+		'pie'             => $pie
 	) ,
 
 	// where
@@ -47,6 +53,8 @@ function prefix_admin_ordersheepupdate() {
 
 	 // small goods send
 	if ($url == 1) { wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );
+	} elseif ($pie == 1) {
+		wp_redirect( home_url() . '/order-pies?n=' . $_POST['unid'] );
 	} else {
 		wp_redirect( home_url() . '/confirm-sheep?n=' . $_POST['unid'] );
 	}

@@ -30,6 +30,11 @@ function prefix_admin_orderdeerupdate() {
 	} else {
 		$url = 0;
 	}
+	if (isset($_POST['pies'])) {
+		$pie = $_POST['pies']; if($pie == 'yes'){$pie=1;}else{$pie=0;}
+	} else {
+		$pie = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
@@ -53,7 +58,8 @@ function prefix_admin_orderdeerupdate() {
 		'excess_trim_v'     =>      $excess_trim_v ,
 		'assistance'        =>      $assistance ,
 		'spins'             =>      $spins ,
-		'small'             =>      $url
+		'small'             =>      $url,
+		'pie'              =>      $pie
 	) ,
 
 	// where
@@ -64,6 +70,9 @@ function prefix_admin_orderdeerupdate() {
 	// small goods send
 	if ($url == 1) {
 		wp_redirect( home_url() . '/order-small-goods?n=' . $_POST['unid'] );
+		exit();
+	} elseif ($pie == 1) {
+		wp_redirect( home_url() . '/order-pies?n=' . $_POST['unid'] );
 		exit();
 	} else {
 		wp_redirect( home_url() . '/confirm-deer?n=' . $_POST['unid'] );

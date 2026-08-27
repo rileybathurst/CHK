@@ -20,5 +20,18 @@
 
 <hr>
 
+<!-- Pies -->
+<h4 class="button-banner">PIES</h4>
+
+<div> <!-- adds styling for .run-the-stripes -->
+	<input type="radio" name="pies" id="yes" value="yes"/><label for="yes">Yes</label><br>
+</div>
+<div>
+	<input type="radio" name="pies" id="no" value="no"/><label for="no">No</label><br>
+</div>
+<p><em>Options on following page</em></p>
+
+<hr>
+
 <h4>SPECIAL INSTRUCTIONS</h4>
 <textarea name="spins" id="spins" placeholder="Special instructions..."></textarea>
