@@ -374,6 +374,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									</div>
 
 									<?php include("confirm-small-goods.php"); ?>
+									<?php include("confirm-pies.php"); ?>
 									
 									<input type="submit" value="Submit">
 								</fieldset>
