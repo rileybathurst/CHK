@@ -465,6 +465,17 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 
 								<hr /> 
 
+								<!-- Pies -->
+								<h4 class="button-banner">PIES</h4>
+
+								<div> <!-- adds styling for .run-the-stripes -->
+									<input type="radio" name="pies" id="yes" value="yes"/><label for="yes">Yes</label><br>
+								</div>
+								<div>
+									<input type="radio" name="pies" id="no" value="no"/><label for="no">No</label><br>
+								</div>
+								<p><em>Options on following page</em></p>
+
 								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>
 
 							<input type="submit" value="Submit">

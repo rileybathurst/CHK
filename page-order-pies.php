@@ -43,7 +43,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 								</div>
 
 								<div class="stripe">
-										<input type="radio" name="pie_steak" id="yes" value="yes"/>
+										<input type="checkbox" name="pie_steak" id="pie_steak" value="yes"/>
 										<label for="pie_steak">Steak Pie</label>
 										<select name="pie_steak_size" id="pie_steak_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
@@ -52,7 +52,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="pie_steak_cheese" id="no" value="no"/>
+										<input type="checkbox" name="pie_steak_cheese" id="pie_steak_cheese" value="yes"/>
 										<label for="pie_steak_cheese">Steak N Cheese</label>
 										<select name="pie_steak_cheese_size" id="pie_steak_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
@@ -61,7 +61,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="pie_mince" id="no" value="no"/>
+										<input type="checkbox" name="pie_mince" id="pie_mince" value="yes"/>
 										<label for="pie_mince">Mince</label>
 										<select name="pie_mince_size" id="pie_mince_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
@@ -70,7 +70,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="pie_mince_cheese" id="no" value="no"/>
+										<input type="checkbox" name="pie_mince_cheese" id="pie_mince_cheese" value="yes"/>
 										<label for="pie_mince_cheese">Mince N Cheese</label>
 										<select name="pie_mince_cheese_size" id="pie_mince_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
@@ -79,7 +79,7 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="pie_big_sausage_rolls" id="no" value="no"/>
+										<input type="checkbox" name="pie_big_sausage_rolls" id="pie_big_sausage_rolls" value="yes"/>
 										<label for="pie_big_sausage_rolls">Big Sausage Rolls</label>
 									</div>
 

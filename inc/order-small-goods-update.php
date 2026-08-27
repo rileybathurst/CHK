@@ -70,7 +70,8 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_koftas'               => isset($_POST['t_koftas']) ? $_POST['t_koftas'] : '',
 		't_bbq_grill_stick'      => isset($_POST['t_bbq_grill_stick']) ? $_POST['t_bbq_grill_stick'] : '',
 		'bbq_grill_stick_t'      => isset($_POST['bbq_grill_stick_t']) ? $_POST['bbq_grill_stick_t'] : '',
-		't_bolognese_meatballs'      => isset($_POST['t_bolognese_meatballs']) ? $_POST['t_bolognese_meatballs'] : '',
+		't_bolognese_meatballs'  => isset($_POST['t_bolognese_meatballs']) ? $_POST['t_bolognese_meatballs'] : '',
+		'pies'                   => isset($_POST['pies']) ? $_POST['pies'] : '',
 	) ,
 
 	// where
@@ -78,7 +79,11 @@ function prefix_admin_ordersmallgoodsupdate() {
 		'unid' => $_POST['unid'] )
 	);
 
-	wp_redirect( home_url() . '/confirm-' . $_POST['animal'] . '?n=' . $_POST['unid'] );
+	if (isset($_POST['pies'])) {
+			wp_redirect( home_url() . '/order-pies?n=' . $_POST['unid'] );
+	} else {
+		wp_redirect( home_url() . '/confirm-' . $_POST['animal'] . '?n=' . $_POST['unid'] );
+	}
 	exit;
 }
 
