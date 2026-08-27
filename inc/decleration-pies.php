@@ -1,5 +1,11 @@
 <?php
 // PIES
+add_action( 'wp_footer', function() {
+	?>
+	<script>console.log( 'CHK: inc/decleration-pies.php loaded.' );</script>
+	<?php
+} );
+
 function prefix_admin_declarationPies() {
 
 	// Extremely Important to set
