@@ -145,6 +145,7 @@ require get_parent_theme_file_path( '/inc/decleration-pig.php' );
 require get_parent_theme_file_path( '/inc/decleration-deer.php' );
 require get_parent_theme_file_path( '/inc/decleration-sheep.php' );
 require get_parent_theme_file_path( '/inc/decleration-alpaca-llama.php' );
+require get_parent_theme_file_path( '/inc/decleration-pies.php' );
 
 require get_parent_theme_file_path( '/inc/order-details-update.php' );
 require get_parent_theme_file_path( '/inc/order-beef-update.php' );
@@ -153,6 +154,7 @@ require get_parent_theme_file_path( '/inc/order-deer-update.php' );
 require get_parent_theme_file_path( '/inc/order-sheep-update.php' );
 require get_parent_theme_file_path( '/inc/order-alpaca-llama-update.php' );
 require get_parent_theme_file_path( '/inc/order-small-goods-update.php' );
+require get_parent_theme_file_path( '/inc/order-pies-update.php' );
 
 require get_parent_theme_file_path( '/inc/con1.php' );
 require get_parent_theme_file_path( '/inc/booking.php' );
