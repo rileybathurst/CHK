@@ -34,7 +34,7 @@ function prefix_admin_orderpiesupdate() {
 			'unid' => $_POST['unid'] )
 		);
 
-		wp_redirect( home_url() . '/confirm-pies?n=' . $_POST['unid'] );
+		wp_redirect( home_url() . '/confirm-' . $_POST['animal'] . '?n=' . $_POST['unid'] );
 
 }
 add_action( 'admin_post_orderpiesupdate', 'prefix_admin_orderpiesupdate' );
