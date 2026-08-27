@@ -9,7 +9,7 @@ function prefix_admin_declarationPies() {
 			$wpdb->insert( 'meatorders' ,
 				array(
 					'unid'          => '$unid' ,
-					'animal'        => '' ,
+					'animal'        => 'unassigned' ,
 					'declaration'   => $_POST['declaration'] ,
 				) , 
 				array(
