@@ -7,6 +7,8 @@ get_header();
 
 //define variable for url bar .php?n=
 $animal = $_GET['a'];
+
+echo '<script>console.log(' . wp_json_encode($animal) . ');</script>';
 ?>
 
 <!-- posts and pages -->
