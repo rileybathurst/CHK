@@ -11,6 +11,7 @@ function prefix_admin_orderdetailsupdate() {
 	$email = isset($_POST['email']) ? sanitize_text_field($_POST['email']) : '';
 	$phone = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
 	$phone2 = isset($_POST['phone2']) ? sanitize_text_field($_POST['phone2']) : '';
+	$animal = isset($_POST['animal']) ? sanitize_text_field($_POST['animal']) : '';
 	$amp = isset($_POST['amp']) ? sanitize_text_field($_POST['amp']) : '';
 	$people = isset($_POST['people']) ? sanitize_text_field($_POST['people']) : '';
 
@@ -23,6 +24,7 @@ function prefix_admin_orderdetailsupdate() {
 		'email'  => $email ,
 		'phone'  => $phone ,
 		'phone2' => $phone2 ,
+		'animal' => $animal ,
 		'amp'    => $amp ,
 		'people' => $people 
 	) ,
