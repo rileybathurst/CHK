@@ -34,6 +34,11 @@ get_header(); ?>
 						<h3>Offal</h3>
 						<p class="single-stripe">$5 processed &amp; packaged per animal</p>
 						<p class="set-in">No charge collected and left on property in customer container</p>
+
+						<hr />
+
+						<h3>Pies</h3>
+						<p class="single-stripe"><a href="<?php echo home_url('/'); ?>pies">Check here</a> for pie prices</p>
 						
 						<!-- bookings
 						<h3>Bookings</h3>

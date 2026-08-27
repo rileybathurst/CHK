@@ -29,13 +29,11 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 						<!-- // TODO: theres a line break in the phone number make sure that can't happen with a span -->
 						<?php the_content(); ?> <!-- always double check the code editor if there are issues with the columns -->
 
-								
-
 						<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 							<fieldset class="run-the-stripes">
 
-								<input type="hidden" name="action" value="orderbeefupdate">
-								<input type="hidden" name="data" value="orderbeefupdateid"><!-- slightly different value to differentiate, not used -->
+								<input type="hidden" name="action" value="orderpiesupdate">
+								<input type="hidden" name="data" value="orderpiesupdateid"><!-- slightly different value to differentiate, not used -->
 										
 								<!-- use the url unid variable in the form to keep it on the same one -->
 								<input type="hidden" name="unid" value="<?php echo $unid; ?>">
@@ -44,47 +42,45 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 										<h3>Pies</h3>									
 								</div>
 
-								<!-- // ! still on b_fillet label -->
-
 								<div class="stripe">
-										<input type="radio" name="small_goods" id="yes" value="yes"/>
-										<label for="b_fillet">Steak Pie</label>
-										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<input type="radio" name="pie_steak" id="yes" value="yes"/>
+										<label for="pie_steak">Steak Pie</label>
+										<select name="pie_steak_size" id="pie_steak_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="fillet_bf" value="steak">Family Size</option>
-										<option name="fillet_bf" value="whole">Smaller</option>
+										<option name="pie_steak_size" value="steak">Family Size</option>
+										<option name="pie_steak_size" value="whole">Smaller</option>
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="small_goods" id="no" value="no"/>
-										<label for="no">Steak N Cheese</label>
-										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<input type="radio" name="pie_steak_cheese" id="no" value="no"/>
+										<label for="pie_steak_cheese">Steak N Cheese</label>
+										<select name="pie_steak_cheese_size" id="pie_steak_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="fillet_bf" value="steak">Family Size</option>
-										<option name="fillet_bf" value="whole">Smaller</option>
+										<option name="pie_steak_cheese_size" value="steak">Family Size</option>
+										<option name="pie_steak_cheese_size" value="whole">Smaller</option>
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="small_goods" id="no" value="no"/>
-										<label for="no">Mince</label>
-										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<input type="radio" name="pie_mince" id="no" value="no"/>
+										<label for="pie_mince">Mince</label>
+										<select name="pie_mince_size" id="pie_mince_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="fillet_bf" value="steak">Family Size</option>
-										<option name="fillet_bf" value="whole">Smaller</option>
+										<option name="pie_mince_size" value="steak">Family Size</option>
+										<option name="pie_mince_size" value="whole">Smaller</option>
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="small_goods" id="no" value="no"/>
-										<label for="no">Mince N Cheese</label>
-										<select name="fillet_bf" id="fillet_bf" required class="select-css">
+										<input type="radio" name="pie_mince_cheese" id="no" value="no"/>
+										<label for="pie_mince_cheese">Mince N Cheese</label>
+										<select name="pie_mince_cheese_size" id="pie_mince_cheese_size" required class="select-css">
 										<option value="" disabled selected>Select</option>
-										<option name="fillet_bf" value="steak">Family Size</option>
-										<option name="fillet_bf" value="whole">Smaller</option>
+										<option name="pie_mince_cheese_size" value="steak">Family Size</option>
+										<option name="pie_mince_cheese_size" value="whole">Smaller</option>
 									</select>
 									</div>
 									<div>
-										<input type="radio" name="small_goods" id="no" value="no"/>
-										<label for="no">Big Sausage Rolls</label>
+										<input type="radio" name="pie_big_sausage_rolls" id="no" value="no"/>
+										<label for="pie_big_sausage_rolls">Big Sausage Rolls</label>
 									</div>
 
 								<?php include get_parent_theme_file_path( '/inc/submitted.php' ); ?>

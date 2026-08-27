@@ -509,7 +509,7 @@ function prefix_admin_con1() {
 		</html>
 		';
 
-	// fixes orders 0 and 1's to Y's and N's
+	// ? fixes orders 0 and 1's to Y's and N's
 	$number = array("0", "1");
 	$letter = array("N", "Y");
 

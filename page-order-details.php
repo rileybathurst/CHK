@@ -107,10 +107,24 @@ $unid = isset($_GET['n']) ? sanitize_text_field(wp_unslash($_GET['n'])) : '';
 								> <!-- double check this placeholder, might be able to bring it in from a variable -->
 							</div>
 							
+							<!-- ! when this is pies it needs to be a select -->
+							<?php if ($order->animal != 'pies') { ?>
 							<div>
 								<label for="animal">Animal:</label>
 									<p class="preselected-options"><span class="custom-check"><span class="screen-reader">✓</span></span><?php echo $order->animal; ?></p><!-- leaving the html checkmark for screenreaders but using a fancy css shape one when we can -->
 							</div>
+							<?php } else { ?>
+								<div>
+									<label for="animal">Animal:</label>
+									<select name="animal" id="animal">
+										<option value="beef" <?php selected( $order->animal, 'beef' ); ?>>Beef</option>
+										<option value="pig" <?php selected( $order->animal, 'pig' ); ?>>Pig</option>
+										<option value="sheep" <?php selected( $order->animal, 'sheep' ); ?>>Sheep</option>
+										<option value="deer" <?php selected( $order->animal, 'deer' ); ?>>Deer</option>
+										<option value="alpacallama" <?php selected( $order->animal, 'alpacallama' ); ?>>Alpaca / Llama</option>
+									</select>
+								</div>
+							<?php } ?>
 
 							<div>
 								<label for="amp">Animal to be processed:*</label>

@@ -1,10 +1,10 @@
 # Flow
 
-This is running through a Beef order 
+This is running through a Beef order
 
 | Page | Template | Actions |
-|---------|---------|-|
-| /beef    | /template-animal.php |
+| --------- | --------- | - |
+| /beef | /template-animal.php | |
 | /order-declaration/?a=Beef | /order-declaration.php | /inc/ decleration-beef.php |
 | /order-details/?n=12934 | /page-order-details.php | /inc/order-details-update.php |
 | /order-beef/?n=1001 | /page-order-beef.php | / inc/order-beef-update.php |
@@ -14,3 +14,11 @@ This is running through a Beef order
 | /view-all | /page-view-all.php | |
 | /view-results | /page-view-results.php | |
 | /view-order/?n=1001 | /page-view-order.php /view-beef.php /view-small-goods.php | |
+
+
+## Pies
+
+- /pie/ - template-animal.php needs a couple things dropped down
+- ??? /order-decleration?a=pie
+- /order-details this wouldn't have an animal so needs to be selectable? - the select needs to go to the correct animal then into the flow
+- /order-(animal) - pies should be auto selected
