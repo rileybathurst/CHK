@@ -71,7 +71,7 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_bbq_grill_stick'      => isset($_POST['t_bbq_grill_stick']) ? $_POST['t_bbq_grill_stick'] : '',
 		'bbq_grill_stick_t'      => isset($_POST['bbq_grill_stick_t']) ? $_POST['bbq_grill_stick_t'] : '',
 		't_bolognese_meatballs'  => isset($_POST['t_bolognese_meatballs']) ? $_POST['t_bolognese_meatballs'] : '',
-		'pie'                    => isset($_POST['pie']) ? $_POST['pie'] : '',
+		'pie'                    => isset($_POST['pie']) && $_POST['pie'] == 'on' ? 1 : 0;
 	) ,
 
 	// where
