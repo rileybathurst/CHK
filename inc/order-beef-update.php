@@ -79,7 +79,7 @@ function prefix_admin_orderbeefupdate() {
 			'assistance'              => $assistance ,
 			'spins'                   => $spins, 
 			'small'                   => $url,
-			'pie'                    => $pie
+			'pie'                     => $pie
 		) ,
 
 		// where

@@ -9,6 +9,11 @@ function prefix_admin_ordersmallgoodsupdate() {
 	$sg_hogg_casing = isset($_POST['sg_hogg_casing']) && $_POST['sg_hogg_casing'] == 'on' ? 1 : 0;
 	$sg_gormet_cheese = isset($_POST['sg_gormet_cheese']) && $_POST['sg_gormet_cheese'] == 'on' ? 1 : 0;
 	$individual_packs = isset($_POST['individual_packs']) && $_POST['individual_packs'] == 'on' ? 1 : 0;
+	if (isset($_POST['pies'])) {
+		$pie = $_POST['pies']; if($pie == 'yes'){$pie=1;}else{$pie=0;}
+	} else {
+		$pie = 0;
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
@@ -71,7 +76,7 @@ function prefix_admin_ordersmallgoodsupdate() {
 		't_bbq_grill_stick'      => isset($_POST['t_bbq_grill_stick']) ? $_POST['t_bbq_grill_stick'] : '',
 		'bbq_grill_stick_t'      => isset($_POST['bbq_grill_stick_t']) ? $_POST['bbq_grill_stick_t'] : '',
 		't_bolognese_meatballs'  => isset($_POST['t_bolognese_meatballs']) ? $_POST['t_bolognese_meatballs'] : '',
-		'pie'                    => isset($_POST['pie']) && $_POST['pie'] == 'on' ? 1 : 0
+		'pie'                    => $pie
 	) ,
 
 	// where
