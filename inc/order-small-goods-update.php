@@ -84,7 +84,7 @@ function prefix_admin_ordersmallgoodsupdate() {
 		'unid' => $_POST['unid'] )
 	);
 
-	if (isset($_POST['pie'])) {
+	if ($pie == 1) {
 			wp_redirect( home_url() . '/order-pies?n=' . $_POST['unid'] );
 	} else {
 		wp_redirect( home_url() . '/confirm-' . $_POST['animal'] . '?n=' . $_POST['unid'] );
