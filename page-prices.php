@@ -83,6 +83,20 @@ get_header(); ?>
 							<hr>
 						<?php }
 
+						// offal
+						get_template_part(
+							'components/offal',
+							null,
+							array(
+								'animals' => array(
+									'sheep' => true,
+									'beef' => true,
+									'pig' => true,
+								),
+							)
+						); ?>
+						<hr>
+
 						// small goods
 						$page = get_page_by_path('small-goods');
 							if ($page) { ?>
