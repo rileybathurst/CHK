@@ -31,9 +31,18 @@ get_header(); ?>
 
 						<hr>
 
-						<h3>Offal</h3>
-						<p class="single-stripe">$5 processed &amp; packaged per animal</p>
-						<p class="set-in">No charge collected and left on property in customer container</p>
+						<?php
+						get_template_part(
+							'components/offal',
+							null,
+							array(
+								'animals' => array(
+									sanitize_title(get_the_title()) => true,
+								),
+							)
+						);
+						?>
+
 
 						<hr />
 
