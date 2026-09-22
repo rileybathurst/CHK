@@ -20,7 +20,7 @@
 	<?php if (!empty($args['animals']['deer'])) { ?>
 		<li>Deer offal $10</li>
 	<?php } ?>
-	<?php if (!empty($args['animals']['alpaca-llama/'])) { ?>
+	<?php if (!empty($args['animals']['alpaca-llama'])) { ?>
 		<li>Alpaca / Llama offal $10</li>
 	<?php } ?>
 	<li>Prices are plus gst</li>

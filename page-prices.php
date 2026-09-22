@@ -92,6 +92,8 @@ get_header(); ?>
 									'sheep' => true,
 									'beef' => true,
 									'pig' => true,
+									'deer' => true,
+									'alpaca-llama' => true,
 								),
 							)
 						); ?>
