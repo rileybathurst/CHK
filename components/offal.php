@@ -17,6 +17,12 @@
 	<?php if (!empty($args['animals']['pig'])) { ?>
 		<li>Pig offal $10</li>
 	<?php } ?>
+	<?php if (!empty($args['animals']['deer'])) { ?>
+		<li>Deer offal $10</li>
+	<?php } ?>
+	<?php if (!empty($args['animals']['alpaca-llama/'])) { ?>
+		<li>Alpaca / Llama offal $10</li>
+	<?php } ?>
 	<li>Prices are plus gst</li>
 </ul>
 <p>To avoid these cost we can leave the skins and offal on-site for your disposal.</p>
