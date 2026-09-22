@@ -99,7 +99,7 @@ get_header(); ?>
 						); ?>
 						<hr>
 
-						// small goods
+						<?php // small goods
 						$page = get_page_by_path('small-goods');
 							if ($page) { ?>
 								<h3>
