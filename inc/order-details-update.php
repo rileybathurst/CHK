@@ -14,6 +14,12 @@ function prefix_admin_orderdetailsupdate() {
 	$animal = isset($_POST['animal']) ? sanitize_text_field($_POST['animal']) : '';
 	$amp = isset($_POST['amp']) ? sanitize_text_field($_POST['amp']) : '';
 	$people = isset($_POST['people']) ? sanitize_text_field($_POST['people']) : '';
+	$unid = isset($_POST['unid']) ? sanitize_text_field($_POST['unid']) : '';
+
+	if ( '' === $animal || '' === $unid ) {
+		wp_safe_redirect( home_url( '/order/' ) );
+		exit();
+	}
 
 	// Whats inserted
 	$wpdb->update( 'meatorders' ,
@@ -31,11 +37,11 @@ function prefix_admin_orderdetailsupdate() {
 
 	// where
 	array(
-		'unid' => $_POST['unid'] )
+		'unid' => $unid )
 	);
 
 	// Redirect
-	wp_redirect( home_url() . '/order-' . $_POST['animal'] . '?n=' . $_POST['unid'] );
+	wp_redirect( home_url() . '/order-' . $animal . '?n=' . rawurlencode( $unid ) );
 	exit();
 
 }

@@ -195,21 +195,7 @@ function gutenberg_banner_block() {
 		array( 'wp-blocks', 'wp-element', 'wp-editor' )
 		// filemtime( get_template_directory_uri() . '/js/banner-block.js' ) // I dont understand this one or know if its neccesary
 	);
-	wp_register_style(
-		'banner-block-editor',
-		get_template_directory_uri() . '/css/banner-block-editor.css',
-		array( 'wp-edit-blocks' )
-		// filemtime( get_template_directory_uri() . '/css/banner-block-editor.css' )
-	);
-	wp_register_script(
-		'banner-block',
-		get_template_directory_uri() . '/css/banner-block.js',
-		array( )
-		// filemtime( get_template_directory_uri() . '/css/banner-block.css' )
-	);
 	register_block_type( 'chk/banner-block', array(
-		'style' => 'banner-block',
-		'editor_style' => 'banner-block-editor',
 		'editor_script' => 'banner-block',
 		) 
 	);

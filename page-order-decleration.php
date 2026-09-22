@@ -6,13 +6,10 @@
 get_header();
 
 //define variable for url bar .php?n=
-$animal = $_GET['a'];
+$animal = isset($_GET['a']) ? sanitize_key(wp_unslash($_GET['a'])) : '';
 
-echo '<script>console.log(' . wp_json_encode($animal) . ');</script>';
+// echo '<script>console.log(' . wp_json_encode($animal) . ');</script>';
 ?>
-
-<!-- posts and pages -->
-<?php get_header(); ?>
 
 <div class="container main-border over-background">
 	<main>

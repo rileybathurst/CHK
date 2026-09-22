@@ -23,7 +23,6 @@ get_header(); ?>
 
 						<?php the_content(); ?>
 
-						<!-- sheep -->
 						<?php $page = get_page_by_path('sheep');
 							if ($page) { ?>
 								<h3>
@@ -35,7 +34,6 @@ get_header(); ?>
 								<hr>
 						<?php }
 
-						// pig
 						$page = get_page_by_path('pig');
 							if ($page) { ?>
 								<h3>
@@ -47,7 +45,6 @@ get_header(); ?>
 								<hr>
 						<?php }
 
-						// deer
 						$page = get_page_by_path('deer');
 							if ($page) { ?>
 								<h3>
@@ -59,7 +56,6 @@ get_header(); ?>
 								<hr>
 						<?php }
 
-						// beef
 						$page = get_page_by_path('beef');
 							if ($page) { ?>
 								<h3>
@@ -71,7 +67,6 @@ get_header(); ?>
 								<hr>
 						<?php }
 
-						// Alpaca Llama
 						$page = get_page_by_path('alpaca-llama');
 						if ($page) { ?>
 							<h3>
@@ -99,7 +94,7 @@ get_header(); ?>
 						); ?>
 						<hr>
 
-						<?php // small goods
+						<?php
 						$page = get_page_by_path('small-goods');
 							if ($page) { ?>
 								<h3>
