@@ -3,10 +3,25 @@
  *  Template Name: order declaration
  */
 
-get_header();
-
 //define variable for url bar .php?n=
-$animal = isset($_GET['a']) ? sanitize_key(wp_unslash($_GET['a'])) : '';
+$animal_key = isset($_GET['a']) ? sanitize_key(wp_unslash($_GET['a'])) : '';
+$animals = array(
+	'alpacallama' => 'AlpacaLlama',
+	'beef'        => 'Beef',
+	'deer'        => 'Deer',
+	'pig'         => 'Pig',
+	'sheep'       => 'Sheep',
+	'pies'        => 'Pies',
+);
+
+if ( ! isset($animals[$animal_key]) ) {
+	wp_safe_redirect( home_url( '/order/' ) );
+	exit;
+}
+
+$animal = $animals[$animal_key];
+
+get_header();
 
 // echo '<script>console.log(' . wp_json_encode($animal) . ');</script>';
 ?>
